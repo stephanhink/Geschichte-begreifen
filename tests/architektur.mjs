@@ -180,6 +180,7 @@ export function laufe(pruefe) {
     'screens/Themenuebersicht.js',
     'screens/Kapitel.js',
     'components/abschnitte/AufhaengerAbschnitt.js',
+    'components/abschnitte/KarteAbschnitt.js',
     'components/abschnitte/PerspektivenAbschnitt.js',
     'components/abschnitte/SyntheseAbschnitt.js',
     'components/abschnitte/UrteilAbschnitt.js',

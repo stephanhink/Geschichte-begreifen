@@ -56,10 +56,55 @@
 //         erklaerung: 'Kurz und freundlich erklärt, warum.',
 //       },
 //     ],
+//
+//     // 2. „Geschichte in Bewegung" — OPTIONAL. Bringt ein Thema dieses
+//     //    Feld mit, erscheint der Karten-Abschnitt zwischen Aufhänger und
+//     //    Blickwinkeln; fehlt es, wird er übersprungen.
+//     //    Alle Koordinaten sind SVG-Koordinaten innerhalb von
+//     //    breite × hoehe (die ViewBox). Die Themen-Module rechnen sie aus
+//     //    echten Längen-/Breitengraden aus — siehe utils/karte-geo.js.
+//     karte: {
+//       breite: 700,
+//       hoehe:  548.3,
+//
+//       // Der statische Untergrund: Meer, Landmassen, Flüsse.
+//       basis: [
+//         { art: 'land', d: 'M …', fill: '#F3E6CD', stroke: '#D2BB92',
+//           strokeWidth: 1 },
+//       ],
+//
+//       // Die Epochen, zwischen denen der Umschalter wechselt (mind. 2).
+//       phasen: [
+//         {
+//           id:    'hoehepunkt',        // ASCII-Slug, in der Karte eindeutig
+//           label: '117 n. Chr.',       // Beschriftung des Umschalters
+//           hinweis: 'Ein Satz dazu.',  // optional
+//           flaechen: [{ titel: 'Britannien', d: 'M …' }],
+//         },
+//       ],
+//
+//       // Die anklickbaren Info-Punkte — hier lebt das Hintergrundwissen.
+//       punkte: [
+//         { id: 'rom', name: 'Rom', typ: 'stadt', x: 285.8, y: 245.2,
+//           text: 'Der lange Text, der im Popup erscheint.' },
+//       ],
+//
+//       // Routen (Völkerwanderung) — optional, aber wenn da, dann vollständig.
+//       bewegungen: [
+//         { id: 'hunnen', name: 'Hunnen', von: [682.5, 129.5],
+//           ueber: [[606.7, 144.7]],       // optional: Zwischenpunkte
+//           nach: [367.5, 167.5], text: 'Was dort passiert ist.' },
+//       ],
+//
+//       // Landschafts- und Meeresnamen — optional.
+//       beschriftungen: [
+//         { text: 'Mittelmeer', art: 'meer', x: 315, y: 380, drehung: 0 },
+//       ],
+//     },
 //   }
 //
-// Weitere Felder (z. B. Zeitleisten oder Karten für „Geschichte in Bewegung")
-// dürfen später ergänzt werden — die Prüfung unten stört sich nicht daran.
+// Weitere Felder (z. B. Zeitleisten) dürfen später ergänzt werden — die
+// Prüfung unten stört sich nicht daran.
 
 /** Erlaubte Form eines Slugs: ASCII, klein, Bindestrich-getrennt. */
 const SLUG_MUSTER = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -67,12 +112,247 @@ const SLUG_MUSTER = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 /** Mindestlänge, ab der ein Text als „ausgefüllt" gilt (keine Platzhalter). */
 const MINDESTLAENGE_TEXT = 40;
 
+/** Was ein Info-Punkt auf der Karte darstellen kann. */
+const KARTEN_PUNKT_TYPEN = ['stadt', 'ereignis', 'grenze'];
+
+/** Wofür eine Beschriftung steht — davon hängt ihre Farbe in der App ab. */
+const KARTEN_BESCHRIFTUNG_ARTEN = ['land', 'meer'];
+
 function istSlug(wert) {
   return typeof wert === 'string' && SLUG_MUSTER.test(wert);
 }
 
 function istText(wert) {
   return typeof wert === 'string' && wert.trim().length > 0;
+}
+
+/** Eine echte, endliche Zahl (NaN und Infinity zählen nicht). */
+function istZahl(wert) {
+  return typeof wert === 'number' && Number.isFinite(wert);
+}
+
+/**
+ * Prüft eine Karte für „Geschichte in Bewegung".
+ *
+ * Getrennt von pruefeThema, damit der Test die Karte auch für sich prüfen
+ * kann. Gibt wie pruefeThema eine Liste von Meldungen zurück — leer heißt:
+ * alles in Ordnung.
+ *
+ * @param {object} karte
+ * @returns {string[]} Fehlermeldungen (leer = fehlerfrei)
+ */
+function pruefeKarte(karte) {
+  const fehler = [];
+  const melde = (text) => fehler.push(`karte: ${text}`);
+
+  if (!karte || typeof karte !== 'object' || Array.isArray(karte)) {
+    return ['karte ist kein Objekt.'];
+  }
+
+  // --- ViewBox -----------------------------------------------------------
+  // Ohne gültige Maße lässt sich keine Koordinate einordnen, deshalb zuerst.
+  const breiteOk = istZahl(karte.breite) && karte.breite > 0;
+  const hoeheOk = istZahl(karte.hoehe) && karte.hoehe > 0;
+  if (!breiteOk) melde('breite fehlt oder ist keine positive Zahl.');
+  if (!hoeheOk) melde('hoehe fehlt oder ist keine positive Zahl.');
+
+  /**
+   * Prüft ein Koordinatenpaar: Zahlen, und innerhalb der ViewBox.
+   *
+   * Ein Punkt außerhalb wäre auf dem Gerät unsichtbar — das fällt sonst
+   * erst auf, wenn jemand vergeblich darauf tippt.
+   */
+  const pruefeKoordinaten = (wo, x, y) => {
+    if (!istZahl(x) || !istZahl(y)) {
+      melde(`${wo}: x und y müssen Zahlen sein.`);
+      return;
+    }
+    if (breiteOk && (x < 0 || x > karte.breite)) {
+      melde(`${wo}: x (${x}) liegt außerhalb der Karte (0…${karte.breite}).`);
+    }
+    if (hoeheOk && (y < 0 || y > karte.hoehe)) {
+      melde(`${wo}: y (${y}) liegt außerhalb der Karte (0…${karte.hoehe}).`);
+    }
+  };
+
+  // --- Untergrund --------------------------------------------------------
+  if (!Array.isArray(karte.basis) || karte.basis.length === 0) {
+    melde('basis fehlt oder ist leer — ohne Untergrund keine erkennbare Karte.');
+  } else {
+    karte.basis.forEach((teil, i) => {
+      const wo = `basis[${i}]`;
+      if (!teil || typeof teil !== 'object') {
+        melde(`${wo} ist kein Objekt.`);
+        return;
+      }
+      if (!istText(teil.d)) melde(`${wo}.d fehlt oder ist leer.`);
+      if (!istText(teil.fill)) melde(`${wo}.fill fehlt — auch „none" muss dastehen.`);
+      if (!istText(teil.stroke)) melde(`${wo}.stroke fehlt — auch „none" muss dastehen.`);
+      if (!istZahl(teil.strokeWidth) || teil.strokeWidth < 0) {
+        melde(`${wo}.strokeWidth fehlt oder ist keine Zahl ≥ 0.`);
+      }
+    });
+  }
+
+  // --- Phasen ------------------------------------------------------------
+  // Weniger als zwei Phasen wäre keine Bewegung, sondern ein Standbild.
+  if (!Array.isArray(karte.phasen) || karte.phasen.length < 2) {
+    melde('phasen fehlen oder sind weniger als 2 — ohne Wechsel keine Bewegung.');
+  } else {
+    const gesehen = new Set();
+    karte.phasen.forEach((phase, i) => {
+      const wo = `phasen[${i}]`;
+      if (!phase || typeof phase !== 'object') {
+        melde(`${wo} ist kein Objekt.`);
+        return;
+      }
+      if (!istSlug(phase.id)) {
+        melde(`${wo}.id fehlt oder ist kein ASCII-Slug.`);
+      } else if (gesehen.has(phase.id)) {
+        melde(`${wo}.id „${phase.id}" kommt doppelt vor.`);
+      } else {
+        gesehen.add(phase.id);
+      }
+      if (!istText(phase.label)) melde(`${wo}.label fehlt — der Umschalter braucht eine Beschriftung.`);
+      if (phase.hinweis !== undefined && !istText(phase.hinweis)) {
+        melde(`${wo}.hinweis ist vorhanden, aber leer.`);
+      }
+      if (!Array.isArray(phase.flaechen) || phase.flaechen.length === 0) {
+        melde(`${wo}.flaechen fehlt oder ist leer — jede Phase zeigt Gebiet.`);
+        return;
+      }
+      phase.flaechen.forEach((flaeche, j) => {
+        const woF = `${wo}.flaechen[${j}]`;
+        if (!flaeche || typeof flaeche !== 'object') {
+          melde(`${woF} ist kein Objekt.`);
+          return;
+        }
+        if (!istText(flaeche.d)) melde(`${woF}.d fehlt oder ist leer.`);
+        if (!istText(flaeche.titel)) melde(`${woF}.titel fehlt oder ist leer.`);
+      });
+    });
+  }
+
+  // --- Info-Punkte -------------------------------------------------------
+  // Hier lebt das Hintergrundwissen: ein Punkt ohne Text hätte nichts zu
+  // erzählen und wäre nur ein Fleck auf der Karte.
+  if (!Array.isArray(karte.punkte) || karte.punkte.length === 0) {
+    melde('punkte fehlen oder sind leer — die Karte trägt die Texte.');
+  } else {
+    const gesehen = new Set();
+    karte.punkte.forEach((punkt, i) => {
+      const wo = `punkte[${i}]`;
+      if (!punkt || typeof punkt !== 'object') {
+        melde(`${wo} ist kein Objekt.`);
+        return;
+      }
+      if (!istSlug(punkt.id)) {
+        melde(`${wo}.id fehlt oder ist kein ASCII-Slug.`);
+      } else if (gesehen.has(punkt.id)) {
+        melde(`${wo}.id „${punkt.id}" kommt doppelt vor.`);
+      } else {
+        gesehen.add(punkt.id);
+      }
+      if (!istText(punkt.name)) melde(`${wo}.name fehlt oder ist leer.`);
+      if (!KARTEN_PUNKT_TYPEN.includes(punkt.typ)) {
+        melde(`${wo}.typ „${punkt.typ}" ist unbekannt (erlaubt: ${KARTEN_PUNKT_TYPEN.join(', ')}).`);
+      }
+      pruefeKoordinaten(wo, punkt.x, punkt.y);
+      if (!istText(punkt.text)) {
+        melde(`${wo}.text fehlt oder ist leer.`);
+      } else if (punkt.text.trim().length < MINDESTLAENGE_TEXT) {
+        melde(`${wo}.text wirkt wie ein Platzhalter (unter ${MINDESTLAENGE_TEXT} Zeichen).`);
+      }
+    });
+  }
+
+  // --- Bewegungen --------------------------------------------------------
+  // Optional: nicht jedes Thema hat Wanderungsrouten. Wenn aber welche da
+  // sind, müssen sie vollständig sein.
+  if (karte.bewegungen !== undefined) {
+    if (!Array.isArray(karte.bewegungen)) {
+      melde('bewegungen ist vorhanden, aber keine Liste.');
+    } else {
+      const gesehen = new Set();
+      karte.bewegungen.forEach((bewegung, i) => {
+        const wo = `bewegungen[${i}]`;
+        if (!bewegung || typeof bewegung !== 'object') {
+          melde(`${wo} ist kein Objekt.`);
+          return;
+        }
+        if (!istSlug(bewegung.id)) {
+          melde(`${wo}.id fehlt oder ist kein ASCII-Slug.`);
+        } else if (gesehen.has(bewegung.id)) {
+          melde(`${wo}.id „${bewegung.id}" kommt doppelt vor.`);
+        } else {
+          gesehen.add(bewegung.id);
+        }
+        if (!istText(bewegung.name)) melde(`${wo}.name fehlt oder ist leer.`);
+
+        const paar = (feld, wert) => {
+          if (!Array.isArray(wert) || wert.length !== 2) {
+            melde(`${wo}.${feld} muss ein Paar [x, y] sein.`);
+            return false;
+          }
+          pruefeKoordinaten(`${wo}.${feld}`, wert[0], wert[1]);
+          return istZahl(wert[0]) && istZahl(wert[1]);
+        };
+        const vonOk = paar('von', bewegung.von);
+        const nachOk = paar('nach', bewegung.nach);
+        // Start gleich Ziel ergäbe einen Pfeil ohne Richtung.
+        if (
+          vonOk && nachOk &&
+          bewegung.von[0] === bewegung.nach[0] &&
+          bewegung.von[1] === bewegung.nach[1]
+        ) {
+          melde(`${wo}: von und nach sind derselbe Punkt — daraus wird kein Pfeil.`);
+        }
+        if (bewegung.ueber !== undefined) {
+          if (!Array.isArray(bewegung.ueber)) {
+            melde(`${wo}.ueber ist vorhanden, aber keine Liste.`);
+          } else {
+            bewegung.ueber.forEach((punkt, j) => {
+              if (!Array.isArray(punkt) || punkt.length !== 2) {
+                melde(`${wo}.ueber[${j}] muss ein Paar [x, y] sein.`);
+                return;
+              }
+              pruefeKoordinaten(`${wo}.ueber[${j}]`, punkt[0], punkt[1]);
+            });
+          }
+        }
+        if (!istText(bewegung.text)) {
+          melde(`${wo}.text fehlt oder ist leer.`);
+        } else if (bewegung.text.trim().length < MINDESTLAENGE_TEXT) {
+          melde(`${wo}.text wirkt wie ein Platzhalter (unter ${MINDESTLAENGE_TEXT} Zeichen).`);
+        }
+      });
+    }
+  }
+
+  // --- Beschriftungen ----------------------------------------------------
+  if (karte.beschriftungen !== undefined) {
+    if (!Array.isArray(karte.beschriftungen)) {
+      melde('beschriftungen ist vorhanden, aber keine Liste.');
+    } else {
+      karte.beschriftungen.forEach((beschriftung, i) => {
+        const wo = `beschriftungen[${i}]`;
+        if (!beschriftung || typeof beschriftung !== 'object') {
+          melde(`${wo} ist kein Objekt.`);
+          return;
+        }
+        if (!istText(beschriftung.text)) melde(`${wo}.text fehlt oder ist leer.`);
+        if (!KARTEN_BESCHRIFTUNG_ARTEN.includes(beschriftung.art)) {
+          melde(`${wo}.art „${beschriftung.art}" ist unbekannt (erlaubt: ${KARTEN_BESCHRIFTUNG_ARTEN.join(', ')}).`);
+        }
+        pruefeKoordinaten(wo, beschriftung.x, beschriftung.y);
+        if (beschriftung.drehung !== undefined && !istZahl(beschriftung.drehung)) {
+          melde(`${wo}.drehung ist vorhanden, aber keine Zahl.`);
+        }
+      });
+    }
+  }
+
+  return fehler;
 }
 
 /**
@@ -185,13 +465,24 @@ function pruefeThema(thema) {
     });
   }
 
+  // --- „Geschichte in Bewegung" (optional) -------------------------------
+  // Fehlt die Karte, ist das kein Mangel — der Abschnitt entfällt dann in
+  // der App. Ist sie da, wird sie vollständig geprüft.
+  if (thema.karte !== undefined) {
+    for (const meldung of pruefeKarte(thema.karte)) melde(meldung);
+  }
+
   return fehler;
 }
 
 module.exports = {
   SLUG_MUSTER,
   MINDESTLAENGE_TEXT,
+  KARTEN_PUNKT_TYPEN,
+  KARTEN_BESCHRIFTUNG_ARTEN,
   istSlug,
   istText,
+  istZahl,
+  pruefeKarte,
   pruefeThema,
 };

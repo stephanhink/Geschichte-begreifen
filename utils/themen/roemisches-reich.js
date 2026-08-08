@@ -5,6 +5,13 @@
 // gemeinsam überarbeitet (siehe CLAUDE.md, Perspektiven-Workflow).
 //
 // Reine Daten — keine UI-Importe (Architektur-Regel).
+//
+// Runde 3: Dazugekommen ist das Feld `karte` für „Geschichte in Bewegung".
+// Die Karte selbst liegt in karten/roemisches-reich.js — sie ist lang und
+// von anderer Art (Geometrie statt Erzählung), deshalb in einer eigenen
+// Datei. Die Texte unten sind unverändert.
+
+const karte = require('./karten/roemisches-reich');
 
 const roemischesReich = {
   id: 'roemisches-reich',
@@ -26,6 +33,10 @@ const roemischesReich = {
       'sind dabei nur Wegmarken, keine Hauptsache.',
     ].join('\n'),
   },
+
+  // „Geschichte in Bewegung" — die Karte kommt nach dem Aufhänger und vor
+  // den Blickwinkeln (utils/lernformat.js).
+  karte,
 
   perspektiven: [
     {

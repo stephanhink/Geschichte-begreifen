@@ -3,7 +3,7 @@
 // `npm test` sie nicht.
 //
 // Stand: Smoke-Tests für die App-Dateien + Prüfungen der Fachlogik in utils/
-// (Themen-Module, Markdown, Quiz, Fortschritt, Lernformat).
+// (Themen-Module, Karten, Markdown, Quiz, Fortschritt, Lernformat).
 //
 // Eine registrierte Testdatei exportiert `laufe(pruefe)` und meldet ihre
 // Ergebnisse über die übergebene Prüf-Funktion. `laufe` darf auch
@@ -13,6 +13,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { laufe as laufeThemen } from './themen.mjs';
+import { laufe as laufeKarte } from './karte.mjs';
 import { laufe as laufeMarkdown } from './markdown.mjs';
 import { laufe as laufeQuiz } from './quiz.mjs';
 import { laufe as laufeFortschritt } from './fortschritt.mjs';
@@ -38,6 +39,7 @@ pruefe('app.json existiert', existsSync(path.join(projekt, 'app.json')));
 
 // Registrierte Testdateien:
 laufeThemen(pruefe);
+laufeKarte(pruefe);
 laufeMarkdown(pruefe);
 laufeQuiz(pruefe);
 laufeLernformat(pruefe);

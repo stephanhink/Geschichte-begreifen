@@ -69,7 +69,14 @@ Kein Zeitdruck, keine Noten — **Erforschen statt Pauken**. Jedes Thema
    das halb Europa umspannte — wie hält man das zusammen?").
 2. **Geschichte in Bewegung** — interaktive Grafiken (Karten mit
    Expansion/Verschiebungen, Zeitleisten) — hier kommt `react-native-svg`
-   zum Einsatz.
+   zum Einsatz. **Die Karte ist die Bühne, nicht die Illustration:** Man
+   soll die Entwicklung der Reiche *sehen* statt über sie zu lesen. Die
+   guten Texte stehen deshalb hinter anklickbaren Info-Punkten, nicht auf
+   dem Bildschirm. Und die Karte muss die Regionen erkennen lassen —
+   Italien als Stiefel, Iberische Halbinsel, Britannien, Nordafrika,
+   Mittelmeer, Schwarzes Meer sofort erkennbar. Klare, moderne
+   Schulatlaskarte, auf das Nötige reduziert; keine abstrakte Skizze.
+   Der Abschnitt ist optional: Themen ohne `karte` überspringen ihn.
 3. **Zwei Blickwinkel** — die Perspektiven nebeneinander (Kern der App).
 4. **Synthese** — Übereinstimmungen und Widersprüche.
 5. **Dein Urteil** — offene Frage; die eigene Antwort wird auf dem Gerät
@@ -101,9 +108,18 @@ keine Accounts, kein Netzwerk.
 sie holen Daten aus den utils, stellen sie dar und reichen Eingaben zurück.
 
 Die **Themeninhalte** liegen als strukturierte Daten in `utils/themen/`
-(ein Modul pro Thema: Aufhänger, Perspektiven mit Attribution, Synthese,
-Urteils-Fragen, Quiz). Die Texte sind damit menschenlesbar (der Betreiber
-liest sie im Repo gegen) und testbar — getrennt von der UI.
+(ein Modul pro Thema: Aufhänger, Karte, Perspektiven mit Attribution,
+Synthese, Urteils-Fragen, Quiz). Die Texte sind damit menschenlesbar (der
+Betreiber liest sie im Repo gegen) und testbar — getrennt von der UI.
+
+Die **Karten** liegen daneben in `utils/themen/karten/` (eine Datei je
+Thema): Sie sind lang und von anderer Art — Geometrie statt Erzählung.
+**Küstenlinien stehen dort als echte Längen-/Breitengrade** (`[lon, lat]`),
+nicht als geratene Pixel; `utils/karte-geo.js` rechnet sie in
+SVG-Koordinaten um (Projektion, Pfadglättung, Pfeilspitzen, Kartenpalette).
+Damit ist die Geografie im Repo nachschlagbar — und `tests/karte.mjs` prüft
+gegen den Atlas nach, ob bekannte Kaps und Meerengen auf der gezeichneten
+Küste liegen.
 
 Daneben liegt in `utils/` die übrige Fachlogik, jeweils ohne UI-Import:
 `markdown.js` (zerlegt die Themen-Texte in Absätze, Überschriften,
@@ -173,7 +189,7 @@ aus dem Play Store hinkt den SDKs hinterher (siehe AGENTS.md). Zum Testen
 
 ## Status
 
-Stand: 2026-08-08 — Runde 2 abgeschlossen (Oberfläche):
+Stand: 2026-08-08 — Runde 3 abgeschlossen (Geschichte in Bewegung):
 - Projekt-Setup: Expo-SDK-57-Grundgerüst, EAS-Projekt
   @heilpraktikerdk/geschichte + Android-Keystore (remote + lokales Backup),
   Platzhalter-Assets, GitHub-Repo public
@@ -184,12 +200,26 @@ Stand: 2026-08-08 — Runde 2 abgeschlossen (Oberfläche):
 - Runde 2: die App-Oberfläche — Themenübersicht und Kapitel-Ansicht mit
   allen fünf Abschnitten des Lernformats, Fortschritt und „Dein Urteil"
   lokal über async-storage, eigene State-Navigation, keine neuen Pakete
-- `npm test` grün (320 Prüfungen)
+- Runde 3: „Geschichte in Bewegung" — der sechste Abschnitt, zwischen
+  Aufhänger und Blickwinkeln. Neu dazugekommen sind
+  `utils/karte-geo.js` (Projektion aus echten Koordinaten, Pfadglättung,
+  Pfeilspitzen, Kartenpalette), `utils/themen/karten/roemisches-reich.js`
+  (Atlas-Küstenlinien vom Atlantik bis Mesopotamien, vier Phasen von
+  264 v. Chr. bis 476 n. Chr., sechs Info-Punkte, drei Wanderungsrouten),
+  das Feld `karte` im Themen-Schema samt vollständiger Prüfung und
+  `components/abschnitte/KarteAbschnitt.js` (SVG-Karte, Phasen-Umschalter
+  mit Ablauf-Knopf, antippbare Punkte mit Popup, Legende der Wanderungen)
+- `npm test` grün (441 Prüfungen)
 
 Nächste Schritte (Landkarte, noch offen):
-- **„Geschichte in Bewegung"** — der bisher fehlende Abschnitt des
-  Lernformats: interaktive Karten und Zeitleisten mit `react-native-svg`.
-  `utils/lernformat.js` nimmt ihn auf, sobald ein Thema die Daten mitbringt.
+- **Am Gerät gegenlesen:** Die Karte ist rechnerisch gegen den Atlas
+  geprüft, aber noch nicht auf einem Handy gesehen. Vor allem
+  Schriftgrößen und Trefferflächen der Punkte gehören auf einem kleinen
+  Bildschirm beurteilt (`npm start`, Expo Go).
+- **Zeitleisten** — der zweite Teil von „Geschichte in Bewegung"; die
+  Karte deckt bisher nur den Raum ab, nicht die Zeit.
 - **Weitere Themen** nach der Themenlandkarte: Germanen und
   Völkerwanderung, frühe Königreiche, Mittelalter, Ausblick Neuzeit —
   jeweils westliche Sicht von Opus, östliche von Hermes, Synthese gemeinsam.
+  Karten sind dabei optional: Themen ohne `karte` überspringen den
+  Abschnitt.

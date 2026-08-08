@@ -13,7 +13,7 @@ const { alleThemen, themaNachId } = require('../utils/themen/index.js');
  */
 export function laufe(pruefe) {
   // --- Die Reihenfolge aus CLAUDE.md -------------------------------------
-  const erwartet = ['aufhaenger', 'perspektiven', 'synthese', 'urteil', 'quiz'];
+  const erwartet = ['aufhaenger', 'karte', 'perspektiven', 'synthese', 'urteil', 'quiz'];
   pruefe(
     'Lernformat: Abschnitte stehen in der Reihenfolge aus CLAUDE.md',
     ABSCHNITTE.map((a) => a.id).join(',') === erwartet.join(','),
@@ -24,7 +24,7 @@ export function laufe(pruefe) {
   // --- Abschnitte eines konkreten Themas ---------------------------------
   const rom = themaNachId('roemisches-reich');
   const romAbschnitte = abschnitteFuer(rom);
-  pruefe('Lernformat: „Römisches Reich" hat alle fünf Abschnitte', romAbschnitte.length === 5);
+  pruefe('Lernformat: „Römisches Reich" hat alle sechs Abschnitte', romAbschnitte.length === 6);
   pruefe(
     'Lernformat: die zurückgegebenen Abschnitte tragen keine Prüffunktion mit',
     romAbschnitte.every((a) => typeof a.hatInhalt === 'undefined'),
@@ -43,9 +43,15 @@ export function laufe(pruefe) {
   );
 
   // Jedes registrierte Thema muss die volle Strecke anbieten — sonst fehlt
-  // Inhalt, den das Lernformat vorsieht.
+  // Inhalt, den das Lernformat vorsieht. „Geschichte in Bewegung" ist dabei
+  // die eine Ausnahme: eine Karte darf ein Thema (noch) nicht haben.
+  const PFLICHT = ABSCHNITTE.filter((a) => a.id !== 'karte').map((a) => a.id);
   for (const thema of alleThemen) {
-    pruefe(`Lernformat: „${thema.id}" bietet alle fünf Abschnitte`, abschnitteFuer(thema).length === ABSCHNITTE.length);
+    const habe = abschnitteFuer(thema).map((a) => a.id);
+    pruefe(
+      `Lernformat: „${thema.id}" bietet alle Pflicht-Abschnitte`,
+      PFLICHT.every((id) => habe.includes(id)),
+    );
   }
 
   // --- Blättern ----------------------------------------------------------

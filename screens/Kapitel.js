@@ -1,5 +1,6 @@
 // Die Kapitel-Ansicht eines Themas: die Abschnitte des Lernformats zum
-// Durchblättern — Aufhänger, Blickwinkel, Synthese, Dein Urteil, „Stimmt's?".
+// Durchblättern — Aufhänger, Geschichte in Bewegung, Blickwinkel, Synthese,
+// Dein Urteil, „Stimmt's?".
 //
 // Jeder Abschnitt ist eine eigene Ansicht statt ein endloser Scroll: So bleibt
 // jeder Schritt für sich lesbar. Gesprungen werden darf trotzdem jederzeit
@@ -23,6 +24,7 @@ import {
 import Knopf from '../components/Knopf';
 import Schrittleiste from '../components/Schrittleiste';
 import AufhaengerAbschnitt from '../components/abschnitte/AufhaengerAbschnitt';
+import KarteAbschnitt from '../components/abschnitte/KarteAbschnitt';
 import PerspektivenAbschnitt from '../components/abschnitte/PerspektivenAbschnitt';
 import QuizAbschnitt from '../components/abschnitte/QuizAbschnitt';
 import SyntheseAbschnitt from '../components/abschnitte/SyntheseAbschnitt';
@@ -92,6 +94,8 @@ export default function Kapitel({
         showsVerticalScrollIndicator={false}
       >
         {aktuell.id === 'aufhaenger' ? <AufhaengerAbschnitt thema={thema} /> : null}
+
+        {aktuell.id === 'karte' ? <KarteAbschnitt karte={thema.karte} /> : null}
 
         {aktuell.id === 'perspektiven' ? (
           <PerspektivenAbschnitt

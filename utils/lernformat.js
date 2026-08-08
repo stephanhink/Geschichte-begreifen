@@ -2,14 +2,14 @@
 // Reihenfolge sie durchblättert werden.
 //
 // Die Reihenfolge stammt aus CLAUDE.md („Lernformat"): Aufhänger →
-// Blickwinkel → Synthese → Dein Urteil → „Stimmt's?". Sie steht hier und
-// nicht in der UI, damit sie ohne React prüfbar bleibt (Architektur-Regel)
-// und der Betreiber sie an einer Stelle nachlesen kann.
+// Geschichte in Bewegung → Blickwinkel → Synthese → Dein Urteil →
+// „Stimmt's?". Sie steht hier und nicht in der UI, damit sie ohne React
+// prüfbar bleibt (Architektur-Regel) und der Betreiber sie an einer Stelle
+// nachlesen kann.
 //
-// „Geschichte in Bewegung" (interaktive Karten und Zeitleisten mit
-// react-native-svg) ist im Lernformat vorgesehen, aber noch nicht gebaut —
-// sobald ein Thema entsprechende Daten mitbringt, kommt hier ein Abschnitt
-// dazu und erscheint automatisch in der Kapitel-Ansicht.
+// „Geschichte in Bewegung" ist seit Runde 3 gebaut, aber optional: Der
+// Abschnitt erscheint nur bei Themen, die eine `karte` mitbringen. Themen
+// ohne Karte überspringen ihn — die übrigen Abschnitte rücken auf.
 
 /** Alle Abschnitte des Lernformats in ihrer festen Reihenfolge. */
 const ABSCHNITTE = [
@@ -19,6 +19,19 @@ const ABSCHNITTE = [
     kurz: 'Frage',
     // Ein Abschnitt erscheint nur, wenn das Thema Inhalt dafür mitbringt.
     hatInhalt: (thema) => Boolean(thema && thema.aufhaenger && thema.aufhaenger.frage),
+  },
+  {
+    id: 'karte',
+    name: 'Geschichte in Bewegung',
+    kurz: 'Karte',
+    // Eine Karte ohne mindestens zwei Phasen hätte nichts zu bewegen.
+    hatInhalt: (thema) =>
+      Boolean(
+        thema &&
+          thema.karte &&
+          Array.isArray(thema.karte.phasen) &&
+          thema.karte.phasen.length >= 2,
+      ),
   },
   {
     id: 'perspektiven',
