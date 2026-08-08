@@ -105,6 +105,33 @@ Die **Themeninhalte** liegen als strukturierte Daten in `utils/themen/`
 Urteils-Fragen, Quiz). Die Texte sind damit menschenlesbar (der Betreiber
 liest sie im Repo gegen) und testbar — getrennt von der UI.
 
+Daneben liegt in `utils/` die übrige Fachlogik, jeweils ohne UI-Import:
+`markdown.js` (zerlegt die Themen-Texte in Absätze, Überschriften,
+Aufzählungen), `quiz.js` (Auswertung von „Stimmt's?"), `fortschritt.js`
+(Lernstand und „Dein Urteil"; der Speicher wird übergeben, damit der Test
+ein Fake einsetzen kann) und `lernformat.js` (Reihenfolge der Abschnitte).
+
+`tests/architektur.mjs` prüft diese Regel nach: keine UI-Importe in `utils/`
+und `tests/`, jede utils-Datei mit blankem `node` ladbar, alle Importpfade
+und benannten Importe auflösbar, keine neuen npm-Pakete.
+
+### Aufbau der Oberfläche
+
+Navigation **ohne zusätzliches Paket** (wie bei „Mathe begreifen"):
+`App.js` hält den Fortschritt und entscheidet über einen State, ob die
+Themenübersicht oder ein Kapitel sichtbar ist.
+
+- `screens/Themenuebersicht.js` — die Themenlandkarte als Karten
+  (Titel, Epoche, Aufhänger-Frage, Zahl der Blickwinkel, Fortschritt).
+- `screens/Kapitel.js` — blättert durch die Abschnitte des Lernformats;
+  jeder Abschnitt ist eine eigene Ansicht, kein endloser Scroll.
+- `components/abschnitte/` — eine Komponente je Abschnitt.
+- `components/design.js` — Farben, Abstände, Schriftgrößen an einer Stelle
+  (Bernstein auf warmem Papier, `#FFF8ED` / `#7C4A03`).
+
+`node tools/syntaxpruefung.mjs` prüft alle `.js`-Dateien auf Syntaxfehler
+(nutzt den Babel-Parser aus `node_modules`, deshalb nicht in `npm test`).
+
 ## Prüf-Regel
 
 **`npm test` ist der Torwächter.** Eine Änderung an der Fachlogik ohne
@@ -146,16 +173,23 @@ aus dem Play Store hinkt den SDKs hinterher (siehe AGENTS.md). Zum Testen
 
 ## Status
 
-Stand: 2026-08-08 — Projekt-Setup abgeschlossen, Inhaltsspezifikation V1
-steht (siehe oben):
-- Expo-SDK-57-Grundgerüst (package.json, App.js, app.json, eas.json)
-- GitHub-Repo public: https://github.com/stephanhink/Geschichte-begreifen
-  (Pages-Workflow aktiv, docs/ mit Datenschutz-Platzhalter)
-- EAS-Projekt @heilpraktikerdk/geschichte + Android-Keystore angelegt
-  (remote + lokales Backup), Platzhalter-Assets
-- `npm test` grün (Smoke-Tests in tests/alle.mjs)
+Stand: 2026-08-08 — Runde 2 abgeschlossen (Oberfläche):
+- Projekt-Setup: Expo-SDK-57-Grundgerüst, EAS-Projekt
+  @heilpraktikerdk/geschichte + Android-Keystore (remote + lokales Backup),
+  Platzhalter-Assets, GitHub-Repo public
+  (https://github.com/stephanhink/Geschichte-begreifen, Pages-Workflow aktiv,
+  docs/ mit Datenschutz-Platzhalter)
+- Runde 1: Themen-Schema (`utils/themen/`), Modul „Römisches Reich" mit
+  europäischer (Opus) und chinesischer (Hermes) Sichtweise samt Synthese
+- Runde 2: die App-Oberfläche — Themenübersicht und Kapitel-Ansicht mit
+  allen fünf Abschnitten des Lernformats, Fortschritt und „Dein Urteil"
+  lokal über async-storage, eigene State-Navigation, keine neuen Pakete
+- `npm test` grün (320 Prüfungen)
 
-Nächster Schritt: erste Claude-Code-Runde (Opus) — Themen-Struktur und
-`utils/themen/`-Schema aufsetzen, Modul „Römisches Reich" (westliche
-Perspektive) anlegen. Hermes ergänzt die chinesische Perspektive; Synthese
-gemeinsam.
+Nächste Schritte (Landkarte, noch offen):
+- **„Geschichte in Bewegung"** — der bisher fehlende Abschnitt des
+  Lernformats: interaktive Karten und Zeitleisten mit `react-native-svg`.
+  `utils/lernformat.js` nimmt ihn auf, sobald ein Thema die Daten mitbringt.
+- **Weitere Themen** nach der Themenlandkarte: Germanen und
+  Völkerwanderung, frühe Königreiche, Mittelalter, Ausblick Neuzeit —
+  jeweils westliche Sicht von Opus, östliche von Hermes, Synthese gemeinsam.
