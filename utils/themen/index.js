@@ -6,16 +6,22 @@
 // nicht an.
 //
 // Die Reihenfolge im Array ist die Reihenfolge in der App (Themenlandkarte
-// aus CLAUDE.md: Rom → Germanen/Völkerwanderung → frühe Königreiche →
+// aus CLAUDE.md: Rom → China → Germanen/Völkerwanderung → frühe Königreiche →
 // Mittelalter → Ausblick Neuzeit).
+//
+// China steht bewusst direkt hinter Rom: Beide Reiche waren zur selben Zeit
+// ungefähr gleich groß, und die Seidenstraße verbindet sie auf der Karte.
+// Wer Rom gelesen hat, sieht im nächsten Kapitel dieselbe Zeit von der
+// anderen Seite.
 //
 // CommonJS, damit dieselbe Datei mit blankem `node` prüfbar ist und von
 // Metro/Babel in der App geladen werden kann (siehe schema.js).
 
 const roemischesReich = require('./roemisches-reich');
+const china = require('./china');
 
 /** Alle Themen in der Reihenfolge der Themenlandkarte. */
-const alleThemen = [roemischesReich];
+const alleThemen = [roemischesReich, china];
 
 /**
  * Sucht ein Thema anhand seiner id.

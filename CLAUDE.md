@@ -44,21 +44,27 @@ gekennzeichnet:
 
 ## Themenlandkarte
 
-**Version 1 — Europa im Fokus** (die anderen Geschichten sind miteinander
-verwoben, aber der Einstieg ist Europa):
+**Version 1 — Einstieg über Europa, aber nicht nur Europa.** Die Reihenfolge
+hier ist zugleich die Reihenfolge in der App (`utils/themen/index.js`):
 
 1. **Das Römische Reich** — Aufstieg und Ausdehnung, wie es funktionierte
-   (Macht, Straßen, Recht), wie es fiel.
-2. **Germanen und Völkerwanderung** — Ausbreitung der Germanen in Europa,
+   (Macht, Straßen, Recht), wie es fiel. *(fertig)*
+2. **China: Vom ersten Kaiser zu den großen Dynastien** — Qin, Han, Tang;
+   die Seidenstraße als Faden zwischen den beiden größten Reichen der
+   Antike. Steht bewusst direkt hinter Rom: Dieselbe Zeit, die andere
+   Seite. *(europäische Sicht fertig, chinesische offen)*
+3. **Germanen und Völkerwanderung** — Ausbreitung der Germanen in Europa,
    was mit Rom danach geschah.
-3. **Die frühen Königreiche** — wie sie entstanden, welche Macht sie hatten.
-4. **Mittelalter** — Ordnung, Glaube, Handel; das Scharnier zur Neuzeit.
-5. **Ausblick Neuzeit** — die großen Umbrüche, als Brücke zu den nächsten
+4. **Die frühen Königreiche** — wie sie entstanden, welche Macht sie hatten.
+5. **Mittelalter** — Ordnung, Glaube, Handel; das Scharnier zur Neuzeit.
+6. **Ausblick Neuzeit** — die großen Umbrüche, als Brücke zu den nächsten
    Modulen.
 
-**Spätere Module (Landkarte, nicht V1):** China und Persien als große
-Reiche, das Osmanische Reich und der Mittlere Osten, Japan (Entstehung,
-Machthaber, Ausdehnung), die Mongolen unter Dschingis Khan, Indonesien.
+**Als Nächstes nach China (Entscheidung des Betreibers):** die Mongolen
+unter Dschingis Khan, danach Japan (Entstehung, Machthaber, Ausdehnung).
+
+**Spätere Module (Landkarte, noch ohne Termin):** Persien als großes Reich,
+das Osmanische Reich und der Mittlere Osten, Indonesien.
 
 ## Lernformat (Betreiber-Vorschlag, wächst mit den Runden)
 
@@ -117,9 +123,12 @@ Thema): Sie sind lang und von anderer Art — Geometrie statt Erzählung.
 **Küstenlinien stehen dort als echte Längen-/Breitengrade** (`[lon, lat]`),
 nicht als geratene Pixel; `utils/karte-geo.js` rechnet sie in
 SVG-Koordinaten um (Projektion, Pfadglättung, Pfeilspitzen, Kartenpalette).
-Damit ist die Geografie im Repo nachschlagbar — und `tests/karte.mjs` prüft
-gegen den Atlas nach, ob bekannte Kaps und Meerengen auf der gezeichneten
-Küste liegen.
+Damit ist die Geografie im Repo nachschlagbar — und je Karte prüft eine
+Testdatei gegen den Atlas nach, ob bekannte Kaps und Meerengen auf der
+gezeichneten Küste liegen (`tests/karte.mjs` für Rom, `tests/karte-china.mjs`
+für China; letztere nimmt bewusst Koordinaten, die NICHT als Eckpunkte im
+Kartenmodul stehen, damit die gezeichnete Linie geprüft wird und nicht die
+abgeschriebene Zahl).
 
 Daneben liegt in `utils/` die übrige Fachlogik, jeweils ohne UI-Import:
 `markdown.js` (zerlegt die Themen-Texte in Absätze, Überschriften,
@@ -189,7 +198,7 @@ aus dem Play Store hinkt den SDKs hinterher (siehe AGENTS.md). Zum Testen
 
 ## Status
 
-Stand: 2026-08-08 — Runde 3 abgeschlossen (Geschichte in Bewegung):
+Stand: 2026-08-08 — Runde 4 abgeschlossen (Modul „China"):
 - Projekt-Setup: Expo-SDK-57-Grundgerüst, EAS-Projekt
   @heilpraktikerdk/geschichte + Android-Keystore (remote + lokales Backup),
   Platzhalter-Assets, GitHub-Repo public
@@ -209,17 +218,35 @@ Stand: 2026-08-08 — Runde 3 abgeschlossen (Geschichte in Bewegung):
   das Feld `karte` im Themen-Schema samt vollständiger Prüfung und
   `components/abschnitte/KarteAbschnitt.js` (SVG-Karte, Phasen-Umschalter
   mit Ablauf-Knopf, antippbare Punkte mit Popup, Legende der Wanderungen)
-- `npm test` grün (441 Prüfungen)
+- Runde 4: das zweite Thema — „China: Vom ersten Kaiser zu den großen
+  Dynastien" (`utils/themen/china.js`, registriert als Modul 2). Vorerst
+  nur die europäische Sichtweise (Stimme: Opus): Serica, die Qin-Einigung,
+  die Han und Zhang Qian, die Tang und Chang'an, und zum Schluss die Frage,
+  warum Europa das kaum erzählt. Die Synthese ist ausdrücklich vorläufig
+  und benennt selbst, dass die chinesische Stimme noch fehlt.
+  Dazu `utils/themen/karten/china.js` (Ausschnitt 58–145° O, 14–55° N —
+  weit genug nach Westen für die ganze Seidenstraße; Küsten Chinas, Koreas,
+  Japans und Indiens als Atlas-Koordinaten, Große Mauer und Seidenstraße
+  als feste Linien, Wüsten Gobi und Taklamakan, drei Phasen 221 v. Chr. /
+  100 n. Chr. / 750 n. Chr., sechs Info-Punkte, drei Bewegungen) und
+  `tests/karte-china.mjs`. Neu in der Kartenpalette: `wueste`, `mauer`,
+  `route`.
+- `npm test` grün (526 Prüfungen)
 
 Nächste Schritte (Landkarte, noch offen):
-- **Am Gerät gegenlesen:** Die Karte ist rechnerisch gegen den Atlas
+- **Die chinesische Sichtweise zu „China" (Hermes)** — danach die Synthese
+  gemeinsam neu schreiben; der Platzhaltertext in `utils/themen/china.js`
+  sagt das auch in der App offen.
+- **Am Gerät gegenlesen:** Beide Karten sind rechnerisch gegen den Atlas
   geprüft, aber noch nicht auf einem Handy gesehen. Vor allem
   Schriftgrößen und Trefferflächen der Punkte gehören auf einem kleinen
-  Bildschirm beurteilt (`npm start`, Expo Go).
+  Bildschirm beurteilt (`npm start`, Expo Go). Die China-Karte ist
+  deutlich breiter als die römische (700 × 400 statt 700 × 548) — ob die
+  Beschriftungen da noch lesbar sind, entscheidet das Gerät.
 - **Zeitleisten** — der zweite Teil von „Geschichte in Bewegung"; die
-  Karte deckt bisher nur den Raum ab, nicht die Zeit.
-- **Weitere Themen** nach der Themenlandkarte: Germanen und
-  Völkerwanderung, frühe Königreiche, Mittelalter, Ausblick Neuzeit —
-  jeweils westliche Sicht von Opus, östliche von Hermes, Synthese gemeinsam.
-  Karten sind dabei optional: Themen ohne `karte` überspringen den
-  Abschnitt.
+  Karten decken bisher nur den Raum ab, nicht die Zeit.
+- **Weitere Themen** nach der Themenlandkarte: Dschingis Khan, Japan,
+  Germanen und Völkerwanderung, frühe Königreiche, Mittelalter, Ausblick
+  Neuzeit — jeweils westliche Sicht von Opus, östliche von Hermes,
+  Synthese gemeinsam. Karten sind dabei optional: Themen ohne `karte`
+  überspringen den Abschnitt.

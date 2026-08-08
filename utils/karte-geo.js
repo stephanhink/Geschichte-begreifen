@@ -33,9 +33,15 @@ const KARTENFARBEN = {
   land: '#F3E6CD',
   landRand: '#D2BB92',
   fluss: '#A9C6D6',
+  /** Wüstenflächen — eine Spur tiefer als das Land, ohne aufdringlich zu sein. */
+  wueste: '#EDDCB4',
   reich: '#C08A3E',
   reichRand: '#7C4A03',
   grenze: '#8A5212',
+  /** Gebaute Grenzlinien (Große Mauer, Limes) — dunkel, nicht zu übersehen. */
+  mauer: '#5B4632',
+  /** Handelswege (Seidenstraße) — warm, aber leiser als das Reichsgebiet. */
+  route: '#B5762B',
   punkt: '#7C4A03',
   punktRand: '#FFF8ED',
   schriftLand: '#6B5636',

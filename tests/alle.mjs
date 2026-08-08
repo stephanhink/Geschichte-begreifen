@@ -14,6 +14,7 @@ import { fileURLToPath } from 'node:url';
 
 import { laufe as laufeThemen } from './themen.mjs';
 import { laufe as laufeKarte } from './karte.mjs';
+import { laufe as laufeKarteChina } from './karte-china.mjs';
 import { laufe as laufeMarkdown } from './markdown.mjs';
 import { laufe as laufeQuiz } from './quiz.mjs';
 import { laufe as laufeFortschritt } from './fortschritt.mjs';
@@ -40,6 +41,7 @@ pruefe('app.json existiert', existsSync(path.join(projekt, 'app.json')));
 // Registrierte Testdateien:
 laufeThemen(pruefe);
 laufeKarte(pruefe);
+laufeKarteChina(pruefe);
 laufeMarkdown(pruefe);
 laufeQuiz(pruefe);
 laufeLernformat(pruefe);
