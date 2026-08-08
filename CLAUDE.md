@@ -2,15 +2,82 @@
 
 Dieses Dokument ist die verbindliche Projekt-DNA. Es wächst mit dem Projekt
 und wird vor jeder Arbeit von Claude Code gelesen. Stand: 2026-08-08
-(Projekt-Setup, noch keine Inhalte).
+(Inhaltsspezifikation V1 durch den Betreiber).
 
 ## Ziel und Zielgruppe
 
-**Arbeitshypothese (wird mit dem Betreiber präzisiert):** Die App „Geschichte
-begreifen" macht historische Themen für Kinder und Jugendliche interaktiv
-begreifbar — analog zum Schwesterprojekt „Mathe begreifen". Der konkrete
-Inhalt (Epochen, Themen, Aufgabentypen) wird nach dem Setup mit dem
-Betreiber festgelegt und hier dokumentiert.
+Die App „Geschichte begreifen" macht Geschichte für Schülerinnen und Schüler
+**von Klasse 5 bis Klasse 13 (bis Abitur)** interaktiv begreifbar — dieselbe
+Zielgruppe wie beim Schwesterprojekt „Mathe begreifen". Aber bewusst anders
+im Ton: **kein Schulstress, kein Daten-Auswendiglernen.** Geschichte soll
+spannend sein und zeigen, wie sie die Welt verändert hat.
+
+## Leitidee: Der Sieger schreibt die Geschichte
+
+Das Herzstück der App ist **Multiperspektivität**: Geschichte wird je nach
+Standpunkt unterschiedlich erzählt und interpretiert. „Der Sieger schreibt
+die Geschichte" — und niemand war wirklich dabei. Deshalb gilt:
+
+- **Kein Thema wird als eine einzige Wahrheit erzählt.** Zu jedem Thema gibt
+  es mehrere klar gekennzeichnete Perspektiven (z. B. „Europäische
+  Sichtweise", „Chinesische Sichtweise", „Persische Sichtweise").
+- Jede Perspektive ist als solche markiert — sie ist eine Erzählung, keine
+  objektive Wahrheit. Die App sagt nie „so war es", sondern „so wird es aus
+  dieser Sicht erzählt".
+- Eine **Synthese** führt die Perspektiven zusammen: Wo stimmen sie überein,
+  wo widersprechen sie sich, und warum könnte das sein?
+- Am Ende steht **„Dein Urteil"**: Die Schülerin/der Schüler bildet sich
+  ihre/seine eigene Meinung. Es gibt kein Richtig oder Falsch — nur die
+  eigene, begründete Sicht.
+
+### Perspektiven-Workflow (wer schreibt welche Stimme)
+
+Die Perspektiven werden von unterschiedlichen Stimmen verfasst und in der App
+gekennzeichnet:
+
+- **Opus (Claude Code)** verfasst die westliche/europäische Sichtweise.
+- **Hermes** verfasst die chinesische (bzw. östliche) Sichtweise.
+- Beide Stimmen fließen in eine **Synthese** (gemeinsam erarbeitet), die
+  Übereinstimmungen und Widersprüche sichtbar macht, ohne zu werten.
+- Im Repo ist pro Perspektive festgehalten, welche Stimme sie geschrieben
+  hat (Attribution im Themen-Modul, nicht in der App-Oberfläche).
+
+## Themenlandkarte
+
+**Version 1 — Europa im Fokus** (die anderen Geschichten sind miteinander
+verwoben, aber der Einstieg ist Europa):
+
+1. **Das Römische Reich** — Aufstieg und Ausdehnung, wie es funktionierte
+   (Macht, Straßen, Recht), wie es fiel.
+2. **Germanen und Völkerwanderung** — Ausbreitung der Germanen in Europa,
+   was mit Rom danach geschah.
+3. **Die frühen Königreiche** — wie sie entstanden, welche Macht sie hatten.
+4. **Mittelalter** — Ordnung, Glaube, Handel; das Scharnier zur Neuzeit.
+5. **Ausblick Neuzeit** — die großen Umbrüche, als Brücke zu den nächsten
+   Modulen.
+
+**Spätere Module (Landkarte, nicht V1):** China und Persien als große
+Reiche, das Osmanische Reich und der Mittlere Osten, Japan (Entstehung,
+Machthaber, Ausdehnung), die Mongolen unter Dschingis Khan, Indonesien.
+
+## Lernformat (Betreiber-Vorschlag, wächst mit den Runden)
+
+Kein Zeitdruck, keine Noten — **Erforschen statt Pauken**. Jedes Thema
+(Kapitel) folgt demselben Muster:
+
+1. **Aufhänger** — eine spannende Frage statt Datenwüste (z. B. „Ein Reich,
+   das halb Europa umspannte — wie hält man das zusammen?").
+2. **Geschichte in Bewegung** — interaktive Grafiken (Karten mit
+   Expansion/Verschiebungen, Zeitleisten) — hier kommt `react-native-svg`
+   zum Einsatz.
+3. **Zwei Blickwinkel** — die Perspektiven nebeneinander (Kern der App).
+4. **Synthese** — Übereinstimmungen und Widersprüche.
+5. **Dein Urteil** — offene Frage; die eigene Antwort wird auf dem Gerät
+   gespeichert (kein Richtig/Falsch).
+6. **Nebenbei: „Stimmt's?"** — lockere Quizfragen ohne Zeitdruck.
+
+Der Lernfortschritt („erforscht/entdeckt") wird lokal gespeichert —
+keine Accounts, kein Netzwerk.
 
 ## Tech-Stack (bewusste Entscheidungen)
 
@@ -19,8 +86,9 @@ Betreiber festgelegt und hier dokumentiert.
 - **Fachlogik in `utils/` ohne UI** — mit blankem `node` prüfbar
   (Architektur-Regel, siehe unten).
 - **Lokaler State via `@react-native-async-storage/async-storage`** —
-  Lernfortschritt bleibt auf dem Gerät, keine Accounts, kein Netzwerk
-  (datenschutzfreundlich; die Datenschutzerklärung in `docs/` lebt davon).
+  Lernfortschritt und „Dein Urteil" bleiben auf dem Gerät, keine Accounts,
+  kein Netzwerk (datenschutzfreundlich; die Datenschutzerklärung in `docs/`
+  lebt davon).
 - **EAS Build remote-Credentials** (`credentialsSource: "remote"`): Keystore
   liegt bei EAS (@heilpraktikerdk/geschichte), Backup lokal unter
   `~/Documents/GitHub/@heilpraktikerdk__geschichte-keystore-backup/` und in
@@ -28,10 +96,14 @@ Betreiber festgelegt und hier dokumentiert.
 
 ## Architektur-Regel
 
-**Fachlogik gehört in `utils/` — ohne UI-Importe, mit blankem `node`
-prüfbar.** React-Komponenten (`components/`, `screens/`) bleiben dünn: sie
-holen Daten aus den utils, stellen sie dar und reichen Eingaben zurück.
-Diese Regel hält die App testbar und den Kopf frei für den Inhalt.
+**Fachlogik und Inhalte gehören in `utils/` — ohne UI-Importe, mit blankem
+`node` prüfbar.** React-Komponenten (`components/`, `screens/`) bleiben dünn:
+sie holen Daten aus den utils, stellen sie dar und reichen Eingaben zurück.
+
+Die **Themeninhalte** liegen als strukturierte Daten in `utils/themen/`
+(ein Modul pro Thema: Aufhänger, Perspektiven mit Attribution, Synthese,
+Urteils-Fragen, Quiz). Die Texte sind damit menschenlesbar (der Betreiber
+liest sie im Repo gegen) und testbar — getrennt von der UI.
 
 ## Prüf-Regel
 
@@ -74,7 +146,8 @@ aus dem Play Store hinkt den SDKs hinterher (siehe AGENTS.md). Zum Testen
 
 ## Status
 
-Stand: 2026-08-08 — Projekt-Setup abgeschlossen:
+Stand: 2026-08-08 — Projekt-Setup abgeschlossen, Inhaltsspezifikation V1
+steht (siehe oben):
 - Expo-SDK-57-Grundgerüst (package.json, App.js, app.json, eas.json)
 - GitHub-Repo public: https://github.com/stephanhink/Geschichte-begreifen
   (Pages-Workflow aktiv, docs/ mit Datenschutz-Platzhalter)
@@ -82,6 +155,7 @@ Stand: 2026-08-08 — Projekt-Setup abgeschlossen:
   (remote + lokales Backup), Platzhalter-Assets
 - `npm test` grün (Smoke-Tests in tests/alle.mjs)
 
-Nächster Schritt: Inhalt mit dem Betreiber besprechen (Zielgruppe, Epochen,
-Aufgabentypen), dann erste Claude-Code-Runde. Vorher muss der Betreiber
-`claude auth login` ausführen (Konto andreas@hink.de).
+Nächster Schritt: erste Claude-Code-Runde (Opus) — Themen-Struktur und
+`utils/themen/`-Schema aufsetzen, Modul „Römisches Reich" (westliche
+Perspektive) anlegen. Hermes ergänzt die chinesische Perspektive; Synthese
+gemeinsam.
