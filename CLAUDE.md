@@ -52,16 +52,20 @@ hier ist zugleich die Reihenfolge in der App (`utils/themen/index.js`):
 2. **China: Vom ersten Kaiser zu den großen Dynastien** — Qin, Han, Tang;
    die Seidenstraße als Faden zwischen den beiden größten Reichen der
    Antike. Steht bewusst direkt hinter Rom: Dieselbe Zeit, die andere
-   Seite. *(europäische Sicht fertig, chinesische offen)*
-3. **Germanen und Völkerwanderung** — Ausbreitung der Germanen in Europa,
+   Seite. *(fertig)*
+3. **Dschingis Khan und die Mongolen** — das größte zusammenhängende
+   Landreich der Geschichte, vom Kurultai 1206 bis zum Ende der Yuan 1368.
+   Folgt auf China, weil die Mongolen genau dessen Faden aufnehmen: Sie
+   machen aus der Seidenstraße erstmals einen Weg innerhalb eines einzigen
+   Reiches — und regieren am Ende China selbst.
+   *(europäische Sicht fertig, chinesische offen)*
+4. **Japan** — Entstehung, Machthaber, Ausdehnung.
+5. **Germanen und Völkerwanderung** — Ausbreitung der Germanen in Europa,
    was mit Rom danach geschah.
-4. **Die frühen Königreiche** — wie sie entstanden, welche Macht sie hatten.
-5. **Mittelalter** — Ordnung, Glaube, Handel; das Scharnier zur Neuzeit.
-6. **Ausblick Neuzeit** — die großen Umbrüche, als Brücke zu den nächsten
+6. **Die frühen Königreiche** — wie sie entstanden, welche Macht sie hatten.
+7. **Mittelalter** — Ordnung, Glaube, Handel; das Scharnier zur Neuzeit.
+8. **Ausblick Neuzeit** — die großen Umbrüche, als Brücke zu den nächsten
    Modulen.
-
-**Als Nächstes nach China (Entscheidung des Betreibers):** die Mongolen
-unter Dschingis Khan, danach Japan (Entstehung, Machthaber, Ausdehnung).
 
 **Spätere Module (Landkarte, noch ohne Termin):** Persien als großes Reich,
 das Osmanische Reich und der Mittlere Osten, Indonesien.
@@ -126,9 +130,11 @@ SVG-Koordinaten um (Projektion, Pfadglättung, Pfeilspitzen, Kartenpalette).
 Damit ist die Geografie im Repo nachschlagbar — und je Karte prüft eine
 Testdatei gegen den Atlas nach, ob bekannte Kaps und Meerengen auf der
 gezeichneten Küste liegen (`tests/karte.mjs` für Rom, `tests/karte-china.mjs`
-für China; letztere nimmt bewusst Koordinaten, die NICHT als Eckpunkte im
-Kartenmodul stehen, damit die gezeichnete Linie geprüft wird und nicht die
-abgeschriebene Zahl).
+für China, `tests/karte-dschingis.mjs` für die Mongolen; die beiden letzteren
+nehmen bewusst Koordinaten, die NICHT als Eckpunkte im Kartenmodul stehen,
+damit die gezeichnete Linie geprüft wird und nicht die abgeschriebene Zahl —
+dazu Kontrollpunkte im Binnenland, die gerade NICHT auf einer Küste liegen
+dürfen, sonst wäre die Probe durch bloße Punktdichte immer erfüllt).
 
 Daneben liegt in `utils/` die übrige Fachlogik, jeweils ohne UI-Import:
 `markdown.js` (zerlegt die Themen-Texte in Absätze, Überschriften,
@@ -198,7 +204,7 @@ aus dem Play Store hinkt den SDKs hinterher (siehe AGENTS.md). Zum Testen
 
 ## Status
 
-Stand: 2026-08-08 — Runde 4 abgeschlossen (Modul „China"):
+Stand: 2026-08-09 — Runde 5 abgeschlossen (Modul „Dschingis Khan"):
 - Projekt-Setup: Expo-SDK-57-Grundgerüst, EAS-Projekt
   @heilpraktikerdk/geschichte + Android-Keystore (remote + lokales Backup),
   Platzhalter-Assets, GitHub-Repo public
@@ -219,34 +225,55 @@ Stand: 2026-08-08 — Runde 4 abgeschlossen (Modul „China"):
   `components/abschnitte/KarteAbschnitt.js` (SVG-Karte, Phasen-Umschalter
   mit Ablauf-Knopf, antippbare Punkte mit Popup, Legende der Wanderungen)
 - Runde 4: das zweite Thema — „China: Vom ersten Kaiser zu den großen
-  Dynastien" (`utils/themen/china.js`, registriert als Modul 2). Vorerst
-  nur die europäische Sichtweise (Stimme: Opus): Serica, die Qin-Einigung,
-  die Han und Zhang Qian, die Tang und Chang'an, und zum Schluss die Frage,
-  warum Europa das kaum erzählt. Die Synthese ist ausdrücklich vorläufig
-  und benennt selbst, dass die chinesische Stimme noch fehlt.
-  Dazu `utils/themen/karten/china.js` (Ausschnitt 58–145° O, 14–55° N —
-  weit genug nach Westen für die ganze Seidenstraße; Küsten Chinas, Koreas,
-  Japans und Indiens als Atlas-Koordinaten, Große Mauer und Seidenstraße
-  als feste Linien, Wüsten Gobi und Taklamakan, drei Phasen 221 v. Chr. /
-  100 n. Chr. / 750 n. Chr., sechs Info-Punkte, drei Bewegungen) und
-  `tests/karte-china.mjs`. Neu in der Kartenpalette: `wueste`, `mauer`,
-  `route`.
-- `npm test` grün (526 Prüfungen)
+  Dynastien" (`utils/themen/china.js`, registriert als Modul 2). Erst die
+  europäische Sichtweise (Stimme: Opus): Serica, die Qin-Einigung, die Han
+  und Zhang Qian, die Tang und Chang'an, und zum Schluss die Frage, warum
+  Europa das kaum erzählt. Hermes hat die chinesische Sichtweise ergänzt;
+  die Synthese führt inzwischen beide Stimmen zusammen — das Thema ist
+  fertig. Dazu `utils/themen/karten/china.js` (Ausschnitt 58–145° O,
+  14–55° N — weit genug nach Westen für die ganze Seidenstraße; Küsten
+  Chinas, Koreas, Japans und Indiens als Atlas-Koordinaten, Große Mauer und
+  Seidenstraße als feste Linien, Wüsten Gobi und Taklamakan, drei Phasen
+  221 v. Chr. / 100 n. Chr. / 750 n. Chr., sechs Info-Punkte, drei
+  Bewegungen) und `tests/karte-china.mjs`. Neu in der Kartenpalette:
+  `wueste`, `mauer`, `route`.
+- Runde 5: das dritte Thema — „Dschingis Khan und die Mongolen"
+  (`utils/themen/dschingis-khan.js`, registriert als Modul 3). Vorerst nur
+  die europäische Sichtweise (Stimme: Opus): 1241 der „Gotteszorn" vor
+  Liegnitz, die Rettung durch einen Todesfall (und was diese Erzählung
+  verschweigt), die Pax Mongolica, Marco Polo und das Staunen, das keiner
+  glaubte, und zum Schluss die zwei Bilder — Zerstörer und Wegbereiter. Die
+  Synthese ist ausdrücklich vorläufig und benennt selbst, dass die
+  chinesische Stimme zur Yuan-Zeit noch fehlt.
+  Dazu `utils/themen/karten/dschingis-khan.js` — der bisher größte
+  Ausschnitt (8–143° O, 20–58° N, 700 × 253,5): Liegnitz und Dadu passen
+  nur so auf ein Bild, und genau das ist die Aussage. Küsten vom Mittelmeer
+  bis Japan als Atlas-Koordinaten, Kaspisches Meer / Aralsee / Ostsee /
+  Rotes Meer als eigene Wasserflächen, vierzehn Flüsse, Große Mauer und die
+  Seidenstraße bis ans Schwarze Meer, vier Phasen (1206 Kurultai / 1227 Tod
+  Dschingis Khans / 1259 Höhepunkt mit Großkhanat, Goldener Horde und
+  Ilchanat / 1294 Yuan und Teilreiche), sechs Info-Punkte (Karakorum, Dadu,
+  Samarkand, Bagdad, Liegnitz, Kaffa) und vier Feldzüge. Dazu
+  `tests/karte-dschingis.mjs`. Neu in der Kartenpalette: eine vierte
+  Bewegungsfarbe — bei drei hätten zwei Feldzüge dieselbe bekommen.
+- `npm test` grün (647 Prüfungen)
 
 Nächste Schritte (Landkarte, noch offen):
-- **Die chinesische Sichtweise zu „China" (Hermes)** — danach die Synthese
-  gemeinsam neu schreiben; der Platzhaltertext in `utils/themen/china.js`
-  sagt das auch in der App offen.
-- **Am Gerät gegenlesen:** Beide Karten sind rechnerisch gegen den Atlas
-  geprüft, aber noch nicht auf einem Handy gesehen. Vor allem
+- **Die chinesische Sichtweise zu „Dschingis Khan" (Hermes)** — die
+  Yuan-Zeit von innen: War Kublai rechtmäßiger Kaiser oder Besatzer? Danach
+  die Synthese gemeinsam neu schreiben; der Platzhaltertext in
+  `utils/themen/dschingis-khan.js` sagt das auch in der App offen.
+- **Am Gerät gegenlesen:** Alle drei Karten sind rechnerisch gegen den
+  Atlas geprüft, aber noch nicht auf einem Handy gesehen. Vor allem
   Schriftgrößen und Trefferflächen der Punkte gehören auf einem kleinen
-  Bildschirm beurteilt (`npm start`, Expo Go). Die China-Karte ist
-  deutlich breiter als die römische (700 × 400 statt 700 × 548) — ob die
-  Beschriftungen da noch lesbar sind, entscheidet das Gerät.
+  Bildschirm beurteilt (`npm start`, Expo Go). Die Mongolen-Karte ist mit
+  700 × 253,5 das flachste, breiteste Bild der App (Rom 700 × 548, China
+  700 × 400): fünfzehn Beschriftungen und sechs Ortsnamen auf einem
+  schmalen Band — ob sich das überschneidet, entscheidet das Gerät.
 - **Zeitleisten** — der zweite Teil von „Geschichte in Bewegung"; die
   Karten decken bisher nur den Raum ab, nicht die Zeit.
-- **Weitere Themen** nach der Themenlandkarte: Dschingis Khan, Japan,
-  Germanen und Völkerwanderung, frühe Königreiche, Mittelalter, Ausblick
-  Neuzeit — jeweils westliche Sicht von Opus, östliche von Hermes,
-  Synthese gemeinsam. Karten sind dabei optional: Themen ohne `karte`
-  überspringen den Abschnitt.
+- **Weitere Themen** nach der Themenlandkarte: Japan, Germanen und
+  Völkerwanderung, frühe Königreiche, Mittelalter, Ausblick Neuzeit —
+  jeweils westliche Sicht von Opus, östliche von Hermes, Synthese
+  gemeinsam. Karten sind dabei optional: Themen ohne `karte` überspringen
+  den Abschnitt.

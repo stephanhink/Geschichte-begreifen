@@ -46,8 +46,14 @@ const KARTENFARBEN = {
   punktRand: '#FFF8ED',
   schriftLand: '#6B5636',
   schriftWasser: '#5E7F92',
-  /** Ein Ton je Bewegung (Völkerwanderung) — reihum vergeben. */
-  bewegung: ['#9A4A28', '#4F5F3A', '#5A4A78'],
+  /**
+   * Ein Ton je Bewegung (Völkerwanderung, Feldzüge) — reihum vergeben.
+   *
+   * Vier Töne, seit die Karte zu „Dschingis Khan" vier Feldzüge nebeneinander
+   * zeigt: Bei nur drei Farben hätten zwei Routen dieselbe bekommen, und die
+   * Legende hätte nicht mehr eindeutig auf die Linie gezeigt.
+   */
+  bewegung: ['#9A4A28', '#4F5F3A', '#5A4A78', '#2F6B70'],
 };
 
 /** Rundet auf eine Nachkommastelle — hält die Pfad-Zeichenketten kurz. */

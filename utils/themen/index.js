@@ -6,22 +6,28 @@
 // nicht an.
 //
 // Die Reihenfolge im Array ist die Reihenfolge in der App (Themenlandkarte
-// aus CLAUDE.md: Rom → China → Germanen/Völkerwanderung → frühe Königreiche →
-// Mittelalter → Ausblick Neuzeit).
+// aus CLAUDE.md: Rom → China → Dschingis Khan → Japan →
+// Germanen/Völkerwanderung → frühe Königreiche → Mittelalter →
+// Ausblick Neuzeit).
 //
 // China steht bewusst direkt hinter Rom: Beide Reiche waren zur selben Zeit
 // ungefähr gleich groß, und die Seidenstraße verbindet sie auf der Karte.
 // Wer Rom gelesen hat, sieht im nächsten Kapitel dieselbe Zeit von der
 // anderen Seite.
 //
+// Dschingis Khan folgt auf China, weil die Mongolen genau den Faden aufnehmen,
+// der dort gesponnen wurde: Sie machen aus der Seidenstraße erstmals einen Weg
+// innerhalb eines einzigen Reiches — und regieren am Ende China selbst.
+//
 // CommonJS, damit dieselbe Datei mit blankem `node` prüfbar ist und von
 // Metro/Babel in der App geladen werden kann (siehe schema.js).
 
 const roemischesReich = require('./roemisches-reich');
 const china = require('./china');
+const dschingisKhan = require('./dschingis-khan');
 
 /** Alle Themen in der Reihenfolge der Themenlandkarte. */
-const alleThemen = [roemischesReich, china];
+const alleThemen = [roemischesReich, china, dschingisKhan];
 
 /**
  * Sucht ein Thema anhand seiner id.
