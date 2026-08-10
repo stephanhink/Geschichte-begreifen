@@ -19,15 +19,21 @@
 // der dort gesponnen wurde: Sie machen aus der Seidenstraße erstmals einen Weg
 // innerhalb eines einzigen Reiches — und regieren am Ende China selbst.
 //
+// Japan schließt direkt an: Es ist der einzige Nachbar, den Kublai Khan nicht
+// bekam — zweimal scheiterte seine Flotte an einem Taifun. Wer die Kapitel der
+// Reihe nach liest, kommt also über die abgebrochene Invasion ins nächste Land
+// und sieht dort dieselben Jahre 1274 und 1281 von der anderen Küste aus.
+//
 // CommonJS, damit dieselbe Datei mit blankem `node` prüfbar ist und von
 // Metro/Babel in der App geladen werden kann (siehe schema.js).
 
 const roemischesReich = require('./roemisches-reich');
 const china = require('./china');
 const dschingisKhan = require('./dschingis-khan');
+const japan = require('./japan');
 
 /** Alle Themen in der Reihenfolge der Themenlandkarte. */
-const alleThemen = [roemischesReich, china, dschingisKhan];
+const alleThemen = [roemischesReich, china, dschingisKhan, japan];
 
 /**
  * Sucht ein Thema anhand seiner id.

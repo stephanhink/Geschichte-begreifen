@@ -57,9 +57,13 @@ hier ist zugleich die Reihenfolge in der App (`utils/themen/index.js`):
    Landreich der Geschichte, vom Kurultai 1206 bis zum Ende der Yuan 1368.
    Folgt auf China, weil die Mongolen genau dessen Faden aufnehmen: Sie
    machen aus der Seidenstraße erstmals einen Weg innerhalb eines einzigen
-   Reiches — und regieren am Ende China selbst.
-   *(europäische Sicht fertig, chinesische offen)*
-4. **Japan** — Entstehung, Machthaber, Ausdehnung.
+   Reiches — und regieren am Ende China selbst. *(fertig)*
+4. **Japan — die Inselwelt zwischen Abschottung und Öffnung** — von der
+   Yamato-Zeit bis zur Meiji-Restauration 1868. Schließt direkt an die
+   Mongolen an: Japan ist der einzige Nachbar, den Kublai Khan nicht bekam;
+   1274 und 1281 zerschlug beide Male ein Taifun seine Flotte. Danach ist
+   das Meer nicht mehr Grenze, sondern Thema — es trennt und verbindet
+   zugleich. *(europäische Sicht fertig, chinesische offen)*
 5. **Germanen und Völkerwanderung** — Ausbreitung der Germanen in Europa,
    was mit Rom danach geschah.
 6. **Die frühen Königreiche** — wie sie entstanden, welche Macht sie hatten.
@@ -130,11 +134,14 @@ SVG-Koordinaten um (Projektion, Pfadglättung, Pfeilspitzen, Kartenpalette).
 Damit ist die Geografie im Repo nachschlagbar — und je Karte prüft eine
 Testdatei gegen den Atlas nach, ob bekannte Kaps und Meerengen auf der
 gezeichneten Küste liegen (`tests/karte.mjs` für Rom, `tests/karte-china.mjs`
-für China, `tests/karte-dschingis.mjs` für die Mongolen; die beiden letzteren
-nehmen bewusst Koordinaten, die NICHT als Eckpunkte im Kartenmodul stehen,
-damit die gezeichnete Linie geprüft wird und nicht die abgeschriebene Zahl —
-dazu Kontrollpunkte im Binnenland, die gerade NICHT auf einer Küste liegen
-dürfen, sonst wäre die Probe durch bloße Punktdichte immer erfüllt).
+für China, `tests/karte-dschingis.mjs` für die Mongolen, `tests/karte-japan.mjs`
+für Japan; die drei letzteren nehmen bewusst Koordinaten, die NICHT als
+Eckpunkte im Kartenmodul stehen, damit die gezeichnete Linie geprüft wird und
+nicht die abgeschriebene Zahl — dazu Kontrollpunkte im Binnenland bzw. auf
+offener See, die gerade NICHT auf einer Küste liegen dürfen, sonst wäre die
+Probe durch bloße Punktdichte immer erfüllt. Die Toleranz richtet sich nach
+dem Maßstab: ein Längengrad bei der weiten Eurasien-Karte, 0,6 bei der
+feineren Japan-Karte).
 
 Daneben liegt in `utils/` die übrige Fachlogik, jeweils ohne UI-Import:
 `markdown.js` (zerlegt die Themen-Texte in Absätze, Überschriften,
@@ -204,7 +211,7 @@ aus dem Play Store hinkt den SDKs hinterher (siehe AGENTS.md). Zum Testen
 
 ## Status
 
-Stand: 2026-08-09 — Runde 5 abgeschlossen (Modul „Dschingis Khan"):
+Stand: 2026-08-10 — Runde 6 abgeschlossen (Modul „Japan"):
 - Projekt-Setup: Expo-SDK-57-Grundgerüst, EAS-Projekt
   @heilpraktikerdk/geschichte + Android-Keystore (remote + lokales Backup),
   Platzhalter-Assets, GitHub-Repo public
@@ -238,13 +245,13 @@ Stand: 2026-08-09 — Runde 5 abgeschlossen (Modul „Dschingis Khan"):
   Bewegungen) und `tests/karte-china.mjs`. Neu in der Kartenpalette:
   `wueste`, `mauer`, `route`.
 - Runde 5: das dritte Thema — „Dschingis Khan und die Mongolen"
-  (`utils/themen/dschingis-khan.js`, registriert als Modul 3). Vorerst nur
-  die europäische Sichtweise (Stimme: Opus): 1241 der „Gotteszorn" vor
+  (`utils/themen/dschingis-khan.js`, registriert als Modul 3). Erst die
+  europäische Sichtweise (Stimme: Opus): 1241 der „Gotteszorn" vor
   Liegnitz, die Rettung durch einen Todesfall (und was diese Erzählung
   verschweigt), die Pax Mongolica, Marco Polo und das Staunen, das keiner
-  glaubte, und zum Schluss die zwei Bilder — Zerstörer und Wegbereiter. Die
-  Synthese ist ausdrücklich vorläufig und benennt selbst, dass die
-  chinesische Stimme zur Yuan-Zeit noch fehlt.
+  glaubte, und zum Schluss die zwei Bilder — Zerstörer und Wegbereiter.
+  Hermes hat die chinesische Sichtweise auf die Yuan-Zeit ergänzt; die
+  Synthese führt inzwischen beide Stimmen zusammen — das Thema ist fertig.
   Dazu `utils/themen/karten/dschingis-khan.js` — der bisher größte
   Ausschnitt (8–143° O, 20–58° N, 700 × 253,5): Liegnitz und Dadu passen
   nur so auf ein Bild, und genau das ist die Aussage. Küsten vom Mittelmeer
@@ -256,23 +263,45 @@ Stand: 2026-08-09 — Runde 5 abgeschlossen (Modul „Dschingis Khan"):
   Samarkand, Bagdad, Liegnitz, Kaffa) und vier Feldzüge. Dazu
   `tests/karte-dschingis.mjs`. Neu in der Kartenpalette: eine vierte
   Bewegungsfarbe — bei drei hätten zwei Feldzüge dieselbe bekommen.
-- `npm test` grün (647 Prüfungen)
+- Runde 6: das vierte Thema — „Japan — die Inselwelt zwischen Abschottung
+  und Öffnung" (`utils/themen/japan.js`, registriert als Modul 4). Vorerst
+  nur die europäische Sichtweise (Stimme: Opus): 1543 der Sturm, der zwei
+  Feuerwaffen nach Tanegashima bringt (und was Japan daraus machte), Franz
+  Xaver und die 300 000 Christen, warum Japan die Tür zuzog (mit dem
+  Hinweis, dass das Wort „Sakoku" erst 1801 erfunden wurde und die
+  Abschottung nur gegen Europa galt), zweihundert Jahre Gerücht durch ein
+  Fenster von 120 × 75 Metern, der Japonismus, Perrys schwarze Schiffe, die
+  Iwakura-Mission und Tsushima 1905 — samt der unbequemen Fortsetzung
+  (Taiwan 1895, Korea 1910). Die Synthese ist ausdrücklich vorläufig und
+  benennt selbst, dass die chinesische Stimme noch fehlt.
+  Die Karte `utils/themen/karten/japan.js` stammt von Hermes (Ausschnitt
+  119–146° O, 28–46° N, 700 × 584,3 — das hochformatigste Bild der App):
+  der Archipel als getrennte Landmassen, dazu Korea und die ostchinesische
+  Küste, vier Phasen (um 600 Yamato / 1274 und 1281 die Mongolen / um 1700
+  Sakoku / 1868 Meiji mit Hokkaido), sechs Info-Punkte (Nara, Kyoto,
+  Kamakura, Edo, Dejima, Tsushima) und vier Bewegungen — der Weg des
+  Wissens vom Festland, beide Invasionsflotten und Perry 1853. Dazu
+  `tests/karte-japan.mjs`; dessen Atlas-Probe arbeitet mit 0,6 Grad
+  Toleranz statt einem, weil diese Karte rund fünfmal feiner ist als die
+  Eurasien-Karte.
+- `npm test` grün (759 Prüfungen)
 
 Nächste Schritte (Landkarte, noch offen):
-- **Die chinesische Sichtweise zu „Dschingis Khan" (Hermes)** — die
-  Yuan-Zeit von innen: War Kublai rechtmäßiger Kaiser oder Besatzer? Danach
-  die Synthese gemeinsam neu schreiben; der Platzhaltertext in
-  `utils/themen/dschingis-khan.js` sagt das auch in der App offen.
-- **Am Gerät gegenlesen:** Alle drei Karten sind rechnerisch gegen den
+- **Die chinesische Sichtweise zu „Japan" (Hermes)** — der Nachbar, der
+  über Jahrhunderte Schrift, Glauben und Verwaltung übernahm und 1894 den
+  eigenen Lehrer besiegte. Danach die Synthese gemeinsam neu schreiben; der
+  Platzhaltertext in `utils/themen/japan.js` sagt das auch in der App offen.
+- **Am Gerät gegenlesen:** Alle vier Karten sind rechnerisch gegen den
   Atlas geprüft, aber noch nicht auf einem Handy gesehen. Vor allem
   Schriftgrößen und Trefferflächen der Punkte gehören auf einem kleinen
-  Bildschirm beurteilt (`npm start`, Expo Go). Die Mongolen-Karte ist mit
-  700 × 253,5 das flachste, breiteste Bild der App (Rom 700 × 548, China
-  700 × 400): fünfzehn Beschriftungen und sechs Ortsnamen auf einem
-  schmalen Band — ob sich das überschneidet, entscheidet das Gerät.
+  Bildschirm beurteilt (`npm start`, Expo Go). Die beiden Extremfälle
+  liegen jetzt vor: die Mongolen-Karte mit 700 × 253,5 als flachstes,
+  breitestes Band und die Japan-Karte mit 700 × 584,3 als hochformatigstes
+  Bild (Rom 700 × 548, China 700 × 400). Ob die Beschriftungen dort
+  überlappen, entscheidet das Gerät.
 - **Zeitleisten** — der zweite Teil von „Geschichte in Bewegung"; die
   Karten decken bisher nur den Raum ab, nicht die Zeit.
-- **Weitere Themen** nach der Themenlandkarte: Japan, Germanen und
+- **Weitere Themen** nach der Themenlandkarte: Germanen und
   Völkerwanderung, frühe Königreiche, Mittelalter, Ausblick Neuzeit —
   jeweils westliche Sicht von Opus, östliche von Hermes, Synthese
   gemeinsam. Karten sind dabei optional: Themen ohne `karte` überspringen
