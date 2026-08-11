@@ -24,6 +24,12 @@
 // Reihe nach liest, kommt also über die abgebrochene Invasion ins nächste Land
 // und sieht dort dieselben Jahre 1274 und 1281 von der anderen Küste aus.
 //
+// „Israel und Palästina" steht als fünftes und damit am Ende der bisherigen
+// Reihe — mit Absicht. Wer die vier Kapitel davor gelesen hat, hat viermal
+// geübt, dass dieselben Ereignisse je nach Standpunkt anders klingen, an
+// Themen, bei denen einem das leichtfällt. Hier fällt es schwer. Deshalb
+// kommt es zuletzt und nicht zuerst.
+//
 // CommonJS, damit dieselbe Datei mit blankem `node` prüfbar ist und von
 // Metro/Babel in der App geladen werden kann (siehe schema.js).
 
@@ -31,9 +37,10 @@ const roemischesReich = require('./roemisches-reich');
 const china = require('./china');
 const dschingisKhan = require('./dschingis-khan');
 const japan = require('./japan');
+const israelPalaestina = require('./israel-palaestina');
 
 /** Alle Themen in der Reihenfolge der Themenlandkarte. */
-const alleThemen = [roemischesReich, china, dschingisKhan, japan];
+const alleThemen = [roemischesReich, china, dschingisKhan, japan, israelPalaestina];
 
 /**
  * Sucht ein Thema anhand seiner id.
