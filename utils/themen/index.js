@@ -37,6 +37,12 @@
 // die Sieger geschrieben, sondern die Verlierer. Die Gewinner hinterließen
 // Gräber statt Chroniken.
 //
+// „Die frühen Königreiche" nimmt als siebtes genau dort den Faden auf: Die
+// Wanderung ist zu Ende, die Eroberer sitzen im Land — und müssen es
+// regieren. Die Perspektiven-Achse dreht sich dabei zum ersten Mal von außen
+// nach innen: Es stehen sich nicht zwei Länder gegenüber, sondern oben und
+// unten im selben Land (Höfe und Chronisten gegen die Dörfer).
+//
 // CommonJS, damit dieselbe Datei mit blankem `node` prüfbar ist und von
 // Metro/Babel in der App geladen werden kann (siehe schema.js).
 
@@ -46,6 +52,7 @@ const dschingisKhan = require('./dschingis-khan');
 const japan = require('./japan');
 const israelPalaestina = require('./israel-palaestina');
 const germanen = require('./germanen');
+const koenigreiche = require('./koenigreiche');
 
 /** Alle Themen in der Reihenfolge der Themenlandkarte. */
 const alleThemen = [
@@ -55,6 +62,7 @@ const alleThemen = [
   japan,
   israelPalaestina,
   germanen,
+  koenigreiche,
 ];
 
 /**

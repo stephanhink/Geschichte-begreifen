@@ -96,11 +96,27 @@ hier ist zugleich die Reihenfolge in der App (`utils/themen/index.js`):
    haben nicht die Sieger geschrieben, sondern die Verlierer: Das Reich, das
    unterging, hatte die Bibliotheken; die Gewinner hinterließen Gräber,
    Schmuck und Waffen, aber keine Chroniken.
-   *(römisch-mediterrane Sicht fertig, germanische offen)*
-7. **Die frühen Königreiche** — wie sie entstanden, welche Macht sie hatten.
+   *(fertig)*
+7. **Die frühen Königreiche — wie aus Eroberern Herrscher wurden** — von 476
+   bis zur Kaiserkrönung Karls des Großen 800. Nimmt den Faden der Germanen
+   genau dort auf, wo die Wanderung endet: Die Eroberer sitzen im Land und
+   müssen es regieren. Hier dreht sich die Perspektiven-Achse zum ersten Mal
+   von außen nach innen — es stehen sich nicht zwei Länder gegenüber, sondern
+   oben und unten im selben Land: die Höfe und Chronisten, die schreiben
+   ließen, gegen die Dörfer, in denen neun von zehn Menschen lebten.
+   *(Sicht der Chronisten fertig, Sicht aus den Dörfern offen)*
 8. **Mittelalter** — Ordnung, Glaube, Handel; das Scharnier zur Neuzeit.
 9. **Ausblick Neuzeit** — die großen Umbrüche, als Brücke zu den nächsten
    Modulen.
+
+**Der Neuzeit-Bogen danach** ist inzwischen vom Betreiber ausbuchstabiert und
+steht in `notizen/kapitel-planung.md`: neun Kapitel von „Vom Mittelalter zur
+Neuzeit" über die Eroberung Amerikas, den Dreißigjährigen Krieg, die USA und
+die Vertreibung der Indianer, Revolution und Napoleon, den Weg zum Ersten
+Weltkrieg (mit der Kriegsschuldfrage als multiperspektivischem Herzstück und
+dem Abschnitt „Was 1914 uns heute lehrt") bis zum Zweiten Weltkrieg und der
+neuen Weltordnung. Wer eines dieser Kapitel beginnt, liest die Datei zuerst —
+sie enthält Vorgaben, die aus der Themenlandkarte allein nicht hervorgehen.
 
 **Spätere Module (Landkarte, noch ohne Termin):** Persien als großes Reich,
 das Osmanische Reich und der Mittlere Osten, Indonesien.
@@ -244,8 +260,7 @@ aus dem Play Store hinkt den SDKs hinterher (siehe AGENTS.md). Zum Testen
 
 ## Status
 
-Stand: 2026-08-12 — Runde 8 abgeschlossen (Modul „Germanen und
-Völkerwanderung"):
+Stand: 2026-08-12 — Runde 9 abgeschlossen (Modul „Die frühen Königreiche"):
 - Projekt-Setup: Expo-SDK-57-Grundgerüst, EAS-Projekt
   @heilpraktikerdk/geschichte + Android-Keystore (remote + lokales Backup),
   Platzhalter-Assets, GitHub-Repo public
@@ -359,8 +374,8 @@ Völkerwanderung"):
   (Transformation gegen Absturz des Lebensstandards); und zum Schluss das
   Wort selbst — „Völkerwanderung" gegen „Barbareneinfälle", dazu die
   Zahlen (Zehntausende, nicht Millionen) und die Sieger, die dazugehören
-  wollten. Die Synthese ist ausdrücklich vorläufig und sagt, woran man die
-  fehlende Stimme erkennt: Kein Satz im Kapitel stammt von einem Goten.
+  wollten. Hermes hat die germanische Sichtweise ergänzt; die Synthese führt
+  inzwischen beide Stimmen zusammen — das Thema ist fertig (Commit 6fb075f).
   Die Karte `utils/themen/karten/germanen.js` stammt von Hermes (Ausschnitt
   10° W–45° O, 32–58° N, 700 × 468): Küsten vom Atlantik bis zum Asowschen
   Meer, zehn Flüsse, Rhein–Limes–Donau als eigene dunkle Linie über dem
@@ -374,31 +389,79 @@ Völkerwanderung"):
   abgetastet, dass ein ganzer Grad hier nichts mehr bewiese) und acht
   Kontrollpunkte, die gerade NICHT auf einer Küste liegen dürfen — der
   erste davon mitten in Germanien.
-- `npm test` grün (1019 Prüfungen)
+- Runde 9: das siebte Thema — „Die frühen Königreiche — wie aus Eroberern
+  Herrscher wurden" (`utils/themen/koenigreiche.js`, registriert als Modul 7).
+  Vorerst nur die Sicht der Chronisten und Königshöfe (Stimme: Opus). Die
+  Achse ist hier zum ersten Mal keine geografische, sondern eine soziale:
+  oben gegen unten. Inhalt: die Trümmerkarte nach 476 und die Frage, wie man
+  ein Königreich zusammenhält, wenn ein Heer nur einem Mann folgt;
+  Gefolgschaft als teures Band und die Rechnung, die aufgeht, solange es
+  Beute gibt; die Taufe als Werkzeug (Chlodwig um 496 in Reims — katholisch,
+  während Goten, Vandalen und Burgunder Arianer waren; Reccared 589 in
+  Toledo; Æthelberht 597 samt seiner längst christlichen Frau Bertha); die
+  Kirche als Erbin der Verwaltung (Bischöfe aus den alten Familien, Diözesen
+  auf römischen Bezirken, die Lex Salica auf Latein, Könige, die nicht
+  schreiben konnten); Theoderich in Ravenna samt Cassiodors Programm und der
+  Hinrichtung des Boethius; die Schattenseite aus denselben Chroniken
+  (Chlodwigs Verwandtenmorde bei Gregor von Tours, die Bruderkriege, das Ende
+  Brunhilds 613); 751 Pippins Frage an den Papst und die Salbung; 800 die
+  Kaiserkrönung, Einhards Überraschungs-Behauptung und der Blick aus
+  Konstantinopel. Die Synthese ist ausdrücklich vorläufig und benennt, was
+  diese Lücke von den bisherigen unterscheidet: Die Perspektiven liegen nicht
+  nebeneinander, sondern übereinander.
+  Die Karte `utils/themen/karten/koenigreiche.js` stammt von Hermes
+  (Ausschnitt 11° W–32° O, 33–57° N, 700 × 552,5 — mit 16,3 Einheiten je
+  Längengrad die feinste der drei Europakarten, damit Reims, Tours,
+  Canterbury und Aachen keine Stecknadelköpfe werden): zehn Flüsse, die alte
+  Reichsgrenze aus Rhein und Donau als blasse Linie über dem Untergrund, vier
+  Phasen (476 Trümmerkarte / um 526 die stehenden Königreiche / um 600 nach
+  Justinian und den Langobarden / 800 Kaiserkrönung), sieben Info-Punkte
+  (Reims, Tours, Ravenna, Rom, Canterbury, Aachen, Toledo) und drei
+  Bewegungen (Chlodwigs Weg 486–507, die Mission des Augustinus 596/597, Karl
+  nach Italien 773/774 und 800). Auch hier gilt: Wo es keine Herrschaft mit
+  Grenzen gab, steht keine Fläche — das Land östlich des Rheins bleibt 476
+  leer. Dazu `tests/karte-koenigreiche.mjs`: 19 Atlas-Landmarken mit 0,6 Grad
+  Toleranz (jede davon mindestens 0,1 Grad neben dem nächsten Eckpunkt des
+  Kartenmoduls, damit die gezeichnete Linie geprüft wird und nicht die
+  abgeschriebene Zahl), acht Kontrollpunkte abseits jeder Küste — und die
+  Aussage des Kapitels als Rechnung: Das fränkische Gebiet muss über alle
+  vier Phasen wachsen, Ostrom auf jeder Phase stehen und dabei kleiner
+  werden, und die Bewegungen müssen an denselben Koordinaten hängen wie die
+  Info-Punkte (Mission von Rom nach Canterbury, Karl von Aachen nach Rom).
+- `npm test` grün (1160 Prüfungen)
 
-Die fünf Module Rom, China, Dschingis Khan, Japan und Israel/Palästina haben
-beide Stimmen und eine echte Synthese; bei den Germanen fehlt die zweite noch.
+Die sechs Module Rom, China, Dschingis Khan, Japan, Israel/Palästina und
+Germanen haben beide Stimmen und eine echte Synthese; bei den Königreichen
+fehlt die zweite noch.
 
 Nächste Schritte (Landkarte, noch offen):
-- **Die germanische Sichtweise (Hermes)** — dieselben Jahrhunderte von der
-  anderen Seite der Grenze: nicht das Ende eines Reiches, sondern der Beginn
-  eines Lebens an einem neuen Ort. Ohne Chroniken, dafür mit Gräbern,
-  Siedlungen, Sprache und den Rechtsaufzeichnungen der neuen Königreiche —
-  und mit der Frage, ob eine Gesellschaft ohne Steuerlisten und Stadtmauern
-  rückständig oder nur anders geordnet ist. Danach die Synthese gemeinsam
-  neu schreiben; bis dahin sagt sie in der App offen, dass eine Stimme fehlt.
-- **Am Gerät gegenlesen:** Alle sechs Karten sind rechnerisch gegen den
+- **Die Sicht aus den Dörfern (Hermes)** — die Stimme der Namenlosen zu den
+  frühen Königreichen: Was änderte sich für ein Dorf, wenn der Herr in der
+  Ferne plötzlich anders hieß? Merkte man den Wechsel von einem Reich zum
+  nächsten überhaupt — oder nur daran, wer die Abgaben abholte? Was hat die
+  Kirche den Dörfern gebracht außer Abgaben? Quellen gibt es kaum Erzählende,
+  dafür Urbare, Grabfunde, Siedlungsarchäologie und Ortsnamen.
+- **Am Gerät gegenlesen:** Alle sieben Karten sind rechnerisch gegen den
   Atlas geprüft, aber noch nicht auf einem Handy gesehen. Vor allem
   Schriftgrößen und Trefferflächen der Punkte gehören auf einem kleinen
   Bildschirm beurteilt (`npm start`, Expo Go). Die Extremfälle liegen jetzt
   vor: die Mongolen-Karte mit 700 × 253,5 als flachstes, breitestes Band und
   die Levante-Karte mit 700 × 905,5 als schmalstes, höchstes (Japan
-  700 × 584,3, Rom 700 × 548, Germanen 700 × 468, China 700 × 400). Ob die
-  Beschriftungen dort überlappen — und ob ein so hohes Bild auf einem Handy
-  überhaupt in einem Stück lesbar ist —, entscheidet das Gerät.
+  700 × 584,3, Königreiche 700 × 552,5, Rom 700 × 548, Germanen 700 × 468,
+  China 700 × 400). Ob die Beschriftungen dort überlappen — und ob ein so
+  hohes Bild auf einem Handy überhaupt in einem Stück lesbar ist —,
+  entscheidet das Gerät. Für die Königreiche-Karte liegt schon ein Hinweis
+  vor: `node tools/pruef-koenigreiche.mjs` (Wegwerf-Skript, nicht Teil von
+  `npm test`) meldet vier mögliche Überlappungen von Beschriftungen —
+  „Frankenreich"/Aachen, „Burgunder"/„Langobarden", „Ostgoten"/„Donau" und
+  Canterbury/Aachen. Ob sie wirklich stören, zeigt erst der Bildschirm.
 - **Zeitleisten** — der zweite Teil von „Geschichte in Bewegung"; die
   Karten decken bisher nur den Raum ab, nicht die Zeit.
-- **Weitere Themen** nach der Themenlandkarte: frühe Königreiche,
-  Mittelalter, Ausblick Neuzeit — jeweils die eine Sicht von Opus, die
-  andere von Hermes, Synthese gemeinsam. Karten sind dabei optional: Themen
-  ohne `karte` überspringen den Abschnitt.
+- **Weitere Themen** nach der Themenlandkarte: Mittelalter, Ausblick
+  Neuzeit — und danach der ausbuchstabierte Neuzeit-Bogen aus
+  `notizen/kapitel-planung.md` (Amerika, Dreißigjähriger Krieg, USA und die
+  Vertreibung der Indianer, Napoleon, Erster Weltkrieg mit der
+  Kriegsschuldfrage, Weimar, Zweiter Weltkrieg). Jeweils die eine Sicht von
+  Opus, die andere von Hermes, Synthese gemeinsam; beim Ersten Weltkrieg
+  sind ausdrücklich mehr als zwei Stimmen vorgesehen. Karten sind dabei
+  optional: Themen ohne `karte` überspringen den Abschnitt.
