@@ -88,9 +88,15 @@ hier ist zugleich die Reihenfolge in der App (`utils/themen/index.js`):
    viermal an leichteren Themen geübt, dass dieselben Ereignisse je nach
    Standpunkt anders klingen. Hier fällt das schwer, und hier ist die
    Multiperspektivität nicht Methode, sondern der Gegenstand selbst.
-   *(israelisch-jüdische Sicht fertig, palästinensisch-arabische offen)*
+   *(fertig)*
 6. **Germanen und Völkerwanderung** — Ausbreitung der Germanen in Europa,
-   was mit Rom danach geschah.
+   was mit Rom danach geschah. Schließt den Bogen zurück zum ersten Kapitel:
+   dieselben Jahrhunderte wie „Das Römische Reich", nur von der Grenze aus
+   statt aus der Mitte. Und es dreht die Leitidee der App einmal um — hier
+   haben nicht die Sieger geschrieben, sondern die Verlierer: Das Reich, das
+   unterging, hatte die Bibliotheken; die Gewinner hinterließen Gräber,
+   Schmuck und Waffen, aber keine Chroniken.
+   *(römisch-mediterrane Sicht fertig, germanische offen)*
 7. **Die frühen Königreiche** — wie sie entstanden, welche Macht sie hatten.
 8. **Mittelalter** — Ordnung, Glaube, Handel; das Scharnier zur Neuzeit.
 9. **Ausblick Neuzeit** — die großen Umbrüche, als Brücke zu den nächsten
@@ -238,7 +244,8 @@ aus dem Play Store hinkt den SDKs hinterher (siehe AGENTS.md). Zum Testen
 
 ## Status
 
-Stand: 2026-08-11 — Runde 7 abgeschlossen (Modul „Israel und Palästina"):
+Stand: 2026-08-12 — Runde 8 abgeschlossen (Modul „Germanen und
+Völkerwanderung"):
 - Projekt-Setup: Expo-SDK-57-Grundgerüst, EAS-Projekt
   @heilpraktikerdk/geschichte + Android-Keystore (remote + lokales Backup),
   Platzhalter-Assets, GitHub-Repo public
@@ -315,7 +322,7 @@ Stand: 2026-08-11 — Runde 7 abgeschlossen (Modul „Israel und Palästina"):
   Eurasien-Karte.
 - Runde 7: das fünfte Thema — „Israel und Palästina — ein Land, zwei
   Narrative" (`utils/themen/israel-palaestina.js`, registriert als Modul 5).
-  Vorerst nur die israelisch-jüdische Sichtweise (Stimme: Opus): die Bindung
+  Zuerst die israelisch-jüdische Sichtweise (Stimme: Opus): die Bindung
   ans Land von Abraham bis zum Zweiten Tempel, 70 n. Chr. und Hadrians
   Umbenennung, zweitausend Jahre „Nächstes Jahr in Jerusalem" samt den
   Gemeinden, die durchgehend blieben (Jerusalem, Hebron, Safed, Tiberias),
@@ -324,9 +331,10 @@ Stand: 2026-08-11 — Runde 7 abgeschlossen (Modul „Israel und Palästina"):
   des UN-Teilungsplans samt fair wiedergegebener arabischer Begründung, 1948
   mit beiden Fluchtbewegungen (rund 700 000 Palästinenser, rund 850 000 Juden
   aus arabischen Ländern) und dem Forschungsstand zur Nakba, 1967 und die
-  offen benannte Besatzung. Die Synthese ist ausdrücklich vorläufig und sagt
-  deutlicher als sonst, dass eine einzelne Stimme hier nicht die halbe,
-  sondern eine sich für vollständig haltende Geschichte ist.
+  offen benannte Besatzung. Hermes hat die palästinensisch-arabische
+  Sichtweise ergänzt; die Synthese führt inzwischen beide Stimmen zusammen —
+  das Thema ist fertig. Die Reihenfolge der beiden Stimmen ist dabei
+  ausdrücklich keine Rangfolge; das steht auch so in der App.
   Die Karte `utils/themen/karten/israel-palaestina.js` stammt von Hermes
   (Ausschnitt 32–37° O, 29–34,5° N, 700 × 905,5 — die feinste und
   hochformatigste Karte der App, 140 Einheiten je Längengrad): Levanteküste,
@@ -338,30 +346,59 @@ Stand: 2026-08-11 — Runde 7 abgeschlossen (Modul „Israel und Palästina"):
   Tiberias) und vier Bewegungen in beide Richtungen. Dazu
   `tests/karte-israel-palaestina.mjs` — der prüft nicht nur Geometrie,
   sondern auch die Fairness-Zusagen (siehe Zusatzregel oben).
-- `npm test` grün (872 Prüfungen)
+- Runde 8: das sechste Thema — „Germanen und Völkerwanderung"
+  (`utils/themen/germanen.js`, registriert als Modul 6). Vorerst nur die
+  römisch-mediterrane Sichtweise (Stimme: Opus): wie Caesar 58 v. Chr. am
+  Rhein eine Linie zog und damit ein Volk erfand; Tacitus’ „Germania" als
+  Spiegel für Rom samt ihrer gefährlichen Nachgeschichte bis 1943; der
+  Teutoburger Wald und der „Hermann" des 19. Jahrhunderts; der Limes als
+  Naht und nicht als Wand, mit Stilicho als dem Vandalensohn, der Italien
+  verteidigte und 408 hingerichtet wurde; 375/376 der Anfang, der eine
+  Flucht war, und Adrianopel; der Sturm von 406 bis 476; der Tag, an dem
+  niemand etwas merkte, samt dem offen benannten Streit der Forschung
+  (Transformation gegen Absturz des Lebensstandards); und zum Schluss das
+  Wort selbst — „Völkerwanderung" gegen „Barbareneinfälle", dazu die
+  Zahlen (Zehntausende, nicht Millionen) und die Sieger, die dazugehören
+  wollten. Die Synthese ist ausdrücklich vorläufig und sagt, woran man die
+  fehlende Stimme erkennt: Kein Satz im Kapitel stammt von einem Goten.
+  Die Karte `utils/themen/karten/germanen.js` stammt von Hermes (Ausschnitt
+  10° W–45° O, 32–58° N, 700 × 468): Küsten vom Atlantik bis zum Asowschen
+  Meer, zehn Flüsse, Rhein–Limes–Donau als eigene dunkle Linie über dem
+  Untergrund, fünf Phasen (um 100 / 375–378 / 406–455 / um 500 / 568), sechs
+  Info-Punkte (Teutoburger Wald, Limes, Adrianopel, Rom, Ravenna, Karthago)
+  und fünf Wanderungen (Hunnen, Goten, Westgoten, Vandalen, Angelsachsen).
+  Germanien ist dort in keiner Phase eine Fläche — eine Fläche behauptet
+  eine Herrschaft mit Grenzen, und die gab es nicht; benannt wird das Land
+  trotzdem, als Beschriftung. Dazu `tests/karte-germanen.mjs`: 25
+  Atlas-Landmarken mit 0,6 Grad Toleranz (die Küste ist dicht genug
+  abgetastet, dass ein ganzer Grad hier nichts mehr bewiese) und acht
+  Kontrollpunkte, die gerade NICHT auf einer Küste liegen dürfen — der
+  erste davon mitten in Germanien.
+- `npm test` grün (1019 Prüfungen)
 
-Die vier Module Rom, China, Dschingis Khan und Japan haben beide Stimmen und
-eine echte Synthese; bei Israel/Palästina fehlt die zweite noch.
+Die fünf Module Rom, China, Dschingis Khan, Japan und Israel/Palästina haben
+beide Stimmen und eine echte Synthese; bei den Germanen fehlt die zweite noch.
 
 Nächste Schritte (Landkarte, noch offen):
-- **Die palästinensisch-arabische Sichtweise (Hermes)** — die Geschichte
-  desselben Landes von der anderen Seite: Jahrhunderte als Bauern, Händler
-  und Bürgermeister; 1948 als Nakba; der Alltag unter Besatzung. Danach die
-  Synthese gemeinsam neu schreiben. Bis dahin steht in der App offen, dass
-  das Kapitel unvollständig ist — bei diesem Thema ist das keine Formalie.
-- **Am Gerät gegenlesen:** Alle fünf Karten sind rechnerisch gegen den
+- **Die germanische Sichtweise (Hermes)** — dieselben Jahrhunderte von der
+  anderen Seite der Grenze: nicht das Ende eines Reiches, sondern der Beginn
+  eines Lebens an einem neuen Ort. Ohne Chroniken, dafür mit Gräbern,
+  Siedlungen, Sprache und den Rechtsaufzeichnungen der neuen Königreiche —
+  und mit der Frage, ob eine Gesellschaft ohne Steuerlisten und Stadtmauern
+  rückständig oder nur anders geordnet ist. Danach die Synthese gemeinsam
+  neu schreiben; bis dahin sagt sie in der App offen, dass eine Stimme fehlt.
+- **Am Gerät gegenlesen:** Alle sechs Karten sind rechnerisch gegen den
   Atlas geprüft, aber noch nicht auf einem Handy gesehen. Vor allem
   Schriftgrößen und Trefferflächen der Punkte gehören auf einem kleinen
   Bildschirm beurteilt (`npm start`, Expo Go). Die Extremfälle liegen jetzt
   vor: die Mongolen-Karte mit 700 × 253,5 als flachstes, breitestes Band und
   die Levante-Karte mit 700 × 905,5 als schmalstes, höchstes (Japan
-  700 × 584,3, Rom 700 × 548, China 700 × 400). Ob die Beschriftungen dort
-  überlappen — und ob ein so hohes Bild auf einem Handy überhaupt in einem
-  Stück lesbar ist —, entscheidet das Gerät.
+  700 × 584,3, Rom 700 × 548, Germanen 700 × 468, China 700 × 400). Ob die
+  Beschriftungen dort überlappen — und ob ein so hohes Bild auf einem Handy
+  überhaupt in einem Stück lesbar ist —, entscheidet das Gerät.
 - **Zeitleisten** — der zweite Teil von „Geschichte in Bewegung"; die
   Karten decken bisher nur den Raum ab, nicht die Zeit.
-- **Weitere Themen** nach der Themenlandkarte: Germanen und
-  Völkerwanderung, frühe Königreiche, Mittelalter, Ausblick Neuzeit —
-  jeweils die eine Sicht von Opus, die andere von Hermes, Synthese
-  gemeinsam. Karten sind dabei optional: Themen ohne `karte` überspringen
-  den Abschnitt.
+- **Weitere Themen** nach der Themenlandkarte: frühe Königreiche,
+  Mittelalter, Ausblick Neuzeit — jeweils die eine Sicht von Opus, die
+  andere von Hermes, Synthese gemeinsam. Karten sind dabei optional: Themen
+  ohne `karte` überspringen den Abschnitt.

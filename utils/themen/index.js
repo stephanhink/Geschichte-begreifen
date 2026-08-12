@@ -30,6 +30,13 @@
 // Themen, bei denen einem das leichtfällt. Hier fällt es schwer. Deshalb
 // kommt es zuletzt und nicht zuerst.
 //
+// „Germanen und Völkerwanderung" schließt als sechstes den Bogen zurück zum
+// ersten Kapitel: Es erzählt dieselben Jahrhunderte wie „Das Römische Reich",
+// nur von der Grenze aus statt aus der Mitte — und es endet dort, wo Rom
+// aufhört. Zugleich kehrt es die Leitidee der App einmal um: Hier haben nicht
+// die Sieger geschrieben, sondern die Verlierer. Die Gewinner hinterließen
+// Gräber statt Chroniken.
+//
 // CommonJS, damit dieselbe Datei mit blankem `node` prüfbar ist und von
 // Metro/Babel in der App geladen werden kann (siehe schema.js).
 
@@ -38,9 +45,17 @@ const china = require('./china');
 const dschingisKhan = require('./dschingis-khan');
 const japan = require('./japan');
 const israelPalaestina = require('./israel-palaestina');
+const germanen = require('./germanen');
 
 /** Alle Themen in der Reihenfolge der Themenlandkarte. */
-const alleThemen = [roemischesReich, china, dschingisKhan, japan, israelPalaestina];
+const alleThemen = [
+  roemischesReich,
+  china,
+  dschingisKhan,
+  japan,
+  israelPalaestina,
+  germanen,
+];
 
 /**
  * Sucht ein Thema anhand seiner id.
