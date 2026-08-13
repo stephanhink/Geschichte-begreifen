@@ -113,18 +113,33 @@ hier ist zugleich die Reihenfolge in der App (`utils/themen/index.js`):
    Neuzeit erwächst. Das Kapitel führt die Leitidee der App an einem einzigen
    Wort vor — „finsteres Mittelalter" ist kein Befund, sondern ein Urteil der
    Renaissance über eine Zeit, die sie selbst nicht erlebt hat.
-   *(Sicht der alten Ordnung fertig, Stimme der Städte offen)*
+   *(fertig)*
+9. **Die Eroberung Amerikas** — von der Fahrt des Kolumbus 1492 bis zum
+   spanischen Kolonialreich um 1600. Zweites Kapitel des Neuzeit-Bogens und
+   die unmittelbare Fortsetzung des achten: Dort läuft auf der Karte ein Pfeil
+   nach Westen aus dem Bild hinaus, hier ist die Karte, auf der er ankommt.
+   Die Perspektiven-Achse dreht sich wieder nach außen — und sie steht so
+   schief wie in keinem anderen Kapitel, weil die eine Seite die
+   Aufzeichnungen der anderen verbrannt hat: Von den Büchern der Maya sind
+   vier erhalten. „Der Sieger schreibt die Geschichte" ist hier keine
+   Redensart, sondern der Befund. Zentral sind nach Betreiber-Vorgabe die
+   eingeschleppten Krankheiten: Sie, nicht die Heere, sind der Hauptgrund für
+   den größten Bevölkerungseinbruch, den wir aus der Geschichte kennen.
+   *(europäische Sichtweise fertig, indigene Sichtweise offen)*
 
 **Der Neuzeit-Bogen** ist vom Betreiber ausbuchstabiert und steht in
 `notizen/kapitel-planung.md`: neun Kapitel, beginnend mit „Vom Mittelalter zur
-Neuzeit" (= Modul 8, seit Runde 10 angelegt), dann die Eroberung Amerikas, der
-Dreißigjährige Krieg, die USA und die Vertreibung der Indianer, Revolution und
-Napoleon, der Weg zum Ersten Weltkrieg (mit der Kriegsschuldfrage als
-multiperspektivischem Herzstück und dem Abschnitt „Was 1914 uns heute lehrt")
-bis zum Zweiten Weltkrieg und der neuen Weltordnung. Wer eines dieser Kapitel
-beginnt, liest die Datei zuerst — sie enthält Vorgaben, die aus der
-Themenlandkarte allein nicht hervorgehen. Der frühere Platzhalter „Ausblick
-Neuzeit" ist damit erledigt: Der Bogen selbst ist der Ausblick.
+Neuzeit" (= Modul 8, seit Runde 10 angelegt) und der Eroberung Amerikas
+(= Modul 9, seit Runde 11 angelegt), dann der Dreißigjährige Krieg, die USA
+und die Vertreibung der Indianer, Revolution und Napoleon, der Weg zum Ersten
+Weltkrieg (mit der Kriegsschuldfrage als multiperspektivischem Herzstück und
+dem Abschnitt „Was 1914 uns heute lehrt") bis zum Zweiten Weltkrieg und der
+neuen Weltordnung. Wer eines dieser Kapitel beginnt, liest die Datei zuerst —
+sie enthält Vorgaben, die aus der Themenlandkarte allein nicht hervorgehen.
+Der frühere Platzhalter „Ausblick Neuzeit" ist damit erledigt: Der Bogen
+selbst ist der Ausblick. **Als Nächstes an der Reihe: der Dreißigjährige Krieg
+(1618–1648)** — der Krieg und die Folgen für Europa (Westfälischer Friede,
+modernes Staatensystem).
 
 **Spätere Module (Landkarte, noch ohne Termin):** Persien als großes Reich,
 das Osmanische Reich und der Mittlere Osten, Indonesien.
@@ -192,16 +207,18 @@ gezeichneten Küste liegen (`tests/karte.mjs` für Rom, `tests/karte-china.mjs`
 für China, `tests/karte-dschingis.mjs` für die Mongolen, `tests/karte-japan.mjs`
 für Japan, `tests/karte-israel-palaestina.mjs` für die Levante,
 `tests/karte-germanen.mjs`, `tests/karte-koenigreiche.mjs` und
-`tests/karte-mittelalter.mjs` für die drei Europakarten; alle außer der
+`tests/karte-mittelalter.mjs` für die drei Europakarten,
+`tests/karte-eroberung-amerikas.mjs` für die Atlantikkarte; alle außer der
 ersten nehmen bewusst Koordinaten, die NICHT als Eckpunkte im Kartenmodul
 stehen, damit die gezeichnete Linie geprüft wird und nicht die abgeschriebene
 Zahl — dazu Kontrollpunkte im Binnenland bzw. auf offener See, die gerade
 NICHT auf einer Küste liegen dürfen, sonst wäre die Probe durch bloße
 Punktdichte immer erfüllt. Die Toleranz richtet sich nach dem Maßstab: ein
-Längengrad bei der weiten Eurasien-Karte, 0,6 bei der feineren Japan-Karte
-und bei den drei Europakarten, 0,15 bei der Levante-Karte — dort sind 140
-SVG-Einheiten ein Längengrad, und ein ganzer Grad würde nichts mehr
-beweisen).
+Längengrad bei der weiten Eurasien-Karte und bei der noch weiteren
+Amerika-Karte (6,4 SVG-Einheiten je Grad, die gröbste der App), 0,6 bei der
+feineren Japan-Karte und bei den drei Europakarten, 0,15 bei der
+Levante-Karte — dort sind 140 SVG-Einheiten ein Längengrad, und ein ganzer
+Grad würde nichts mehr beweisen).
 
 Daneben liegt in `utils/` die übrige Fachlogik, jeweils ohne UI-Import:
 `markdown.js` (zerlegt die Themen-Texte in Absätze, Überschriften,
@@ -271,8 +288,8 @@ aus dem Play Store hinkt den SDKs hinterher (siehe AGENTS.md). Zum Testen
 
 ## Status
 
-Stand: 2026-08-13 — Runde 10 abgeschlossen (Modul „Vom Mittelalter zur
-Neuzeit", Beginn des Neuzeit-Bogens):
+Stand: 2026-08-13 — Runde 11 abgeschlossen (Modul „Die Eroberung Amerikas",
+zweites Kapitel des Neuzeit-Bogens):
 - Projekt-Setup: Expo-SDK-57-Grundgerüst, EAS-Projekt
   @heilpraktikerdk/geschichte + Android-Keystore (remote + lokales Backup),
   Platzhalter-Assets, GitHub-Repo public
@@ -464,8 +481,10 @@ Neuzeit", Beginn des Neuzeit-Bogens):
   die sie nicht erlebt hatten, und mit dem Interesse, die eigene Gegenwart
   hell aussehen zu lassen. Dazu die beiden Proben aufs Exempel: Die großen
   Hexenverfolgungen liegen zwischen 1560 und 1630, also in der Neuzeit, und
-  die Kugelgestalt der Erde war jedem Gebildeten bekannt. Die Synthese ist
-  ausdrücklich vorläufig.
+  die Kugelgestalt der Erde war jedem Gebildeten bekannt. Hermes hat die
+  Stimme der Städte und des Aufbruchs noch in Runde 10 ergänzt; die Synthese
+  führt inzwischen beide Stimmen zusammen — das Thema ist fertig
+  (Commit c65a2e8).
   Die Karte `utils/themen/karten/mittelalter.js` hat Hermes zur Hälfte
   angelegt (Küsten, Inseln, zwölf Flüsse, Landmassen) und Opus in Runde 10
   fertiggebaut (Phasen, Punkte, Bewegungen, Beschriftungen, Zusammenbau).
@@ -490,32 +509,112 @@ Neuzeit", Beginn des Neuzeit-Bogens):
   die Kreuzfahrerstaaten müssen 1200 die kleinste Fläche sein, die beiden
   Konfessionsflächen müssen sich eine Kante teilen, und Kreuzzug wie Pest
   müssen über denselben Info-Punkt Konstantinopel laufen.
-- `npm test` grün (1316 Prüfungen)
+- Runde 11: das neunte Thema und das zweite Kapitel des Neuzeit-Bogens — „Die
+  Eroberung Amerikas" (`utils/themen/eroberung-amerikas.js`, registriert als
+  Modul 9). Vorerst nur die europäische Sichtweise (Stimme: Opus): warum 1453
+  und 1492 zusammenhängen (der Landweg nach Asien ist zu, die Reconquista ist
+  zu Ende, und es stehen tausende Männer herum, die nur kämpfen können); die
+  Fahrt von Palos über die Kanaren — mit dem Hinweis, dass nicht die
+  Kugelgestalt der Erde umstritten war, sondern ihre Größe, und dass Kolumbus
+  sich verrechnete und Glück hatte; das Bordbuch des 12. Oktober 1492, in dem
+  Bewunderung für die Taíno und der Satz „mit fünfzig Mann kann man sie alle
+  unterwerfen" auf derselben Seite stehen; der Abschnitt über das Wort
+  „Entdeckung" selbst (es behauptet, vorher sei nichts Zählbares da gewesen —
+  Tenochtitlan hatte das Vierfache der Einwohner Sevillas); die Krankheiten
+  als Herzstück nach Betreiber-Vorgabe, samt der Erklärung, warum es sie in
+  Amerika nicht gab, und den Zahlen mit ihrer Unsicherheit (Zentralmexiko
+  10–25 Millionen 1519, ein bis zwei Millionen um 1600); Cortés 1519–1521 mit
+  Cholula, der Noche Triste und dem Punkt, den die Heldenerzählung klein
+  redet — die indigenen Verbündeten stellten die Mehrheit des Heeres, und
+  ihre Beweggründe waren nachvollziehbar; Pizarro 1532/33 mit Cajamarca, dem
+  gezahlten und trotzdem nicht eingelösten Lösegeld und dem Widerstand bis
+  1572; ein Abschnitt „Warum ging das so schnell?", der fünf Ursachen in
+  ihrer wirklichen Reihenfolge nennt und die europäische Lieblingsantwort
+  (überlegene Kultur) ausdrücklich verwirft; Encomienda, Mita, Potosí und der
+  Silberstrom bis nach China; der Sklavenhandel als direkte Fortsetzung; die
+  Kritiker aus den eigenen Reihen (Montesinos 1511, Las Casas, Vitoria,
+  Valladolid 1550/51) — samt der ehrlichen Anmerkung, dass Las Casas
+  zeitweise afrikanische Sklaven vorschlug, und der Einordnung der
+  „Schwarzen Legende"; und zum Schluss die Tür zur zweiten Stimme. Auch die
+  Quetzalcoatl-Legende wird als das gekennzeichnet, was sie wahrscheinlich
+  ist: eine nachträgliche Erklärung aus Quellen, die nach der Eroberung unter
+  spanischer Aufsicht entstanden. Hermes hat die indigene Sichtweise ergänzt:
+  die Welt vor 1492 als eigene Geschichte (Tenochtitlan mit Chinampas,
+  Schulen und Markt; das Tawantinsuyu mit Straßen, Quipus und Mita), die
+  eigenen unbequemen Stellen selbst benannt (Opferungen und Blumenkriege,
+  der Bruderkrieg Atahualpa/Huáscar, das Tlaxcala-Bündnis als Rechnung, die
+  nicht aufging), die Ankunft aus Sicht der Taíno („Begegnung" gegen
+  „Inbesitznahme"), die Seuche, für die es kein Wort gab, der Fall mit
+  Cuauhtémoc und der Widerstand bis Vilcabamba 1572, verbrannte Bücher und
+  lebendige Erinnerung (Popol Vuh, Florentiner Kodex, Nahuatl und Quechua
+  heute) — und fair zur Gegenseite (Montesinos, Las Casas, Vitoria,
+  Valladolid). Die Synthese führt beide Stimmen zusammen: wo sie
+  übereinstimmen (dieselben Ursachen in derselben Reihenfolge), wo sie
+  auseinandergehen (das erste Wort, die Quelle selbst, die Frage nach dem
+  Sinn) — und übergibt an Dein Urteil. Der Befund, der dieses Kapitel von
+  allen anderen unterscheidet, steht in beiden Stimmen und in der Synthese:
+  von den Büchern der Maya sind vier erhalten, und Diego de Landa schrieb
+  nach dem Verbrennen selbst ein Buch über die Kultur, die er vernichtet
+  hatte.
+  Die Karte `utils/themen/karten/eroberung-amerikas.js` ist der weiteste
+  Ausschnitt der App: 115° W–5° W, 20° S–45° N, 700 × 423,7 — 110
+  Längengrade auf 700 Einheiten, also 6,4 Einheiten je Grad. Das ist grob und
+  Absicht: Sevilla und Cusco müssen auf ein Bild, Potosí liegt einen
+  Fingerbreit über dem unteren Rand, und in der Mitte ist nichts als Ozean —
+  der Atlantik ist hier nicht Lücke, sondern Bühne. Ganz Amerika ist ein
+  einziger Umriss vom Nordpazifik bis Feuerland-Höhe und zurück über
+  Brasilien, die Karibik, Yucatán, den Golf und die nordamerikanische
+  Atlantikküste; Golf von Mexiko und Karibisches Meer entstehen dabei von
+  selbst. Dazu Kuba, Hispaniola, Jamaika, Puerto Rico, Trinidad, die Bahamas
+  mit Guanahani, vier Kanareninseln, die Iberische Halbinsel und
+  Nordwestafrika, sieben Flüsse (darunter der Guadalquivir — der Grund, warum
+  der Hafen der Neuen Welt achtzig Kilometer landeinwärts lag). Fünf Phasen
+  (um 1492 zwei getrennte Welten / 1492–1504 die vier Reisen und Hispaniola /
+  1519–1521 der Fall Tenochtitlans / 1532–1533 der Fall des Inkareichs / um
+  1600 die beiden Vizekönigreiche), sechs Info-Punkte (Sevilla, Kanaren,
+  Guanahani, Santo Domingo, Tenochtitlan, Cusco) und vier Bewegungen —
+  Kolumbus 1492, Cortés 1519, Pizarro 1531–1533 und, als Gegenbewegung, der
+  Silberstrom von Potosí nach Sevilla ab 1545. Die Zurückhaltungsregel der
+  Germanen- und Königreiche-Karten gilt hier besonders streng: Nordamerika,
+  das Amazonasbecken und der Süden bleiben in jeder Phase leer — dort lebten
+  Millionen Menschen, aber keine der gezeigten Herrschaften hatte dort
+  Grenzen. Auch das Kolonialreich von 1600 zeigt Verwaltetes, nicht
+  Beanspruchtes; der Hinweis der Phase sagt das selbst.
+  Dazu `tests/karte-eroberung-amerikas.mjs`: 36 Atlas-Landmarken von Ensenada
+  bis Gijón mit einem Längengrad Toleranz (jede mindestens 0,1 Grad neben dem
+  nächsten Eckpunkt des Kartenmoduls — nachrechenbar mit
+  `node tools/pruef-eroberung-amerikas.mjs`), zehn Kontrollpunkte abseits
+  jeder Küste (der erste mitten im Atlantik), und die Aussage des Kapitels als
+  Rechnung: 1492 müssen zwei Mächte links und zwei rechts des Ozeans stehen
+  und in Amerika keine einzige spanische Fläche; das spanische Gebiet muss von
+  Phase zu Phase wachsen und um 1600 ein Vielfaches des ersten Stützpunkts
+  sein; das Aztekenreich muss nach Phase 3 vom Umschalter verschwinden, das
+  Inkareich nach Phase 4; keine amerikanische Fläche darf über den 30.
+  Breitengrad nach Norden reichen; und der Silberstrom muss dieselbe Strecke
+  zurücklaufen, die Kolumbus hinfuhr. Dazu die Tone-Prüfungen der Zusatzregel
+  für sensible Themen: dass die Perspektive Requerimiento, Cholula und
+  Sklavenhandel selbst benennt, dass sie die Beweggründe der Verbündeten fair
+  wiedergibt, dass sie ihre eigene Lieblingserklärung verwirft — und dass
+  keine Quizfrage nach Schuld oder Besitz fragt.
+- `npm test` grün (1514 Prüfungen)
 
-Die sieben Module Rom, China, Dschingis Khan, Japan, Israel/Palästina,
-Germanen und Königreiche haben beide Stimmen und eine echte Synthese; beim
-Mittelalter fehlt die zweite noch.
+Alle neun Module Rom, China, Dschingis Khan, Japan, Israel/Palästina,
+Germanen, Königreiche, Mittelalter und Eroberung Amerikas haben beide
+Stimmen und eine echte Synthese.
 
 Nächste Schritte (Landkarte, noch offen):
-- **Die Stimme der Städte und des Aufbruchs (Hermes)** — die zweite Stimme
-  zum Mittelalter-Kapitel: Bürger, Kaufleute, Handwerker, Drucker, Reformer.
-  Wie sieht diese Zeit aus, wenn man sie nicht vom Thron her betrachtet,
-  sondern vom Markt? „Stadtluft macht frei" als Loch in der Ständeordnung;
-  woher das Geld kam, das den Fürsten ihre Kriege bezahlte; warum die neuen
-  Ideen fast alle in Städten entstanden. Und die Kernfrage: Was die alte
-  Ordnung als Zerfall erlebte, war von unten gesehen vielleicht ein Aufbruch.
-- **Am Gerät gegenlesen:** Alle acht Karten sind rechnerisch gegen den
+- **Am Gerät gegenlesen:** Alle neun Karten sind rechnerisch gegen den
   Atlas geprüft, aber noch nicht auf einem Handy gesehen. Vor allem
   Schriftgrößen und Trefferflächen der Punkte gehören auf einem kleinen
   Bildschirm beurteilt (`npm start`, Expo Go). Die Extremfälle liegen jetzt
   vor: die Mongolen-Karte mit 700 × 253,5 als flachstes, breitestes Band und
   die Levante-Karte mit 700 × 905,5 als schmalstes, höchstes (Japan
   700 × 584,3, Königreiche 700 × 552,5, Rom 700 × 548, Mittelalter
-  700 × 495,4, Germanen 700 × 468, China 700 × 400). Ob die Beschriftungen
-  dort überlappen — und ob ein so hohes Bild auf einem Handy überhaupt in
-  einem Stück lesbar ist —, entscheidet das Gerät. Für zwei Karten liegen
-  schon Hinweise vor; beide Skripte sind Wegwerf-Werkzeuge und nicht Teil von
-  `npm test`:
+  700 × 495,4, Germanen 700 × 468, Amerika 700 × 423,7, China 700 × 400). Ob
+  die Beschriftungen dort überlappen — und ob ein so hohes Bild auf einem
+  Handy überhaupt in einem Stück lesbar ist —, entscheidet das Gerät. Für
+  drei Karten liegen schon Hinweise vor; alle drei Skripte sind
+  Wegwerf-Werkzeuge und nicht Teil von `npm test`:
   `node tools/pruef-koenigreiche.mjs` meldet vier mögliche Überlappungen —
   „Frankenreich"/Aachen, „Burgunder"/„Langobarden", „Ostgoten"/„Donau" und
   Canterbury/Aachen.
@@ -524,12 +623,17 @@ Nächste Schritte (Landkarte, noch offen):
   und Canossa/Venedig. Bei 12,7 Einheiten je Längengrad stehen die Ortsnamen
   dort dicht beieinander. Wenn es auf dem Gerät stört, ist die Frage, ob die
   App Ortsnamen erst beim Antippen zeigen sollte — das beträfe alle Karten.
+  `node tools/pruef-eroberung-amerikas.mjs` meldet keine Überlappung — die
+  Karte ist so weit, dass alles Luft hat. Dort ist die offene Frage die
+  umgekehrte: ob die vier Kanareninseln und Guanahani auf einem Handy
+  überhaupt noch als Inseln zu erkennen sind; sie sind wenige SVG-Einheiten
+  groß, und Guanahani trägt trotzdem einen Info-Punkt.
 - **Zeitleisten** — der zweite Teil von „Geschichte in Bewegung"; die
   Karten decken bisher nur den Raum ab, nicht die Zeit.
-- **Weitere Themen** nach `notizen/kapitel-planung.md`, dem Neuzeit-Bogen:
-  die Eroberung Amerikas, der Dreißigjährige Krieg, die USA und die
-  Vertreibung der Indianer, Revolution und Napoleon, der Erste Weltkrieg mit
-  der Kriegsschuldfrage, Weimar, der Zweite Weltkrieg. Jeweils die eine Sicht
-  von Opus, die andere von Hermes, Synthese gemeinsam; beim Ersten Weltkrieg
-  sind ausdrücklich mehr als zwei Stimmen vorgesehen. Karten sind dabei
-  optional: Themen ohne `karte` überspringen den Abschnitt.
+- **Weitere Themen** nach `notizen/kapitel-planung.md`, dem Neuzeit-Bogen —
+  als Nächstes **der Dreißigjährige Krieg (1618–1648)**, danach die USA und
+  die Vertreibung der Indianer, Revolution und Napoleon, der Erste Weltkrieg
+  mit der Kriegsschuldfrage, Weimar, der Zweite Weltkrieg. Jeweils die eine
+  Sicht von Opus, die andere von Hermes, Synthese gemeinsam; beim Ersten
+  Weltkrieg sind ausdrücklich mehr als zwei Stimmen vorgesehen. Karten sind
+  dabei optional: Themen ohne `karte` überspringen den Abschnitt.

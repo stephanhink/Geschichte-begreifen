@@ -21,6 +21,7 @@ import { laufe as laufeKarteIsraelPalaestina } from './karte-israel-palaestina.m
 import { laufe as laufeKarteGermanen } from './karte-germanen.mjs';
 import { laufe as laufeKarteKoenigreiche } from './karte-koenigreiche.mjs';
 import { laufe as laufeKarteMittelalter } from './karte-mittelalter.mjs';
+import { laufe as laufeKarteEroberungAmerikas } from './karte-eroberung-amerikas.mjs';
 import { laufe as laufeMarkdown } from './markdown.mjs';
 import { laufe as laufeQuiz } from './quiz.mjs';
 import { laufe as laufeFortschritt } from './fortschritt.mjs';
@@ -54,6 +55,7 @@ laufeKarteIsraelPalaestina(pruefe);
 laufeKarteGermanen(pruefe);
 laufeKarteKoenigreiche(pruefe);
 laufeKarteMittelalter(pruefe);
+laufeKarteEroberungAmerikas(pruefe);
 laufeMarkdown(pruefe);
 laufeQuiz(pruefe);
 laufeLernformat(pruefe);

@@ -6,9 +6,9 @@
 // nicht an.
 //
 // Die Reihenfolge im Array ist die Reihenfolge in der App (Themenlandkarte
-// aus CLAUDE.md: Rom → China → Dschingis Khan → Japan →
+// aus CLAUDE.md: Rom → China → Dschingis Khan → Japan → Israel/Palästina →
 // Germanen/Völkerwanderung → frühe Königreiche → Mittelalter →
-// Ausblick Neuzeit).
+// Eroberung Amerikas).
 //
 // China steht bewusst direkt hinter Rom: Beide Reiche waren zur selben Zeit
 // ungefähr gleich groß, und die Seidenstraße verbindet sie auf der Karte.
@@ -49,6 +49,15 @@
 // Achse bleibt sozial, kippt aber: oben die alte Ordnung aus Kaiser, Papst
 // und Adel, unten die Städte, aus denen die Neuzeit erwächst.
 //
+// „Die Eroberung Amerikas" ist das neunte Thema und das zweite des
+// Neuzeit-Bogens. Es hängt unmittelbar am achten: Dort läuft auf der Karte
+// ein Pfeil nach Westen aus dem Bild hinaus — 1492 —, hier ist die Karte, auf
+// der er ankommt. Die Perspektiven-Achse dreht sich wieder nach außen, und
+// sie steht so schief wie in keinem anderen Kapitel: Die eine Seite hat die
+// Aufzeichnungen der anderen verbrannt. Genau deshalb steht es hier und
+// nicht früher — wer die acht Kapitel davor gelesen hat, ist geübt darin,
+// hinter einer Erzählung die Auswahl zu sehen.
+//
 // CommonJS, damit dieselbe Datei mit blankem `node` prüfbar ist und von
 // Metro/Babel in der App geladen werden kann (siehe schema.js).
 
@@ -60,6 +69,7 @@ const israelPalaestina = require('./israel-palaestina');
 const germanen = require('./germanen');
 const koenigreiche = require('./koenigreiche');
 const mittelalter = require('./mittelalter');
+const eroberungAmerikas = require('./eroberung-amerikas');
 
 /** Alle Themen in der Reihenfolge der Themenlandkarte. */
 const alleThemen = [
@@ -71,6 +81,7 @@ const alleThemen = [
   germanen,
   koenigreiche,
   mittelalter,
+  eroberungAmerikas,
 ];
 
 /**
