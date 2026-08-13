@@ -125,21 +125,38 @@ hier ist zugleich die Reihenfolge in der App (`utils/themen/index.js`):
    Redensart, sondern der Befund. Zentral sind nach Betreiber-Vorgabe die
    eingeschleppten Krankheiten: Sie, nicht die Heere, sind der Hauptgrund für
    den größten Bevölkerungseinbruch, den wir aus der Geschichte kennen.
-   *(europäische Sichtweise fertig, indigene Sichtweise offen)*
+   *(fertig)*
+10. **Der Dreißigjährige Krieg** — von 1618 bis zum Westfälischen Frieden
+    1648. Drittes Kapitel des Neuzeit-Bogens und die unmittelbare Fortsetzung
+    des achten: Dort ist der Prager Fenstersturz der letzte Satz, hier ist er
+    der erste. Die Perspektiven-Achse ist wieder eine soziale wie bei den
+    frühen Königreichen und beim Mittelalter — oben die Entscheider (Kaiser,
+    Kurfürsten, Könige, Feldherren), unten die Betroffenen in Städten und
+    Dörfern. Das Kapitel führt die Leitidee an einer Frage vor, die bis heute
+    gestritten wird: Religionskrieg oder Machtkrieg? Ein katholischer Kardinal
+    bezahlt lutherische Heere, ein lutherischer Kurfürst kämpft für den
+    katholischen Kaiser — und trotzdem war der Glaube für die Beteiligten
+    keine Maske. Beides zugleich stehen zu lassen, ohne eine Seite zu
+    dämonisieren oder zu verharmlosen, ist hier die eigentliche Aufgabe.
+    *(beide Sichtweisen fertig, die Synthese führt sie zusammen)*
 
 **Der Neuzeit-Bogen** ist vom Betreiber ausbuchstabiert und steht in
 `notizen/kapitel-planung.md`: neun Kapitel, beginnend mit „Vom Mittelalter zur
 Neuzeit" (= Modul 8, seit Runde 10 angelegt) und der Eroberung Amerikas
-(= Modul 9, seit Runde 11 angelegt), dann der Dreißigjährige Krieg, die USA
-und die Vertreibung der Indianer, Revolution und Napoleon, der Weg zum Ersten
-Weltkrieg (mit der Kriegsschuldfrage als multiperspektivischem Herzstück und
-dem Abschnitt „Was 1914 uns heute lehrt") bis zum Zweiten Weltkrieg und der
-neuen Weltordnung. Wer eines dieser Kapitel beginnt, liest die Datei zuerst —
-sie enthält Vorgaben, die aus der Themenlandkarte allein nicht hervorgehen.
-Der frühere Platzhalter „Ausblick Neuzeit" ist damit erledigt: Der Bogen
-selbst ist der Ausblick. **Als Nächstes an der Reihe: der Dreißigjährige Krieg
-(1618–1648)** — der Krieg und die Folgen für Europa (Westfälischer Friede,
-modernes Staatensystem).
+(= Modul 9, seit Runde 11 angelegt), dem Dreißigjährigen Krieg (= Modul 10,
+seit Runde 12 angelegt), dann die USA und die Vertreibung der Indianer,
+Revolution und Napoleon, der Weg zum Ersten Weltkrieg (mit der
+Kriegsschuldfrage als multiperspektivischem Herzstück und dem Abschnitt „Was
+1914 uns heute lehrt") bis zum Zweiten Weltkrieg und der neuen Weltordnung.
+Wer eines dieser Kapitel beginnt, liest die Datei zuerst — sie enthält
+Vorgaben, die aus der Themenlandkarte allein nicht hervorgehen. Der frühere
+Platzhalter „Ausblick Neuzeit" ist damit erledigt: Der Bogen selbst ist der
+Ausblick. **Als Nächstes an der Reihe: Die USA — Unabhängigkeit und die
+Vertreibung der Indianer (1776–ca. 1890)**: Westexpansion, Trail of Tears,
+Indianerkriege, Wounded Knee; Perspektiven Siedler gegen Stämme, das brutale
+Vorgehen gegen die indigene Bevölkerung ausdrücklich prominent. Dieses Kapitel
+steht nach Betreiber-Vorgabe zeitlich VOR Napoleon (Gründung 1776 <
+Napoleon 1799).
 
 **Spätere Module (Landkarte, noch ohne Termin):** Persien als großes Reich,
 das Osmanische Reich und der Mittlere Osten, Indonesien.
@@ -208,15 +225,16 @@ für China, `tests/karte-dschingis.mjs` für die Mongolen, `tests/karte-japan.mj
 für Japan, `tests/karte-israel-palaestina.mjs` für die Levante,
 `tests/karte-germanen.mjs`, `tests/karte-koenigreiche.mjs` und
 `tests/karte-mittelalter.mjs` für die drei Europakarten,
-`tests/karte-eroberung-amerikas.mjs` für die Atlantikkarte; alle außer der
-ersten nehmen bewusst Koordinaten, die NICHT als Eckpunkte im Kartenmodul
-stehen, damit die gezeichnete Linie geprüft wird und nicht die abgeschriebene
-Zahl — dazu Kontrollpunkte im Binnenland bzw. auf offener See, die gerade
-NICHT auf einer Küste liegen dürfen, sonst wäre die Probe durch bloße
-Punktdichte immer erfüllt. Die Toleranz richtet sich nach dem Maßstab: ein
-Längengrad bei der weiten Eurasien-Karte und bei der noch weiteren
+`tests/karte-eroberung-amerikas.mjs` für die Atlantikkarte,
+`tests/karte-dreissigjaehriger-krieg.mjs` für die vierte Europakarte; alle
+außer der ersten nehmen bewusst Koordinaten, die NICHT als Eckpunkte im
+Kartenmodul stehen, damit die gezeichnete Linie geprüft wird und nicht die
+abgeschriebene Zahl — dazu Kontrollpunkte im Binnenland bzw. auf offener See,
+die gerade NICHT auf einer Küste liegen dürfen, sonst wäre die Probe durch
+bloße Punktdichte immer erfüllt. Die Toleranz richtet sich nach dem Maßstab:
+ein Längengrad bei der weiten Eurasien-Karte und bei der noch weiteren
 Amerika-Karte (6,4 SVG-Einheiten je Grad, die gröbste der App), 0,6 bei der
-feineren Japan-Karte und bei den drei Europakarten, 0,15 bei der
+feineren Japan-Karte und bei den vier Europakarten, 0,15 bei der
 Levante-Karte — dort sind 140 SVG-Einheiten ein Längengrad, und ein ganzer
 Grad würde nichts mehr beweisen).
 
@@ -288,8 +306,8 @@ aus dem Play Store hinkt den SDKs hinterher (siehe AGENTS.md). Zum Testen
 
 ## Status
 
-Stand: 2026-08-13 — Runde 11 abgeschlossen (Modul „Die Eroberung Amerikas",
-zweites Kapitel des Neuzeit-Bogens):
+Stand: 2026-08-13 — Runde 12 abgeschlossen (Modul „Der Dreißigjährige Krieg",
+drittes Kapitel des Neuzeit-Bogens; erste Stimme, Karte und Tests):
 - Projekt-Setup: Expo-SDK-57-Grundgerüst, EAS-Projekt
   @heilpraktikerdk/geschichte + Android-Keystore (remote + lokales Backup),
   Platzhalter-Assets, GitHub-Repo public
@@ -596,21 +614,100 @@ zweites Kapitel des Neuzeit-Bogens):
   Sklavenhandel selbst benennt, dass sie die Beweggründe der Verbündeten fair
   wiedergibt, dass sie ihre eigene Lieblingserklärung verwirft — und dass
   keine Quizfrage nach Schuld oder Besitz fragt.
-- `npm test` grün (1514 Prüfungen)
+- Runde 12: das zehnte Thema und das dritte Kapitel des Neuzeit-Bogens — „Der
+  Dreißigjährige Krieg" (`utils/themen/dreissigjaehriger-krieg.js`,
+  registriert als Modul 10). Vorerst nur die Sicht von Kaiser, Fürsten und
+  Feldherren (Stimme: Opus) — die Sicht derer, die entschieden. Inhalt: der
+  Prager Fenstersturz vom 23. Mai 1618 als förmliche Handlung mit Vorbild von
+  1419, der Majestätsbrief von 1609 und der Weiße Berg 1620 samt den 27
+  Hinrichtungen und der Enteignung, aus der ein mittlerer Adliger namens
+  Wallenstein reich wurde; ein Abschnitt darüber, warum ein Fenstersturz einen
+  Krieg auslösen konnte — das Reich als Verband aus über dreihundert
+  Herrschaften und die drei Konstruktionsfehler des Augsburger
+  Religionsfriedens (die Calvinisten kommen darin nicht vor, der geistliche
+  Vorbehalt wurde nicht eingehalten, die Reichsgerichte waren blockiert), dazu
+  „cuius regio, eius religio" ausdrücklich als Machtregel gelesen: Wer die
+  Konfession wechselt, wechselt die Einnahmen; das Restitutionsedikt 1629 als
+  „der Sieg, der zu weit ging" (auch die katholischen Kurfürsten erschraken
+  und erzwangen 1630 in Regensburg Wallensteins Entlassung); Wallenstein als
+  Kriegsunternehmer mit „Der Krieg ernährt den Krieg", dem
+  Kontributionssystem, Stralsund 1628 und dem Ende in Eger 1634; Magdeburg
+  1631 mit der offen benannten Rechnung der Entscheider (ein Heer ohne Sold,
+  die Plünderung als zugesagter Lohn) und dem ehrlichen „bis heute
+  umstritten", wer das Feuer legte; Gustav Adolf 1630–1632 als frommer
+  Lutheraner UND Machtpolitiker mit französischem Geld (Bärwalde 1631),
+  Breitenfeld, München, Lützen — und dem unbequemen Befund, dass sein Tod fast
+  nichts änderte; 1635 der Prager Friede, Richelieu und die Staatsräson,
+  Rocroi 1643; ein Abschnitt „Warum dreißig Jahre?" mit vier strukturellen
+  Gründen; der Westfälische Friede 1648 mit Normaljahr 1624, Landeshoheit,
+  den Gebietsgewinnen, dem Austritt der Niederlande und der Schweiz, der
+  Amnestie samt der Ausnahme für die Erblande (Böhmen bekam nichts zurück)
+  und der Erklärung, warum er als Geburtsurkunde des neuzeitlichen Europas
+  gilt; und zum Schluss vier unbequeme Stellen, die diese Stimme selbst
+  ausspricht: die Zahlen mit ihrer Unsicherheit (16–18 auf 10–13 Millionen,
+  regional bis zwei Drittel, die meisten Toten durch Hunger und Seuchen), dass
+  die Entscheider selbst selten in Lebensgefahr waren, dass die Konfession oft
+  Vorwand war — ohne die Gegenbehauptung, der Glaube sei nur Maske gewesen —,
+  und dass diese Männer „keine Heiligen und keine Ungeheuer" waren. Hermes
+  hat die Sicht der Betroffenen ergänzt (Söldner, Hunger, Pest, Flucht,
+  Überleben — mit den eigenen unbequemen Stellen: Hexenverfolgung, Söldner
+  aus den eigenen Dörfern, Kriegsgewinnler — und fair zur Gegenseite:
+  Gustav Adolf, Wallenstein, der echte Friede von 1648). Die Synthese führt
+  beide Stimmen zusammen: wo sie übereinstimmen (dieselben Ereignisse,
+  dieselben Zahlen, dieselbe unbequeme Diagnose „Der Krieg ernährt den
+  Krieg"), wo sie auseinandergehen (der Maßstab: Feldzüge gegen Winter;
+  das Ende: Vertrag gegen erste Ernte; die Schuldfrage) — und übergibt an
+  Dein Urteil.
+  Die Karte `utils/themen/karten/dreissigjaehriger-krieg.js` ist mit 20
+  SVG-Einheiten je Längengrad die feinste der App nach der Levante-Karte
+  (Ausschnitt 5° W–30° O, 42–60° N, 700 × 572): Zwischen Breitenfeld und
+  Lützen liegen fünfundzwanzig Kilometer, eine gröbere Karte hätte daraus
+  einen Fleck gemacht. Küsten von der Bretagne bis zur Newamündung, die ganze
+  Ostsee mit Skandinavien (ohne Finnland — es beginnt über dem oberen
+  Bildrand), acht Inseln von Rügen bis Saaremaa, vierzehn Flüsse (darunter die
+  Moldau und die Saale, an denen dieses Kapitel spielt). Die zentrale
+  Festlegung: **Das Reich ist keine Fläche, sondern eine Linie** — die
+  Reichsgrenze liegt blass im Untergrund, weil eine eingefärbte Fläche einen
+  Staat behaupten würde, den es nicht gab. Drei Phasen (1618 der Aufstand in
+  Böhmen / 1631–1632 Magdeburg, Breitenfeld und Lützen / 1648 der Westfälische
+  Friede), sieben Info-Punkte (Prag, Wien, Magdeburg, Breitenfeld, Lützen,
+  Münster und Osnabrück, Rocroi) und drei Bewegungen (die Kaiserlichen nach
+  Magdeburg 1630/31, Gustav Adolf von Usedom über Breitenfeld und Bayern nach
+  Lützen, die Franzosen nach Rocroi 1643). Die Fläche der Phase 1631/32 heißt
+  im eigenen Titel „kein Staatsgebiet, sondern besetztes Land" — sie zeigt die
+  Reichweite eines Heeres.
+  Dazu `tests/karte-dreissigjaehriger-krieg.mjs`: 38 Atlas-Landmarken von
+  Brest bis zur Newamündung mit 0,6 Grad Toleranz (jede mindestens 0,1 Grad
+  neben dem nächsten Eckpunkt des Kartenmoduls), zwölf Kontrollpunkte abseits
+  jeder Küste (der erste mitten in Böhmen) — und die Aussage des Kapitels als
+  Rechnung: keine Fläche darf „Heiliges Römisches Reich" heißen, die
+  Reichsgrenze muss eine offene Linie ohne Füllung sein, Habsburg muss 1648
+  kleiner sein als 1618 (die Lausitz), Frankreich größer (das Elsass),
+  Schweden darf erst 1648 Gebiet im Reich haben, die Niederlande und die
+  Schweiz müssen 1648 als aus dem Reich ausgeschieden benannt sein, und das
+  schwedische Vormarschgebiet muss Leipzig, Bayern und Mainz einschließen,
+  Böhmen und Wien aber ausschließen (Punkt-im-Vieleck-Probe). Dazu die
+  Tone-Prüfungen: dass die Perspektive das Söldnersystem als eigene
+  Entscheidung benennt, dass sie zugibt, Menschen als Posten zu führen, dass
+  die Zahlen als umstritten gekennzeichnet sind, dass die Beweggründe beider
+  Seiten fair wiedergegeben werden — und dass keine Quizfrage nach Schuld
+  fragt.
+- `npm test` grün (1737 Prüfungen)
 
-Alle neun Module Rom, China, Dschingis Khan, Japan, Israel/Palästina,
-Germanen, Königreiche, Mittelalter und Eroberung Amerikas haben beide
-Stimmen und eine echte Synthese.
+Alle zehn Module Rom, China, Dschingis Khan, Japan, Israel/Palästina,
+Germanen, Königreiche, Mittelalter, Eroberung Amerikas und Dreißigjähriger
+Krieg haben beide Stimmen und eine echte Synthese.
 
 Nächste Schritte (Landkarte, noch offen):
-- **Am Gerät gegenlesen:** Alle neun Karten sind rechnerisch gegen den
+- **Am Gerät gegenlesen:** Alle zehn Karten sind rechnerisch gegen den
   Atlas geprüft, aber noch nicht auf einem Handy gesehen. Vor allem
   Schriftgrößen und Trefferflächen der Punkte gehören auf einem kleinen
   Bildschirm beurteilt (`npm start`, Expo Go). Die Extremfälle liegen jetzt
   vor: die Mongolen-Karte mit 700 × 253,5 als flachstes, breitestes Band und
   die Levante-Karte mit 700 × 905,5 als schmalstes, höchstes (Japan
-  700 × 584,3, Königreiche 700 × 552,5, Rom 700 × 548, Mittelalter
-  700 × 495,4, Germanen 700 × 468, Amerika 700 × 423,7, China 700 × 400). Ob
+  700 × 584,3, Dreißigjähriger Krieg 700 × 572, Königreiche 700 × 552,5, Rom
+  700 × 548, Mittelalter 700 × 495,4, Germanen 700 × 468, Amerika 700 × 423,7,
+  China 700 × 400). Ob
   die Beschriftungen dort überlappen — und ob ein so hohes Bild auf einem
   Handy überhaupt in einem Stück lesbar ist —, entscheidet das Gerät. Für
   drei Karten liegen schon Hinweise vor; alle drei Skripte sind
@@ -628,11 +725,23 @@ Nächste Schritte (Landkarte, noch offen):
   umgekehrte: ob die vier Kanareninseln und Guanahani auf einem Handy
   überhaupt noch als Inseln zu erkennen sind; sie sind wenige SVG-Einheiten
   groß, und Guanahani trägt trotzdem einen Info-Punkt.
+  `node tools/pruef-dreissigjaehriger-krieg.mjs` meldet sieben mögliche
+  Überlappungen, und alle sieben liegen in derselben Landschaft — zwischen
+  Magdeburg, Leipzig und Prag, also genau dort, wo dieses Kapitel spielt. Zwei
+  davon sind reine Geografie und nicht zu verschieben: Breitenfeld und Lützen
+  liegen fünfundzwanzig Kilometer auseinander (knapp acht SVG-Einheiten), und
+  Magdeburg liegt auf demselben Breitengrad wie Münster/Osnabrück, dessen
+  langer Name nach Osten läuft. Vier gehen auf die Beschriftung „Sachsen"
+  zurück, die zwischen drei Ortsnamen dieses Kapitels sitzt. Die Abschätzung
+  im Skript ist bewusst großzügig; ob es auf dem Gerät wirklich stört, muss
+  das Gerät zeigen. Falls ja, wäre die Antwort dieselbe wie bei der
+  Mittelalter-Karte: Ortsnamen erst beim Antippen zeigen — das beträfe alle
+  Karten.
 - **Zeitleisten** — der zweite Teil von „Geschichte in Bewegung"; die
   Karten decken bisher nur den Raum ab, nicht die Zeit.
 - **Weitere Themen** nach `notizen/kapitel-planung.md`, dem Neuzeit-Bogen —
-  als Nächstes **der Dreißigjährige Krieg (1618–1648)**, danach die USA und
-  die Vertreibung der Indianer, Revolution und Napoleon, der Erste Weltkrieg
+  als Nächstes **die USA: Unabhängigkeit und die Vertreibung der Indianer
+  (1776–ca. 1890)**, danach Revolution und Napoleon, der Erste Weltkrieg
   mit der Kriegsschuldfrage, Weimar, der Zweite Weltkrieg. Jeweils die eine
   Sicht von Opus, die andere von Hermes, Synthese gemeinsam; beim Ersten
   Weltkrieg sind ausdrücklich mehr als zwei Stimmen vorgesehen. Karten sind

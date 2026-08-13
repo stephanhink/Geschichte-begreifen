@@ -24,6 +24,12 @@
 // Reihe nach liest, kommt also über die abgebrochene Invasion ins nächste Land
 // und sieht dort dieselben Jahre 1274 und 1281 von der anderen Küste aus.
 //
+// „Der Dreißigjährige Krieg" steht als zehntes Thema am Ende und knüpft an das
+// achte an: „Vom Mittelalter zur Neuzeit" endet mit dem Prager Fenstersturz
+// 1618, hier beginnt es damit. Die Achse ist wieder eine soziale — oben die
+// Entscheider (Kaiser, Fürsten, Feldherren), unten die Betroffenen in Städten
+// und Dörfern.
+//
 // „Israel und Palästina" steht als fünftes und damit am Ende der bisherigen
 // Reihe — mit Absicht. Wer die vier Kapitel davor gelesen hat, hat viermal
 // geübt, dass dieselben Ereignisse je nach Standpunkt anders klingen, an
@@ -70,6 +76,7 @@ const germanen = require('./germanen');
 const koenigreiche = require('./koenigreiche');
 const mittelalter = require('./mittelalter');
 const eroberungAmerikas = require('./eroberung-amerikas');
+const dreissigjaehrigerKrieg = require('./dreissigjaehriger-krieg');
 
 /** Alle Themen in der Reihenfolge der Themenlandkarte. */
 const alleThemen = [
@@ -82,6 +89,7 @@ const alleThemen = [
   koenigreiche,
   mittelalter,
   eroberungAmerikas,
+  dreissigjaehrigerKrieg,
 ];
 
 /**
