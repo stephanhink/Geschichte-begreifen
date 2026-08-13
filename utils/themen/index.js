@@ -43,6 +43,12 @@
 // nach innen: Es stehen sich nicht zwei Länder gegenüber, sondern oben und
 // unten im selben Land (Höfe und Chronisten gegen die Dörfer).
 //
+// „Vom Mittelalter zur Neuzeit" ist das achte Thema und zugleich das erste
+// des Neuzeit-Bogens (notizen/kapitel-planung.md). Es beginnt dort, wo das
+// Kapitel davor endet — bei der Kaiserkrönung 800 — und führt bis 1618. Die
+// Achse bleibt sozial, kippt aber: oben die alte Ordnung aus Kaiser, Papst
+// und Adel, unten die Städte, aus denen die Neuzeit erwächst.
+//
 // CommonJS, damit dieselbe Datei mit blankem `node` prüfbar ist und von
 // Metro/Babel in der App geladen werden kann (siehe schema.js).
 
@@ -53,6 +59,7 @@ const japan = require('./japan');
 const israelPalaestina = require('./israel-palaestina');
 const germanen = require('./germanen');
 const koenigreiche = require('./koenigreiche');
+const mittelalter = require('./mittelalter');
 
 /** Alle Themen in der Reihenfolge der Themenlandkarte. */
 const alleThemen = [
@@ -63,6 +70,7 @@ const alleThemen = [
   israelPalaestina,
   germanen,
   koenigreiche,
+  mittelalter,
 ];
 
 /**

@@ -104,19 +104,27 @@ hier ist zugleich die Reihenfolge in der App (`utils/themen/index.js`):
    von außen nach innen — es stehen sich nicht zwei Länder gegenüber, sondern
    oben und unten im selben Land: die Höfe und Chronisten, die schreiben
    ließen, gegen die Dörfer, in denen neun von zehn Menschen lebten.
-   *(Sicht der Chronisten fertig, Sicht aus den Dörfern offen)*
-8. **Mittelalter** — Ordnung, Glaube, Handel; das Scharnier zur Neuzeit.
-9. **Ausblick Neuzeit** — die großen Umbrüche, als Brücke zu den nächsten
-   Modulen.
+   *(fertig)*
+8. **Vom Mittelalter zur Neuzeit — die Geburtsstunde Europas** — von der
+   Kaiserkrönung 800 bis zum Vorabend des Dreißigjährigen Krieges 1618.
+   Zugleich das erste Kapitel des Neuzeit-Bogens (siehe unten). Es beginnt
+   dort, wo das Kapitel davor endet, und die soziale Achse kippt: oben die
+   alte Ordnung aus Kaiser, Papst und Adel, unten die Städte, aus denen die
+   Neuzeit erwächst. Das Kapitel führt die Leitidee der App an einem einzigen
+   Wort vor — „finsteres Mittelalter" ist kein Befund, sondern ein Urteil der
+   Renaissance über eine Zeit, die sie selbst nicht erlebt hat.
+   *(Sicht der alten Ordnung fertig, Stimme der Städte offen)*
 
-**Der Neuzeit-Bogen danach** ist inzwischen vom Betreiber ausbuchstabiert und
-steht in `notizen/kapitel-planung.md`: neun Kapitel von „Vom Mittelalter zur
-Neuzeit" über die Eroberung Amerikas, den Dreißigjährigen Krieg, die USA und
-die Vertreibung der Indianer, Revolution und Napoleon, den Weg zum Ersten
-Weltkrieg (mit der Kriegsschuldfrage als multiperspektivischem Herzstück und
-dem Abschnitt „Was 1914 uns heute lehrt") bis zum Zweiten Weltkrieg und der
-neuen Weltordnung. Wer eines dieser Kapitel beginnt, liest die Datei zuerst —
-sie enthält Vorgaben, die aus der Themenlandkarte allein nicht hervorgehen.
+**Der Neuzeit-Bogen** ist vom Betreiber ausbuchstabiert und steht in
+`notizen/kapitel-planung.md`: neun Kapitel, beginnend mit „Vom Mittelalter zur
+Neuzeit" (= Modul 8, seit Runde 10 angelegt), dann die Eroberung Amerikas, der
+Dreißigjährige Krieg, die USA und die Vertreibung der Indianer, Revolution und
+Napoleon, der Weg zum Ersten Weltkrieg (mit der Kriegsschuldfrage als
+multiperspektivischem Herzstück und dem Abschnitt „Was 1914 uns heute lehrt")
+bis zum Zweiten Weltkrieg und der neuen Weltordnung. Wer eines dieser Kapitel
+beginnt, liest die Datei zuerst — sie enthält Vorgaben, die aus der
+Themenlandkarte allein nicht hervorgehen. Der frühere Platzhalter „Ausblick
+Neuzeit" ist damit erledigt: Der Bogen selbst ist der Ausblick.
 
 **Spätere Module (Landkarte, noch ohne Termin):** Persien als großes Reich,
 das Osmanische Reich und der Mittlere Osten, Indonesien.
@@ -182,15 +190,18 @@ Damit ist die Geografie im Repo nachschlagbar — und je Karte prüft eine
 Testdatei gegen den Atlas nach, ob bekannte Kaps und Meerengen auf der
 gezeichneten Küste liegen (`tests/karte.mjs` für Rom, `tests/karte-china.mjs`
 für China, `tests/karte-dschingis.mjs` für die Mongolen, `tests/karte-japan.mjs`
-für Japan, `tests/karte-israel-palaestina.mjs` für die Levante; die vier
-letzteren nehmen bewusst Koordinaten, die NICHT als Eckpunkte im Kartenmodul
+für Japan, `tests/karte-israel-palaestina.mjs` für die Levante,
+`tests/karte-germanen.mjs`, `tests/karte-koenigreiche.mjs` und
+`tests/karte-mittelalter.mjs` für die drei Europakarten; alle außer der
+ersten nehmen bewusst Koordinaten, die NICHT als Eckpunkte im Kartenmodul
 stehen, damit die gezeichnete Linie geprüft wird und nicht die abgeschriebene
 Zahl — dazu Kontrollpunkte im Binnenland bzw. auf offener See, die gerade
 NICHT auf einer Küste liegen dürfen, sonst wäre die Probe durch bloße
 Punktdichte immer erfüllt. Die Toleranz richtet sich nach dem Maßstab: ein
-Längengrad bei der weiten Eurasien-Karte, 0,6 bei der feineren Japan-Karte,
-0,15 bei der Levante-Karte — dort sind 140 SVG-Einheiten ein Längengrad, und
-ein ganzer Grad würde nichts mehr beweisen).
+Längengrad bei der weiten Eurasien-Karte, 0,6 bei der feineren Japan-Karte
+und bei den drei Europakarten, 0,15 bei der Levante-Karte — dort sind 140
+SVG-Einheiten ein Längengrad, und ein ganzer Grad würde nichts mehr
+beweisen).
 
 Daneben liegt in `utils/` die übrige Fachlogik, jeweils ohne UI-Import:
 `markdown.js` (zerlegt die Themen-Texte in Absätze, Überschriften,
@@ -260,7 +271,8 @@ aus dem Play Store hinkt den SDKs hinterher (siehe AGENTS.md). Zum Testen
 
 ## Status
 
-Stand: 2026-08-12 — Runde 9 abgeschlossen (Modul „Die frühen Königreiche"):
+Stand: 2026-08-13 — Runde 10 abgeschlossen (Modul „Vom Mittelalter zur
+Neuzeit", Beginn des Neuzeit-Bogens):
 - Projekt-Setup: Expo-SDK-57-Grundgerüst, EAS-Projekt
   @heilpraktikerdk/geschichte + Android-Keystore (remote + lokales Backup),
   Platzhalter-Assets, GitHub-Repo public
@@ -391,7 +403,7 @@ Stand: 2026-08-12 — Runde 9 abgeschlossen (Modul „Die frühen Königreiche")
   erste davon mitten in Germanien.
 - Runde 9: das siebte Thema — „Die frühen Königreiche — wie aus Eroberern
   Herrscher wurden" (`utils/themen/koenigreiche.js`, registriert als Modul 7).
-  Vorerst nur die Sicht der Chronisten und Königshöfe (Stimme: Opus). Die
+  Zuerst die Sicht der Chronisten und Königshöfe (Stimme: Opus). Die
   Achse ist hier zum ersten Mal keine geografische, sondern eine soziale:
   oben gegen unten. Inhalt: die Trümmerkarte nach 476 und die Frage, wie man
   ein Königreich zusammenhält, wenn ein Heer nur einem Mann folgt;
@@ -406,9 +418,10 @@ Stand: 2026-08-12 — Runde 9 abgeschlossen (Modul „Die frühen Königreiche")
   (Chlodwigs Verwandtenmorde bei Gregor von Tours, die Bruderkriege, das Ende
   Brunhilds 613); 751 Pippins Frage an den Papst und die Salbung; 800 die
   Kaiserkrönung, Einhards Überraschungs-Behauptung und der Blick aus
-  Konstantinopel. Die Synthese ist ausdrücklich vorläufig und benennt, was
-  diese Lücke von den bisherigen unterscheidet: Die Perspektiven liegen nicht
-  nebeneinander, sondern übereinander.
+  Konstantinopel. Hermes hat die Sicht aus den Dörfern ergänzt; die Synthese
+  führt inzwischen beide Stimmen zusammen — das Thema ist fertig
+  (Commit 447a5b5). Die Perspektiven liegen hier nicht nebeneinander, sondern
+  übereinander: oben und unten im selben Land.
   Die Karte `utils/themen/karten/koenigreiche.js` stammt von Hermes
   (Ausschnitt 11° W–32° O, 33–57° N, 700 × 552,5 — mit 16,3 Einheiten je
   Längengrad die feinste der drei Europakarten, damit Reims, Tours,
@@ -428,40 +441,95 @@ Stand: 2026-08-12 — Runde 9 abgeschlossen (Modul „Die frühen Königreiche")
   vier Phasen wachsen, Ostrom auf jeder Phase stehen und dabei kleiner
   werden, und die Bewegungen müssen an denselben Koordinaten hängen wie die
   Info-Punkte (Mission von Rom nach Canterbury, Karl von Aachen nach Rom).
-- `npm test` grün (1160 Prüfungen)
+- Runde 10: das achte Thema und der Beginn des Neuzeit-Bogens — „Vom
+  Mittelalter zur Neuzeit — die Geburtsstunde Europas"
+  (`utils/themen/mittelalter.js`, registriert als Modul 8). Vorerst nur die
+  Sicht der alten Ordnung (Stimme: Opus): das Lehnswesen als Netz aus
+  Treueiden und sein eingebauter Fehler (wer ein Lehen erbt, wird vom Diener
+  zum Konkurrenten); die Ständeordnung Adalberos als Weltbild UND
+  Rechtfertigung; der Investiturstreit mit Canossa 1077 als Demütigung und
+  Schachzug zugleich, samt der Folge, die bis heute reicht (zwei Gewalten,
+  von denen keine die andere schlucken konnte); die Kreuzzüge als Glaube und
+  Gewalt in einem — „Gott will es", die Pogrome im Rheinland, das Blutbad von
+  1099, Saladin 1187, der Kreuzzug von 1204 gegen eine christliche Stadt,
+  Akkon 1291; die Pest 1347–1353 samt den Judenpogromen von 1348/49 und der
+  Folge, die die alte Ordnung erschütterte (wo ein Drittel der Arbeitenden
+  fehlt, wird Arbeit teuer); der Hundertjährige Krieg und Jeanne d’Arc; die
+  drei Zahlen 1450 (Gutenberg), 1453 (Konstantinopel) und 1492 (Granada, die
+  Vertreibung der Juden, Kolumbus); die Reformation von 1517 bis zum
+  Augsburger Religionsfrieden 1555 samt „cuius regio, eius religio" und dem
+  Prager Fenstersturz 1618 als Übergang ins nächste Kapitel.
+  Das Herzstück ist ein Abschnitt über den Namen selbst: „finsteres
+  Mittelalter" stammt von den Humanisten der Renaissance — über eine Zeit,
+  die sie nicht erlebt hatten, und mit dem Interesse, die eigene Gegenwart
+  hell aussehen zu lassen. Dazu die beiden Proben aufs Exempel: Die großen
+  Hexenverfolgungen liegen zwischen 1560 und 1630, also in der Neuzeit, und
+  die Kugelgestalt der Erde war jedem Gebildeten bekannt. Die Synthese ist
+  ausdrücklich vorläufig.
+  Die Karte `utils/themen/karten/mittelalter.js` hat Hermes zur Hälfte
+  angelegt (Küsten, Inseln, zwölf Flüsse, Landmassen) und Opus in Runde 10
+  fertiggebaut (Phasen, Punkte, Bewegungen, Beschriftungen, Zusammenbau).
+  Ausschnitt 11° W–44° O, 30–58° N, 700 × 495,4 — der größte der App, und das
+  ist die Aussage: Jerusalem muss hinein, sonst enden die Kreuzzüge im
+  Nichts; Kaffa auf der Krim muss hinein, sonst hat die Pest keinen
+  Ausgangspunkt. Vier Phasen (um 800 Karl / um 1200 Kaiser, Papst und
+  Kreuzfahrerstaaten / um 1500 Entdeckungen und Osmanen / 1618 die
+  Konfessionen), sieben Info-Punkte (Aachen, Canossa, Jerusalem, Venedig,
+  Konstantinopel, Mainz, Wittenberg) und vier Bewegungen (Erster Kreuzzug
+  1096–1099, der Schwarze Tod 1347–1353 von Kaffa nach London, Kolumbus 1492
+  und die Reformation ab 1517 nach Norden). Weil die App alle Flächen einer
+  Phase gleich einfärbt, stehen die Konfessionen von 1618 als zwei
+  aneinandergrenzende Flächen da; der Hinweis der Phase sagt selbst, wie grob
+  das ist, und nennt Böhmen als Gegenbeispiel.
+  Dazu `tests/karte-mittelalter.mjs`: 22 Atlas-Landmarken mit 0,6 Grad
+  Toleranz (jede mindestens 0,1 Grad neben dem nächsten Eckpunkt des
+  Kartenmoduls), 14 Kontrollpunkte abseits jeder Küste — und die Aussage des
+  Kapitels als Rechnung: Die Reichsfläche muss über die ersten drei Phasen
+  schrumpfen (Karls Reich kommt nie wieder), Byzanz muss zwischen 1200 und
+  1500 vom Bild verschwinden und durch das Osmanische Reich ersetzt werden,
+  die Kreuzfahrerstaaten müssen 1200 die kleinste Fläche sein, die beiden
+  Konfessionsflächen müssen sich eine Kante teilen, und Kreuzzug wie Pest
+  müssen über denselben Info-Punkt Konstantinopel laufen.
+- `npm test` grün (1316 Prüfungen)
 
-Die sechs Module Rom, China, Dschingis Khan, Japan, Israel/Palästina und
-Germanen haben beide Stimmen und eine echte Synthese; bei den Königreichen
-fehlt die zweite noch.
+Die sieben Module Rom, China, Dschingis Khan, Japan, Israel/Palästina,
+Germanen und Königreiche haben beide Stimmen und eine echte Synthese; beim
+Mittelalter fehlt die zweite noch.
 
 Nächste Schritte (Landkarte, noch offen):
-- **Die Sicht aus den Dörfern (Hermes)** — die Stimme der Namenlosen zu den
-  frühen Königreichen: Was änderte sich für ein Dorf, wenn der Herr in der
-  Ferne plötzlich anders hieß? Merkte man den Wechsel von einem Reich zum
-  nächsten überhaupt — oder nur daran, wer die Abgaben abholte? Was hat die
-  Kirche den Dörfern gebracht außer Abgaben? Quellen gibt es kaum Erzählende,
-  dafür Urbare, Grabfunde, Siedlungsarchäologie und Ortsnamen.
-- **Am Gerät gegenlesen:** Alle sieben Karten sind rechnerisch gegen den
+- **Die Stimme der Städte und des Aufbruchs (Hermes)** — die zweite Stimme
+  zum Mittelalter-Kapitel: Bürger, Kaufleute, Handwerker, Drucker, Reformer.
+  Wie sieht diese Zeit aus, wenn man sie nicht vom Thron her betrachtet,
+  sondern vom Markt? „Stadtluft macht frei" als Loch in der Ständeordnung;
+  woher das Geld kam, das den Fürsten ihre Kriege bezahlte; warum die neuen
+  Ideen fast alle in Städten entstanden. Und die Kernfrage: Was die alte
+  Ordnung als Zerfall erlebte, war von unten gesehen vielleicht ein Aufbruch.
+- **Am Gerät gegenlesen:** Alle acht Karten sind rechnerisch gegen den
   Atlas geprüft, aber noch nicht auf einem Handy gesehen. Vor allem
   Schriftgrößen und Trefferflächen der Punkte gehören auf einem kleinen
   Bildschirm beurteilt (`npm start`, Expo Go). Die Extremfälle liegen jetzt
   vor: die Mongolen-Karte mit 700 × 253,5 als flachstes, breitestes Band und
   die Levante-Karte mit 700 × 905,5 als schmalstes, höchstes (Japan
-  700 × 584,3, Königreiche 700 × 552,5, Rom 700 × 548, Germanen 700 × 468,
-  China 700 × 400). Ob die Beschriftungen dort überlappen — und ob ein so
-  hohes Bild auf einem Handy überhaupt in einem Stück lesbar ist —,
-  entscheidet das Gerät. Für die Königreiche-Karte liegt schon ein Hinweis
-  vor: `node tools/pruef-koenigreiche.mjs` (Wegwerf-Skript, nicht Teil von
-  `npm test`) meldet vier mögliche Überlappungen von Beschriftungen —
+  700 × 584,3, Königreiche 700 × 552,5, Rom 700 × 548, Mittelalter
+  700 × 495,4, Germanen 700 × 468, China 700 × 400). Ob die Beschriftungen
+  dort überlappen — und ob ein so hohes Bild auf einem Handy überhaupt in
+  einem Stück lesbar ist —, entscheidet das Gerät. Für zwei Karten liegen
+  schon Hinweise vor; beide Skripte sind Wegwerf-Werkzeuge und nicht Teil von
+  `npm test`:
+  `node tools/pruef-koenigreiche.mjs` meldet vier mögliche Überlappungen —
   „Frankenreich"/Aachen, „Burgunder"/„Langobarden", „Ostgoten"/„Donau" und
-  Canterbury/Aachen. Ob sie wirklich stören, zeigt erst der Bildschirm.
+  Canterbury/Aachen.
+  `node tools/pruef-mittelalter.mjs` meldet zwei, und beide sind echte
+  Geografie und nicht zu verschieben: Aachen/Mainz (rund 200 km auseinander)
+  und Canossa/Venedig. Bei 12,7 Einheiten je Längengrad stehen die Ortsnamen
+  dort dicht beieinander. Wenn es auf dem Gerät stört, ist die Frage, ob die
+  App Ortsnamen erst beim Antippen zeigen sollte — das beträfe alle Karten.
 - **Zeitleisten** — der zweite Teil von „Geschichte in Bewegung"; die
   Karten decken bisher nur den Raum ab, nicht die Zeit.
-- **Weitere Themen** nach der Themenlandkarte: Mittelalter, Ausblick
-  Neuzeit — und danach der ausbuchstabierte Neuzeit-Bogen aus
-  `notizen/kapitel-planung.md` (Amerika, Dreißigjähriger Krieg, USA und die
-  Vertreibung der Indianer, Napoleon, Erster Weltkrieg mit der
-  Kriegsschuldfrage, Weimar, Zweiter Weltkrieg). Jeweils die eine Sicht von
-  Opus, die andere von Hermes, Synthese gemeinsam; beim Ersten Weltkrieg
+- **Weitere Themen** nach `notizen/kapitel-planung.md`, dem Neuzeit-Bogen:
+  die Eroberung Amerikas, der Dreißigjährige Krieg, die USA und die
+  Vertreibung der Indianer, Revolution und Napoleon, der Erste Weltkrieg mit
+  der Kriegsschuldfrage, Weimar, der Zweite Weltkrieg. Jeweils die eine Sicht
+  von Opus, die andere von Hermes, Synthese gemeinsam; beim Ersten Weltkrieg
   sind ausdrücklich mehr als zwei Stimmen vorgesehen. Karten sind dabei
   optional: Themen ohne `karte` überspringen den Abschnitt.
