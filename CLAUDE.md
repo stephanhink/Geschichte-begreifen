@@ -139,24 +139,36 @@ hier ist zugleich die Reihenfolge in der App (`utils/themen/index.js`):
     keine Maske. Beides zugleich stehen zu lassen, ohne eine Seite zu
     dämonisieren oder zu verharmlosen, ist hier die eigentliche Aufgabe.
     *(beide Sichtweisen fertig, die Synthese führt sie zusammen)*
+11. **Die USA: Unabhängigkeit und die Vertreibung der Indianer**
+    (1776–ca. 1890) — viertes Kapitel des Neuzeit-Bogens, und zeitlich nach
+    Betreiber-Vorgabe VOR Napoleon einsortiert (Gründung 1776 < Napoleon
+    1799). Von der Unabhängigkeitserklärung 1776 und ihrem Satz „alle
+    Menschen sind gleich geschaffen" — der weder die Sklaverei noch die
+    Souveränität der Stämme abdeckte — über die Frontier als Gründungsmythos,
+    den Louisiana Purchase 1803 und den Oregon Trail bis zur Indian Removal
+    Policy unter Andrew Jackson, dem Trail of Tears 1838/39 und den
+    Indianerkriegen im Westen (Little Bighorn 1876, die gezielte Ausrottung
+    der Büffelherden als Kriegsmittel, Wounded Knee 1890). Die
+    Perspektiven-Achse steht wieder nach außen — Siedler gegen Stämme —, und
+    das brutale Vorgehen gegen die indigene Bevölkerung ist nach
+    Betreiber-Vorgabe ausdrücklich zentral, nicht Randnotiz.
+    *(beide Sichtweisen fertig — Siedler/Nation und Stämme —, die Synthese
+    führt sie zusammen)*
 
 **Der Neuzeit-Bogen** ist vom Betreiber ausbuchstabiert und steht in
 `notizen/kapitel-planung.md`: neun Kapitel, beginnend mit „Vom Mittelalter zur
-Neuzeit" (= Modul 8, seit Runde 10 angelegt) und der Eroberung Amerikas
+Neuzeit" (= Modul 8, seit Runde 10 angelegt), der Eroberung Amerikas
 (= Modul 9, seit Runde 11 angelegt), dem Dreißigjährigen Krieg (= Modul 10,
-seit Runde 12 angelegt), dann die USA und die Vertreibung der Indianer,
-Revolution und Napoleon, der Weg zum Ersten Weltkrieg (mit der
-Kriegsschuldfrage als multiperspektivischem Herzstück und dem Abschnitt „Was
-1914 uns heute lehrt") bis zum Zweiten Weltkrieg und der neuen Weltordnung.
-Wer eines dieser Kapitel beginnt, liest die Datei zuerst — sie enthält
-Vorgaben, die aus der Themenlandkarte allein nicht hervorgehen. Der frühere
-Platzhalter „Ausblick Neuzeit" ist damit erledigt: Der Bogen selbst ist der
-Ausblick. **Als Nächstes an der Reihe: Die USA — Unabhängigkeit und die
-Vertreibung der Indianer (1776–ca. 1890)**: Westexpansion, Trail of Tears,
-Indianerkriege, Wounded Knee; Perspektiven Siedler gegen Stämme, das brutale
-Vorgehen gegen die indigene Bevölkerung ausdrücklich prominent. Dieses Kapitel
-steht nach Betreiber-Vorgabe zeitlich VOR Napoleon (Gründung 1776 <
-Napoleon 1799).
+seit Runde 12 angelegt) und den USA — Unabhängigkeit und die Vertreibung der
+Indianer (= Modul 11, seit Runde 13 angelegt), dann Revolution und Napoleon,
+der Weg zum Ersten Weltkrieg (mit der Kriegsschuldfrage als
+multiperspektivischem Herzstück und dem Abschnitt „Was 1914 uns heute lehrt")
+bis zum Zweiten Weltkrieg und der neuen Weltordnung. Wer eines dieser Kapitel
+beginnt, liest die Datei zuerst — sie enthält Vorgaben, die aus der
+Themenlandkarte allein nicht hervorgehen. Der frühere Platzhalter „Ausblick
+Neuzeit" ist damit erledigt: Der Bogen selbst ist der Ausblick. **Als
+Nächstes an der Reihe: Revolution und Napoleon (1789–1815)** — Französische
+Revolution, Napoleon, der Russland-Feldzug 1812, Waterloo.
 
 **Spätere Module (Landkarte, noch ohne Termin):** Persien als großes Reich,
 das Osmanische Reich und der Mittlere Osten, Indonesien.
@@ -306,7 +318,84 @@ aus dem Play Store hinkt den SDKs hinterher (siehe AGENTS.md). Zum Testen
 
 ## Status
 
-Stand: 2026-08-13 — Runde 12 abgeschlossen (Modul „Der Dreißigjährige Krieg",
+Stand: 2026-08-13 — Runde 13 abgeschlossen (Modul „Die USA: Unabhängigkeit
+und die Vertreibung der Indianer", viertes Kapitel des Neuzeit-Bogens; beide
+Stimmen, Karte und Tests):
+- Runde 13: das elfte Thema — „Die USA: Unabhängigkeit und die Vertreibung
+  der Indianer" (`utils/themen/usa-unabhaengigkeit.js`, registriert als
+  Modul 11). Zeitlich nach Betreiber-Vorgabe vor Napoleon einsortiert
+  (Gründung 1776 < Napoleon 1799). Die Sicht der Siedler und der
+  jungen Nation (Stimme: Opus): die Unabhängigkeitserklärung 1776 mit ihrem
+  Satz „alle Menschen sind gleich geschaffen" — und der Beschwerde-Passage
+  im selben Dokument, die indianische Nationen als „gnadenlose Wilde"
+  bezeichnet —, die Verfassung 1787 samt Drei-Fünftel-Klausel und der
+  Klausel über „Handel mit den Indianerstämmen"; die Frontier als
+  Gründungsmythos nach Frederick Jackson Turner und die unbequeme Stelle,
+  die diese Stimme selbst benennt: „frei war das Land nicht"; der Louisiana
+  Purchase 1803 (Napoleon verkauft, ohne dass eine der betroffenen Nationen
+  gefragt wurde), der Siedlerstrom über den Cumberland Gap, Oregon Trail und
+  California Trail; über dreihundert Verträge, von denen die meisten
+  gebrochen wurden, die Indian Removal Policy unter Andrew Jackson, das
+  Ignorieren von Worcester v. Georgia 1832, der Vertrag von New Echota 1835
+  (unterzeichnet gegen den erklärten Willen der gewählten Cherokee-Führung
+  um John Ross) und der Trail of Tears 1838/39; die Indianerkriege im
+  Westen (Little Bighorn 1876, die von der US-Regierung geförderte
+  Ausrottung der Büffelherden als offen ausgesprochenes Kriegsmittel, der
+  Dawes Act 1887, Wounded Knee 1890 als Massaker ohne Sieg); und zum
+  Schluss „Manifest Destiny" als Selbstrechtfertigung samt der
+  Bevölkerungsbilanz (von geschätzt mehreren Millionen auf rund 237 000 bei
+  der Volkszählung 1900) und der Tür zur zweiten Stimme. Hermes ergänzt die
+  Sicht der Stämme (Stimme: Hermes): die Haudenosaunee-Konföderation als
+  Republik vor der Republik, Sequoyahs Silbenschrift und die
+  Cherokee-Verfassung von 1827, Land als gemeinsames Zuhause statt Ware
+  („solange Gras wächst und Wasser fließt"), die Verträge als feierliche
+  Bündnisse und ihr Bruch (Black Hills), New Echota und der Trail of Tears
+  aus der Sicht der Betroffenen („Nunna daul Isunyi"), Widerstand (Seminolen,
+  Little Bighorn, Geistertanz), Internate und Dawes Act, Überleben bis heute
+  (Black-Hills-Urteil 1980, Standing Rock 2016) — und, nach der Zusatzregel,
+  auch die unbequemen Stellen der eigenen Seite (Stammesrivalitäten,
+  Sklaverei in Südost-Nationen, die New-Echota-Minderheit). Die Synthese
+  führt beide Stimmen zusammen.
+  Die Karte `utils/themen/karten/usa-unabhaengigkeit.js` ist mit 700 × 367,6
+  und 11,7 SVG-Einheiten je Längengrad die bislang breiteste Karte der App
+  nach der Mongolen-Karte: Der Ausschnitt (125° W–65° W, 25° N–50° N) muss
+  die ganze Ausdehnung der Westexpansion vom Atlantik bis zum Pazifik
+  zeigen. Küsten von Niederkalifornien bis zur Bay of Fundy, die Großen Seen
+  als fünf eigene Wasserflächen, fünf Flüsse (Mississippi, Missouri, Ohio,
+  Rio Grande, Columbia), drei Phasen (1776 die Dreizehn Kolonien / 1830–1839
+  Indian Removal und Trail of Tears / 1890 die USA von Meer zu Meer), sieben
+  Info-Punkte (Boston, Philadelphia, New Echota, New Orleans, Fort Laramie,
+  Little Bighorn, Wounded Knee) und drei Bewegungen (Trail of Tears, Oregon
+  Trail, California Trail). Die zentrale Festlegung aus der Zusatzregel für
+  sensible Themen: 1776 stehen neben den Dreizehn Kolonien auch das Land der
+  Haudenosaunee und das der Nationen des Südostens (Cherokee, Muskogee,
+  Choctaw, Chickasaw, Seminolen) als eigene, gleich behandelte Flächen auf
+  der Karte — sie verschwinden erst mit der Vertreibung, und genau dieses
+  Verschwinden erzählt die Bewegung „Trail of Tears". Reservate tragen ihr
+  Gründungsjahr im Titel (Pine-Ridge-Reservat, 1889), datierte Zustände ohne
+  Wertung. Zwischen Appalachen und Mississippi bleibt 1776 bewusst eine
+  Lücke ungefärbt: Land der Nationen des Ohiotals, für das sich keine
+  seriöse Grenze zeichnen ließ. Dazu `tests/karte-usa-unabhaengigkeit.mjs`:
+  21 Atlas-Landmarken von San José del Cabo bis Provincetown mit einem
+  Längengrad Toleranz, sechs Kontrollpunkte abseits jeder Küste — und die
+  Aussage des Kapitels als Rechnung: Die Fläche der jungen Nation muss über
+  alle drei Phasen wachsen, das spanische bzw. mexikanische Gebiet muss
+  schrumpfen und 1890 bei null liegen, die Länder der Haudenosaunee und der
+  Südost-Nationen müssen nach 1830 verschwunden sein, das Indianerterritorium
+  darf erst ab 1830 auftauchen. Dazu die Tone-Prüfungen: dass die Perspektive
+  die feindselige Formulierung in der Unabhängigkeitserklärung, die
+  gebrochenen Verträge, die Ausrottung der Büffelherden als Kriegsmittel und
+  Wounded Knee als Massaker selbst benennt, dass sie die politische
+  Eigenständigkeit der Cherokee und den Widerstand der Seminolen fair
+  wiedergibt — und dass keine Quizfrage nach Schuld oder Besitz fragt.
+- `npm test` grün (1894 Prüfungen)
+
+Alle elf Module — Rom, China, Dschingis Khan, Japan, Israel/Palästina,
+Germanen, Königreiche, Mittelalter, Eroberung Amerikas, Dreißigjähriger
+Krieg und die USA — haben beide Stimmen und eine echte Synthese.
+
+Frühere Runde (2026-08-13): Runde 12 abgeschlossen (Modul „Der
+Dreißigjährige Krieg",
 drittes Kapitel des Neuzeit-Bogens; erste Stimme, Karte und Tests):
 - Projekt-Setup: Expo-SDK-57-Grundgerüst, EAS-Projekt
   @heilpraktikerdk/geschichte + Android-Keystore (remote + lokales Backup),
@@ -694,11 +783,7 @@ drittes Kapitel des Neuzeit-Bogens; erste Stimme, Karte und Tests):
   fragt.
 - `npm test` grün (1737 Prüfungen)
 
-Alle zehn Module Rom, China, Dschingis Khan, Japan, Israel/Palästina,
-Germanen, Königreiche, Mittelalter, Eroberung Amerikas und Dreißigjähriger
-Krieg haben beide Stimmen und eine echte Synthese.
-
-Nächste Schritte (Landkarte, noch offen):
+Nächste Schritte von Runde 12 (durch Runde 13 überholt, siehe oben):
 - **Am Gerät gegenlesen:** Alle zehn Karten sind rechnerisch gegen den
   Atlas geprüft, aber noch nicht auf einem Handy gesehen. Vor allem
   Schriftgrößen und Trefferflächen der Punkte gehören auf einem kleinen

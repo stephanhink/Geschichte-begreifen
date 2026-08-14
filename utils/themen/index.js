@@ -64,6 +64,18 @@
 // nicht früher — wer die acht Kapitel davor gelesen hat, ist geübt darin,
 // hinter einer Erzählung die Auswahl zu sehen.
 //
+// „Der Dreißigjährige Krieg" ist das zehnte Thema und das dritte des
+// Neuzeit-Bogens; es knüpft an „Vom Mittelalter zur Neuzeit" an, dessen
+// letzter Satz der Prager Fenstersturz 1618 ist.
+//
+// „Die USA: Unabhängigkeit und die Vertreibung der Indianer" ist das elfte
+// Thema und das vierte des Neuzeit-Bogens (notizen/kapitel-planung.md).
+// Zeitlich steht es bewusst vor „Revolution und Napoleon": Die
+// Unabhängigkeit der USA 1776 liegt vor Napoleons Aufstieg 1799. Die
+// Perspektiven-Achse dreht sich wieder nach außen — Siedler gegen Stämme —
+// und das Kapitel macht, wie „Die Eroberung Amerikas", die Vertreibung der
+// indigenen Bevölkerung ausdrücklich zum zentralen Gegenstand.
+//
 // CommonJS, damit dieselbe Datei mit blankem `node` prüfbar ist und von
 // Metro/Babel in der App geladen werden kann (siehe schema.js).
 
@@ -77,6 +89,7 @@ const koenigreiche = require('./koenigreiche');
 const mittelalter = require('./mittelalter');
 const eroberungAmerikas = require('./eroberung-amerikas');
 const dreissigjaehrigerKrieg = require('./dreissigjaehriger-krieg');
+const usaUnabhaengigkeit = require('./usa-unabhaengigkeit');
 
 /** Alle Themen in der Reihenfolge der Themenlandkarte. */
 const alleThemen = [
@@ -90,6 +103,7 @@ const alleThemen = [
   mittelalter,
   eroberungAmerikas,
   dreissigjaehrigerKrieg,
+  usaUnabhaengigkeit,
 ];
 
 /**
