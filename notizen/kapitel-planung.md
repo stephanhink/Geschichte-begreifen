@@ -1,9 +1,9 @@
 # Kapitel-Planung Neuzeit-Bogen (Betreiber-Vorgaben)
 
-Stand: 2026-08-12. Ergänzt die Themenlandkarte in CLAUDE.md um die
+Stand: 2026-08-14. Ergänzt die Themenlandkarte in CLAUDE.md um die
 besonderen inhaltlichen Anforderungen des Betreibers.
 
-## Landkarte (9 Kapitel nach den Königreichen)
+## Landkarte (10 Kapitel nach den Königreichen)
 
 1. **Vom Mittelalter zur Neuzeit** (Brücke, ~800–1618) — Lehnswesen,
    Kirche, Pest, Renaissance, Reformation
@@ -19,7 +19,30 @@ besonderen inhaltlichen Anforderungen des Betreibers.
    Napoleon einordnen (USA-Gründung 1776 < Napoleon 1799).
 5. **Revolution & Napoleon** (1789–1815) — Französische Revolution,
    Napoleon, der Russland-Feldzug 1812, Waterloo
-6. **Der Weg zum Ersten Weltkrieg** (1815–1914) — Wiener Kongress,
+6. **Die Kolonien** (≈1815–1914) — der europäische Imperialismus, die
+   Aufteilung der Welt im 19. Jahrhundert: Afrika („Wettlauf um Afrika",
+   Kongokonferenz 1884/85, der Kongo unter Leopold II.), Asien
+   (Britisch-Indien, die Opiumkriege in China, Südostasien), die
+   Kolonialmächte (Großbritannien, Frankreich, Belgien, Deutschland,
+   Portugal, Spanien). **Besondere Rolle Großbritanniens** (Betreiber-
+   Vorgabe): England war lange die bedeutendste Macht der Welt und
+   breitete seinen Einfluss über die ganze Erde aus — „The sun never
+   sets on the British Empire" (über dem Empire ging die Sonne nie
+   unter). Britisch-Indien als „Juwel der Krone" (East India Company,
+   nach 1857 Kronkolonie; aus Britisch-Indien gingen Indien und Pakistan
+   hervor, Teilung 1947), die Siedlerkolonien/Dominions Kanada,
+   Australien, Neuseeland, Südafrika, dazu Stützpunkte und Handelswege
+   rund um den Globus. Pax Britannica: die britische Marine sicherte die
+   Handelsrouten; Sprache, Recht, Verwaltung und Handel Großbritanniens
+   prägen große Teile der Welt bis heute. Perspektiven: die
+   Kolonialmächte vs. die
+   kolonisierten Völker (Indien, Kongo, Afrika, Asien) — Ausbeutung,
+   Rassismus, Widerstand, Nachwirkungen bis heute. „Der Sieger schreibt
+   die Geschichte" gilt hier doppelt. Verbindung zum 1. WK: die
+   Kolonialrivalitäten (Faschoda 1898, Marokko-Krisen 1905/1911) als
+   Teil der Spannungen, die 1914 explodierten. (Betreiber-Ergänzung
+   2026-08-14: anfangs vergessenes, aber wichtiges Kapitel.)
+7. **Der Weg zum Ersten Weltkrieg** (1815–1914) — Wiener Kongress,
    Nationalismus, Industrialisierung, Bündnissysteme, Julikrise.
    **KRIEGSSCHULDFRAGE als Herzstück, multiperspektivisch:**
    - Die in Deutschland gelehrte Alleinschuld-These ist NICHT der
@@ -64,11 +87,11 @@ besonderen inhaltlichen Anforderungen des Betreibers.
      (Gesichtsverlust, Zeitdruck). Der Ukraine-Krieg als aktuelles
      Beispiel dafür, wie schnell ein regionaler Konflikt eskalieren
      kann und wie schwer Deeskalation ist, wenn die Spirale erst dreht.
-7. **Die USA: Aufstieg zur Weltmacht** (1890–1945) — Industrialisierung,
+8. **Die USA: Aufstieg zur Weltmacht** (1890–1945) — Industrialisierung,
    Spanisch-Amerikanischer Krieg, 1917, Zwischenkriegszeit, 1941–45
-8. **Weimarer Republik und der Weg in die Diktatur** (1918–1933) —
+9. **Weimarer Republik und der Weg in die Diktatur** (1918–1933) —
    Versailles-Folgen, Inflation 1923, Arbeitslosigkeit, NS-Aufstieg
-9. **Der Zweite Weltkrieg und die neue Weltordnung** (1939–1945 + danach)
+10. **Der Zweite Weltkrieg und die neue Weltordnung** (1939–1945 + danach)
    — Perspektiven: Besiegte, Befreite, Besetzer (multiperspektivisch:
    Deutschland, besetzte Länder, Sowjetunion, USA, Japan)
 

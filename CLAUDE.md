@@ -154,21 +154,50 @@ hier ist zugleich die Reihenfolge in der App (`utils/themen/index.js`):
     Betreiber-Vorgabe ausdrücklich zentral, nicht Randnotiz.
     *(beide Sichtweisen fertig — Siedler/Nation und Stämme —, die Synthese
     führt sie zusammen)*
+12. **Revolution und Napoleon** (1789–1815) — fünftes Kapitel des
+    Neuzeit-Bogens. Von der Krise des Ancien Régime über den Ballhausschwur,
+    den Sturm auf die Bastille und die Erklärung der Menschen- und
+    Bürgerrechte 1789 bis Waterloo 1815. Es schließt an die USA an, weil
+    beide Kapitel zusammenhängen: 1803 verkauft Napoleon Louisiana an die
+    USA, um seine Kriege in Europa zu bezahlen. Die Perspektiven-Achse liegt
+    zwischen denen, die die Ideen von 1789 trugen, und denen, über deren
+    Köpfe hinweg sie gebracht wurden — Befreiung und Eroberung in derselben
+    Uniform. Die Leitidee der App führt dieses Kapitel an einer einzigen
+    Zahlenreihe vor: Dieselben Jahre gaben Europa Nation, Bürgerrechte und
+    Gleichheit vor dem Gesetz — und kosteten drei bis fünf Millionen
+    Menschen das Leben. Beides gehört in dieselbe Bilanz.
+    *(beide Sichtweisen fertig — Revolutionäre/Napoleon und Betroffene —,
+    die Synthese führt sie zusammen)*
 
 **Der Neuzeit-Bogen** ist vom Betreiber ausbuchstabiert und steht in
-`notizen/kapitel-planung.md`: neun Kapitel, beginnend mit „Vom Mittelalter zur
-Neuzeit" (= Modul 8, seit Runde 10 angelegt), der Eroberung Amerikas
+`notizen/kapitel-planung.md`: zehn Kapitel (seit dem 14.08.2026 — der
+Betreiber hat „Die Kolonien" als eigenes Kapitel nachgetragen), beginnend mit
+„Vom Mittelalter zur Neuzeit" (= Modul 8, seit Runde 10 angelegt), der Eroberung Amerikas
 (= Modul 9, seit Runde 11 angelegt), dem Dreißigjährigen Krieg (= Modul 10,
 seit Runde 12 angelegt) und den USA — Unabhängigkeit und die Vertreibung der
-Indianer (= Modul 11, seit Runde 13 angelegt), dann Revolution und Napoleon,
-der Weg zum Ersten Weltkrieg (mit der Kriegsschuldfrage als
-multiperspektivischem Herzstück und dem Abschnitt „Was 1914 uns heute lehrt")
-bis zum Zweiten Weltkrieg und der neuen Weltordnung. Wer eines dieser Kapitel
-beginnt, liest die Datei zuerst — sie enthält Vorgaben, die aus der
-Themenlandkarte allein nicht hervorgehen. Der frühere Platzhalter „Ausblick
-Neuzeit" ist damit erledigt: Der Bogen selbst ist der Ausblick. **Als
-Nächstes an der Reihe: Revolution und Napoleon (1789–1815)** — Französische
-Revolution, Napoleon, der Russland-Feldzug 1812, Waterloo.
+Indianer (= Modul 11, seit Runde 13 angelegt) und Revolution und Napoleon
+(= Modul 12, seit Runde 14 angelegt), dann die Kolonien, der Weg zum Ersten
+Weltkrieg (mit der Kriegsschuldfrage als multiperspektivischem Herzstück und
+dem Abschnitt „Was 1914 uns heute lehrt") bis zum Zweiten Weltkrieg und der
+neuen Weltordnung. Wer eines dieser Kapitel beginnt, liest die Datei zuerst —
+sie enthält Vorgaben, die aus der Themenlandkarte allein nicht hervorgehen.
+Der frühere Platzhalter „Ausblick Neuzeit" ist damit erledigt: Der Bogen
+selbst ist der Ausblick. **Als Nächstes an der Reihe: Die Kolonien
+(ca. 1815–1914)** — der europäische Imperialismus und die Aufteilung der Welt
+im 19. Jahrhundert: Wettlauf um Afrika und Kongokonferenz 1884/85, der Kongo
+unter Leopold II., Britisch-Indien, die Opiumkriege, Südostasien; nach
+Betreiber-Vorgabe mit einer besonderen Rolle Großbritanniens (Pax Britannica,
+„The sun never sets on the British Empire", Indien als „Juwel der Krone", die
+Dominions) und mit der Verbindung zum Ersten Weltkrieg über die
+Kolonialrivalitäten (Faschoda 1898, Marokko-Krisen 1905/1911).
+Perspektiven-Achse: die Kolonialmächte gegen die kolonisierten Völker — „Der
+Sieger schreibt die Geschichte" gilt hier doppelt. Danach folgt **Der Weg zum
+Ersten Weltkrieg (1815–1914)** mit der Kriegsschuldfrage als Herzstück (die
+Alleinschuld-These als das kennzeichnen, was sie ist: Artikel 231 des
+Versailler Vertrags, kein Forschungsstand) und ausdrücklich mehr als zwei
+Stimmen — je Großmacht eine. Die Vorgaben zu beiden Kapiteln stehen
+ausbuchstabiert in `notizen/kapitel-planung.md` und sind vor dem Start zu
+lesen.
 
 **Spätere Module (Landkarte, noch ohne Termin):** Persien als großes Reich,
 das Osmanische Reich und der Mittlere Osten, Indonesien.
@@ -238,15 +267,19 @@ für Japan, `tests/karte-israel-palaestina.mjs` für die Levante,
 `tests/karte-germanen.mjs`, `tests/karte-koenigreiche.mjs` und
 `tests/karte-mittelalter.mjs` für die drei Europakarten,
 `tests/karte-eroberung-amerikas.mjs` für die Atlantikkarte,
-`tests/karte-dreissigjaehriger-krieg.mjs` für die vierte Europakarte; alle
+`tests/karte-dreissigjaehriger-krieg.mjs` für die vierte Europakarte,
+`tests/karte-usa-unabhaengigkeit.mjs` für die Nordamerika-Karte,
+`tests/karte-revolution-und-napoleon.mjs` für die fünfte Europakarte; alle
 außer der ersten nehmen bewusst Koordinaten, die NICHT als Eckpunkte im
 Kartenmodul stehen, damit die gezeichnete Linie geprüft wird und nicht die
 abgeschriebene Zahl — dazu Kontrollpunkte im Binnenland bzw. auf offener See,
 die gerade NICHT auf einer Küste liegen dürfen, sonst wäre die Probe durch
 bloße Punktdichte immer erfüllt. Die Toleranz richtet sich nach dem Maßstab:
-ein Längengrad bei der weiten Eurasien-Karte und bei der noch weiteren
-Amerika-Karte (6,4 SVG-Einheiten je Grad, die gröbste der App), 0,6 bei der
-feineren Japan-Karte und bei den vier Europakarten, 0,15 bei der
+ein Längengrad bei der weiten Eurasien-Karte, bei der noch weiteren
+Amerika-Karte (6,4 SVG-Einheiten je Grad, die gröbste der App), bei der
+Nordamerika-Karte (11,7) und bei der Napoleon-Karte (14 — sie spannt 50
+Längengrade von Lissabon bis östlich von Moskau), 0,6 bei der feineren
+Japan-Karte und bei den vier engeren Europakarten, 0,15 bei der
 Levante-Karte — dort sind 140 SVG-Einheiten ein Längengrad, und ein ganzer
 Grad würde nichts mehr beweisen).
 
@@ -318,9 +351,87 @@ aus dem Play Store hinkt den SDKs hinterher (siehe AGENTS.md). Zum Testen
 
 ## Status
 
-Stand: 2026-08-13 — Runde 13 abgeschlossen (Modul „Die USA: Unabhängigkeit
-und die Vertreibung der Indianer", viertes Kapitel des Neuzeit-Bogens; beide
-Stimmen, Karte und Tests):
+Stand: 2026-08-14 — Runde 14 abgeschlossen (Modul „Revolution und Napoleon",
+fünftes Kapitel des Neuzeit-Bogens; beide Stimmen, Karte und Tests):
+- Runde 14: das zwölfte Thema — „Revolution und Napoleon"
+  (`utils/themen/revolution-und-napoleon.js`, registriert als Modul 12).
+  Die Sicht der Revolutionäre und der napoleonischen Bewegung
+  (Stimme: Opus). Inhalt: 1789 als Rechnung, die nicht aufging (Staatsbankrott
+  nach dem amerikanischen Unabhängigkeitskrieg, Missernte 1788, Generalstände,
+  Ballhausschwur, Bastille, Nacht des 4. August); die Erklärung der Menschen-
+  und Bürgerrechte samt dem Halbsatz, der alles umstürzt — Ämter für alle
+  „ohne einen anderen Unterschied als den ihrer Fähigkeiten" — und der Liste
+  dessen, was tatsächlich kam (Ende der Leibeigenschaft und der Zünfte,
+  Gleichstellung von Protestanten und Juden 1791, metrisches System); ein
+  eigener Abschnitt „Wen die Gleichheit nicht meinte" (Frauen und Olympe de
+  Gouges, das Verbot der Frauenklubs 1793, die Versklavten in Saint-Domingue,
+  die Abschaffung der Sklaverei 1794 — und ihre Wiedereinführung durch
+  Napoleon 1802, aus der 1804 Haiti hervorging); der Terror 1793/94 mit rund
+  17 000 Todesurteilen, der Vendée und dem Satz, den diese Stimme über sich
+  selbst sagt: Eine Bewegung, die im Namen der Menschenrechte Menschen ohne
+  Verteidigung aburteilt, widerlegt sich selbst; Bonapartes Aufstieg (Toulon
+  1793, Italien 1796, Ägypten 1798 samt Stein von Rosetta, der 18. Brumaire
+  ausdrücklich als Staatsstreich benannt); der Code civil als das, was blieb,
+  mitsamt seiner Kehrseite (die Ehefrau unter der Gewalt des Mannes, vier
+  statt siebzig Pariser Zeitungen, Geheimpolizei); die Kaiserkrönung 1804 als
+  neue Erbherrschaft, Austerlitz 1805, Jena und Auerstedt 1806, Trafalgar und
+  die Kontinentalsperre als Kette, an der jeder Krieg den nächsten erzeugte;
+  Spanien ab 1808 mit fair wiedergegebenen Beweggründen der Gegenseite; 1812
+  als Feldzug ohne erreichbares Ziel (600 000 Mann, weniger als 100 000
+  zurück); Leipzig, Elba, die Hundert Tage, Waterloo und der Wiener Kongress;
+  und zum Schluss „Was die Zeitgenossen sahen" (Kant, Hegels „Weltseele zu
+  Pferde", Beethovens zurückgenommene Widmung, Wordsworth — und Goyas
+  „Schrecken des Krieges", die Blutsteuer, die Bilanz aus Bürgerrechten und
+  drei bis fünf Millionen Toten, die in dieselbe Rechnung gehören). Die Sicht
+  der Betroffenen (Saint-Domingue/Haiti, Spanien, Russland, die deutschen
+  Länder, die Soldaten der Grande Armée) ergänzt Hermes; die Synthese sagt
+  bis dahin offen, dass dieses Kapitel eine halbe Geschichte ist.
+  Die Karte `utils/themen/karten/revolution-und-napoleon.js` spannt 10° W bis
+  40° O und 35° N bis 57° N auf 700 × 443,4 — 14 SVG-Einheiten je Längengrad.
+  Der Betreiber hatte 9° W–40° O und 35–55° N vorgegeben; nach Norden und
+  Westen steht der Rahmen eine Spur weiter, und zwar aus dem Grund, den die
+  Vorgabe selbst nennt: Moskau liegt auf 55,75° N, Kopenhagen auf 55,68° N,
+  Lissabon auf 9,14° W — bei 55° N und 9° W wäre der Russland-Feldzug ohne
+  Ziel geblieben. Was der Ausschnitt kostet, steht im Kopf der Datei: Norwegen
+  und Sankt Petersburg liegen über dem oberen Rand, Ägypten unter dem unteren
+  — der Ägypten-Feldzug 1798/99 steht deshalb nur im Text. Enthalten sind
+  Küsten von Irland bis zum Kaukasus, Anatolien und die Levanteküste,
+  Nordafrika von Tanger bis Kap Bon, zwölf Inseln (darunter Korsika und Elba,
+  beide für dieses Kapitel unverzichtbar) und neunzehn Flüsse — vom Rhein bis
+  zur Beresina. Drei Phasen (1789 das Europa der Königreiche / 1805–1812 das
+  Empire auf dem Höhepunkt / 1815 die Ordnung des Wiener Kongresses), sieben
+  Info-Punkte (Paris, Trafalgar, Madrid, Austerlitz, Moskau, Leipzig,
+  Waterloo) und drei Bewegungen (Vormarsch 1812, Rückzug über die Beresina,
+  von Elba nach Waterloo).
+  Zwei Festlegungen sind zentral. Erstens: **Das Heilige Römische Reich ist
+  keine Fläche** — dieselbe Regel wie beim Dreißigjährigen Krieg; die
+  Reichsgrenze von 1789 liegt als blasse Linie im Untergrund und bleibt auch
+  auf den späteren Phasen stehen, damit man sieht, was 1806 verschwand.
+  Zweitens: **Moskau liegt in keiner Phase im französischen Gebiet.** Napoleon
+  stand im September 1812 in der Stadt; einverleibt war sie nie. Der Feldzug
+  ist deshalb ein Pfeil und keine Fläche — derselbe Unterschied wie beim
+  schwedischen Vormarsch von 1631.
+  Dazu `tests/karte-revolution-und-napoleon.mjs`: 30 Atlas-Landmarken von
+  Galway bis Rostow am Don mit einem Längengrad Toleranz (jede mindestens
+  0,1 Grad neben dem nächsten Eckpunkt des Kartenmoduls), zwölf Kontrollpunkte
+  abseits jeder Küste — und die Aussage des Kapitels als Rechnung: Das
+  französische Gebiet muss 1812 deutlich größer sein als 1789 und 1815 wieder
+  auf den alten Wert zurückfallen; Polen-Litauen steht 1789 auf der Karte und
+  danach nie wieder; Herzogtum Warschau und Rheinbund gibt es nur in der
+  mittleren Phase, den Deutschen Bund erst 1815; Russland wächst über alle
+  drei Phasen. Dazu die Punkt-im-Vieleck-Proben: Moskau liegt in jeder Phase
+  im russischen und in keiner im französischen Gebiet, Rom, Utrecht und
+  Ajaccio dagegen 1812 im einverleibten Gebiet, Berlin nicht. Und die
+  Tone-Prüfungen: dass die Perspektive den Terror, die Wiedereinführung der
+  Sklaverei 1802, den Staatsstreich, die Zensur und die Ziellosigkeit des
+  Feldzugs von 1812 selbst benennt, dass sie die Beweggründe der spanischen
+  Seite und der Freiwilligen von 1813 fair wiedergibt — und dass keine
+  Quizfrage nach Schuld fragt.
+- `npm test` grün (2093 Prüfungen)
+
+Frühere Runde (2026-08-13): Runde 13 abgeschlossen (Modul „Die USA:
+Unabhängigkeit und die Vertreibung der Indianer", viertes Kapitel des
+Neuzeit-Bogens; beide Stimmen, Karte und Tests):
 - Runde 13: das elfte Thema — „Die USA: Unabhängigkeit und die Vertreibung
   der Indianer" (`utils/themen/usa-unabhaengigkeit.js`, registriert als
   Modul 11). Zeitlich nach Betreiber-Vorgabe vor Napoleon einsortiert
@@ -388,11 +499,12 @@ Stimmen, Karte und Tests):
   Wounded Knee als Massaker selbst benennt, dass sie die politische
   Eigenständigkeit der Cherokee und den Widerstand der Seminolen fair
   wiedergibt — und dass keine Quizfrage nach Schuld oder Besitz fragt.
-- `npm test` grün (1894 Prüfungen)
+- `npm test` grün (2095 Prüfungen)
 
-Alle elf Module — Rom, China, Dschingis Khan, Japan, Israel/Palästina,
+Alle zwölf Module — Rom, China, Dschingis Khan, Japan, Israel/Palästina,
 Germanen, Königreiche, Mittelalter, Eroberung Amerikas, Dreißigjähriger
-Krieg und die USA — haben beide Stimmen und eine echte Synthese.
+Krieg, die USA und Revolution und Napoleon — haben beide Stimmen und eine
+echte Synthese.
 
 Frühere Runde (2026-08-13): Runde 12 abgeschlossen (Modul „Der
 Dreißigjährige Krieg",
@@ -783,7 +895,33 @@ drittes Kapitel des Neuzeit-Bogens; erste Stimme, Karte und Tests):
   fragt.
 - `npm test` grün (1737 Prüfungen)
 
-Nächste Schritte von Runde 12 (durch Runde 13 überholt, siehe oben):
+Nächste Schritte nach Runde 14:
+- **Die Kolonien (ca. 1815–1914)** als nächstes Kapitel. Achtung, das ist neu:
+  Der Betreiber hat dieses Kapitel am 14.08.2026 in
+  `notizen/kapitel-planung.md` nachgetragen („anfangs vergessenes, aber
+  wichtiges Kapitel") — es steht jetzt als Nummer 6 zwischen Napoleon und dem
+  Ersten Weltkrieg, der damit Nummer 7 ist. Inhalt und Vorgaben stehen dort;
+  besonders zu beachten ist die ausdrücklich verlangte Rolle Großbritanniens
+  und die Verbindung zum Ersten Weltkrieg über die Kolonialrivalitäten.
+- **Der Weg zum Ersten Weltkrieg (1815–1914)** danach. Vor dem
+  Start `notizen/kapitel-planung.md` lesen: Dort steht ausbuchstabiert, dass
+  die Kriegsschuldfrage das Herzstück ist, dass die Alleinschuld-These als
+  Artikel 231 des Versailler Vertrags gekennzeichnet werden muss und nicht als
+  Forschungsstand, dass Quellen aller Mächte heranzuziehen sind — und dass ein
+  Abschnitt „Was 1914 uns heute lehrt" dazugehört. Ausdrücklich mehr als zwei
+  Stimmen: je Großmacht eine.
+- **Am Gerät gegenlesen** (siehe die ältere Liste unten): Mit der
+  Napoleon-Karte (700 × 443,4) sind es jetzt zwölf Karten, die rechnerisch
+  gegen den Atlas geprüft, aber noch auf keinem Handy gesehen wurden. Die
+  Beschriftungen der Napoleon-Karte wurden auf Überlappung geprüft; zwei
+  Kollisionen („Spanien" mit dem Info-Punkt Madrid, „Korsika" mit „Elba")
+  sind durch Verschieben der beiden Landschaftsnamen behoben. Offen bleibt
+  die Frage vom kleinen Bildschirm her: Elba ist bei 14 Einheiten je
+  Längengrad nur wenige SVG-Einheiten groß und trägt trotzdem den Anfang
+  einer Bewegung.
+- **Zeitleisten** — unverändert offen, siehe unten.
+
+Nächste Schritte von Runde 12 (durch Runde 13 und 14 überholt, siehe oben):
 - **Am Gerät gegenlesen:** Alle zehn Karten sind rechnerisch gegen den
   Atlas geprüft, aber noch nicht auf einem Handy gesehen. Vor allem
   Schriftgrößen und Trefferflächen der Punkte gehören auf einem kleinen

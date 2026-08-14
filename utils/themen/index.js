@@ -76,6 +76,13 @@
 // und das Kapitel macht, wie „Die Eroberung Amerikas", die Vertreibung der
 // indigenen Bevölkerung ausdrücklich zum zentralen Gegenstand.
 //
+// „Revolution und Napoleon" ist das zwölfte Thema und das fünfte des
+// Neuzeit-Bogens. Es steht hinter den USA, weil deren Unabhängigkeit 1776 vor
+// Napoleons Aufstieg 1799 liegt — und weil beide Kapitel zusammenhängen: 1803
+// verkauft Napoleon Louisiana an die USA, um seine Kriege in Europa zu
+// bezahlen. Die Perspektiven-Achse liegt hier zwischen denen, die die Ideen
+// von 1789 trugen, und denen, über deren Köpfe hinweg sie gebracht wurden.
+//
 // CommonJS, damit dieselbe Datei mit blankem `node` prüfbar ist und von
 // Metro/Babel in der App geladen werden kann (siehe schema.js).
 
@@ -90,6 +97,7 @@ const mittelalter = require('./mittelalter');
 const eroberungAmerikas = require('./eroberung-amerikas');
 const dreissigjaehrigerKrieg = require('./dreissigjaehriger-krieg');
 const usaUnabhaengigkeit = require('./usa-unabhaengigkeit');
+const revolutionUndNapoleon = require('./revolution-und-napoleon');
 
 /** Alle Themen in der Reihenfolge der Themenlandkarte. */
 const alleThemen = [
@@ -104,6 +112,7 @@ const alleThemen = [
   eroberungAmerikas,
   dreissigjaehrigerKrieg,
   usaUnabhaengigkeit,
+  revolutionUndNapoleon,
 ];
 
 /**
