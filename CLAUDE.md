@@ -168,6 +168,26 @@ hier ist zugleich die Reihenfolge in der App (`utils/themen/index.js`):
     Menschen das Leben. Beides gehört in dieselbe Bilanz.
     *(beide Sichtweisen fertig — Revolutionäre/Napoleon und Betroffene —,
     die Synthese führt sie zusammen)*
+13. **Die Kolonien** (≈1815–1914) — sechstes Kapitel des Neuzeit-Bogens und
+    eine Betreiber-Ergänzung vom 14.08.2026 („anfangs vergessenes, aber
+    wichtiges Kapitel"). Vom Wiener Kongress bis zum Vorabend des Ersten
+    Weltkriegs: der europäische Imperialismus und die Aufteilung der Welt.
+    Nach Betreiber-Vorgabe ist die **besondere Rolle Großbritanniens**
+    zentral — Pax Britannica, „The sun never sets on the British Empire",
+    Britisch-Indien als „Juwel der Krone" (East India Company, nach 1857
+    Kronkolonie; 1947 gingen daraus Indien und Pakistan hervor), die
+    Dominions Kanada, Australien, Neuseeland und Südafrika, dazu Stützpunkte
+    und Handelswege rund um den Globus. Dazu der Wettlauf um Afrika, die
+    Kongokonferenz 1884/85, der Kongo unter Leopold II., die Opiumkriege und
+    die Verbindung zum nächsten Kapitel über die Kolonialrivalitäten
+    (Faschoda 1898, die Marokko-Krisen 1905 und 1911). Die
+    Perspektiven-Achse steht wieder nach außen: die Kolonialmächte gegen die
+    kolonisierten Völker. Hier gilt die Leitidee der App doppelt — diese
+    Seite hat nicht nur gewonnen, sie hat auch die Akten geführt, die Karten
+    gezeichnet und die Namen vergeben.
+    *(erste Sichtweise fertig — die Kolonialmächte, Stimme Opus; die Sicht
+    der kolonisierten Völker ergänzt Hermes, die Synthese ist bis dahin
+    vorläufig und sagt das selbst)*
 
 **Der Neuzeit-Bogen** ist vom Betreiber ausbuchstabiert und steht in
 `notizen/kapitel-planung.md`: zehn Kapitel (seit dem 14.08.2026 — der
@@ -176,26 +196,18 @@ Betreiber hat „Die Kolonien" als eigenes Kapitel nachgetragen), beginnend mit
 (= Modul 9, seit Runde 11 angelegt), dem Dreißigjährigen Krieg (= Modul 10,
 seit Runde 12 angelegt) und den USA — Unabhängigkeit und die Vertreibung der
 Indianer (= Modul 11, seit Runde 13 angelegt) und Revolution und Napoleon
-(= Modul 12, seit Runde 14 angelegt), dann die Kolonien, der Weg zum Ersten
+(= Modul 12, seit Runde 14 angelegt), den Kolonien (= Modul 13, seit Runde 15
+angelegt), dem Weg zum Ersten
 Weltkrieg (mit der Kriegsschuldfrage als multiperspektivischem Herzstück und
 dem Abschnitt „Was 1914 uns heute lehrt") bis zum Zweiten Weltkrieg und der
 neuen Weltordnung. Wer eines dieser Kapitel beginnt, liest die Datei zuerst —
 sie enthält Vorgaben, die aus der Themenlandkarte allein nicht hervorgehen.
 Der frühere Platzhalter „Ausblick Neuzeit" ist damit erledigt: Der Bogen
-selbst ist der Ausblick. **Als Nächstes an der Reihe: Die Kolonien
-(ca. 1815–1914)** — der europäische Imperialismus und die Aufteilung der Welt
-im 19. Jahrhundert: Wettlauf um Afrika und Kongokonferenz 1884/85, der Kongo
-unter Leopold II., Britisch-Indien, die Opiumkriege, Südostasien; nach
-Betreiber-Vorgabe mit einer besonderen Rolle Großbritanniens (Pax Britannica,
-„The sun never sets on the British Empire", Indien als „Juwel der Krone", die
-Dominions) und mit der Verbindung zum Ersten Weltkrieg über die
-Kolonialrivalitäten (Faschoda 1898, Marokko-Krisen 1905/1911).
-Perspektiven-Achse: die Kolonialmächte gegen die kolonisierten Völker — „Der
-Sieger schreibt die Geschichte" gilt hier doppelt. Danach folgt **Der Weg zum
+selbst ist der Ausblick. **Als Nächstes an der Reihe: Der Weg zum
 Ersten Weltkrieg (1815–1914)** mit der Kriegsschuldfrage als Herzstück (die
 Alleinschuld-These als das kennzeichnen, was sie ist: Artikel 231 des
 Versailler Vertrags, kein Forschungsstand) und ausdrücklich mehr als zwei
-Stimmen — je Großmacht eine. Die Vorgaben zu beiden Kapiteln stehen
+Stimmen — je Großmacht eine. Die Vorgaben dazu stehen
 ausbuchstabiert in `notizen/kapitel-planung.md` und sind vor dem Start zu
 lesen.
 
@@ -269,14 +281,17 @@ für Japan, `tests/karte-israel-palaestina.mjs` für die Levante,
 `tests/karte-eroberung-amerikas.mjs` für die Atlantikkarte,
 `tests/karte-dreissigjaehriger-krieg.mjs` für die vierte Europakarte,
 `tests/karte-usa-unabhaengigkeit.mjs` für die Nordamerika-Karte,
-`tests/karte-revolution-und-napoleon.mjs` für die fünfte Europakarte; alle
+`tests/karte-revolution-und-napoleon.mjs` für die fünfte Europakarte,
+`tests/karte-die-kolonien.mjs` für die Afrika-Indien-Karte; alle
 außer der ersten nehmen bewusst Koordinaten, die NICHT als Eckpunkte im
 Kartenmodul stehen, damit die gezeichnete Linie geprüft wird und nicht die
 abgeschriebene Zahl — dazu Kontrollpunkte im Binnenland bzw. auf offener See,
 die gerade NICHT auf einer Küste liegen dürfen, sonst wäre die Probe durch
 bloße Punktdichte immer erfüllt. Die Toleranz richtet sich nach dem Maßstab:
-ein Längengrad bei der weiten Eurasien-Karte, bei der noch weiteren
-Amerika-Karte (6,4 SVG-Einheiten je Grad, die gröbste der App), bei der
+ein Längengrad bei der weiten Eurasien-Karte, bei der Kolonien-Karte (6,1
+SVG-Einheiten je Grad — sie spannt 115 Längengrade von den Kanaren bis Birma
+und ist damit die gröbste der App), bei der
+Amerika-Karte (6,4), bei der
 Nordamerika-Karte (11,7) und bei der Napoleon-Karte (14 — sie spannt 50
 Längengrade von Lissabon bis östlich von Moskau), 0,6 bei der feineren
 Japan-Karte und bei den vier engeren Europakarten, 0,15 bei der
@@ -351,8 +366,102 @@ aus dem Play Store hinkt den SDKs hinterher (siehe AGENTS.md). Zum Testen
 
 ## Status
 
-Stand: 2026-08-14 — Runde 14 abgeschlossen (Modul „Revolution und Napoleon",
-fünftes Kapitel des Neuzeit-Bogens; beide Stimmen, Karte und Tests):
+Stand: 2026-08-14 — Runde 15 abgeschlossen (Modul „Die Kolonien", sechstes
+Kapitel des Neuzeit-Bogens; erste Stimme, Karte und Tests):
+- Runde 15: das dreizehnte Thema — „Die Kolonien"
+  (`utils/themen/die-kolonien.js`, registriert als Modul 13). Vorerst nur die
+  Sicht der Kolonialmächte (Stimme: Opus). Herzstück ist nach
+  Betreiber-Vorgabe die britische Sonderrolle: das Reich, in dem die Sonne
+  nicht unterging (ein Viertel der Menschheit, ein Viertel der Landfläche),
+  die Royal Navy als eigentlicher Träger, Pfund Sterling, Lloyd’s,
+  Seekabel und der Nullmeridian von Greenwich; die Pax Britannica samt dem
+  Satz, der gleich daneben gehört (ein Frieden zwischen Großmächten — in
+  Indien, China, Ägypten, im Sudan und in Südafrika war das Jahrhundert voller
+  Kriege); Britisch-Indien als „Juwel der Krone" von der East India Company
+  über Plassey 1757 und den Aufstand von 1857 („Sepoy-Meuterei" gegen „Erster
+  Unabhängigkeitskrieg" — beide Namen stehen da) zur Kronkolonie 1858, mit
+  Eisenbahnen, Universitäten und Rechtswesen in derselben Bilanz wie die
+  Hungersnöte von 1876–1900 und die Teilung von 1947; die Dominions Kanada,
+  Australien, Neuseeland und Südafrika samt der unbequemen Stelle, die diese
+  Stimme selbst benennt (Selbstverwaltung hieß Selbstverwaltung der
+  Eingewanderten — 1910 hatte die Mehrheit Südafrikas kein Stimmrecht). Dazu
+  die anderen Mächte (Frankreich, Belgien, Deutschland als später Einsteiger,
+  Portugal, Spanien, Italien), der Wettlauf um Afrika mit seinen drei Ursachen
+  (Technik, Industrie, Konkurrenz untereinander), die Kongokonferenz 1884/85
+  samt der Richtigstellung, dass dort keine Kolonien verteilt, sondern Regeln
+  beschlossen wurden — und dass kein Afrikaner eingeladen war; die
+  Selbstrechtfertigung („Zivilisierungsmission", Kiplings „Bürde des weißen
+  Mannes") und der Rassismus als Ideologie, ausdrücklich als das benannt, was
+  das Ganze moralisch erträglich erscheinen ließ; die Rechnung aus Rohstoffen,
+  Eisenbahnen und dem Sueskanal 1869 mitsamt der Frage, wem der Gewinn zufloss;
+  und der Widerstand, den diese Stimme fair wiedergibt (Aschanti und Yaa
+  Asantewaa, Samori Touré, der Mahdi-Staat, Maji-Maji, Menelik II. und Adua)
+  — mit dem Satz, der die eigene Deutung widerlegt: In Europa nannten wir
+  genau dasselbe Verhalten Vaterlandsliebe. Die unbequemen Stellen benennt
+  die Perspektive selbst: der Kongo unter Leopold II. samt Kautschukquoten und
+  abgehackten Händen, die Opiumkriege („ein Krieg für das Recht, Drogen zu
+  verkaufen"), der Völkermord an Herero und Nama 1904–1908, die Lager im
+  Burenkrieg, Zwangsarbeit und Kopfsteuern, die eigene Rolle als größter
+  Sklavenhändler des 18. Jahrhunderts — und der Quellenvorsprung, der dieses
+  Kapitel von allen anderen unterscheidet: Diese Seite hat nicht nur gewonnen,
+  sie hat auch die Akten geführt. Die Sicht der kolonisierten Völker (Indien,
+  Kongo, China, Afrika) ergänzt Hermes; die Synthese sagt bis dahin offen,
+  dass eine Seite, die über sich selbst Rechenschaft ablegt, immer noch eine
+  Seite ist.
+  Die Karte `utils/themen/karten/die-kolonien.js` spannt 20° W bis 95° O und
+  36° S bis 58° N auf 700 × 582,9 — mit 6,1 SVG-Einheiten je Längengrad die
+  gröbste der App. Der Betreiber hatte 20° W bis 60° O vorgeschlagen; nach
+  Osten steht der Rahmen deutlich weiter, und zwar aus dem Grund, den die
+  Vorgabe selbst nennt: Britisch-Indien soll sichtbar sein, und Delhi liegt
+  auf 77,2° O, Kalkutta auf 88,4° O — bei 60° O wäre vom „Juwel der Krone"
+  nichts auf der Karte. Was der Ausschnitt kostet, steht im Kopf der Datei:
+  Australien, Neuseeland, Kanada, China, Singapur und Indochina liegen
+  außerhalb — die Dominions und die Opiumkriege stehen deshalb nur im Text.
+  Enthalten sind Afrika als geschlossener Umriss, Europa und Asien als zweiter
+  Ring, elf Inseln von Madagaskar bis Gran Canaria, acht Binnenmeere und Seen
+  (Schwarzes Meer, Kaspisches Meer, Persischer Golf, Aralsee, Victoria-,
+  Tanganjika-, Njassa- und Tschadsee), fünf Wüsten, zwölf Flüsse und der
+  Sueskanal als gebaute Linie. Drei Phasen (1815 vor dem Wettlauf / 1885 nach
+  der Kongokonferenz / 1914 aufgeteilt), sieben Info-Punkte (London, Berlin,
+  Sueskanal, Delhi, Léopoldville, Kapstadt, Sansibar) und vier Bewegungen (der
+  alte Seeweg ums Kap, der kurze Weg durch den Sueskanal, die Karawanenwege
+  ins Innere Ostafrikas, der Kautschuk vom Kongo nach Antwerpen).
+  Zwei Festlegungen sind zentral. Erstens: **Die Staaten Afrikas stehen als
+  eigene, gleich behandelte Flächen auf der Karte** — dieselbe Regel wie bei
+  den USA, wo 1776 das Land der Haudenosaunee neben den Dreizehn Kolonien
+  steht. 1815 sind es zehn (Sokoto, Bornu, Aschanti, Dahomey, Buganda, Merina,
+  Sansibar/Oman, Marokko, die Regentschaften, Abessinien, dazu Ägypten unter
+  Muhammad Ali), 1885 siebzehn, 1914 zwei: Abessinien und Liberia. Der
+  Umschalter erzählt damit nicht, wie Europa ankommt, sondern was verschwindet.
+  Zweitens: **Eingefärbt wird nur, wo eine Herrschaft mit Grenzen plausibel
+  ist** — Sahara, Kongobecken und Kalahari bleiben 1815 leer, und der
+  Küstenstreifen des Sultans von Sansibar ist ausdrücklich breiter gezeichnet,
+  als er war, weil er sonst dünner wäre als seine eigene Umrandung; der Hinweis
+  der Phase sagt das selbst.
+  Dazu `tests/karte-die-kolonien.mjs`: 42 Atlas-Landmarken von Essaouira bis
+  Sittwe mit einem Längengrad Toleranz (jede mindestens 0,1 Grad neben dem
+  nächsten Eckpunkt des Kartenmoduls), 14 Kontrollpunkte abseits jeder Küste —
+  und die Aussage des Kapitels als Rechnung: 1914 sind von den Staaten Afrikas
+  genau zwei übrig, beide tragen „nie kolonisiert" im Titel; Sokoto, Aschanti
+  und das Sultanat Sansibar stehen 1815 und 1885 da und danach nicht mehr; der
+  Kongo-Freistaat steht nur auf der mittleren Phase, und sein Titel sagt, dass
+  er Privatbesitz Leopolds II. und nicht Besitz Belgiens war; 1815 kommt keine
+  deutsche, belgische oder italienische Fläche vor. Dazu die
+  Punkt-im-Vieleck-Proben: Timbuktu, Tabora, Kumasi, Antananarivo und Bamako
+  liegen 1815 in keiner europäischen Fläche und 1914 in einer — Addis Abeba
+  und Monrovia dagegen in keiner einzigen Phase. Und die Tone-Prüfungen: dass
+  die Perspektive Kongo, Opiumkriege, Herero und Nama, die Lager im
+  Burenkrieg, Zwangsarbeit, Hungersnöte, Rassismus und die eigene Rolle im
+  Sklavenhandel selbst benennt, dass sie den Widerstand fair wiedergibt — und
+  dass keine Quizfrage nach Schuld fragt.
+  `node tools/pruef-die-kolonien.mjs` meldet **keine** Überlappung und nichts
+  über dem Bildrand; das Skript rechnet als erstes dieser Art die Drehung mit
+  (ein hochkant gestellter Name ist schmal, nicht breit).
+- `npm test` grün (2344 Prüfungen)
+
+Frühere Runde (2026-08-14): Runde 14 abgeschlossen (Modul „Revolution und
+Napoleon", fünftes Kapitel des Neuzeit-Bogens; beide Stimmen, Karte und
+Tests):
 - Runde 14: das zwölfte Thema — „Revolution und Napoleon"
   (`utils/themen/revolution-und-napoleon.js`, registriert als Modul 12).
   Die Sicht der Revolutionäre und der napoleonischen Bewegung
@@ -501,10 +610,12 @@ Neuzeit-Bogens; beide Stimmen, Karte und Tests):
   wiedergibt — und dass keine Quizfrage nach Schuld oder Besitz fragt.
 - `npm test` grün (2095 Prüfungen)
 
-Alle zwölf Module — Rom, China, Dschingis Khan, Japan, Israel/Palästina,
-Germanen, Königreiche, Mittelalter, Eroberung Amerikas, Dreißigjähriger
-Krieg, die USA und Revolution und Napoleon — haben beide Stimmen und eine
-echte Synthese.
+Zwölf der dreizehn Module — Rom, China, Dschingis Khan, Japan,
+Israel/Palästina, Germanen, Königreiche, Mittelalter, Eroberung Amerikas,
+Dreißigjähriger Krieg, die USA und Revolution und Napoleon — haben beide
+Stimmen und eine echte Synthese. Beim dreizehnten, „Die Kolonien", steht
+bisher die Sicht der Kolonialmächte; die Sicht der kolonisierten Völker
+ergänzt Hermes, und die Synthese ist bis dahin vorläufig.
 
 Frühere Runde (2026-08-13): Runde 12 abgeschlossen (Modul „Der
 Dreißigjährige Krieg",

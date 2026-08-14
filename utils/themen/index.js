@@ -83,6 +83,16 @@
 // bezahlen. Die Perspektiven-Achse liegt hier zwischen denen, die die Ideen
 // von 1789 trugen, und denen, über deren Köpfe hinweg sie gebracht wurden.
 //
+// „Die Kolonien" ist das dreizehnte Thema und das sechste des Neuzeit-Bogens
+// (notizen/kapitel-planung.md, vom Betreiber am 14.08.2026 nachgetragen). Es
+// steht hinter „Revolution und Napoleon", weil es dort ansetzt, wo der Wiener
+// Kongress 1815 endet, und es steht vor dem Weg zum Ersten Weltkrieg, weil die
+// Kolonialrivalitäten — Faschoda 1898, die Marokko-Krisen 1905 und 1911 — zu
+// den Spannungen gehören, die 1914 explodierten. Die Perspektiven-Achse steht
+// wieder nach außen: die Kolonialmächte gegen die kolonisierten Völker. „Der
+// Sieger schreibt die Geschichte" gilt hier doppelt — diese Seite hat nicht
+// nur gewonnen, sie hat auch die Akten geführt und die Karten gezeichnet.
+//
 // CommonJS, damit dieselbe Datei mit blankem `node` prüfbar ist und von
 // Metro/Babel in der App geladen werden kann (siehe schema.js).
 
@@ -98,6 +108,7 @@ const eroberungAmerikas = require('./eroberung-amerikas');
 const dreissigjaehrigerKrieg = require('./dreissigjaehriger-krieg');
 const usaUnabhaengigkeit = require('./usa-unabhaengigkeit');
 const revolutionUndNapoleon = require('./revolution-und-napoleon');
+const dieKolonien = require('./die-kolonien');
 
 /** Alle Themen in der Reihenfolge der Themenlandkarte. */
 const alleThemen = [
@@ -113,6 +124,7 @@ const alleThemen = [
   dreissigjaehrigerKrieg,
   usaUnabhaengigkeit,
   revolutionUndNapoleon,
+  dieKolonien,
 ];
 
 /**
