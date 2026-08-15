@@ -3,7 +3,7 @@
 Stand: 2026-08-14. Ergänzt die Themenlandkarte in CLAUDE.md um die
 besonderen inhaltlichen Anforderungen des Betreibers.
 
-## Landkarte (10 Kapitel nach den Königreichen)
+## Landkarte (13 Kapitel nach den Königreichen)
 
 1. **Vom Mittelalter zur Neuzeit** (Brücke, ~800–1618) — Lehnswesen,
    Kirche, Pest, Renaissance, Reformation
@@ -91,9 +91,80 @@ besonderen inhaltlichen Anforderungen des Betreibers.
    Spanisch-Amerikanischer Krieg, 1917, Zwischenkriegszeit, 1941–45
 9. **Weimarer Republik und der Weg in die Diktatur** (1918–1933) —
    Versailles-Folgen, Inflation 1923, Arbeitslosigkeit, NS-Aufstieg
-10. **Der Zweite Weltkrieg und die neue Weltordnung** (1939–1945 + danach)
-   — Perspektiven: Besiegte, Befreite, Besetzer (multiperspektivisch:
-   Deutschland, besetzte Länder, Sowjetunion, USA, Japan)
+10. **Der Zweite Weltkrieg** (1939–1945) — der Krieg selbst. Perspektiven:
+   Besiegte (Deutschland), die Sowjetunion, die USA/Westmächte
+   (multiperspektivisch, das Schema erlaubt 3+). **Die sowjetische
+   Hauptlast (Betreiber-Vorgabe, PROMINENT):** Die Sowjetunion trug die
+   Hauptlast des Krieges gegen Deutschland — an der Ostfront erlitt die
+   Wehrmacht den weitaus größten Teil ihrer Verluste; Leningrad (900-Tage-
+   Blockade), Stalingrad, Kursk. Zahlen nach dem Forschungsstand
+   (Krivosheev): rund 27 Mio. sowjetische Tote insgesamt, davon ~8,7–11 Mio.
+   Soldaten; die oft zitierte „20-Millionen-Zahl" ist die ältere sowjetische
+   Angabe (Chruschtschow 1961) für die Gesamtverluste — die Hauptlast-
+   Aussage des Betreibers ist inhaltlich richtig, die Zahlen im Modul müssen
+   dem Forschungsstand entsprechen. Der Holocaust als deutsche
+   Verantwortung, nie relativieren. Der Krieg als verbrecherischer
+   Angriffskrieg.
+11. **Die neue Weltordnung und der Kalte Krieg** (1945–1991) — die
+   Nachkriegsordnung (Jalta/Potsdam), die Teilung Deutschlands und Europas
+   (Eiserner Vorhang, BRD/DDR, Berlin, die Mauer 1961), **NATO (1949) vs.
+   Warschauer Pakt (1955)** — die Blöcke, die Aufteilung der Welt, die
+   Grenze durch Deutschland; Berliner Luftbrücke 1948/49, Kubakrise 1962
+   (die Welt am Abgrund), Stellvertreterkriege, Helsinki 1975
+   (KSZE-Menschenrechte als Hebel der Dissidenten). **Warum der Ostblock
+   zusammenbrach (Betreiber-Vorgabe):** Planwirtschaft vs. Markt,
+   Rüstungslast, Ölpreisverfall 1986, Gorbatschows Perestroika/Glasnost,
+   die Samtenen Revolutionen 1989, Fall der Mauer 9.11.1989, das Ende der
+   UdSSR am 25.12.1991. **Der 2+4-Vertrag (12.09.1990, Moskau —
+   Betreiber-Vorgabe):** „Vertrag über die abschließende Regelung in Bezug
+   auf Deutschland" — seine Bedeutung (volle Souveränität Deutschlands,
+   Ende der Vier-Mächte-Rechte, die Wiedervereinigung völkerrechtlich
+   besiegelt) und die Frage, ob er eingehalten wurde (formal ja — Art. 7
+   erlaubt ausdrücklich Bündnismitgliedschaft; die offene Debatte über den
+   „Geist" des Vertrags und die NATO-Osterweiterung, siehe Kapitel 12;
+   beide Sichtweisen fair).
+12. **Russland und der Westen** (1991–heute) — Russland nach dem
+   Zusammenbruch: die 90er unter Jelzin (wirtschaftlicher Kollaps,
+   Hyperinflation, Oligarchen, Rubelkrise 1998, die „Anarchie"), die
+   Tschetschenienkriege. **Russland unter Putin (Betreiber-Vorgabe:
+   WIRKLICH OBJEKTIV beschreiben):** die Stabilisierung und das
+   Wirtschaftswachstum der 2000er (Ölpreis, Wiederaufbau von Staatlichkeit
+   und Ordnung, Renten, Rückkehr aus dem Chaos) UND die autoritäre Wende
+   (Medienkontrolle, Verfolgung von Gegnern, die Kriege: Georgien 2008,
+   Krim/Donbass 2014, die Ukraine 2022) — beides fair und faktenbasiert,
+   keine Dämonisierung, keine Beschönigung. **Die NATO-Osterweiterung
+   (Betreiber-Vorgabe):** das Baker-Versprechen von 1990 („not one inch
+   eastward" gegenüber Gorbatschow) und die Frage, ob es gebrochen wurde —
+   die westliche Sicht (offene Tür, souveräne Beitrittsentscheidungen,
+   kein Vertragsverbot) und die russische Sicht (Vertrauensbruch,
+   Einkreisung) fair nebeneinander. Perspektiven: Westen vs. Osten.
+   Leitfrage des Kapitels: Wie wurden aus Verbündeten von 1945 binnen
+   weniger Jahre Feinde — und was bedeutet das bis heute?
+13. **Der Aufstieg Asiens und die Zukunft des Westens** (1945–heute,
+   ABSCHLUSS-Kapitel der App, darf offen bleiben — Betreiber-Vorgabe
+   15.08.2026) — der Wiederaufbau Deutschlands und Europas nach 1945
+   (Währungsreform 1948, Marshallplan, Soziale Marktwirtschaft, das
+   „Wirtschaftswunder" — Bildung und Ingenieurskultur als Faktoren, fair
+   und ohne Heldenmythos, der Koreakrieg-Boom), dann der Aufstieg Asiens:
+   Japan (das Wirtschaftswunder der 50er–80er, dann die „verlorenen
+   Jahrzehnte"), die Tigerstaaten (Südkorea, Taiwan, Hongkong, Singapur),
+   China (die Reformen Deng Xiaopings ab 1978, das größte
+   Aufhol-Wachstum der Geschichte), Indien (IT-Revolution,
+   demografische Dividende, seit 2023 bevölkerungsreichstes Land der
+   Welt), Taiwan (Halbleiter, TSMC — das Herz der Weltwirtschaft).
+   Perspektiven (Schema erlaubt 3+): der Westen (Deutschland/Europa:
+   die Stärken — Export, Industrie, stabile Währung — und die Sorgen:
+   Demografie, Überalterung, langsames Wachstum) vs. Asien (Japan,
+   China, Indien, Korea, Taiwan — je eigene Stimme möglich). **Die
+   Betreiber-These, FAIR behandelt:** „Deutschland ein sterbendes Land,
+   Europa ein alter Kontinent mit wenig Zukunft?" — die App zeigt die
+   Nuance: Deutschland verliert RELATIV an Gewicht (Asien wächst
+   schneller, deutsche Demografie), bleibt aber absolut eine der
+   stärksten Volkswirtschaften; „aufholen" ist nicht dasselbe wie
+   „überholen". KEINE Panikmache, KEINE Beschönigung, faktenbasiert.
+   Das Kapitel ENDET OFFEN mit der Frage nach der Zukunft — als
+   Abschluss der App: Geschichte wird gerade geschrieben, und die Frage
+   ist, wessen Geschichte die nächste sein wird.
 
 ## Allgemeine Anforderungen
 

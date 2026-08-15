@@ -202,6 +202,24 @@ hier ist zugleich die Reihenfolge in der App (`utils/themen/index.js`):
     *(beide Sichtweisen fertig — Mittelmächte und Entente/Serbien —, die
     Synthese führt sie zusammen; das Schema erlaubt später weitere Stimmen
     je Großmacht)*
+15. **Die USA: Aufstieg zur Weltmacht** (1890–1945) — achtes Kapitel des
+    Neuzeit-Bogens. Vom Volkszählungsjahr 1890, in dem die USA ihre eigene
+    Frontier für geschlossen erklären, über den Spanisch-Amerikanischen
+    Krieg 1898 (Kuba, Puerto Rico, Guam, die Philippinen — und den
+    Philippinisch-Amerikanischen Krieg 1899–1902 als eigenen Kolonialkrieg),
+    die „Big Stick"-Politik in Lateinamerika und den Panamakanal 1914, den
+    Kriegseintritt 1917 mit Wilsons 14 Punkten und dem eigenen Rückzug aus
+    dem Völkerbund, die Zwischenkriegszeit mit Weltwirtschaftskrise, New
+    Deal und Isolationismus, bis zu Pearl Harbor 1941, dem Kriegseintritt
+    und der Atombombe 1945. Die Perspektiven-Achse steht wieder nach außen:
+    die USA gegen die, die ihre Weltmacht zu spüren bekamen (Philippinen,
+    Lateinamerika, japanischstämmige Amerikaner in den Internierungslagern,
+    Afroamerikaner unter Jim Crow, Hiroshima und Nagasaki). Nach
+    Betreiber-Vorgabe benennt die amerikanische Stimme ihre eigenen
+    unbequemen Stellen selbst — der Kolonialkrieg auf den Philippinen, Jim
+    Crow im eigenen Land, der Isolationismus der 1930er, die Atombombe.
+    *(erste Sichtweise fertig — die USA selbst —, die zweite Stimme derer,
+    die die Weltmacht zu spüren bekamen, ergänzt Hermes danach)*
 
 **Der Neuzeit-Bogen** ist vom Betreiber ausbuchstabiert und steht in
 `notizen/kapitel-planung.md`: zehn Kapitel (seit dem 14.08.2026 — der
@@ -211,17 +229,20 @@ Betreiber hat „Die Kolonien" als eigenes Kapitel nachgetragen), beginnend mit
 seit Runde 12 angelegt) und den USA — Unabhängigkeit und die Vertreibung der
 Indianer (= Modul 11, seit Runde 13 angelegt) und Revolution und Napoleon
 (= Modul 12, seit Runde 14 angelegt), den Kolonien (= Modul 13, seit Runde 15
-angelegt) und dem Weg zum Ersten
+angelegt), dem Weg zum Ersten
 Weltkrieg (= Modul 14, seit Runde 16 angelegt, mit der Kriegsschuldfrage als
 multiperspektivischem Herzstück und dem Abschnitt „Was 1914 uns heute
-lehrt") bis zum Zweiten Weltkrieg und der neuen Weltordnung. Wer eines dieser
-Kapitel beginnt, liest die Datei zuerst — sie enthält Vorgaben, die aus der
-Themenlandkarte allein nicht hervorgehen. Der frühere Platzhalter „Ausblick
-Neuzeit" ist damit erledigt: Der Bogen selbst ist der Ausblick. **Als
-Nächstes an der Reihe: Die USA — Aufstieg zur Weltmacht (1890–1945),
-Kapitel 8** — Industrialisierung, Spanisch-Amerikanischer Krieg, 1917,
-Zwischenkriegszeit, 1941–45. Die Vorgaben dazu stehen ausbuchstabiert in
-`notizen/kapitel-planung.md` und sind vor dem Start zu lesen.
+lehrt") und den USA — Aufstieg zur Weltmacht (= Modul 15, seit Runde 17
+angelegt) bis zum Zweiten Weltkrieg und der neuen Weltordnung. Wer eines
+dieser Kapitel beginnt, liest die Datei zuerst — sie enthält Vorgaben, die
+aus der Themenlandkarte allein nicht hervorgehen. Der frühere Platzhalter
+„Ausblick Neuzeit" ist damit erledigt: Der Bogen selbst ist der Ausblick.
+**Als Nächstes an der Reihe: Weimarer Republik und der Weg in die Diktatur
+(1918–1933), Kapitel 9** — die Revolution von 1918, die Verfassung von
+Weimar, Dolchstoßlegende und Inflation 1923, die goldenen Jahre, die
+Notverordnungen ab 1930 und die Machtübergabe 1933. Die Vorgaben dazu stehen
+ausbuchstabiert in `notizen/kapitel-planung.md` und sind vor dem Start zu
+lesen.
 
 **Spätere Module (Landkarte, noch ohne Termin):** Persien als großes Reich,
 das Osmanische Reich und der Mittlere Osten, Indonesien.
@@ -378,7 +399,79 @@ aus dem Play Store hinkt den SDKs hinterher (siehe AGENTS.md). Zum Testen
 
 ## Status
 
-Stand: 2026-08-15 — Runde 16 abgeschlossen (Modul „Der Weg zum Ersten
+Stand: 2026-08-15 — Runde 17 abgeschlossen (Modul „Die USA: Aufstieg zur
+Weltmacht", achtes Kapitel des Neuzeit-Bogens; erste Stimme, Karte und
+Tests):
+- Runde 17: das fünfzehnte Thema — „Die USA: Aufstieg zur Weltmacht"
+  (`utils/themen/usa-weltmacht.js`, registriert als Modul 15). Die Sicht der
+  USA selbst (Stimme: Opus): 1890 die Kontinentalmacht (die Frontier vom
+  US-Volkszählungsamt für geschlossen erklärt, Turners Frontier-These,
+  Industrialisierung mit Carnegie und Rockefeller, die Einwanderungswellen
+  als „Schmelztiegel" samt dem Chinese Exclusion Act 1882 als Kehrseite, der
+  „American Dream" als Erzählung und als Versprechen ohne Einlösung für die
+  meisten); 1898 der Spanisch-Amerikanische Krieg (die „Maine", Puerto Rico,
+  Guam und die Philippinen, mit dem Philippinisch-Amerikanischen Krieg
+  1899–1902 als selbst benanntem Kolonialkrieg mit mindestens 200 000 toten
+  Filipinos, Mark Twain und die Anti-Imperialistische Liga als Widerstand
+  aus den eigenen Reihen); die „Big Stick"-Politik in Lateinamerika
+  (Roosevelt-Corollary, der Panamakanal 1914, der Begriff „Bananenrepublik"
+  als Realität, an der die USA selbst mitwirkten); 1917 der Kriegseintritt
+  (U-Boot-Krieg, Zimmermann-Depesche, Wilsons 14 Punkte und der
+  missionarische Ton „die Welt sicher machen für die Demokratie" — und die
+  unbequeme Stelle, dass der eigene US-Senat den selbst erdachten
+  Völkerbund ablehnte); die Zwischenkriegszeit (Boom der 20er,
+  Weltwirtschaftskrise 1929, New Deal, die Neutralitätsgesetze und der
+  Isolationismus, der zusah, wie Japan und Deutschland aufrüsteten, bis zum
+  Lend-Lease-Gesetz 1941); 1941–45 Pearl Harbor (7. Dezember 1941), das
+  „Arsenal der Demokratie", D-Day, das Inselspringen im Pazifik und die
+  Atombombe im August 1945 als unbequemste Stelle der ganzen Erzählung,
+  selbst benannt und nicht beschönigt; und zum Schluss, was 1945 blieb (die
+  USA als einzige unzerstörte Industriemacht, Gründungsmacht der UNO,
+  Supermacht — und Jim Crow im eigenen Land, gegen das afroamerikanische
+  Soldaten 1945 aus dem Krieg zurückkamen). Die Sicht derer, die die
+  amerikanische Weltmacht zu spüren bekamen (Philippinen, Lateinamerika,
+  japanischstämmige Amerikaner in den Internierungslagern, Afroamerikaner
+  unter Jim Crow, Hiroshima und Nagasaki), ergänzt Hermes danach; die
+  Synthese sagt bis dahin offen, dass die zweite Stimme noch fehlt.
+  Die Karte `utils/themen/karten/usa-weltmacht.js` spannt 110° O bis 110° W
+  über den Pazifik hinweg (34° N bis 62° N wird durch den Ausschnitt
+  110–250° gerechnet, siehe Kopf der Datei) auf 700 × 341,8 — mit 5
+  SVG-Einheiten je Längengrad der weiteste und damit gröbste Ausschnitt der
+  App. Der Ausschnitt läuft über den 180. Längengrad; eine eigene
+  `pazifisch()`-Umrechnung zählt westliche Längen ab dort weiter, damit die
+  schlichte Plattkarten-Projektion aus `karte-geo.js` rechnen kann. Drei
+  Phasen (1890 die Kontinentalmacht, im Pazifik nur mit Alaska / 1917 mit
+  Hawaii, Philippinen, Guam, Wake und dem Panamakanal / 1945 die Pazifikmacht
+  nach Japans Kapitulation), sieben Info-Punkte (San Francisco, Pearl
+  Harbor, Manila, Guam, Midway, Hiroshima, Tokio) und vier Bewegungen
+  (Deweys Geschwader nach Manila 1898, die japanische Trägerflotte nach
+  Pearl Harbor 1941, das Inselspringen 1944/45, die Atombombe von Tinian
+  nach Hiroshima 1945). Zentrale Festlegung: **Eingefärbt wird nur, wo eine
+  Herrschaft mit Grenzen plausibel ist**, jede Fläche trägt ihren Zustand
+  mit Jahreszahl im Titel — 1890 steht das Königreich Hawaii als eigener
+  Staat da, die Philippinen als spanische Kolonie, nicht als künftiger
+  US-Besitz. Winzige Inseln (Midway, Wake, Iwojima, die Marshallinseln) sind
+  als kleine Vielecke größer gezeichnet, als sie sind, sonst wären sie bei
+  diesem Maßstab unsichtbar; ihre Lage stimmt, ihre Größe nicht. Politische
+  Grenzen sind angenähert, nicht vermessen — anders als die Atlas-Küsten.
+  Dazu `tests/karte-usa-weltmacht.mjs`: 16 Atlas-Landmarken von Los Angeles
+  bis Shanghai mit einem Längengrad Toleranz, acht Kontrollpunkte abseits
+  jeder Küste, Punkt-im-Vieleck-Proben für San Francisco, Manila, Pearl
+  Harbor, Seoul, Pjöngjang, Taipei, Guam und Hiroshima — und die Aussage des
+  Kapitels als Rechnung: Die USA wachsen 1890→1917 deutlich (Hawaii,
+  Philippinen, Guam) und bleiben 1917→1945 gleich groß; Japan ist 1917 am
+  größten (mit Taiwan, Süd-Sachalin, Korea) und 1945 am kleinsten; das
+  Königreich Korea steht nur 1890 auf der Karte; Russlands Staatsname
+  wechselt korrekt von „Russisches Reich" über „Russland" (nach der
+  Revolution) zur „Sowjetunion". Dazu die Tone-Prüfungen: dass die
+  Perspektive den Philippinisch-Amerikanischen Krieg mit Opferzahl, Jim Crow
+  und die Atombombe selbst benennt, dass sie die Beweggründe der
+  philippinischen Unabhängigkeitsbewegung und die internationale
+  Wahrnehmung von Wilsons Idealismus fair wiedergibt — und dass keine
+  Quizfrage nach Schuld fragt.
+- `npm test` grün (2718 Prüfungen)
+
+Frühere Runde (2026-08-15): Runde 16 abgeschlossen (Modul „Der Weg zum Ersten
 Weltkrieg", siebtes Kapitel des Neuzeit-Bogens; beide Stimmen, Karte und
 Tests):
 - Runde 16: das vierzehnte Thema — „Der Weg zum Ersten Weltkrieg"
@@ -689,12 +782,13 @@ Neuzeit-Bogens; beide Stimmen, Karte und Tests):
   wiedergibt — und dass keine Quizfrage nach Schuld oder Besitz fragt.
 - `npm test` grün (2095 Prüfungen)
 
-Dreizehn der vierzehn Module — Rom, China, Dschingis Khan, Japan,
+Vierzehn der fünfzehn Module — Rom, China, Dschingis Khan, Japan,
 Israel/Palästina, Germanen, Königreiche, Mittelalter, Eroberung Amerikas,
-Dreißigjähriger Krieg, die USA, Revolution und Napoleon und die Kolonien —
-haben beide Stimmen und eine echte Synthese — auch „Der Weg zum Ersten
-Weltkrieg" mit den Sichtweisen der Mittelmächte und der Entente und
-Serbiens.
+Dreißigjähriger Krieg, die USA, Revolution und Napoleon, die Kolonien und
+„Der Weg zum Ersten Weltkrieg" (mit den Sichtweisen der Mittelmächte und der
+Entente und Serbiens) — haben beide Stimmen und eine echte Synthese. Nur
+„Die USA: Aufstieg zur Weltmacht" hat bislang erst die erste Stimme; die
+zweite ergänzt Hermes nach Runde 17.
 
 Frühere Runde (2026-08-13): Runde 12 abgeschlossen (Modul „Der
 Dreißigjährige Krieg",
@@ -1085,29 +1179,33 @@ drittes Kapitel des Neuzeit-Bogens; erste Stimme, Karte und Tests):
   fragt.
 - `npm test` grün (1737 Prüfungen)
 
-Nächste Schritte nach Runde 16:
-- **Die Sicht der Entente und Serbiens** für „Der Weg zum Ersten Weltkrieg" —
-  Hermes ergänzt die zweite (und nach Betreiber-Vorgabe möglicherweise
-  weitere) Stimme; das Schema erlaubt ausdrücklich mehr als zwei
-  Perspektiven, je Großmacht eine (siehe `notizen/kapitel-planung.md`,
-  Kapitel 7). Erst danach führt die Synthese beide bzw. alle Stimmen
-  zusammen.
-- **Die USA — Aufstieg zur Weltmacht (1890–1945)** als nächstes Kapitel
-  (Kapitel 8 des Neuzeit-Bogens) danach: Industrialisierung,
-  Spanisch-Amerikanischer Krieg, 1917, Zwischenkriegszeit, 1941–45. Vor dem
-  Start `notizen/kapitel-planung.md` lesen.
+Nächste Schritte nach Runde 17:
+- **Die Sicht derer, die die amerikanische Weltmacht zu spüren bekamen** für
+  „Die USA: Aufstieg zur Weltmacht" — Hermes ergänzt die zweite Stimme
+  (Philippinen, Lateinamerika, japanischstämmige Amerikaner in den
+  Internierungslagern, Afroamerikaner unter Jim Crow, Hiroshima und
+  Nagasaki; die genaue Ausgestaltung entscheidet Hermes). Erst danach führt
+  die Synthese beide Stimmen zusammen.
+- **Weimarer Republik und der Weg in die Diktatur (1918–1933)** als
+  nächstes Kapitel (Kapitel 9 des Neuzeit-Bogens) danach: die Revolution
+  von 1918, die Verfassung von Weimar, Dolchstoßlegende und Inflation 1923,
+  die goldenen Jahre, die Notverordnungen ab 1930 und die Machtübergabe
+  1933. Vor dem Start `notizen/kapitel-planung.md` lesen.
 - **Am Gerät gegenlesen** (siehe die ältere Liste unten): Mit der
-  Weltkrieg-Karte (700 × 508,7) sind es jetzt vierzehn Karten, die
+  Weltmacht-Karte (700 × 341,8) sind es jetzt fünfzehn Karten, die
   rechnerisch gegen den Atlas geprüft, aber noch auf keinem Handy gesehen
-  wurden. Die politischen Grenzen dieser Karte sind angenähert, nicht
-  vermessen (anders als die Küsten) — ob das auf einem kleinen Bildschirm
-  überzeugt oder zu grob wirkt, entscheidet das Gerät.
+  wurden. Bei 5 SVG-Einheiten je Längengrad ist sie die gröbste der App —
+  ob die winzigen, bewusst vergrößerten Inseln (Midway, Wake, die
+  Marshallinseln) auf einem kleinen Bildschirm noch als Inseln zu erkennen
+  sind, entscheidet das Gerät.
 - **Zeitleisten** — unverändert offen, siehe unten.
 
-Nächste Schritte nach Runde 14 (durch Runde 15 und 16 überholt, siehe oben):
+Nächste Schritte nach Runde 14 (durch Runde 15–17 überholt, siehe oben):
 - **Die Kolonien (ca. 1815–1914)**: inzwischen angelegt, beide Stimmen fertig
   (Runde 15). **Der Weg zum Ersten Weltkrieg (1815–1914)**: inzwischen
-  angelegt, beide Stimmen fertig (Runde 16 + Hermes-Pass).
+  angelegt, beide Stimmen fertig (Runde 16 + Hermes-Pass). **Die USA:
+  Aufstieg zur Weltmacht (1890–1945)**: inzwischen angelegt, erste Stimme
+  fertig (Runde 17).
 
 Nächste Schritte von Runde 12 (durch Runde 13 und 14 überholt, siehe oben):
 - **Am Gerät gegenlesen:** Alle zehn Karten sind rechnerisch gegen den
