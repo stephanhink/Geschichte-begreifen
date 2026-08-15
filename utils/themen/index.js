@@ -110,6 +110,15 @@
 // Weltmacht zu spüren bekamen (Philippinen, Lateinamerika, japanischstämmige
 // Amerikaner, Afroamerikaner unter Jim Crow, Hiroshima und Nagasaki).
 //
+// „Weimarer Republik und der Weg in die Diktatur" ist das sechzehnte Thema
+// und das neunte des Neuzeit-Bogens. Es beginnt dort, wo der Krieg endet,
+// dessen Julikrise Kapitel 14 erzählt: im November 1918. Die
+// Perspektiven-Achse dreht sich wieder nach innen — nicht zwei Länder stehen
+// sich gegenüber, sondern die, die diese Demokratie bauten und verteidigten,
+// und die, die sie nicht geschützt hat. Und es dreht die Leitidee der App
+// noch einmal: Hier erzählt zuerst die Seite, die verlor — und die mit
+// eigenen Fehlentscheidungen zu ihrer Niederlage beitrug.
+//
 // CommonJS, damit dieselbe Datei mit blankem `node` prüfbar ist und von
 // Metro/Babel in der App geladen werden kann (siehe schema.js).
 
@@ -128,6 +137,7 @@ const revolutionUndNapoleon = require('./revolution-und-napoleon');
 const dieKolonien = require('./die-kolonien');
 const wegZumErstenWeltkrieg = require('./weg-zum-ersten-weltkrieg');
 const usaWeltmacht = require('./usa-weltmacht');
+const weimarNs = require('./weimar-ns');
 
 /** Alle Themen in der Reihenfolge der Themenlandkarte. */
 const alleThemen = [
@@ -146,6 +156,7 @@ const alleThemen = [
   dieKolonien,
   wegZumErstenWeltkrieg,
   usaWeltmacht,
+  weimarNs,
 ];
 
 /**
