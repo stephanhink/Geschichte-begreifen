@@ -101,6 +101,15 @@
 // Versailler Vertrags, kein Forschungsstand. Das Schema erlaubt hier
 // ausdrücklich mehr als zwei Stimmen — je Großmacht eine.
 //
+// „Die USA: Aufstieg zur Weltmacht" ist das fünfzehnte Thema und das achte
+// des Neuzeit-Bogens. Es steht hinter „Der Weg zum Ersten Weltkrieg": Die
+// USA treten 1917 in genau den Krieg ein, dessen Julikrise das vorherige
+// Kapitel erzählt, und dieser Kriegseintritt ist der erste Schritt der
+// amerikanischen Nation von einer Kontinental- zu einer Weltmacht. Die
+// Perspektiven-Achse steht wieder nach außen — die USA gegen die, die ihre
+// Weltmacht zu spüren bekamen (Philippinen, Lateinamerika, japanischstämmige
+// Amerikaner, Afroamerikaner unter Jim Crow, Hiroshima und Nagasaki).
+//
 // CommonJS, damit dieselbe Datei mit blankem `node` prüfbar ist und von
 // Metro/Babel in der App geladen werden kann (siehe schema.js).
 
@@ -118,6 +127,7 @@ const usaUnabhaengigkeit = require('./usa-unabhaengigkeit');
 const revolutionUndNapoleon = require('./revolution-und-napoleon');
 const dieKolonien = require('./die-kolonien');
 const wegZumErstenWeltkrieg = require('./weg-zum-ersten-weltkrieg');
+const usaWeltmacht = require('./usa-weltmacht');
 
 /** Alle Themen in der Reihenfolge der Themenlandkarte. */
 const alleThemen = [
@@ -135,6 +145,7 @@ const alleThemen = [
   revolutionUndNapoleon,
   dieKolonien,
   wegZumErstenWeltkrieg,
+  usaWeltmacht,
 ];
 
 /**

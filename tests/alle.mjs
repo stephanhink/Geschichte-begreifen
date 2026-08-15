@@ -27,6 +27,7 @@ import { laufe as laufeKarteUsaUnabhaengigkeit } from './karte-usa-unabhaengigke
 import { laufe as laufeKarteRevolutionUndNapoleon } from './karte-revolution-und-napoleon.mjs';
 import { laufe as laufeKarteDieKolonien } from './karte-die-kolonien.mjs';
 import { laufe as laufeKarteWegZumErstenWeltkrieg } from './karte-weg-zum-ersten-weltkrieg.mjs';
+import { laufe as laufeKarteUsaWeltmacht } from './karte-usa-weltmacht.mjs';
 import { laufe as laufeMarkdown } from './markdown.mjs';
 import { laufe as laufeQuiz } from './quiz.mjs';
 import { laufe as laufeFortschritt } from './fortschritt.mjs';
@@ -66,6 +67,7 @@ laufeKarteUsaUnabhaengigkeit(pruefe);
 laufeKarteRevolutionUndNapoleon(pruefe);
 laufeKarteDieKolonien(pruefe);
 laufeKarteWegZumErstenWeltkrieg(pruefe);
+laufeKarteUsaWeltmacht(pruefe);
 laufeMarkdown(pruefe);
 laufeQuiz(pruefe);
 laufeLernformat(pruefe);
