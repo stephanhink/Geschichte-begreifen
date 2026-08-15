@@ -1286,8 +1286,9 @@ const phasen = [
     id: 'reichsgruendung',
     label: '1871',
     hinweis: [
-      'Das Deutsche Reich steht seit Januar 1871, gerade erst gegründet in',
-      'Versailles. Die Landkarte zeigt fünf Großmächte nebeneinander —',
+      'Das Deutsche Reich steht seit Januar 1871 — die Verfassung trat am',
+      '1. Januar in Kraft, die Kaiserproklamation folgte am 18. Januar im',
+      'Spiegelsaal von Versailles. Die Landkarte zeigt fünf Großmächte nebeneinander —',
       'aber noch keine festen Bündnisblöcke. Bismarcks Zweibund mit',
       'Österreich-Ungarn kommt erst 1879. Bosnien-Herzegowina ist noch',
       'osmanisch, Serbien ein kleines Königreich am Rand der Karte.',
