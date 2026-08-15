@@ -26,6 +26,7 @@ import { laufe as laufeKarteDreissigjaehrigerKrieg } from './karte-dreissigjaehr
 import { laufe as laufeKarteUsaUnabhaengigkeit } from './karte-usa-unabhaengigkeit.mjs';
 import { laufe as laufeKarteRevolutionUndNapoleon } from './karte-revolution-und-napoleon.mjs';
 import { laufe as laufeKarteDieKolonien } from './karte-die-kolonien.mjs';
+import { laufe as laufeKarteWegZumErstenWeltkrieg } from './karte-weg-zum-ersten-weltkrieg.mjs';
 import { laufe as laufeMarkdown } from './markdown.mjs';
 import { laufe as laufeQuiz } from './quiz.mjs';
 import { laufe as laufeFortschritt } from './fortschritt.mjs';
@@ -64,6 +65,7 @@ laufeKarteDreissigjaehrigerKrieg(pruefe);
 laufeKarteUsaUnabhaengigkeit(pruefe);
 laufeKarteRevolutionUndNapoleon(pruefe);
 laufeKarteDieKolonien(pruefe);
+laufeKarteWegZumErstenWeltkrieg(pruefe);
 laufeMarkdown(pruefe);
 laufeQuiz(pruefe);
 laufeLernformat(pruefe);

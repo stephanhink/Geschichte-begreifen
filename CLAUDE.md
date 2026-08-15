@@ -185,9 +185,23 @@ hier ist zugleich die Reihenfolge in der App (`utils/themen/index.js`):
     kolonisierten Völker. Hier gilt die Leitidee der App doppelt — diese
     Seite hat nicht nur gewonnen, sie hat auch die Akten geführt, die Karten
     gezeichnet und die Namen vergeben.
-    *(erste Sichtweise fertig — die Kolonialmächte, Stimme Opus; die Sicht
-    der kolonisierten Völker ergänzt Hermes, die Synthese ist bis dahin
-    vorläufig und sagt das selbst)*
+    *(beide Sichtweisen fertig — Kolonialmächte und kolonisierte Völker —,
+    die Synthese führt sie zusammen)*
+14. **Der Weg zum Ersten Weltkrieg** (1815–1914) — siebtes Kapitel des
+    Neuzeit-Bogens. Vom Wiener Kongress 1815 über die Bündnissysteme
+    (Zweibund 1879, Dreibund 1882, Tripel-Entente 1907) bis zur Julikrise
+    1914. Herzstück ist nach Betreiber-Vorgabe die **Kriegsschuldfrage**:
+    Die in Deutschland lange gelehrte Alleinschuld-These ist Artikel 231 des
+    Versailler Vertrags von 1919 — ein politisches Dokument der Sieger, kein
+    Forschungsstand; der tatsächliche Forschungsstand (Fritz Fischer 1961,
+    Christopher Clark 2013) verteilt die Verantwortung über mehrere
+    Großmächte. Dazu der Abschnitt „Was 1914 uns heute lehrt" als sachlicher
+    Denkanstoß zur Eskalationsdynamik, ohne ein aktuelles Ereignis zu
+    bewerten. Das Schema erlaubt hier ausdrücklich mehr als zwei
+    Perspektiven — je Großmacht eine.
+    *(beide Sichtweisen fertig — Mittelmächte und Entente/Serbien —, die
+    Synthese führt sie zusammen; das Schema erlaubt später weitere Stimmen
+    je Großmacht)*
 
 **Der Neuzeit-Bogen** ist vom Betreiber ausbuchstabiert und steht in
 `notizen/kapitel-planung.md`: zehn Kapitel (seit dem 14.08.2026 — der
@@ -197,19 +211,17 @@ Betreiber hat „Die Kolonien" als eigenes Kapitel nachgetragen), beginnend mit
 seit Runde 12 angelegt) und den USA — Unabhängigkeit und die Vertreibung der
 Indianer (= Modul 11, seit Runde 13 angelegt) und Revolution und Napoleon
 (= Modul 12, seit Runde 14 angelegt), den Kolonien (= Modul 13, seit Runde 15
-angelegt), dem Weg zum Ersten
-Weltkrieg (mit der Kriegsschuldfrage als multiperspektivischem Herzstück und
-dem Abschnitt „Was 1914 uns heute lehrt") bis zum Zweiten Weltkrieg und der
-neuen Weltordnung. Wer eines dieser Kapitel beginnt, liest die Datei zuerst —
-sie enthält Vorgaben, die aus der Themenlandkarte allein nicht hervorgehen.
-Der frühere Platzhalter „Ausblick Neuzeit" ist damit erledigt: Der Bogen
-selbst ist der Ausblick. **Als Nächstes an der Reihe: Der Weg zum
-Ersten Weltkrieg (1815–1914)** mit der Kriegsschuldfrage als Herzstück (die
-Alleinschuld-These als das kennzeichnen, was sie ist: Artikel 231 des
-Versailler Vertrags, kein Forschungsstand) und ausdrücklich mehr als zwei
-Stimmen — je Großmacht eine. Die Vorgaben dazu stehen
-ausbuchstabiert in `notizen/kapitel-planung.md` und sind vor dem Start zu
-lesen.
+angelegt) und dem Weg zum Ersten
+Weltkrieg (= Modul 14, seit Runde 16 angelegt, mit der Kriegsschuldfrage als
+multiperspektivischem Herzstück und dem Abschnitt „Was 1914 uns heute
+lehrt") bis zum Zweiten Weltkrieg und der neuen Weltordnung. Wer eines dieser
+Kapitel beginnt, liest die Datei zuerst — sie enthält Vorgaben, die aus der
+Themenlandkarte allein nicht hervorgehen. Der frühere Platzhalter „Ausblick
+Neuzeit" ist damit erledigt: Der Bogen selbst ist der Ausblick. **Als
+Nächstes an der Reihe: Die USA — Aufstieg zur Weltmacht (1890–1945),
+Kapitel 8** — Industrialisierung, Spanisch-Amerikanischer Krieg, 1917,
+Zwischenkriegszeit, 1941–45. Die Vorgaben dazu stehen ausbuchstabiert in
+`notizen/kapitel-planung.md` und sind vor dem Start zu lesen.
 
 **Spätere Module (Landkarte, noch ohne Termin):** Persien als großes Reich,
 das Osmanische Reich und der Mittlere Osten, Indonesien.
@@ -366,11 +378,78 @@ aus dem Play Store hinkt den SDKs hinterher (siehe AGENTS.md). Zum Testen
 
 ## Status
 
-Stand: 2026-08-14 — Runde 15 abgeschlossen (Modul „Die Kolonien", sechstes
-Kapitel des Neuzeit-Bogens; erste Stimme, Karte und Tests):
+Stand: 2026-08-15 — Runde 16 abgeschlossen (Modul „Der Weg zum Ersten
+Weltkrieg", siebtes Kapitel des Neuzeit-Bogens; beide Stimmen, Karte und
+Tests):
+- Runde 16: das vierzehnte Thema — „Der Weg zum Ersten Weltkrieg"
+  (`utils/themen/weg-zum-ersten-weltkrieg.js`, registriert als Modul 14).
+  Die Sicht der Mittelmächte — Deutsches Reich und
+  Österreich-Ungarn (Stimme: Opus). Herzstück ist nach Betreiber-Vorgabe die
+  Kriegsschuldfrage: der lange Weg 1815–1914 (Wiener Kongress, die
+  Reichsgründung 1871 aus der Sicht der Nachbarn, Österreich-Ungarns Kampf
+  um den Zusammenhalt der Donaumonarchie, der Balkan als „Pulverfass" nach
+  dem osmanischen Rückzug, der Rüstungswettlauf samt der ehrlichen
+  Selbstauskunft, dass auch die eigene Rüstung an der Spirale drehte); die
+  Bündnissysteme (Zweibund 1879, Dreibund 1882, Bismarcks „Albtraum der
+  Koalitionen", dann die französisch-russische Allianz, Entente cordiale
+  1904 und Tripel-Entente 1907 — als „Einkreisung" erzählt, mit dem fairen
+  Hinweis, dass die Entente-Mächte sich spiegelbildlich von Deutschland
+  eingekreist fühlten); die Julikrise 1914 im Detail (Attentat von Sarajevo
+  28.06., der „Blankoscheck" 05.07. als eigener, folgenschwerer Fehler,
+  Österreich-Ungarns bewusst schwer annehmbares Ultimatum 23.07., Serbiens
+  weitgehendes Entgegenkommen 25.07., die russische Teil- und
+  Generalmobilmachung als Schutzmacht Serbiens, die deutschen
+  Kriegserklärungen 01./03.08. und der Einmarsch in das neutrale Belgien
+  04.08. als offen benannter Bruch des Völkerrechts, Großbritanniens
+  Kriegseintritt); die Kriegsschuldfrage selbst mit Artikel 231 des
+  Versailler Vertrags ausdrücklich als Vertragsbestimmung der Sieger und
+  nicht als Forschungsstand gekennzeichnet, dazu Fritz Fischer (1961),
+  Christopher Clark („Die Schlafwandler", 2013) und die heutige, über
+  mehrere Großmächte verteilte Verantwortung; und der Abschnitt „Was 1914
+  uns heute lehrt" (Mobilmachungslogik, Bündnisse als Kettenreaktion,
+  Kommunikationsversagen, Ultimaten statt Diplomatie) — sachlich, ohne ein
+  aktuelles Ereignis zu bewerten. Die Sicht der Entente und Serbiens ergänzt
+  Hermes danach; das Schema erlaubt dabei ausdrücklich mehr als zwei
+  Stimmen, wie in `notizen/kapitel-planung.md` vorgegeben. Die Synthese sagt
+  bis dahin offen, dass die Kriegsschuldfrage noch nicht einmal zur Hälfte
+  gestellt ist.
+  Die Karte `utils/themen/karten/weg-zum-ersten-weltkrieg.js` spannt 10° W
+  bis 45° O und 34° N bis 61° N auf 700 × 508,7 — der Rahmen setzt den der
+  Napoleon-Karte fort, aber nach Norden und Osten erweitert, damit St.
+  Petersburg (59,94° N) mit auf die Karte passt. Drei Phasen (1871 nach der
+  Reichsgründung, noch keine festen Bündnisblöcke / 1907 nach der
+  Tripel-Entente, zwei Blöcke stehen sich gegenüber / 1914 dieselben Blöcke,
+  aber ein veränderter Balkan), sieben Info-Punkte (Sarajevo, Wien, Berlin,
+  Belgrad, St. Petersburg, Paris, London) und drei Bewegungen (der
+  Schlieffen-Plan 1914, die russische Mobilmachung, Österreich-Ungarns
+  Kriegserklärung von Wien nach Belgrad). Zentrale Festlegung: Österreich-
+  Ungarns Fläche wächst 1907 um Bosnien-Herzegowina (1878 besetzt, 1908
+  annektiert) — Sarajevo liegt 1871 noch im Osmanischen Reich, danach in der
+  Doppelmonarchie; das Osmanische Reich schrumpft über alle drei Phasen auf
+  einen Streifen bei Konstantinopel, Serbien wächst nach den Balkankriegen
+  1912/13. Politische Grenzen sind hier — anders als die Atlas-Küsten —
+  angenähert, nicht vermessen; das steht auch so im Kopf der Datei.
+  Dazu `tests/karte-weg-zum-ersten-weltkrieg.mjs`: 32 Atlas-Landmarken von
+  Lissabon bis zur Newabucht bei St. Petersburg mit einem Längengrad
+  Toleranz, 14 Kontrollpunkte abseits jeder Küste, Punkt-im-Vieleck-Proben
+  für Sarajevo, Belgrad, Berlin, Wien, Paris, London, St. Petersburg und
+  Warschau — und die Aussage des Kapitels als Rechnung: Österreich-Ungarns
+  Fläche wächst 1871→1907 und bleibt 1907→1914 gleich, das Osmanische Reich
+  schrumpft über alle drei Phasen, Serbien wächst 1907→1914, Deutschland
+  bleibt konstant. Dazu die Tone-Prüfungen: dass die Perspektive den
+  Blankoscheck, den Einmarsch in Belgien, das bewusst unannehmbare
+  Ultimatum und den eigenen Anteil am Rüstungswettlauf selbst benennt, dass
+  sie Artikel 231 als Vertragsbestimmung statt als Forschungsstand
+  kennzeichnet, dass sie die Beweggründe Russlands, der Entente und
+  Serbiens fair wiedergibt — und dass weder Karte noch Quiz je nach Schuld
+  fragen (das Wort selbst kommt im Quiz nicht vor).
+- `npm test` grün (2546 Prüfungen)
+
+Frühere Runde (2026-08-14): Runde 15 abgeschlossen (Modul „Die Kolonien",
+sechstes Kapitel des Neuzeit-Bogens; beide Stimmen, Karte und Tests):
 - Runde 15: das dreizehnte Thema — „Die Kolonien"
-  (`utils/themen/die-kolonien.js`, registriert als Modul 13). Vorerst nur die
-  Sicht der Kolonialmächte (Stimme: Opus). Herzstück ist nach
+  (`utils/themen/die-kolonien.js`, registriert als Modul 13). Die Sicht der
+  Kolonialmächte (Stimme: Opus). Herzstück ist nach
   Betreiber-Vorgabe die britische Sonderrolle: das Reich, in dem die Sonne
   nicht unterging (ein Viertel der Menschheit, ein Viertel der Landfläche),
   die Royal Navy als eigentlicher Träger, Pfund Sterling, Lloyd’s,
@@ -405,9 +484,9 @@ Kapitel des Neuzeit-Bogens; erste Stimme, Karte und Tests):
   Sklavenhändler des 18. Jahrhunderts — und der Quellenvorsprung, der dieses
   Kapitel von allen anderen unterscheidet: Diese Seite hat nicht nur gewonnen,
   sie hat auch die Akten geführt. Die Sicht der kolonisierten Völker (Indien,
-  Kongo, China, Afrika) ergänzt Hermes; die Synthese sagt bis dahin offen,
-  dass eine Seite, die über sich selbst Rechenschaft ablegt, immer noch eine
-  Seite ist.
+  Kongo, China, Afrika) hat Hermes ergänzt; die Synthese führt beide Stimmen
+  zusammen und hält fest, dass eine Seite, die über sich selbst Rechenschaft
+  ablegt, immer noch eine Seite ist.
   Die Karte `utils/themen/karten/die-kolonien.js` spannt 20° W bis 95° O und
   36° S bis 58° N auf 700 × 582,9 — mit 6,1 SVG-Einheiten je Längengrad die
   gröbste der App. Der Betreiber hatte 20° W bis 60° O vorgeschlagen; nach
@@ -610,12 +689,12 @@ Neuzeit-Bogens; beide Stimmen, Karte und Tests):
   wiedergibt — und dass keine Quizfrage nach Schuld oder Besitz fragt.
 - `npm test` grün (2095 Prüfungen)
 
-Zwölf der dreizehn Module — Rom, China, Dschingis Khan, Japan,
+Dreizehn der vierzehn Module — Rom, China, Dschingis Khan, Japan,
 Israel/Palästina, Germanen, Königreiche, Mittelalter, Eroberung Amerikas,
-Dreißigjähriger Krieg, die USA und Revolution und Napoleon — haben beide
-Stimmen und eine echte Synthese. Beim dreizehnten, „Die Kolonien", steht
-bisher die Sicht der Kolonialmächte; die Sicht der kolonisierten Völker
-ergänzt Hermes, und die Synthese ist bis dahin vorläufig.
+Dreißigjähriger Krieg, die USA, Revolution und Napoleon und die Kolonien —
+haben beide Stimmen und eine echte Synthese — auch „Der Weg zum Ersten
+Weltkrieg" mit den Sichtweisen der Mittelmächte und der Entente und
+Serbiens.
 
 Frühere Runde (2026-08-13): Runde 12 abgeschlossen (Modul „Der
 Dreißigjährige Krieg",
@@ -1006,31 +1085,29 @@ drittes Kapitel des Neuzeit-Bogens; erste Stimme, Karte und Tests):
   fragt.
 - `npm test` grün (1737 Prüfungen)
 
-Nächste Schritte nach Runde 14:
-- **Die Kolonien (ca. 1815–1914)** als nächstes Kapitel. Achtung, das ist neu:
-  Der Betreiber hat dieses Kapitel am 14.08.2026 in
-  `notizen/kapitel-planung.md` nachgetragen („anfangs vergessenes, aber
-  wichtiges Kapitel") — es steht jetzt als Nummer 6 zwischen Napoleon und dem
-  Ersten Weltkrieg, der damit Nummer 7 ist. Inhalt und Vorgaben stehen dort;
-  besonders zu beachten ist die ausdrücklich verlangte Rolle Großbritanniens
-  und die Verbindung zum Ersten Weltkrieg über die Kolonialrivalitäten.
-- **Der Weg zum Ersten Weltkrieg (1815–1914)** danach. Vor dem
-  Start `notizen/kapitel-planung.md` lesen: Dort steht ausbuchstabiert, dass
-  die Kriegsschuldfrage das Herzstück ist, dass die Alleinschuld-These als
-  Artikel 231 des Versailler Vertrags gekennzeichnet werden muss und nicht als
-  Forschungsstand, dass Quellen aller Mächte heranzuziehen sind — und dass ein
-  Abschnitt „Was 1914 uns heute lehrt" dazugehört. Ausdrücklich mehr als zwei
-  Stimmen: je Großmacht eine.
+Nächste Schritte nach Runde 16:
+- **Die Sicht der Entente und Serbiens** für „Der Weg zum Ersten Weltkrieg" —
+  Hermes ergänzt die zweite (und nach Betreiber-Vorgabe möglicherweise
+  weitere) Stimme; das Schema erlaubt ausdrücklich mehr als zwei
+  Perspektiven, je Großmacht eine (siehe `notizen/kapitel-planung.md`,
+  Kapitel 7). Erst danach führt die Synthese beide bzw. alle Stimmen
+  zusammen.
+- **Die USA — Aufstieg zur Weltmacht (1890–1945)** als nächstes Kapitel
+  (Kapitel 8 des Neuzeit-Bogens) danach: Industrialisierung,
+  Spanisch-Amerikanischer Krieg, 1917, Zwischenkriegszeit, 1941–45. Vor dem
+  Start `notizen/kapitel-planung.md` lesen.
 - **Am Gerät gegenlesen** (siehe die ältere Liste unten): Mit der
-  Napoleon-Karte (700 × 443,4) sind es jetzt zwölf Karten, die rechnerisch
-  gegen den Atlas geprüft, aber noch auf keinem Handy gesehen wurden. Die
-  Beschriftungen der Napoleon-Karte wurden auf Überlappung geprüft; zwei
-  Kollisionen („Spanien" mit dem Info-Punkt Madrid, „Korsika" mit „Elba")
-  sind durch Verschieben der beiden Landschaftsnamen behoben. Offen bleibt
-  die Frage vom kleinen Bildschirm her: Elba ist bei 14 Einheiten je
-  Längengrad nur wenige SVG-Einheiten groß und trägt trotzdem den Anfang
-  einer Bewegung.
+  Weltkrieg-Karte (700 × 508,7) sind es jetzt vierzehn Karten, die
+  rechnerisch gegen den Atlas geprüft, aber noch auf keinem Handy gesehen
+  wurden. Die politischen Grenzen dieser Karte sind angenähert, nicht
+  vermessen (anders als die Küsten) — ob das auf einem kleinen Bildschirm
+  überzeugt oder zu grob wirkt, entscheidet das Gerät.
 - **Zeitleisten** — unverändert offen, siehe unten.
+
+Nächste Schritte nach Runde 14 (durch Runde 15 und 16 überholt, siehe oben):
+- **Die Kolonien (ca. 1815–1914)**: inzwischen angelegt, beide Stimmen fertig
+  (Runde 15). **Der Weg zum Ersten Weltkrieg (1815–1914)**: inzwischen
+  angelegt, beide Stimmen fertig (Runde 16 + Hermes-Pass).
 
 Nächste Schritte von Runde 12 (durch Runde 13 und 14 überholt, siehe oben):
 - **Am Gerät gegenlesen:** Alle zehn Karten sind rechnerisch gegen den

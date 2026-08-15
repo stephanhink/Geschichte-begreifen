@@ -93,6 +93,14 @@
 // Sieger schreibt die Geschichte" gilt hier doppelt — diese Seite hat nicht
 // nur gewonnen, sie hat auch die Akten geführt und die Karten gezeichnet.
 //
+// „Der Weg zum Ersten Weltkrieg" ist das vierzehnte Thema und das siebte des
+// Neuzeit-Bogens. Es beginnt dort, wo „Die Kolonien" den Faden bereits knüpft
+// (dieselben Kolonialrivalitäten gehören zu den Spannungen von 1914) und
+// macht die Kriegsschuldfrage zum multiperspektivischen Herzstück: Die in
+// Deutschland lange gelehrte Alleinschuld-These ist Artikel 231 des
+// Versailler Vertrags, kein Forschungsstand. Das Schema erlaubt hier
+// ausdrücklich mehr als zwei Stimmen — je Großmacht eine.
+//
 // CommonJS, damit dieselbe Datei mit blankem `node` prüfbar ist und von
 // Metro/Babel in der App geladen werden kann (siehe schema.js).
 
@@ -109,6 +117,7 @@ const dreissigjaehrigerKrieg = require('./dreissigjaehriger-krieg');
 const usaUnabhaengigkeit = require('./usa-unabhaengigkeit');
 const revolutionUndNapoleon = require('./revolution-und-napoleon');
 const dieKolonien = require('./die-kolonien');
+const wegZumErstenWeltkrieg = require('./weg-zum-ersten-weltkrieg');
 
 /** Alle Themen in der Reihenfolge der Themenlandkarte. */
 const alleThemen = [
@@ -125,6 +134,7 @@ const alleThemen = [
   usaUnabhaengigkeit,
   revolutionUndNapoleon,
   dieKolonien,
+  wegZumErstenWeltkrieg,
 ];
 
 /**
