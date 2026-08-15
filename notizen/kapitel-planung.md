@@ -87,10 +87,40 @@ besonderen inhaltlichen Anforderungen des Betreibers.
      (Gesichtsverlust, Zeitdruck). Der Ukraine-Krieg als aktuelles
      Beispiel dafür, wie schnell ein regionaler Konflikt eskalieren
      kann und wie schwer Deeskalation ist, wenn die Spirale erst dreht.
+   - **DIE DEMÜTIGUNG VON 1871 (Betreiber-Vorgabe 15.08.2026, PROMINENT
+     behandeln):** Der Deutsch-Französische Krieg 1870/71 — FRANKREICH
+     GRIFF AN (Kriegserklärung nach der Emser Depesche, Juli 1870) und
+     wurde besiegt. Die Kaiserproklamation am 18.01.1871 im Spiegelsaal
+     von Versailles (während Paris belagert wurde, das deutsche
+     Hauptquartier lag im Schloss) war eine BEWUSSTE DEMÜTIGUNG des
+     besiegten Gegners; Elsass-Lothringen wurde abgetreten. Die Rache
+     folgte 1919: Der Versailler Vertrag wurde BEWUSST im selben
+     Spiegelsaal unterzeichnet — die symbolische Antwort auf 1871
+     (daher der Name „Versailler Vertrag"). Diese Kette
+     (Demütigung → Rache → Demütigung) gehört PROMINENT in das Kapitel:
+     Wenige wissen, dass Frankreich 1870 angriff und verlor, und dass
+     die Kaiserproklamation in Versailles die Wurzel der späteren
+     Verwerfungen ist (Karte Phase 1871: Hinweistext entsprechend
+     erweitern).
 8. **Die USA: Aufstieg zur Weltmacht** (1890–1945) — Industrialisierung,
    Spanisch-Amerikanischer Krieg, 1917, Zwischenkriegszeit, 1941–45
 9. **Weimarer Republik und der Weg in die Diktatur** (1918–1933) —
-   Versailles-Folgen, Inflation 1923, Arbeitslosigkeit, NS-Aufstieg
+   Versailles-Folgen, Inflation 1923, Arbeitslosigkeit, NS-Aufstieg.
+   **DIE KETTE VERSAILLES → HITLER (Betreiber-Vorgabe 15.08.2026,
+   besonders behandeln):** Der Versailler Vertrag (Artikel 231 als
+   „Kriegsschuldlüge"-Narrativ, die Reparationen) → die Hyperinflation
+   1923 (Kriegsfinanzierung + Ruhrkampf) → die Weltwirtschaftskrise
+   1929 → Massenarbeitslosigkeit → der Aufstieg Hitlers 1933 — als
+   ZUSAMMENHÄNGENDE KETTE erzählen, die viele Menschen nicht als Ganzes
+   kennen. Die Kette erklärt die ANFÄLLIGKEIT der Republik, sie
+   relativiert NIE die NS-Verbrechen (die Forschung: die Belastung durch
+   Versailles + die Dolchstoßlegende + die Krisen schürten die
+   Ablehnung der Demokratie; die konkreten Reparationszahlungen waren
+   geringer als gefordert, die Inflation hatte auch innenpolitische
+   Ursachen — beides fair und faktenbasiert). Verbindung zum
+   1.-WK-Kapitel: Die Demütigung von 1871 (Versailles!) und die Rache
+   von 1919 schließen sich hier zum Kreis — die rote Linie
+   1871 → 1919 → 1923 → 1933 → 1939.
 10. **Der Zweite Weltkrieg** (1939–1945) — der Krieg selbst. Perspektiven:
    Besiegte (Deutschland), die Sowjetunion, die USA/Westmächte
    (multiperspektivisch, das Schema erlaubt 3+). **Die sowjetische
