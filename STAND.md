@@ -98,6 +98,11 @@ Offen (Runden 20–22, Kapitel 11–13 der Planung):
   die Modelle nennen: Opus/Anthropic + DeepSeek/Hermes). **ENGLISCHE
   Version später** (Betreiber-Vorgabe 16.08.: internationale
   Veröffentlichung — Übersetzungs-Pipeline erweitert um EN).
+  **VERTEILUNG (final 16.08.): Amazon 2,99 € (70 %-Royalty, KEIN
+  KDP-Select!) + frei auf Website/Leanpub/GitHub; Hörbuch als MP3 +
+  Podcast-Feed (DE + DA). Details: ~/Geschichte-Buch/Verteilungsstrategie.md
+  + Klappentext DE/DA, Impressum (Kirkevænget!), Kategorien, Cover-Entwurf
+  dort.**
   Übersetzungen: da/ im Repo (CommonJS-Module, gleiche Struktur wie
   utils/themen/*.js + karteHinweise-Array). Demo-PDFs:
   /tmp/kapitel-demo-de.pdf + /tmp/kapitel-demo-da.pdf; Export-Skripte:
