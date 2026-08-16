@@ -60,3 +60,4 @@ build-*.apk
 credentials.json
 credentials/
 tools/.zwischenstand/
+build-*.aab
