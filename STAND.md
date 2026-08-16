@@ -95,10 +95,13 @@ Offen (Runden 20–22, Kapitel 11–13 der Planung):
 - Buch-Projekt: nach Fertigstellung EPUB3 (DE + DA, Mona!), PDF (A4),
   Hörbuch (TTS, eine Stimme pro Perspektive; da-DK ChristelNeural
   existiert), Amazon KDP mit KI-Offenlegung (Betreiber will transparent
-  die Modelle nennen: Opus/Anthropic + DeepSeek/Hermes). Demo-PDFs:
+  die Modelle nennen: Opus/Anthropic + DeepSeek/Hermes). **ENGLISCHE
+  Version später** (Betreiber-Vorgabe 16.08.: internationale
+  Veröffentlichung — Übersetzungs-Pipeline erweitert um EN).
+  Übersetzungen: da/ im Repo (CommonJS-Module, gleiche Struktur wie
+  utils/themen/*.js + karteHinweise-Array). Demo-PDFs:
   /tmp/kapitel-demo-de.pdf + /tmp/kapitel-demo-da.pdf; Export-Skripte:
-  /tmp/modul-zu-html.cjs (de|da), /tmp/html-zu-pdf.py; dänische
-  Übersetzung Demo: /tmp/da-teil1..3.js + /tmp/da-modul.js.
+  /tmp/modul-zu-html.cjs (de|da), /tmp/html-zu-pdf.py.
 - Dänisch: Alle Kapitel sollen auf Dänisch erscheinen (Mona liest mit) —
   Übersetzungs-Pipeline nach Fertigstellung.
 
@@ -121,5 +124,7 @@ Offen (Runden 20–22, Kapitel 11–13 der Planung):
   morgen früh vs. heute dänische Übersetzungen).
 - Runde-19-Hermes-Pass ist DONE (3 Stimmen) — bffb5b2 committet.
 - Karten-Vorschau Runde 19: /tmp/karte-2wk-phase0..2.png.
-- Telegram-Zustellung: seit 16.08. deliver=origin (Desktop-App) statt
-  Andreas' Telegram-Chat (war telegram:31557334:68355 — nicht verwenden!).
+- Telegram-Zustellung: seit 16.08. deliver=origin (Desktop-App) +
+  telegram:902266104 (STEPHAN — der Betreiber, gewünscht). NICHT
+  verwenden: telegram:31557334:68355 (Andreas' Chat — war der Fehler
+  vom 15.08.).
