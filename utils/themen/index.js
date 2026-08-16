@@ -119,6 +119,16 @@
 // noch einmal: Hier erzählt zuerst die Seite, die verlor — und die mit
 // eigenen Fehlentscheidungen zu ihrer Niederlage beitrug.
 //
+// „Der Zweite Weltkrieg und die neue Weltordnung" ist das siebzehnte Thema und
+// das zehnte — letzte — Kapitel des Neuzeit-Bogens. Es beginnt dort, wo das
+// Kapitel davor endet: am 30. Januar 1933. Und es ist die einzige Stelle des
+// ganzen Bogens, an der die eigene Seite die Täterseite ist. Deshalb spricht
+// hier zuerst die Sicht der Besiegten: Eine Täterseite, die zuletzt spricht,
+// redet sich heraus; eine, die zuerst spricht, muss die unbequemsten Sätze
+// selbst sagen. Die weiteren Stimmen — die Sowjetunion mit der Hauptlast des
+// Krieges, die USA und die Westmächte, die überfallenen Länder — ergänzt
+// Hermes danach; das Schema erlaubt drei und mehr Perspektiven.
+//
 // CommonJS, damit dieselbe Datei mit blankem `node` prüfbar ist und von
 // Metro/Babel in der App geladen werden kann (siehe schema.js).
 
@@ -138,6 +148,7 @@ const dieKolonien = require('./die-kolonien');
 const wegZumErstenWeltkrieg = require('./weg-zum-ersten-weltkrieg');
 const usaWeltmacht = require('./usa-weltmacht');
 const weimarNs = require('./weimar-ns');
+const zweiterWeltkrieg = require('./zweiter-weltkrieg');
 
 /** Alle Themen in der Reihenfolge der Themenlandkarte. */
 const alleThemen = [
@@ -157,6 +168,7 @@ const alleThemen = [
   wegZumErstenWeltkrieg,
   usaWeltmacht,
   weimarNs,
+  zweiterWeltkrieg,
 ];
 
 /**

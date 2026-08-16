@@ -218,8 +218,8 @@ hier ist zugleich die Reihenfolge in der App (`utils/themen/index.js`):
     Betreiber-Vorgabe benennt die amerikanische Stimme ihre eigenen
     unbequemen Stellen selbst — der Kolonialkrieg auf den Philippinen, Jim
     Crow im eigenen Land, der Isolationismus der 1930er, die Atombombe.
-    *(erste Sichtweise fertig — die USA selbst —, die zweite Stimme derer,
-    die die Weltmacht zu spüren bekamen, ergänzt Hermes danach)*
+    *(beide Sichtweisen fertig — die USA selbst und die Betroffenen der
+    Weltmacht —, die Synthese führt sie zusammen)*
 
 **Der Neuzeit-Bogen** ist vom Betreiber ausbuchstabiert und steht in
 `notizen/kapitel-planung.md`: zehn Kapitel (seit dem 14.08.2026 — der
@@ -399,10 +399,26 @@ aus dem Play Store hinkt den SDKs hinterher (siehe AGENTS.md). Zum Testen
 
 ## Status
 
-Stand: 2026-08-15 — Runde 17 abgeschlossen (Modul „Die USA: Aufstieg zur
-Weltmacht", achtes Kapitel des Neuzeit-Bogens; erste Stimme, Karte und
-Tests):
-- Runde 17: das fünfzehnte Thema — „Die USA: Aufstieg zur Weltmacht"
+Stand: 2026-08-16 — Runde 19 abgeschlossen (Modul „Der Zweite Weltkrieg
+und die neue Weltordnung", zehntes Kapitel des Neuzeit-Bogens; drei
+Stimmen, Karte und Tests):
+- Runde 19: das siebzehnte Thema — „Der Zweite Weltkrieg und die neue
+  Weltordnung" (`utils/themen/zweiter-weltkrieg.js`, registriert als Modul
+  17). Drei gleichwertige Sichtweisen: die Besiegten (Deutschland, Stimme
+  Opus — TONE-Regel: Angriffskrieg, Wehrmacht, Holocaust als deutsche
+  Verantwortung, „es wird nicht aufgerechnet"), die Sowjetunion (Stimme
+  Hermes — der Große Vaterländische Krieg, die HAUPTLAST nach
+  Betreiber-Vorgabe: rund 27 Mio. Tote nach Krivosheev, Leningrad,
+  Stalingrad, Kursk, Lend-Lease fair eingeordnet) und die USA/Westmächte
+  (Stimme Hermes — Blitz, Lend-Lease, D-Day, die Öffnung der Lager;
+  unbequeme Stellen: Bombenkrieg, Atombombe, Empire, Rassentrennung).
+  Die Synthese führt alle drei zusammen. Karte
+  `utils/themen/karten/zweiter-weltkrieg.js` mit drei Zuständen
+  (1939–1941, 1942–1944, 1945). npm test grün (2967 Prüfungen).
+- Frühere Runde (2026-08-15): Runde 17 abgeschlossen (Modul „Die USA:
+  Aufstieg zur Weltmacht", achtes Kapitel des Neuzeit-Bogens; beide
+  Stimmen, Karte und Tests):
+  - Runde 17: das fünfzehnte Thema — „Die USA: Aufstieg zur Weltmacht"
   (`utils/themen/usa-weltmacht.js`, registriert als Modul 15). Die Sicht der
   USA selbst (Stimme: Opus): 1890 die Kontinentalmacht (die Frontier vom
   US-Volkszählungsamt für geschlossen erklärt, Turners Frontier-These,
@@ -429,10 +445,10 @@ Tests):
   USA als einzige unzerstörte Industriemacht, Gründungsmacht der UNO,
   Supermacht — und Jim Crow im eigenen Land, gegen das afroamerikanische
   Soldaten 1945 aus dem Krieg zurückkamen). Die Sicht derer, die die
-  amerikanische Weltmacht zu spüren bekamen (Philippinen, Lateinamerika,
-  japanischstämmige Amerikaner in den Internierungslagern, Afroamerikaner
-  unter Jim Crow, Hiroshima und Nagasaki), ergänzt Hermes danach; die
-  Synthese sagt bis dahin offen, dass die zweite Stimme noch fehlt.
+ amerikanische Weltmacht zu spüren bekamen (Philippinen, Lateinamerika,
+ japanischstämmige Amerikaner in den Internierungslagern, Afroamerikaner
+ unter Jim Crow, Hiroshima und Nagasaki) ergänzte Hermes in Runde 17; die
+ Synthese führt beide zusammen.
   Die Karte `utils/themen/karten/usa-weltmacht.js` spannt 110° O bis 110° W
   über den Pazifik hinweg (34° N bis 62° N wird durch den Ausschnitt
   110–250° gerechnet, siehe Kopf der Datei) auf 700 × 341,8 — mit 5
@@ -786,9 +802,10 @@ Vierzehn der fünfzehn Module — Rom, China, Dschingis Khan, Japan,
 Israel/Palästina, Germanen, Königreiche, Mittelalter, Eroberung Amerikas,
 Dreißigjähriger Krieg, die USA, Revolution und Napoleon, die Kolonien und
 „Der Weg zum Ersten Weltkrieg" (mit den Sichtweisen der Mittelmächte und der
-Entente und Serbiens) — haben beide Stimmen und eine echte Synthese. Nur
-„Die USA: Aufstieg zur Weltmacht" hat bislang erst die erste Stimme; die
-zweite ergänzt Hermes nach Runde 17.
+Entente und Serbiens) — haben beide Stimmen und eine echte Synthese — auch „Die USA: Aufstieg zur
+Weltmacht" (seit Runde 17) und „Der Zweite Weltkrieg" (seit Runde 19, mit
+den drei Sichtweisen der Besiegten, der Sowjetunion und der
+USA/Westmächte).
 
 Frühere Runde (2026-08-13): Runde 12 abgeschlossen (Modul „Der
 Dreißigjährige Krieg",
@@ -1248,10 +1265,10 @@ Nächste Schritte von Runde 12 (durch Runde 13 und 14 überholt, siehe oben):
   Karten.
 - **Zeitleisten** — der zweite Teil von „Geschichte in Bewegung"; die
   Karten decken bisher nur den Raum ab, nicht die Zeit.
-- **Weitere Themen** nach `notizen/kapitel-planung.md`, dem Neuzeit-Bogen —
-  als Nächstes **die USA: Unabhängigkeit und die Vertreibung der Indianer
-  (1776–ca. 1890)**, danach Revolution und Napoleon, der Erste Weltkrieg
-  mit der Kriegsschuldfrage, Weimar, der Zweite Weltkrieg. Jeweils die eine
-  Sicht von Opus, die andere von Hermes, Synthese gemeinsam; beim Ersten
-  Weltkrieg sind ausdrücklich mehr als zwei Stimmen vorgesehen. Karten sind
-  dabei optional: Themen ohne `karte` überspringen den Abschnitt.
+- **Weitere Themen** nach `notizen/kapitel-planung.md` — der Neuzeit-Bogen
+  ist bis Kapitel 10 umgesetzt (Runden 10–19); offen sind Kapitel 11–13
+  (Die neue Weltordnung und der Kalte Krieg, Russland und der Westen, Der
+  Aufstieg Asiens). Die Runden 11–19 folgten dem Muster: erste Sicht von
+  Opus, weitere Stimmen von Hermes, Synthese gemeinsam; mehr als zwei
+  Stimmen sind ausdrücklich vorgesehen (1. WK, 2. WK). Karten sind dabei
+  optional: Themen ohne `karte` überspringen den Abschnitt.
