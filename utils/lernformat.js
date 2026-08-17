@@ -57,6 +57,22 @@ const ABSCHNITTE = [
     kurz: 'Quiz',
     hatInhalt: (thema) => Boolean(thema && Array.isArray(thema.quiz) && thema.quiz.length > 0),
   },
+  {
+    id: 'autorenwort',
+    name: 'Schlusswort des Autors',
+    kurz: 'Autor',
+    // Das letzte Wort gehört dem Menschen: erscheint nur, wenn der
+    // Betreiber ein Schlusswort hinterlassen hat.
+    hatInhalt: (thema) =>
+      Boolean(
+        thema &&
+          thema.autorenwort &&
+          (typeof thema.autorenwort === 'string'
+            ? thema.autorenwort.trim().length > 0
+            : typeof thema.autorenwort.text === 'string' &&
+              thema.autorenwort.text.trim().length > 0),
+      ),
+  },
 ];
 
 /**

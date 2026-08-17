@@ -166,6 +166,20 @@
 // übernommen hat; die Sichtweisen Asiens ergänzt Hermes danach — das Schema
 // erlaubt hier ausdrücklich mehr als zwei Stimmen.
 //
+// „Die KI und die Folgen auf die Gesellschaft" ist das einundzwanzigste Thema
+// und das vierzehnte Kapitel — das ZUKUNFTSKAPITEL und der Abschluss der App.
+// Es steht hinter „Der Aufstieg Asiens und die Zukunft des Westens", weil es
+// dessen offene Schlussfrage aufnimmt („Wessen Geschichte wird die nächste
+// sein?") und eine der ehrlichsten möglichen Antworten darauf gibt: die
+// Künstliche Intelligenz — die Technologie, mit der dieses Buch selbst
+// geschrieben wurde. Damit dreht sich die Leitidee der App ein letztes Mal:
+// Hier schreibt zum ersten Mal die Sache selbst, von der das Kapitel handelt,
+// und sie sagt das offen. Vier Stimmen sind vorgesehen — eine kritische
+// (Opus), eine positive (Hermes) und die beiden Modelle über sich selbst
+// (Hermes). Es ist außerdem das einzige Modul der App OHNE Karte: Die Zukunft
+// hat keine Karte, und der leere Platz ist die Aussage (Begründung im Kopf
+// von ki-gesellschaft.js).
+//
 // CommonJS, damit dieselbe Datei mit blankem `node` prüfbar ist und von
 // Metro/Babel in der App geladen werden kann (siehe schema.js).
 
@@ -189,6 +203,7 @@ const zweiterWeltkrieg = require('./zweiter-weltkrieg');
 const kalterKrieg = require('./kalter-krieg');
 const russlandWesten = require('./russland-westen');
 const aufstiegAsiens = require('./aufstieg-asiens');
+const kiGesellschaft = require('./ki-gesellschaft');
 
 /** Alle Themen in der Reihenfolge der Themenlandkarte. */
 const alleThemen = [
@@ -212,6 +227,7 @@ const alleThemen = [
   kalterKrieg,
   russlandWesten,
   aufstiegAsiens,
+  kiGesellschaft,
 ];
 
 /**

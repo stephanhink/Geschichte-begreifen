@@ -13,7 +13,9 @@ const { alleThemen, themaNachId } = require('../utils/themen/index.js');
  */
 export function laufe(pruefe) {
   // --- Die Reihenfolge aus CLAUDE.md -------------------------------------
-  const erwartet = ['aufhaenger', 'karte', 'perspektiven', 'synthese', 'urteil', 'quiz'];
+  // Das Schlusswort des Autors steht als letzter, optionaler Abschnitt
+  // hinter dem Quiz — das letzte Wort der App gehört dem Menschen.
+  const erwartet = ['aufhaenger', 'karte', 'perspektiven', 'synthese', 'urteil', 'quiz', 'autorenwort'];
   pruefe(
     'Lernformat: Abschnitte stehen in der Reihenfolge aus CLAUDE.md',
     ABSCHNITTE.map((a) => a.id).join(',') === erwartet.join(','),
@@ -43,9 +45,10 @@ export function laufe(pruefe) {
   );
 
   // Jedes registrierte Thema muss die volle Strecke anbieten — sonst fehlt
-  // Inhalt, den das Lernformat vorsieht. „Geschichte in Bewegung" ist dabei
-  // die eine Ausnahme: eine Karte darf ein Thema (noch) nicht haben.
-  const PFLICHT = ABSCHNITTE.filter((a) => a.id !== 'karte').map((a) => a.id);
+  // Inhalt, den das Lernformat vorsieht. Zwei Ausnahmen: „Geschichte in
+  // Bewegung" (eine Karte darf fehlen) und das „Schlusswort des Autors"
+  // (das schreibt nur der Betreiber, und nur im KI-Kapitel).
+  const PFLICHT = ABSCHNITTE.filter((a) => a.id !== 'karte' && a.id !== 'autorenwort').map((a) => a.id);
   for (const thema of alleThemen) {
     const habe = abschnitteFuer(thema).map((a) => a.id);
     pruefe(

@@ -33,6 +33,9 @@ import { laufe as laufeKarteZweiterWeltkrieg } from './karte-zweiter-weltkrieg.m
 import { laufe as laufeKarteKalterKrieg } from './karte-kalter-krieg.mjs';
 import { laufe as laufeKarteRusslandWesten } from './karte-russland-westen.mjs';
 import { laufe as laufeKarteAufstiegAsiens } from './karte-aufstieg-asiens.mjs';
+// Das Zukunftskapitel hat bewusst keine Karte — deshalb heißt sein Test nicht
+// „karte-…", sondern schlicht nach dem Modul (Begründung im Kopf der Datei).
+import { laufe as laufeKiGesellschaft } from './ki-gesellschaft.mjs';
 import { laufe as laufeMarkdown } from './markdown.mjs';
 import { laufe as laufeQuiz } from './quiz.mjs';
 import { laufe as laufeFortschritt } from './fortschritt.mjs';
@@ -78,6 +81,7 @@ laufeKarteZweiterWeltkrieg(pruefe);
 laufeKarteKalterKrieg(pruefe);
 laufeKarteRusslandWesten(pruefe);
 laufeKarteAufstiegAsiens(pruefe);
+laufeKiGesellschaft(pruefe);
 laufeMarkdown(pruefe);
 laufeQuiz(pruefe);
 laufeLernformat(pruefe);

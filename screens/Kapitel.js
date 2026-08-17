@@ -24,6 +24,7 @@ import {
 import Knopf from '../components/Knopf';
 import Schrittleiste from '../components/Schrittleiste';
 import AufhaengerAbschnitt from '../components/abschnitte/AufhaengerAbschnitt';
+import AutorenwortAbschnitt from '../components/abschnitte/AutorenwortAbschnitt';
 import KarteAbschnitt from '../components/abschnitte/KarteAbschnitt';
 import PerspektivenAbschnitt from '../components/abschnitte/PerspektivenAbschnitt';
 import QuizAbschnitt from '../components/abschnitte/QuizAbschnitt';
@@ -119,6 +120,8 @@ export default function Kapitel({
             onNeuBeginnen={onQuizZuruecksetzen}
           />
         ) : null}
+
+        {aktuell.id === 'autorenwort' ? <AutorenwortAbschnitt thema={thema} /> : null}
       </ScrollView>
 
       <View style={stile.fuss}>
