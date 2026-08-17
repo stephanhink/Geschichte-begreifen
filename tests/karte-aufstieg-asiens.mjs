@@ -518,6 +518,12 @@ export function laufe(pruefe) {
 
   pruefe('„Der Aufstieg Asiens und die Zukunft des Westens" steht als Modul 20 hinter „Russland und der Westen"',
     alleThemen[19] === thema && alleThemen[18].id === 'russland-westen');
-  pruefe('„Der Aufstieg Asiens und die Zukunft des Westens" ist das letzte Modul der App',
-    alleThemen[alleThemen.length - 1] === thema);
+  // Seit Runde 23 steht dahinter noch das Zukunftskapitel „Die KI und die
+  // Folgen auf die Gesellschaft" (Modul 21). „Der Aufstieg Asiens" bleibt das
+  // letzte Kapitel des NEUZEIT-BOGENS — Modul 21 gehört nicht mehr dazu,
+  // sondern nimmt dessen offene Schlussfrage auf.
+  pruefe('„Der Aufstieg Asiens und die Zukunft des Westens" ist das letzte Kapitel des Neuzeit-Bogens',
+    alleThemen[20] !== undefined
+      ? alleThemen[20].id === 'ki-gesellschaft'
+      : alleThemen[alleThemen.length - 1] === thema);
 }

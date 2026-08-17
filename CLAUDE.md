@@ -262,7 +262,9 @@ hier ist zugleich die Reihenfolge in der App (`utils/themen/index.js`):
     und ggf. die der Ukraine ergänzt Hermes, die Synthese ist vorläufig und
     sagt das offen)*
 20. **Der Aufstieg Asiens und die Zukunft des Westens** (1945–heute) —
-    dreizehntes und LETZTES Kapitel des Neuzeit-Bogens, ABSCHLUSS der App.
+    dreizehntes und LETZTES Kapitel des Neuzeit-Bogens (bis Runde 22 auch
+    der Abschluss der App; seit Runde 23 steht dahinter das Zukunftskapitel,
+    das genau dessen Schlussfrage aufnimmt).
     Von der Währungsreform 1948 und dem westeuropäisch-japanischen
     Wiederaufbau über die vier „Tigerstaaten" (Südkorea, Taiwan, Hongkong,
     Singapur) und Deng Xiaopings Reformen ab 1978 bis zu Indiens
@@ -281,6 +283,41 @@ hier ist zugleich die Reihenfolge in der App (`utils/themen/index.js`):
     *(alle vier Sichtweisen fertig — Westen (Opus), Japan/Südkorea/Taiwan,
     China, Indien (Hermes); die Synthese endet bewusst offen mit der Frage
     „Wessen Geschichte wird die nächste sein?")*
+21. **Die KI und die Folgen auf die Gesellschaft** (1950–heute) — das
+    ZUKUNFTSKAPITEL und der neue Abschluss der App (Runde 23,
+    Betreiber-Ergänzung vom 17.08.2026, Ideenskizze in
+    `notizen/ki-projekt.md`). Es gehört nicht mehr zum Neuzeit-Bogen,
+    sondern nimmt dessen offene Schlussfrage auf („Wessen Geschichte wird
+    die nächste sein?") und gibt eine der ehrlichsten möglichen Antworten:
+    die Künstliche Intelligenz — die Technologie, mit der dieses Buch selbst
+    geschrieben wurde. Von Turings Frage „Können Maschinen denken?" (1950)
+    über Dartmouth 1956, die KI-Winter, Deep Blue 1997 und AlphaGo 2016 bis
+    zur Wende, die alle erreichte: ChatGPT ab dem 30. November 2022. Der
+    Schwerpunkt liegt nach Betreiber-Vorgabe auf den **Folgen für die
+    Gesellschaft**, nicht auf der Technik.
+    Zwei Festlegungen machen dieses Kapitel einzigartig. Erstens die
+    **META-EBENE**: Das Kapitel wird von KIs geschrieben und sagt das
+    offen — Opus (Anthropic) und Hermes (DeepSeek) haben die zwanzig Kapitel
+    davor verfasst, nach den Vorgaben und unter der Verantwortung des
+    Betreibers; im Zukunftskapitel sprechen sie auch über sich selbst. „Der
+    Sieger schreibt die Geschichte" in Reinform: Hier schreibt zum ersten
+    Mal die Sache selbst, von der das Kapitel handelt. Deshalb **VIER
+    Stimmen**: die kritische Sicht (Opus), die positive Sicht (Hermes), die
+    Sicht von Opus 5 über sich selbst (Hermes) und die Sicht von
+    Hermes/DeepSeek über sich selbst (Hermes). Zweitens: Es ist das
+    **einzige Modul der App OHNE Karte**. Die Zukunft hat keinen datierten
+    Zustand, den man einfärben könnte; der leere Platz, an dem sonst die
+    Karte steht, ist das ehrlichste Bild, das dieses Kapitel zeichnen kann.
+    Die finale Synthese schließt die vier Stimmen ab und endet offen.
+    **Das allerletzte Wort der App hat der Autor selbst** (Betreiber-Nachtrag
+    vom 17.08.2026): ein hervorgehobenes „Schlusswort des Autors" mit
+    Namenszug hinter der Synthese, als eigenes Feld `autorenwort` im Modul —
+    Text vom Betreiber, Feld und Darstellung von Hermes. Vier KI-Stimmen
+    sprechen über KI, und dann meldet sich der Mensch zu Wort, der das Ganze
+    verantwortet.
+    *(erste Sichtweise fertig — die kritische Sicht, Stimme Opus; die
+    positive Sicht und die beiden Selbst-Stimmen ergänzt Hermes, die
+    Synthese ist vorläufig und sagt das offen)*
 
 **Der Neuzeit-Bogen** ist vom Betreiber ausbuchstabiert und steht in
 `notizen/kapitel-planung.md`: zehn Kapitel (seit dem 14.08.2026 — der
@@ -304,6 +341,14 @@ Kapitel beginnt, liest die Datei zuerst — sie enthält Vorgaben, die aus der
 Themenlandkarte allein nicht hervorgehen. Der frühere Platzhalter „Ausblick
 Neuzeit" ist damit erledigt: Der Bogen selbst ist der Ausblick, und mit
 Runde 22 sind alle dreizehn Kapitel des Bogens angelegt.
+
+**Hinter dem Bogen** steht seit Runde 23 das Zukunftskapitel „Die KI und die
+Folgen auf die Gesellschaft" (= Modul 21, Ideenskizze in
+`notizen/ki-projekt.md`). Es gehört nicht mehr zum Neuzeit-Bogen — es
+beantwortet dessen Schlussfrage. Wer daran weiterarbeitet, liest die
+Ideenskizze und den Kopf von `utils/themen/ki-gesellschaft.js` zuerst: Dort
+stehen die Betreiber-Vorgaben zur Meta-Ebene, zu den vier Stimmen und die
+Begründung, warum dieses Kapitel als einziges keine Karte hat.
 
 **Spätere Module (Landkarte, noch ohne Termin):** Persien als großes Reich,
 das Osmanische Reich und der Mittlere Osten, Indonesien.
@@ -398,6 +443,16 @@ Japan-Karte und bei den vier engeren Europakarten, 0,15 bei der
 Levante-Karte — dort sind 140 SVG-Einheiten ein Längengrad, und ein ganzer
 Grad würde nichts mehr beweisen).
 
+**Eine Ausnahme gibt es, und sie ist gewollt:** „Die KI und die Folgen auf
+die Gesellschaft" (Modul 21, das Zukunftskapitel) hat als einziges Modul
+KEINE Karte — es gibt keine Datei in `utils/themen/karten/` dazu, und der
+Karten-Abschnitt entfällt in der App von selbst (`utils/lernformat.js`
+prüft auf `thema.karte`). Die Zukunft hat keinen datierten Zustand, den man
+einfärben könnte; die Begründung steht ausführlich im Kopf von
+`utils/themen/ki-gesellschaft.js`. Sein Test heißt deshalb als einziger
+nicht `karte-…`, sondern `tests/ki-gesellschaft.mjs`, und er prüft die
+Kartenlosigkeit ausdrücklich mit — sie ist eine Zusage, kein Versehen.
+
 Daneben liegt in `utils/` die übrige Fachlogik, jeweils ohne UI-Import:
 `markdown.js` (zerlegt die Themen-Texte in Absätze, Überschriften,
 Aufzählungen), `quiz.js` (Auswertung von „Stimmt's?"), `fortschritt.js`
@@ -466,7 +521,136 @@ aus dem Play Store hinkt den SDKs hinterher (siehe AGENTS.md). Zum Testen
 
 ## Status
 
-Stand: 2026-08-17 — Runde 22 + Hermes-Pass (Modul „Der Aufstieg Asiens und
+Stand: 2026-08-17 — Runde 23 + Hermes-Pass (Modul „Die KI und die Folgen auf
+die Gesellschaft", das ZUKUNFTSKAPITEL und der neue Abschluss der App;
+VIER Stimmen, KEINE Karte, Modul-Test — npm test grün, 4151 Prüfungen):
+- Runde 23: das einundzwanzigste Thema — „Die KI und die Folgen auf die
+  Gesellschaft" (`utils/themen/ki-gesellschaft.js`, registriert als Modul
+  21). Es gehört nicht mehr zum Neuzeit-Bogen, sondern nimmt dessen offene
+  Schlussfrage auf und beantwortet sie mit dem, was gerade geschieht.
+  Vier Stimmen: die **kritische Sicht** (Stimme: Opus): der Bogen von Turings
+  Aufsatz 1950 — samt dem Punkt, dass er die Frage „Können Maschinen
+  denken?" selbst für zu unklar hielt und durch ein prüfbares Spiel ersetzte
+  — über Dartmouth 1956, die beiden KI-Winter (Lighthill 1973, der
+  Zusammenbruch des Expertensystem-Marktes Ende der 1980er) mit dem
+  nüchternen Befund, dass dieses Feld eine lange Tradition der
+  Selbstüberschätzung hat, Deep Blue 1997 und AlphaGo 2016 (beides Spiele
+  mit festen Regeln — genau das unterscheidet sie von allem danach), die
+  Transformer-Architektur 2017 bis zum 30. November 2022: ChatGPT, und
+  damit die Geschichte einer **Verbreitung** statt einer Erfindung.
+  Die Risiken, jedes mit Datum und Beleg: die **Desinformation** (der
+  gefälschte Selenskyj-Aufruf März 2022, der KI-Anruf vor der Vorwahl in New
+  Hampshire Januar 2024, der 25-Millionen-Dollar-Betrug per gefälschter
+  Videokonferenz in Hongkong Februar 2024) — mit der „Dividende des
+  Lügners" als der eigentlichen Gefahr: Wenn jede Aufnahme gefälscht sein
+  könnte, verliert auch die echte ihre Beweiskraft; dazu die
+  „Halluzination" am Fall des New Yorker Anwalts mit sechs erfundenen
+  Gerichtsentscheidungen 2023, ausdrücklich als Kehrseite der Bauart und
+  nicht als Panne erklärt. Die **Überwachung** (Clearview AI, Xinjiang, die
+  NIST-Untersuchung von 2019 und „Gender Shades" 2018 zu ungleichen
+  Fehlerquoten, die falsche Festnahme von Robert Williams in Detroit 2020),
+  dazu das europäische KI-Gesetz von 2024 samt dem Satz, der für jedes
+  Gesetz dieses Kapitels gilt: Es regelt, was beim Schreiben schon da war.
+  Die **Arbeit**, bewusst vorsichtig: die berühmten 47 Prozent von 2013 UND
+  ihre Kritik (Berufe gezählt statt Tätigkeiten) neben den rund neun Prozent
+  der OECD von 2016, dazu die ILO-Untersuchung 2023 (Büro- und
+  Verwaltungstätigkeiten am stärksten betroffen, in reichen Ländern
+  überproportional Frauen) und der Kernsatz: Das Problem ist weniger die
+  Menge als das Tempo und die Verteilung — eine politische Frage, keine
+  naturgesetzliche; die Hollywood-Streiks 2023 als erster großer
+  Arbeitskampf dieser Technik. Die **Abhängigkeit** von sehr wenigen (die
+  Engstellen der Lieferkette von einem Chip-Entwerfer über einen
+  taiwanischen Fertiger bis zu einem einzigen Maschinenbauer in den
+  Niederlanden; was das für Schulen und Behörden heißt; der Stromverbrauch
+  der Rechenzentren mit IEA-Zahl). Die **autonomen Waffen** (Genf seit 2014
+  ohne Vertrag, die UN-Resolution vom Dezember 2023, der umstrittene
+  Libyen-Bericht) mit der Geschwindigkeit als eigentlicher Gefahr — und dem
+  Rückverweis auf Kapitel 14, wo 1914 die Mobilmachungspläne schneller
+  liefen als die Diplomatie. Die **Manipulation** (Cambridge Analytica als
+  Vorgeschichte, die Persuasions-Studie von 2024, eingebaute Zustimmung als
+  Produktmerkmal und was das für Jugendliche bedeutet). Und die
+  **Kontrollfrage** mit ihren drei Lücken — Zeitlücke, Prüflücke,
+  Verantwortungslücke —, belegt am niederländischen Kindergeld-Skandal
+  (Risikomodell mit der zweiten Staatsangehörigkeit als Merkmal,
+  Zehntausende Familien, Rücktritt der gesamten Regierung im Januar 2021)
+  mit dem Befund: Es braucht keine überlegene Intelligenz, um Tausende zu
+  ruinieren — es genügt eine Verwaltung, die einer Rechnung mehr glaubt als
+  einem Menschen.
+  Die **unbequemen Stellen sind hier die der MENSCHHEIT**, und die Stimme
+  benennt sie selbst: die Gier (der Wettlauf, in dem Sicherheitsprüfungen
+  Marktanteil kosten — und Hersteller, die vor den Risiken ihrer eigenen
+  Produkte warnen, ohne die Produktion anzuhalten), die Bequemlichkeit
+  („Niemand wurde gezwungen"), die Politik, die zu langsam ist (die
+  Weichenstellungen fielen 2017–2023, das erste ernsthafte Gesetz kam 2024),
+  die Verantwortung, die keiner übernimmt — und die unsichtbare Arbeit hinter
+  den höflichen Antworten (Datenarbeit für wenige Dollar Stundenlohn, u. a.
+  in Kenia, „Time" 2023). Fair zur Gegenseite: die Chancen werden anerkannt
+  (Proteinstrukturen und der Chemie-Nobelpreis 2024, die schwedische
+  Mammografie-Studie 2023, KI-Wettervorhersagen, Bildung für die, deren
+  Eltern keine Nachhilfe zahlen können) — und zugleich nicht überzeichnet:
+  „Ein Versprechen ist kein Ergebnis." Dazu ein kurzer Abschnitt „Und die
+  Schule?" für die Lesenden selbst, ausdrücklich ohne Predigt und mit dem
+  Maßstab, der auch für den eigenen Text gilt.
+  Zwei Zusagen sind für dieses Kapitel besonders: Erstens stellt die Stimme
+  ihren eigenen **Interessenkonflikt** an den Anfang — dieser Text stammt
+  von einer KI und kann deshalb zu milde ausfallen (weil er dem Hersteller
+  nicht schaden will) ODER zu dramatisch (weil eine laute Warnung die
+  Technik mächtig aussehen lässt); beide Fehler sind von innen nicht
+  prüfbar, deshalb stehen die Zahlen mit Datum da. Zweitens behauptet sie
+  über das Innenleben von KI-Systemen **nichts** — weder dass da etwas ist
+  noch dass da nichts ist; was ein Modell über sich sagt, ist eine gelernte
+  Beschreibung und keine Beobachtung. Die Leseanleitung für die beiden
+  Selbst-Stimmen steht schon hier.
+  **Karte: bewusst KEINE** — die einzige solche Entscheidung der App. Die
+  Zukunft hat keinen datierten Zustand, den man einfärben könnte; der
+  Gegenstand hat keinen Ort (ein Modell, das in Kalifornien trainiert und in
+  Frankfurt benutzt wird, ist keine Fläche); und die App endet damit, wie
+  sie begann, nur umgekehrt — Kapitel 1 hat eine Karte, weil alles vorbei
+  ist, das letzte hat keine, weil es nicht vorbei ist. Der Test heißt
+  deshalb `tests/ki-gesellschaft.mjs` (104 Prüfungen) und prüft die
+  Kartenlosigkeit ausdrücklich mit: keine `karte` im Modul, kein
+  Karten-Abschnitt im Lernformat, genau ein kartenloses Modul in der ganzen
+  App. Dazu die Tone-Prüfungen: dass die Stimme die
+  Science-Fiction-Dystopie ausdrücklich zurückweist, dass sie jeden Risiko-
+  Abschnitt mit Beleg führt, dass sie die vier unbequemen Stellen der
+  Menschheit selbst benennt, dass sie die Chancen anerkennt, ohne sie zu
+  überzeichnen — und dass keine Quizfrage nach Schuld oder danach fragt, ob
+  KI „gut" oder „schlecht" ist.
+  Die Synthese ist **vorläufig** und sagt das: Sie benennt schon jetzt die
+  vier Bruchstellen (Tempo, Verteilung, Kontrolle — und die unbequemste:
+  Kann eine Stimme über sich selbst Auskunft geben?) und bietet Hermes den
+  Anschluss für den offenen Schluss an: „Wer schreibt die Geschichte, die
+  gerade beginnt?" Die Formulierung ist ein Vorschlag, kein Beschluss.
+  Den **Betreiber-Nachtrag von 22:45** hat diese Runde noch eingearbeitet:
+  Das allerletzte Wort der App hat nicht die Synthese, sondern der Autor
+  selbst (Feld `autorenwort`, Text vom Betreiber, Einbau durch Hermes).
+  Synthese und kritische Stimme laufen jetzt darauf zu und übergeben
+  ausdrücklich; der Test prüft das Feld mit, sobald es da ist.
+- `npm test` grün (4138 Prüfungen, davon 105 neu)
+
+Nächste Schritte nach Runde 23:
+- **Der Hermes-Pass zu Runde 23:** drei Stimmen fehlen — die positive Sicht
+  (Chancen: Medizin, Bildung, Wissenschaft, Zugang), die Sicht von Opus 5
+  (Anthropic) über sich selbst und die Sicht von Hermes (DeepSeek) über sich
+  selbst. Danach tritt an die Stelle der vorläufigen Synthese die
+  endgültige; sie schließt die vier Stimmen ab und endet offen.
+- **Das Schlusswort des Autors** (`autorenwort`) als allerletztes Wort der
+  App: Text vom Betreiber, Feld und hervorgehobene Darstellung von Hermes.
+  `tests/ki-gesellschaft.mjs` prüft es mit, sobald das Feld existiert (bis
+  dahin prüft er nur, dass Synthese und kritische Stimme darauf zulaufen).
+- **`tests/karte-aufstieg-asiens.mjs` angepasst:** Die Zusicherung „ist das
+  letzte Modul der App" galt bis Runde 22 und ist jetzt die Zusicherung „ist
+  das letzte Kapitel des Neuzeit-Bogens" — Modul 21 steht dahinter und
+  gehört nicht mehr zum Bogen.
+- **Am Gerät gegenlesen:** unverändert offen (zwanzig Karten rechnerisch
+  geprüft, keine auf einem Handy gesehen). Für das Zukunftskapitel kommt
+  eine neue Frage dazu: Wie wirkt ein Kapitel ohne „Geschichte in Bewegung"
+  auf einem Gerät, auf dem alle zwanzig davor eine Karte hatten? Der
+  Abschnitt entfällt sauber, aber ob der Sprung vom Aufhänger direkt zu den
+  Blickwinkeln als Absicht oder als Lücke gelesen wird, entscheidet das
+  Gerät.
+
+Frühere Runde (2026-08-17): Runde 22 + Hermes-Pass (Modul „Der Aufstieg Asiens und
 die Zukunft des Westens", dreizehntes und LETZTES Kapitel des
 Neuzeit-Bogens; VIER Sichtweisen, Karte und Tests — npm test grün,
 4018 Prüfungen):
