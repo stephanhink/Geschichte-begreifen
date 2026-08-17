@@ -278,10 +278,9 @@ hier ist zugleich die Reihenfolge in der App (`utils/themen/index.js`):
     Leitidee „Der Sieger schreibt die Geschichte" gilt hier umgekehrt, weil
     eine noch nicht abgeschlossene Geschichte niemand endgültig schreiben
     kann. Leitfrage: Wessen Geschichte wird die nächste sein?
-    *(erste Sichtweise fertig — der Westen/Deutschland und Europa, Stimme
-    Opus; die Sichtweisen Asiens — Japan, China, Indien, Südkorea/Taiwan —
-    ergänzt Hermes danach, das Schema erlaubt hier ausdrücklich mehr als
-    zwei Stimmen; die Synthese ist vorläufig und sagt das offen)*
+    *(alle vier Sichtweisen fertig — Westen (Opus), Japan/Südkorea/Taiwan,
+    China, Indien (Hermes); die Synthese endet bewusst offen mit der Frage
+    „Wessen Geschichte wird die nächste sein?")*
 
 **Der Neuzeit-Bogen** ist vom Betreiber ausbuchstabiert und steht in
 `notizen/kapitel-planung.md`: zehn Kapitel (seit dem 14.08.2026 — der
@@ -299,8 +298,8 @@ angelegt), dem Zweiten Weltkrieg und der neuen Weltordnung (= Modul 17, seit
 Runde 19 angelegt), der neuen Weltordnung und dem Kalten Krieg (= Modul 18,
 seit Runde 20 angelegt), Russland und dem Westen (= Modul 19, seit Runde 21
 angelegt) bis zum dreizehnten und letzten Kapitel, dem Aufstieg Asiens und
-der Zukunft des Westens (= Modul 20, seit Runde 22 angelegt — die erste
-Sichtweise steht, Hermes ergänzt die Sichtweisen Asiens). Wer eines dieser
+der Zukunft des Westens (= Modul 20, seit Runde 22 angelegt und mit Runde
+22 + Hermes-Pass abgeschlossen). Wer eines dieser
 Kapitel beginnt, liest die Datei zuerst — sie enthält Vorgaben, die aus der
 Themenlandkarte allein nicht hervorgehen. Der frühere Platzhalter „Ausblick
 Neuzeit" ist damit erledigt: Der Bogen selbst ist der Ausblick, und mit
@@ -467,9 +466,10 @@ aus dem Play Store hinkt den SDKs hinterher (siehe AGENTS.md). Zum Testen
 
 ## Status
 
-Stand: 2026-08-17 — Runde 22 (Modul „Der Aufstieg Asiens und die Zukunft
-des Westens", dreizehntes und LETZTES Kapitel des Neuzeit-Bogens; erste
-Sichtweise, Karte und Tests):
+Stand: 2026-08-17 — Runde 22 + Hermes-Pass (Modul „Der Aufstieg Asiens und
+die Zukunft des Westens", dreizehntes und LETZTES Kapitel des
+Neuzeit-Bogens; VIER Sichtweisen, Karte und Tests — npm test grün,
+4018 Prüfungen):
 - Runde 22: das zwanzigste Thema — „Der Aufstieg Asiens und die Zukunft des
   Westens" (`utils/themen/aufstieg-asiens.js`, registriert als Modul 20).
   Der ABSCHLUSS der App. Bisher nur die Sicht des Westens — Deutschland und
@@ -500,11 +500,10 @@ Sichtweise, Karte und Tests):
   Alterung, Chinas Ein-Kind-Politik-Erbe, Indiens Ungleichheit, die
   Taiwan-Frage), die die App nicht kleinredet. Die Taiwan-Frage wird
   sachlich behandelt: Die Karte entscheidet nichts, sie zeichnet nur, wer
-  wo regiert. Die Sichtweisen Asiens (Japan, China, Indien, Südkorea/
-  Taiwan — mehrere Stimmen sind ausdrücklich vorgesehen) ergänzt Hermes
-  danach; die Synthese ist vorläufig und sagt das offen, endet aber jetzt
-  schon auf eine offene Frage statt auf einen Punkt — nach Betreiber-Vorgabe
-  darf dieses letzte Kapitel der App bewusst ohne Schlusspunkt bleiben.
+  wo regiert. Die Sichtweisen Asiens (Japan/Südkorea/Taiwan, China, Indien)
+  ergänzte Hermes in Runde 22 — vier Stimmen insgesamt. Die Synthese endet
+  nach Betreiber-Vorgabe bewusst offen auf eine Frage statt auf einen
+  Punkt: „Wessen Geschichte wird die nächste sein?"
   Die Karte `utils/themen/karten/aufstieg-asiens.js` spannt 10° W bis 145° O
   und 10° S bis 58° N auf 700 × 336,2 — mit 4,5 SVG-Einheiten je Längengrad
   der gröbste Ausschnitt der App (vorher war es die USA-Weltmacht-Karte mit
@@ -546,19 +545,10 @@ Sichtweise, Karte und Tests):
 - `npm test` grün (4013 Prüfungen)
 
 Nächste Schritte nach Runde 22:
-- **Die Sichtweisen Asiens** für „Der Aufstieg Asiens und die Zukunft des
-  Westens" — Hermes ergänzt die weiteren Stimmen: Japan (Wirtschaftswunder
-  UND die „verlorenen Jahrzehnte" nach 1990), die Tigerstaaten (Südkorea,
-  Taiwan, Hongkong, Singapur), China (Deng Xiaopings Reformen ab 1978, das
-  größte Aufhol-Wachstum der Geschichte — UND die eigenen unbequemen
-  Stellen: Systemfrage, Menschenrechte, Immobilienkrise) und Indien
-  (IT-Revolution, demografische Dividende, seit 2023 bevölkerungsreichstes
-  Land der Welt). Das Schema erlaubt hier ausdrücklich mehr als zwei
-  Stimmen; Hermes entscheidet die genaue Aufteilung. Danach führt die
-  ENDGÜLTIGE Synthese alle Stimmen zusammen — mit dem bewusst offenen Ende,
-  das dieses letzte Kapitel der App nach Betreiber-Vorgabe tragen darf:
-  keine fertige Antwort auf „wessen Geschichte wird die nächste sein?",
-  sondern eine Frage an die Zukunft.
+- **Erledigt mit Runde 22 + Hermes-Pass:** Die Sichtweisen Asiens
+  (Japan/Südkorea/Taiwan, China, Indien) sind geschrieben, die finale
+  Synthese endet offen mit der Frage „Wessen Geschichte wird die nächste
+  sein?" — der Neuzeit-Bogen ist damit vollständig abgeschlossen.
 - **Damit sind alle dreizehn Kapitel des Neuzeit-Bogens angelegt** (Runden
   10–22). Was danach an der Reihe ist, entscheidet der Betreiber — die
   Themenlandkarte nennt als spätere Module ohne Termin Persien, das
