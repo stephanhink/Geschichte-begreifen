@@ -129,6 +129,16 @@
 // Krieges, die USA und die Westmächte, die überfallenen Länder — ergänzt
 // Hermes danach; das Schema erlaubt drei und mehr Perspektiven.
 //
+// „Die neue Weltordnung und der Kalte Krieg" ist das achtzehnte Thema und das
+// elfte Kapitel des Neuzeit-Bogens. Es beginnt dort, wo das Kapitel davor
+// endet: 1945, bei den Siegern, die sich noch die Hände schütteln — und es
+// erzählt, wie daraus binnen zwei Jahren zwei Blöcke wurden, deren Grenze
+// mitten durch Deutschland lief. Die Perspektiven-Achse steht wieder nach
+// außen, aber anders als sonst verläuft sie diesmal quer durch die eigene
+// Geschichte: Die Linie trennte nicht zwei Länder, sondern eines. Die Sicht
+// des Westens steht zuerst, weil Opus diese Runde übernommen hat; die Sicht
+// des Ostens (Sowjetunion, Warschauer Pakt, DDR) ergänzt Hermes danach.
+//
 // CommonJS, damit dieselbe Datei mit blankem `node` prüfbar ist und von
 // Metro/Babel in der App geladen werden kann (siehe schema.js).
 
@@ -149,6 +159,7 @@ const wegZumErstenWeltkrieg = require('./weg-zum-ersten-weltkrieg');
 const usaWeltmacht = require('./usa-weltmacht');
 const weimarNs = require('./weimar-ns');
 const zweiterWeltkrieg = require('./zweiter-weltkrieg');
+const kalterKrieg = require('./kalter-krieg');
 
 /** Alle Themen in der Reihenfolge der Themenlandkarte. */
 const alleThemen = [
@@ -169,6 +180,7 @@ const alleThemen = [
   usaWeltmacht,
   weimarNs,
   zweiterWeltkrieg,
+  kalterKrieg,
 ];
 
 /**

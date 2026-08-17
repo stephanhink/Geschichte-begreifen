@@ -399,10 +399,28 @@ aus dem Play Store hinkt den SDKs hinterher (siehe AGENTS.md). Zum Testen
 
 ## Status
 
-Stand: 2026-08-16 — Runde 19 abgeschlossen (Modul „Der Zweite Weltkrieg
-und die neue Weltordnung", zehntes Kapitel des Neuzeit-Bogens; drei
-Stimmen, Karte und Tests):
-- Runde 19: das siebzehnte Thema — „Der Zweite Weltkrieg und die neue
+Stand: 2026-08-17 — Runde 20 abgeschlossen (Modul „Die neue Weltordnung
+und der Kalte Krieg", elftes Kapitel des Neuzeit-Bogens; drei Stimmen,
+Karte und Tests):
+- Runde 20: das achtzehnte Thema — „Die neue Weltordnung und der Kalte
+  Krieg" (`utils/themen/kalter-krieg.js`, registriert als Modul 18).
+  Drei gleichwertige Sichtweisen: der Westen (Stimme Opus — Truman-
+  Doktrin, Marshallplan, Luftbrücke, NATO, Kubakrise, Helsinki,
+  1989/91; unbequeme Stellen: McCarthy, Vietnam, Diktaturen-
+  Unterstützung; der Zwei-plus-Vier-Vertrag prominent mit Art. 6/7),
+  der Osten (Stimme Hermes — Sowjetunion/Warschauer Pakt/DDR: die
+  27 Mio. Toten, Einkreisungsangst, Währungsreform 1948 als Bruch,
+  „antifaschistischer Schutzwall", Mangelwirtschaft, Breschnew-Doktrin,
+  Helsinki als Grenzanerkennung) und die Deutschen in Ost und West
+  (Stimme Hermes — Alltag der Teilung, Montagsdemonstrationen,
+  Mauerfall 9.11.1989, Treuhand, „Mauer im Kopf"). Die Synthese führt
+  die drei über die „Bruchstellen" zusammen. Karte
+  `utils/themen/karten/kalter-krieg.js` mit drei Zuständen
+  (1949, 1961/62, 1989–1991). npm test grün.
+- Frühere Runde (2026-08-16): Runde 19 abgeschlossen (Modul „Der Zweite
+  Weltkrieg und die neue Weltordnung", zehntes Kapitel; drei Stimmen,
+  Karte und Tests):
+  - Runde 19: das siebzehnte Thema — „Der Zweite Weltkrieg und die neue
   Weltordnung" (`utils/themen/zweiter-weltkrieg.js`, registriert als Modul
   17). Drei gleichwertige Sichtweisen: die Besiegten (Deutschland, Stimme
   Opus — TONE-Regel: Angriffskrieg, Wehrmacht, Holocaust als deutsche
