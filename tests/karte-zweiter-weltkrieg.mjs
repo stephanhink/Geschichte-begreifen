@@ -519,13 +519,24 @@ export function laufe(pruefe) {
   // in tests/themen.mjs nimmt alle Perspektiven automatisch mit — hier steht
   // nur, was für dieses Thema besonders gilt.
   const besiegte = thema.perspektiven.find((p) => p.id === 'besiegte-sicht');
+  /**
+   * Perspektive und Synthese als Fließtext — Zeilenumbrüche zu Leerzeichen.
+   *
+   * Die Texte in utils/themen/ sind als Zeilen-Array notiert und mit \n
+   * zusammengesetzt; ein gesuchter Begriff kann also mitten im Umbruch
+   * stehen („Vertrag über die abschließende Regelung in Bezug auf\nDeutschland").
+   * Geprüft wird deshalb der Fließtext — an der Frage, ob eine Zusage im
+   * Text steht, ändert das nichts.
+   */
+  const fliesstext = besiegte.text.replace(/\s+/g, ' ');
+  const syntheseText = thema.synthese.replace(/\s+/g, ' ');
   pruefe('„Der Zweite Weltkrieg": die Sicht der Besiegten ist da und stammt von Opus',
     Boolean(besiegte) && besiegte.stimme === 'Opus');
   pruefe('„Der Zweite Weltkrieg": die Perspektive nennt sich gleichwertig, ohne Rangfolge',
-    besiegte.text.includes('gleichwertig') && besiegte.text.includes('keine Rangfolge'));
+    fliesstext.includes('gleichwertig') && fliesstext.includes('keine Rangfolge'));
   pruefe('„Der Zweite Weltkrieg": die Perspektive öffnet die Tür zu den weiteren Stimmen',
-    besiegte.text.includes('zweiten Stimme') &&
-    besiegte.text.includes('Es fehlen die Stimmen der Befreiten'));
+    fliesstext.includes('zweiten Stimme') &&
+    fliesstext.includes('Es fehlen die Stimmen der Befreiten'));
 
   // Die Stationen des Kapitels.
   for (const stichwort of [
@@ -538,62 +549,62 @@ export function laufe(pruefe) {
     'Fritz Bauer', 'Vereinten Nationen', 'Grundgesetz',
   ]) {
     pruefe(`„Der Zweite Weltkrieg": die Perspektive erzählt von „${stichwort}"`,
-      besiegte.text.includes(stichwort));
+      fliesstext.includes(stichwort));
   }
 
   // TONE-REGEL, Teil 1: Die eigene Erzählung benennt ihre unbequemen Stellen
   // selbst, statt sie den anderen Stimmen zu überlassen.
   pruefe('„Der Zweite Weltkrieg": die Perspektive sagt selbst, wer den Krieg begonnen hat',
-    besiegte.text.includes('Deutschland hat diesen Krieg begonnen'));
+    fliesstext.includes('Deutschland hat diesen Krieg begonnen'));
   pruefe('„Der Zweite Weltkrieg": die Perspektive nennt den Krieg einen Angriffskrieg',
-    besiegte.text.includes('Angriffskrieg'));
+    fliesstext.includes('Angriffskrieg'));
   pruefe('„Der Zweite Weltkrieg": die Perspektive nennt den Krieg im Osten einen Vernichtungskrieg',
-    besiegte.text.includes('Vernichtungskrieg'));
+    fliesstext.includes('Vernichtungskrieg'));
   pruefe('„Der Zweite Weltkrieg": die Perspektive weist die eigenen Entlastungsversuche zurück',
-    besiegte.text.includes('wird sie hier nicht finden'));
+    fliesstext.includes('wird sie hier nicht finden'));
   pruefe('„Der Zweite Weltkrieg": die Perspektive benennt die Verstrickung der Wehrmacht selbst',
-    besiegte.text.includes('Es gab keine saubere Wehrmacht') &&
-    besiegte.text.includes('tragende Institution'));
+    fliesstext.includes('Es gab keine saubere Wehrmacht') &&
+    fliesstext.includes('tragende Institution'));
   pruefe('„Der Zweite Weltkrieg": die Perspektive benennt das Sterben der sowjetischen Kriegsgefangenen',
-    besiegte.text.includes('Kriegsgefangenen') && besiegte.text.includes('3,3'));
+    fliesstext.includes('Kriegsgefangenen') && fliesstext.includes('3,3'));
   pruefe('„Der Zweite Weltkrieg": die Perspektive benennt den Holocaust als deutsche Verantwortung',
-    besiegte.text.includes('sechs Millionen') && besiegte.text.includes('deutsche Verantwortung'));
+    fliesstext.includes('sechs Millionen') && fliesstext.includes('deutsche Verantwortung'));
   pruefe('„Der Zweite Weltkrieg": die Perspektive sagt, dass der Holocaust nicht relativiert werden kann',
-    besiegte.text.includes('nicht relativieren'));
+    fliesstext.includes('nicht relativieren'));
   pruefe('„Der Zweite Weltkrieg": die Perspektive stellt die Frage nach dem Mitwissen selbst',
-    besiegte.text.includes('## Was wussten die Deutschen?') &&
-    besiegte.text.includes('nichts wissen zu wollen'));
+    fliesstext.includes('## Was wussten die Deutschen?') &&
+    fliesstext.includes('nichts wissen zu wollen'));
   pruefe('„Der Zweite Weltkrieg": die Perspektive sagt, dass der Widerstand eine Minderheit war',
-    besiegte.text.includes('Und es waren wenige') &&
-    besiegte.text.includes('nicht durch seine Ausnahmen entlastet'));
+    fliesstext.includes('Und es waren wenige') &&
+    fliesstext.includes('nicht durch seine Ausnahmen entlastet'));
 
   // TONE-REGEL, Teil 2: Bombenkrieg und Vertreibung stehen NEBEN dem
   // Holocaust, nicht gegen ihn. Der Text sagt das selbst — mehrfach.
   pruefe('„Der Zweite Weltkrieg": die Perspektive schließt jede Aufrechnung ausdrücklich aus',
-    besiegte.text.includes('In diesem Kapitel wird nicht aufgerechnet'));
+    fliesstext.includes('In diesem Kapitel wird nicht aufgerechnet'));
   pruefe('„Der Zweite Weltkrieg": sie sagt beim Bombenkrieg selbst, dass es keine Gegenrechnung gibt',
-    besiegte.text.includes('Wer Dresden gegen Auschwitz stellt') &&
-    besiegte.text.includes('Gegenrechnung'));
+    fliesstext.includes('Wer Dresden gegen Auschwitz stellt') &&
+    fliesstext.includes('Gegenrechnung'));
   pruefe('„Der Zweite Weltkrieg": sie stellt die Vertreibung neben und nicht gegen die eigenen Taten',
-    besiegte.text.includes('nicht dagegen'));
+    fliesstext.includes('nicht dagegen'));
   pruefe('„Der Zweite Weltkrieg": das Leid der deutschen Zivilbevölkerung wird nicht kleingeredet',
-    besiegte.text.includes('es wird hier nicht kleingeredet'));
+    fliesstext.includes('es wird hier nicht kleingeredet'));
   pruefe('„Der Zweite Weltkrieg": die Reihenfolge des Bombenkriegs wird sachlich benannt',
-    besiegte.text.includes('Warschau 1939, Rotterdam 1940, Coventry 1940'));
+    fliesstext.includes('Warschau 1939, Rotterdam 1940, Coventry 1940'));
 
   // TONE-REGEL, Teil 3: Die Beweggründe und die Verluste der anderen Seite
   // werden fair wiedergegeben — die Hauptlast der Sowjetunion ausdrücklich.
   pruefe('„Der Zweite Weltkrieg": die Perspektive benennt die Hauptlast der Sowjetunion',
-    besiegte.text.includes('Hauptlast dieses Krieges') &&
-    besiegte.text.includes('27 Millionen'));
+    fliesstext.includes('Hauptlast dieses Krieges') &&
+    fliesstext.includes('27 Millionen'));
   pruefe('„Der Zweite Weltkrieg": sie sagt, wo die Wehrmacht ihre Verluste erlitt',
-    besiegte.text.includes('Ostfront erlitt die Wehrmacht'));
+    fliesstext.includes('Ostfront erlitt die Wehrmacht'));
   pruefe('„Der Zweite Weltkrieg": sie gibt die Sicht der Westmächte fair wieder',
-    besiegte.text.includes('Westmächte') && besiegte.text.includes('Lend-Lease'));
+    fliesstext.includes('Westmächte') && fliesstext.includes('Lend-Lease'));
   pruefe('„Der Zweite Weltkrieg": sie nennt den 8. Mai für beide Seiten',
-    besiegte.text.includes('Tag der Befreiung') && besiegte.text.includes('Weizsäcker'));
+    fliesstext.includes('Tag der Befreiung') && fliesstext.includes('Weizsäcker'));
   pruefe('„Der Zweite Weltkrieg": sie räumt ein, dass der Einwand gegen Nürnberg nicht unberechtigt war',
-    besiegte.text.includes('Siegerjustiz'));
+    fliesstext.includes('Siegerjustiz'));
 
   // Solange nur eine Stimme dasteht, muss die Synthese das sagen. Die Prüfung
   // ist zustandstolerant: Sie akzeptiert den Zwischenstand ebenso wie die
@@ -601,15 +612,15 @@ export function laufe(pruefe) {
   const weitereStimme = thema.perspektiven.find((p) => p.stimme !== 'Opus');
   if (!weitereStimme) {
     pruefe('„Der Zweite Weltkrieg": die Synthese sagt offen, dass Sichtweisen fehlen',
-      thema.synthese.includes('fehlen noch') && thema.synthese.includes('Befreiten'));
+      syntheseText.includes('fehlen noch') && syntheseText.includes('Befreiten'));
   } else {
     pruefe('„Der Zweite Weltkrieg": die Synthese führt die Sichtweisen zusammen',
-      thema.synthese.includes('Befreiten') && thema.synthese.includes('Besiegten'));
+      syntheseText.includes('Befreiten') && syntheseText.includes('Besiegten'));
   }
   pruefe('„Der Zweite Weltkrieg": die Synthese hält die Regel gegen das Aufrechnen fest',
-    thema.synthese.includes('nicht aufgerechnet'));
+    syntheseText.includes('nicht aufgerechnet'));
   pruefe('„Der Zweite Weltkrieg": die Synthese nennt keine Sichtweise „so war es"',
-    thema.synthese.includes('so war es'));
+    syntheseText.includes('so war es'));
 
   pruefe('„Der Zweite Weltkrieg" hat 3 bis 5 Quizfragen',
     thema.quiz.length >= 3 && thema.quiz.length <= 5);

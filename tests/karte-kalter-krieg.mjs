@@ -501,14 +501,25 @@ export function laufe(pruefe) {
   // nimmt alle Perspektiven automatisch mit — hier steht nur, was für dieses
   // Thema besonders gilt.
   const westen = thema.perspektiven.find((p) => p.id === 'westen-sicht');
+  /**
+   * Perspektive und Synthese als Fließtext — Zeilenumbrüche zu Leerzeichen.
+   *
+   * Die Texte in utils/themen/ sind als Zeilen-Array notiert und mit \n
+   * zusammengesetzt; ein gesuchter Begriff kann also mitten im Umbruch
+   * stehen („Vertrag über die abschließende Regelung in Bezug auf\nDeutschland").
+   * Geprüft wird deshalb der Fließtext — an der Frage, ob eine Zusage im
+   * Text steht, ändert das nichts.
+   */
+  const fliesstext = westen.text.replace(/\s+/g, ' ');
+  const syntheseText = thema.synthese.replace(/\s+/g, ' ');
   pruefe('„Kalter Krieg": die Sicht des Westens ist da und stammt von Opus',
     Boolean(westen) && westen.stimme === 'Opus');
   pruefe('„Kalter Krieg": die Perspektive nennt sich gleichwertig zu den anderen Stimmen',
-    westen.text.includes('gleichwertig'));
+    fliesstext.includes('gleichwertig'));
   pruefe('„Kalter Krieg": die Reihenfolge wird ausdrücklich nicht als Rangfolge ausgegeben',
-    westen.text.includes('keine Rangfolge'));
+    fliesstext.includes('keine Rangfolge'));
   pruefe('„Kalter Krieg": die Perspektive öffnet die Tür zu den weiteren Stimmen',
-    westen.text.includes('Sicht des Ostens') && westen.text.includes('Hermes'));
+    fliesstext.includes('Sicht des Ostens') && fliesstext.includes('Hermes'));
 
   // Die Stationen des Kapitels (Betreiber-Vorgaben, notizen/kapitel-planung.md).
   for (const stichwort of [
@@ -522,73 +533,73 @@ export function laufe(pruefe) {
     '3. Oktober 1990', '25. Dezember 1991',
   ]) {
     pruefe(`„Kalter Krieg": die Perspektive erzählt von „${stichwort}"`,
-      westen.text.includes(stichwort));
+      fliesstext.includes(stichwort));
   }
 
   // Der 2+4-Vertrag steht nach Betreiber-Vorgabe prominent — mit seiner
   // Bedeutung UND der Frage, ob er eingehalten wurde.
   pruefe('„Kalter Krieg": der 2+4-Vertrag wird mit seinem vollen Namen genannt',
-    westen.text.includes('Vertrag über die abschließende Regelung in Bezug auf Deutschland'));
+    fliesstext.includes('Vertrag über die abschließende Regelung in Bezug auf Deutschland'));
   pruefe('„Kalter Krieg": der 2+4-Vertrag nennt die volle Souveränität und das Ende der Vier-Mächte-Rechte',
-    westen.text.includes('volle Souveränität') && westen.text.includes('Artikel 7'));
+    fliesstext.includes('volle Souveränität') && fliesstext.includes('Artikel 7'));
   pruefe('„Kalter Krieg": der 2+4-Vertrag nennt den Verzicht auf ABC-Waffen und den Truppenabzug bis 1994',
-    westen.text.includes('atomare, biologische und chemische Waffen') && westen.text.includes('bis Ende 1994'));
+    fliesstext.includes('atomare, biologische und chemische Waffen') && fliesstext.includes('bis Ende 1994'));
   pruefe('„Kalter Krieg": Artikel 6 wird als die Bestimmung über die Bündnismitgliedschaft benannt',
-    westen.text.includes('Artikel 6') && westen.text.includes('Bündnissen anzugehören'));
+    fliesstext.includes('Artikel 6') && fliesstext.includes('Bündnissen anzugehören'));
   pruefe('„Kalter Krieg": die Frage nach der Einhaltung wird gestellt und formal mit ja beantwortet',
-    westen.text.includes('Wurde der Vertrag eingehalten?') && westen.text.includes('Formal lautet die Antwort: ja'));
+    fliesstext.includes('Wurde der Vertrag eingehalten?') && fliesstext.includes('Formal lautet die Antwort: ja'));
   pruefe('„Kalter Krieg": die Osterweiterungs-Debatte wird an das nächste Kapitel verwiesen',
-    westen.text.includes('Russland und der Westen') && westen.text.includes('Geist'));
+    fliesstext.includes('Russland und der Westen') && fliesstext.includes('Geist'));
 
   // Warum der Ostblock zusammenbrach (Betreiber-Vorgabe, ausführlich).
   pruefe('„Kalter Krieg": der Abschnitt über den Zusammenbruch des Ostblocks ist da',
-    westen.text.includes('## Warum der Ostblock zusammenbrach'));
+    fliesstext.includes('## Warum der Ostblock zusammenbrach'));
   for (const grund2 of ['Planwirtschaft', 'technologische Rückstand', 'Rüstungslast', 'Ölpreisverfall 1986', 'Reformen']) {
-    pruefe(`„Kalter Krieg": der Zusammenbruch nennt „${grund2}" als Ursache`, westen.text.includes(grund2));
+    pruefe(`„Kalter Krieg": der Zusammenbruch nennt „${grund2}" als Ursache`, fliesstext.includes(grund2));
   }
   pruefe('„Kalter Krieg": die westliche Lieblingserklärung („totgerüstet") wird ausdrücklich verworfen',
-    westen.text.includes('totgerüstet') && westen.text.includes('Der Westen hat diesen Zusammenbruch nicht'));
+    fliesstext.includes('totgerüstet') && fliesstext.includes('Der Westen hat diesen Zusammenbruch nicht'));
 
   // TONE-REGEL für sensible Themen (CLAUDE.md): Die eigene Erzählung muss ihre
   // unbequemen Stellen selbst benennen, statt sie der Gegenstimme zu
   // überlassen — und sie darf die andere Seite nicht verunglimpfen.
   pruefe('„Kalter Krieg": die Perspektive benennt die McCarthy-Ära selbst',
-    westen.text.includes('McCarthy-Ära') && westen.text.includes('hat jahrelang Meinungen verfolgt'));
+    fliesstext.includes('McCarthy-Ära') && fliesstext.includes('hat jahrelang Meinungen verfolgt'));
   pruefe('„Kalter Krieg": die Perspektive benennt Vietnam als eigene Wunde',
-    westen.text.includes('Vietnam') && westen.text.includes('eigene Wunde') && westen.text.includes('My Lai'));
+    fliesstext.includes('Vietnam') && fliesstext.includes('eigene Wunde') && fliesstext.includes('My Lai'));
   pruefe('„Kalter Krieg": die Perspektive benennt die Unterstützung von Diktaturen',
-    westen.text.includes('Mossadeghs') && westen.text.includes('Pinochets') && westen.text.includes('Obristen'));
+    fliesstext.includes('Mossadeghs') && fliesstext.includes('Pinochets') && fliesstext.includes('Obristen'));
   pruefe('„Kalter Krieg": die Perspektive benennt den Rüstungswettlauf und Eisenhowers Warnung',
-    westen.text.includes('Rüstungswettlauf') && westen.text.includes('militärisch-industriellen Komplex'));
+    fliesstext.includes('Rüstungswettlauf') && fliesstext.includes('militärisch-industriellen Komplex'));
   pruefe('„Kalter Krieg": die Perspektive benennt, dass 1953, 1956 und 1968 niemand zu Hilfe kam',
-    westen.text.includes('sah zu, wie Menschen, die genau darauf vertraut hatten'));
+    fliesstext.includes('sah zu, wie Menschen, die genau darauf vertraut hatten'));
   pruefe('„Kalter Krieg": die Perspektive benennt den Geheimteil des Kuba-Handels als unbequeme Stelle',
-    westen.text.includes('verschwiegen wurde, was man selbst zugestanden hatte'));
+    fliesstext.includes('verschwiegen wurde, was man selbst zugestanden hatte'));
   pruefe('„Kalter Krieg": die Perspektive benennt, dass der Marshallplan auch Machtpolitik war',
-    westen.text.includes('Er war auch Machtpolitik'));
+    fliesstext.includes('Er war auch Machtpolitik'));
 
   // Und sie erklärt die Gegenseite nicht zu bloßen Statisten: Die Beweggründe
   // der Sowjetunion werden ausdrücklich fair wiedergegeben.
   pruefe('„Kalter Krieg": die sowjetische Einkreisungsangst wird fair eingeordnet',
-    westen.text.includes('27 Millionen') && westen.text.includes('Einkreisung') &&
-    westen.text.includes('Erfunden war sie'));
+    fliesstext.includes('27 Millionen') && fliesstext.includes('Einkreisung') &&
+    fliesstext.includes('Erfunden war sie'));
   pruefe('„Kalter Krieg": die sowjetische Ablehnung des Marshallplans wird nachvollziehbar gemacht',
-    westen.text.includes('nachvollziehbarer Gedanke, kein bloßer Trotz'));
+    fliesstext.includes('nachvollziehbarer Gedanke, kein bloßer Trotz'));
   pruefe('„Kalter Krieg": die sowjetische Sicht auf die Währungsreform von 1948 wird anerkannt',
-    westen.text.includes('diese Lesart ist nicht'));
+    fliesstext.includes('diese Lesart ist nicht'));
   pruefe('„Kalter Krieg": die sowjetische Sicht auf die Raketen in der Türkei wird gespiegelt',
-    westen.text.includes('unerträglich nah'));
+    fliesstext.includes('unerträglich nah'));
   pruefe('„Kalter Krieg": Österreich 1955 steht als Gegenbeispiel im Text',
-    westen.text.includes('dieses Beispiel gehört in eine faire') ||
-    westen.text.includes('Dieses Beispiel gehört in eine faire'));
+    fliesstext.includes('dieses Beispiel gehört in eine faire') ||
+    fliesstext.includes('Dieses Beispiel gehört in eine faire'));
 
   // Die Siegerfrage wird gestellt — und selbst unbequem beantwortet.
   pruefe('„Kalter Krieg": die Frage nach dem Sieger wird gestellt',
-    westen.text.includes('Wer hat den Kalten Krieg gewonnen?'));
+    fliesstext.includes('Wer hat den Kalten Krieg gewonnen?'));
   pruefe('„Kalter Krieg": die Antwort nennt den Zusammenbruch statt eines Sieges',
-    westen.text.includes('weniger ein Sieg als ein Zusammenbruch'));
+    fliesstext.includes('weniger ein Sieg als ein Zusammenbruch'));
   pruefe('„Kalter Krieg": die Antwort sagt, dass 1989 im Osten nicht überall als Befreiung erlebt wurde',
-    westen.text.includes('nicht überall als Befreiung erlebt'));
+    fliesstext.includes('nicht überall als Befreiung erlebt'));
 
   // Solange nur eine Stimme dasteht, muss die Synthese das sagen. Die Prüfung
   // ist zustandstolerant: Sie akzeptiert den Zwischenstand ebenso wie die
@@ -596,9 +607,9 @@ export function laufe(pruefe) {
   const weitereStimme = thema.perspektiven.find((p) => p.stimme !== 'Opus');
   if (!weitereStimme) {
     pruefe('„Kalter Krieg": die Synthese sagt offen, dass eine Sicht noch fehlt',
-      thema.synthese.includes('fehlt noch') && thema.synthese.includes('Sicht des Ostens'));
+      syntheseText.includes('fehlt noch') && syntheseText.includes('Sicht des Ostens'));
     pruefe('„Kalter Krieg": die Synthese benennt schon jetzt die Bruchstellen',
-      thema.synthese.includes('Bruchstellen'));
+      syntheseText.includes('Bruchstellen'));
   } else {
     pruefe('„Kalter Krieg": die Synthese führt die Sichtweisen zusammen',
       /Westen/.test(thema.synthese) && /Osten|Sowjetunion|DDR/.test(thema.synthese));

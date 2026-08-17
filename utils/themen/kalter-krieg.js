@@ -296,7 +296,7 @@ const kalterKrieg = {
         'besser als ein Krieg. Das war realistisch. Es bedeutete auch: Die',
         'Freiheit West-Berlins war garantiert, die der Menschen im Osten nicht.',
         '',
-        '## Die dreizehn Tage — Kuba 1962',
+        '## Die dreizehn Tage — die Kubakrise 1962',
         '',
         'Am 14. Oktober 1962 fotografierte ein amerikanisches',
         'Aufklärungsflugzeug vom Typ U-2 auf Kuba Abschussrampen für',

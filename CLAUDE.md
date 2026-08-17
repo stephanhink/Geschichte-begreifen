@@ -261,6 +261,27 @@ hier ist zugleich die Reihenfolge in der App (`utils/themen/index.js`):
     *(erste Sichtweise fertig — der Westen, Stimme Opus; die Sicht Russlands
     und ggf. die der Ukraine ergänzt Hermes, die Synthese ist vorläufig und
     sagt das offen)*
+20. **Der Aufstieg Asiens und die Zukunft des Westens** (1945–heute) —
+    dreizehntes und LETZTES Kapitel des Neuzeit-Bogens, ABSCHLUSS der App.
+    Von der Währungsreform 1948 und dem westeuropäisch-japanischen
+    Wiederaufbau über die vier „Tigerstaaten" (Südkorea, Taiwan, Hongkong,
+    Singapur) und Deng Xiaopings Reformen ab 1978 bis zu Indiens
+    IT-Revolution und Taiwans TSMC als Herz der globalen Halbleiterfertigung.
+    Herzstück ist nach Betreiber-Vorgabe die **Betreiber-These „Deutschland
+    ein sterbendes Land, Europa ein alter Kontinent mit wenig Zukunft?"**,
+    FAIR behandelt über die Unterscheidung relativ/absolut: Deutschland
+    verliert relativ an Gewicht (weil andere schneller wachsen), bleibt aber
+    absolut die drittgrößte Volkswirtschaft der Welt — „Aufholen" ist nicht
+    dasselbe wie „Überholen". Anders als in den zwölf Kapiteln davor bleibt
+    der Gegenstand dieses letzten Kapitels nach Betreiber-Vorgabe bewusst
+    OFFEN: kein Schlusspunkt, sondern eine Frage an die Zukunft — die
+    Leitidee „Der Sieger schreibt die Geschichte" gilt hier umgekehrt, weil
+    eine noch nicht abgeschlossene Geschichte niemand endgültig schreiben
+    kann. Leitfrage: Wessen Geschichte wird die nächste sein?
+    *(erste Sichtweise fertig — der Westen/Deutschland und Europa, Stimme
+    Opus; die Sichtweisen Asiens — Japan, China, Indien, Südkorea/Taiwan —
+    ergänzt Hermes danach, das Schema erlaubt hier ausdrücklich mehr als
+    zwei Stimmen; die Synthese ist vorläufig und sagt das offen)*
 
 **Der Neuzeit-Bogen** ist vom Betreiber ausbuchstabiert und steht in
 `notizen/kapitel-planung.md`: zehn Kapitel (seit dem 14.08.2026 — der
@@ -273,20 +294,17 @@ Indianer (= Modul 11, seit Runde 13 angelegt) und Revolution und Napoleon
 angelegt), dem Weg zum Ersten
 Weltkrieg (= Modul 14, seit Runde 16 angelegt, mit der Kriegsschuldfrage als
 multiperspektivischem Herzstück und dem Abschnitt „Was 1914 uns heute
-lehrt") und den USA — Aufstieg zur Weltmacht (= Modul 15, seit Runde 17
-angelegt) bis zum Zweiten Weltkrieg und der neuen Weltordnung. Wer eines
-dieser Kapitel beginnt, liest die Datei zuerst — sie enthält Vorgaben, die
-aus der Themenlandkarte allein nicht hervorgehen. Der frühere Platzhalter
-„Ausblick Neuzeit" ist damit erledigt: Der Bogen selbst ist der Ausblick.
-**Als Nächstes an der Reihe: Der Aufstieg Asiens und die Zukunft des Westens
-(1945–heute), Kapitel 13** — das ABSCHLUSS-Kapitel der App, das nach
-Betreiber-Vorgabe offen bleiben darf: Wiederaufbau und Wirtschaftswunder,
-Japan, die Tigerstaaten, China seit Deng Xiaoping, Indien, Taiwan und die
-Halbleiter — und die Betreiber-These „Deutschland ein sterbendes Land,
-Europa ein alter Kontinent mit wenig Zukunft?", fair behandelt: relativer
-Bedeutungsverlust ja, absoluter Absturz nein, keine Panikmache und keine
-Beschönigung. Die Vorgaben dazu stehen ausbuchstabiert in
-`notizen/kapitel-planung.md` und sind vor dem Start zu lesen.
+lehrt"), den USA — Aufstieg zur Weltmacht (= Modul 15, seit Runde 17
+angelegt), dem Zweiten Weltkrieg und der neuen Weltordnung (= Modul 17, seit
+Runde 19 angelegt), der neuen Weltordnung und dem Kalten Krieg (= Modul 18,
+seit Runde 20 angelegt), Russland und dem Westen (= Modul 19, seit Runde 21
+angelegt) bis zum dreizehnten und letzten Kapitel, dem Aufstieg Asiens und
+der Zukunft des Westens (= Modul 20, seit Runde 22 angelegt — die erste
+Sichtweise steht, Hermes ergänzt die Sichtweisen Asiens). Wer eines dieser
+Kapitel beginnt, liest die Datei zuerst — sie enthält Vorgaben, die aus der
+Themenlandkarte allein nicht hervorgehen. Der frühere Platzhalter „Ausblick
+Neuzeit" ist damit erledigt: Der Bogen selbst ist der Ausblick, und mit
+Runde 22 sind alle dreizehn Kapitel des Bogens angelegt.
 
 **Spätere Module (Landkarte, noch ohne Termin):** Persien als großes Reich,
 das Osmanische Reich und der Mittlere Osten, Indonesien.
@@ -449,7 +467,111 @@ aus dem Play Store hinkt den SDKs hinterher (siehe AGENTS.md). Zum Testen
 
 ## Status
 
-Stand: 2026-08-17 — Runde 21 abgeschlossen (Modul „Russland und der Westen",
+Stand: 2026-08-17 — Runde 22 (Modul „Der Aufstieg Asiens und die Zukunft
+des Westens", dreizehntes und LETZTES Kapitel des Neuzeit-Bogens; erste
+Sichtweise, Karte und Tests):
+- Runde 22: das zwanzigste Thema — „Der Aufstieg Asiens und die Zukunft des
+  Westens" (`utils/themen/aufstieg-asiens.js`, registriert als Modul 20).
+  Der ABSCHLUSS der App. Bisher nur die Sicht des Westens — Deutschland und
+  Europa (Stimme: Opus): der Wiederaufbau ohne Heldenmythos (Währungsreform
+  20. Juni 1948, Soziale Marktwirtschaft, Marshallplan — gemessen an der
+  Wirtschaftsleistung eher klein, aber zur richtigen Zeit wichtig —, acht
+  Millionen Vertriebene als Arbeitskräfte, Bildung und Ingenieurskultur;
+  „Wirtschaftswunder" ausdrücklich als Ergebnis mehrerer Faktoren erzählt,
+  nicht als Wunder, und als kein deutsches Alleinstellungsmerkmal —
+  Frankreich, Italien und Japan wuchsen ähnlich); die heutige Stärke
+  (drittgrößte Volkswirtschaft der Welt mit rund 4,7 Billionen Dollar,
+  Export, Industrie, stabile Währung und Institutionen); die unbequemen
+  Stellen selbst benannt (Exportabhängigkeit am Beispiel der
+  Halbleiterknappheit 2021, die versäumte Digitalisierung — kein
+  europäisches Gegenstück zu den großen Digitalkonzernen —, die Demografie
+  mit Zahlen — 46 Jahre mittleres Alter, rund 1,5 Kinder je Frau —, das
+  langsame Wachstum seit rund zwei Jahrzehnten); und das **Herzstück, die
+  Betreiber-These „sterbendes Land?"**, aufgelöst über die Unterscheidung
+  relativ/absolut — relativer Bedeutungsverlust ja (reine Mathematik, wenn
+  andere schneller wachsen), absoluter Absturz nein, „Aufholen" ist nicht
+  dasselbe wie „Überholen"; dazu die ausdrückliche Zurückweisung beider
+  Fehler im Blick auf Asien — weder Herablassung („nur kopiert", widerlegt
+  am Beispiel TSMC/Taiwan, Samsung/LG, Chinas Batterietechnik) noch
+  German-Angst-Panik („der Westen hat schon verloren"); Wirtschaft
+  ausdrücklich als **kein Nullsummenspiel** benannt, anders als der Krieg,
+  von dem frühere Kapitel oft erzählten; und zum Schluss die Symmetrie —
+  auch Asiens Aufstieg hat eigene ungelöste Fragen (Japans schnellere
+  Alterung, Chinas Ein-Kind-Politik-Erbe, Indiens Ungleichheit, die
+  Taiwan-Frage), die die App nicht kleinredet. Die Taiwan-Frage wird
+  sachlich behandelt: Die Karte entscheidet nichts, sie zeichnet nur, wer
+  wo regiert. Die Sichtweisen Asiens (Japan, China, Indien, Südkorea/
+  Taiwan — mehrere Stimmen sind ausdrücklich vorgesehen) ergänzt Hermes
+  danach; die Synthese ist vorläufig und sagt das offen, endet aber jetzt
+  schon auf eine offene Frage statt auf einen Punkt — nach Betreiber-Vorgabe
+  darf dieses letzte Kapitel der App bewusst ohne Schlusspunkt bleiben.
+  Die Karte `utils/themen/karten/aufstieg-asiens.js` spannt 10° W bis 145° O
+  und 10° S bis 58° N auf 700 × 336,2 — mit 4,5 SVG-Einheiten je Längengrad
+  der gröbste Ausschnitt der App (vorher war es die USA-Weltmacht-Karte mit
+  5): Frankfurt und Tokio müssen auf ein Bild, sonst hat dieses Kapitel
+  keine Bühne. Die USA liegen bewusst außerhalb — die schwerwiegendste
+  Lücke dieser Karte, offen benannt in jeder Phase (die USA sind 1955, 1990
+  und 2024 die größte Volkswirtschaft der Welt, mit rund einem Viertel der
+  Weltwirtschaft 2024). Drei Phasen (1955–1968 Wiederaufbau und
+  Wirtschaftswunder / 1990 Japans Höhepunkt und die vier Tiger / 2024 die
+  neuen Gewichte), sieben Info-Punkte (Frankfurt, Tokio, Seoul, Taipeh,
+  Shenzhen, Mumbai, Singapur) und vier Bewegungen (Marshallplan nach
+  Frankfurt von außerhalb des Bildes, die wandernde Werkbank Japan → Korea/
+  Taiwan → China, der Containerweg zurück nach Europa). Zentrale
+  Festlegungen: **Die Fläche zeigt Land, nicht Gewicht** (Chinas
+  Staatsgebiet ist 27-mal so groß wie das deutsche, seine Wirtschaftsleistung
+  nur rund viermal — das Gewicht steht in den Titeln, mit Zahlen und
+  Jahreszahl); **eine zweite, deckungsgleiche Lage markiert die
+  zweitgrößte Volkswirtschaft der Welt und wandert** — Bundesrepublik
+  (1960er) → Japan (ab 1968) → Volksrepublik China (ab 2010), dieselbe
+  Mechanik wie Russland auf der vorigen und West-Berlin auf der
+  Kalter-Krieg-Karte; **umstrittene Grenzen werden als umstritten benannt,
+  nicht entschieden** (Taiwan, die indisch-chinesische Grenze im Himalaja,
+  Kaschmir); Hongkong und Singapur sind größer gezeichnet, als sie sind.
+  Dazu `tests/karte-aufstieg-asiens.mjs` (rund 130 Prüfungen): 22
+  Atlas-Landmarken von Lissabon bis Mombasa mit einem Längengrad Toleranz
+  (bewusst NICHT die exakten Eckpunkte des Kartenmoduls, da viele
+  Küstenorte dort als kommentierte Koordinate stehen), zwölf Kontrollpunkte
+  abseits jeder Küste — und die Aussage des Kapitels als Rechnung: Chinas
+  Fläche (über die zweite Lage) verdoppelt sich zwischen 1990 und 2024,
+  Japans zweite Lage existiert nur 1990, die DDR verschwindet nach 1990,
+  Vietnam erscheint erst 2024. Dazu die Tone-Prüfungen: dass die
+  Perspektive Exportabhängigkeit, versäumte Digitalisierung, Demografie und
+  langsames Wachstum selbst benennt, dass sie Herablassung UND Panik
+  gegenüber Asien ausdrücklich zurückweist, dass sie „kein Nullsummenspiel"
+  festhält — und dass keine Quizfrage nach Schuld oder nach einem
+  „besseren System" fragt. `node tools/pruef-aufstieg-asiens.mjs` meldet
+  **keine** Überlappung von Beschriftungen und keinen Punkt über dem
+  Bildrand.
+- `npm test` grün (4013 Prüfungen)
+
+Nächste Schritte nach Runde 22:
+- **Die Sichtweisen Asiens** für „Der Aufstieg Asiens und die Zukunft des
+  Westens" — Hermes ergänzt die weiteren Stimmen: Japan (Wirtschaftswunder
+  UND die „verlorenen Jahrzehnte" nach 1990), die Tigerstaaten (Südkorea,
+  Taiwan, Hongkong, Singapur), China (Deng Xiaopings Reformen ab 1978, das
+  größte Aufhol-Wachstum der Geschichte — UND die eigenen unbequemen
+  Stellen: Systemfrage, Menschenrechte, Immobilienkrise) und Indien
+  (IT-Revolution, demografische Dividende, seit 2023 bevölkerungsreichstes
+  Land der Welt). Das Schema erlaubt hier ausdrücklich mehr als zwei
+  Stimmen; Hermes entscheidet die genaue Aufteilung. Danach führt die
+  ENDGÜLTIGE Synthese alle Stimmen zusammen — mit dem bewusst offenen Ende,
+  das dieses letzte Kapitel der App nach Betreiber-Vorgabe tragen darf:
+  keine fertige Antwort auf „wessen Geschichte wird die nächste sein?",
+  sondern eine Frage an die Zukunft.
+- **Damit sind alle dreizehn Kapitel des Neuzeit-Bogens angelegt** (Runden
+  10–22). Was danach an der Reihe ist, entscheidet der Betreiber — die
+  Themenlandkarte nennt als spätere Module ohne Termin Persien, das
+  Osmanische Reich und den Mittleren Osten sowie Indonesien.
+- **Am Gerät gegenlesen:** Mit der Aufstieg-Asiens-Karte (700 × 336,2) sind
+  es jetzt neunzehn Karten, die rechnerisch gegen den Atlas geprüft, aber
+  noch auf keinem Handy gesehen wurden. Bei 4,5 SVG-Einheiten je
+  Längengrad ist sie die gröbste der App — ob die zweite, dunklere Lage
+  (die wandernde zweitgrößte Volkswirtschaft) auf einem kleinen Bildschirm
+  wirklich zu unterscheiden ist, bleibt dieselbe offene Frage wie bei der
+  Russland-Westen-Karte, nur diesmal mit drei Trägern statt einem.
+
+Frühere Runde (2026-08-17): Runde 21 abgeschlossen (Modul „Russland und der Westen",
 zwölftes Kapitel des Neuzeit-Bogens; drei Stimmen, Karte und Tests):
 - Runde 21: das neunzehnte Thema — „Russland und der Westen"
   (`utils/themen/russland-westen.js`, registriert als Modul 19). Drei

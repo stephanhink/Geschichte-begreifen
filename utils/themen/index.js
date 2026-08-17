@@ -153,6 +153,19 @@
 // ergänzt Hermes danach, möglicherweise mit der der Ukraine als dritter
 // Stimme.
 //
+// „Der Aufstieg Asiens und die Zukunft des Westens" ist das zwanzigste und
+// LETZTE Thema — das dreizehnte und letzte Kapitel des Neuzeit-Bogens
+// (notizen/kapitel-planung.md, Kapitel 13). Es beginnt dort, wo „Der Zweite
+// Weltkrieg und die neue Weltordnung" endet: 1945, in Trümmern — und ist
+// zugleich das einzige Kapitel, dessen Gegenstand nach Betreiber-Vorgabe
+// bewusst offen bleiben darf, statt mit einem Punkt zu enden. Die
+// Perspektiven-Achse steht wieder nach außen, aber ohne Gegnerschaft: der
+// Westen (Deutschland und Europa) neben dem Aufstieg Asiens (Japan, China,
+// Indien, Südkorea, Taiwan), zwei Aufstiege statt eines Sieger-Verlierer-
+// Paars. Die Sicht des Westens steht zuerst, weil Opus diese Runde
+// übernommen hat; die Sichtweisen Asiens ergänzt Hermes danach — das Schema
+// erlaubt hier ausdrücklich mehr als zwei Stimmen.
+//
 // CommonJS, damit dieselbe Datei mit blankem `node` prüfbar ist und von
 // Metro/Babel in der App geladen werden kann (siehe schema.js).
 
@@ -175,6 +188,7 @@ const weimarNs = require('./weimar-ns');
 const zweiterWeltkrieg = require('./zweiter-weltkrieg');
 const kalterKrieg = require('./kalter-krieg');
 const russlandWesten = require('./russland-westen');
+const aufstiegAsiens = require('./aufstieg-asiens');
 
 /** Alle Themen in der Reihenfolge der Themenlandkarte. */
 const alleThemen = [
@@ -197,6 +211,7 @@ const alleThemen = [
   zweiterWeltkrieg,
   kalterKrieg,
   russlandWesten,
+  aufstiegAsiens,
 ];
 
 /**
