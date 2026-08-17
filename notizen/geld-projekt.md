@@ -12,6 +12,15 @@ vollständig abschließen (Runde 22 + QS + Buch-Projekt), dann anschieben.
   Achse (Dollar vs. Welt, China mit Papiergeld VOR Europa).
 - Gegenwarts-Relevanz maximal (Inflation, Zinsen, Krypto).
 
+## Rote-Faden-Idee (aus dem Lesen, Betreiber 17.08.)
+„Im Prinzip waren die Kriege notwendig, um die Heere und die Könige zu
+bezahlen." — Historisch fundiert: erste Münzen für Soldzahlungen (Lydien,
+Rom), Bank of England 1694 als Kriegsfinanzierung, Assignaten als
+Kriegsgeld (Hyperinflation 1789/1923), Tilly: „War made the state, the
+state made war", 1. WK zu 1/3 über Schulden finanziert → Versailles →
+Hyperinflation als Geldgeschichte. Aufhänger-Idee: „Geld und Krieg — die
+siamesischen Zwillinge der Geschichte".
+
 ## Bogen (Entwurf)
 Tausch & Muscheln → erste Münzen (Lydien ~600 v. Chr.) → römische Denare
 → Papiergeld in China (Song-Dynastie) → Hanse & Fugger → erste Banken
