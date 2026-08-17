@@ -220,6 +220,47 @@ hier ist zugleich die Reihenfolge in der App (`utils/themen/index.js`):
     Crow im eigenen Land, der Isolationismus der 1930er, die Atombombe.
     *(beide Sichtweisen fertig — die USA selbst und die Betroffenen der
     Weltmacht —, die Synthese führt sie zusammen)*
+16. **Weimarer Republik und der Weg in die Diktatur** (1918–1933) — neuntes
+    Kapitel des Neuzeit-Bogens (Runde 18). Herzstück ist nach
+    Betreiber-Vorgabe die Kette Versailles → Hyperinflation 1923 →
+    Weltwirtschaftskrise 1929 → Massenarbeitslosigkeit → 1933, erzählt als
+    Zusammenhang, der die Anfälligkeit der Republik erklärt und die
+    NS-Verbrechen nie relativiert.
+    *(beide Sichtweisen fertig, die Synthese führt sie zusammen)*
+17. **Der Zweite Weltkrieg und die neue Weltordnung** (1939–1945) — zehntes
+    Kapitel (Runde 19). Drei Stimmen: die Besiegten (Deutschland), die
+    Sowjetunion mit der Hauptlast des Krieges (rund 27 Mio. Tote nach
+    Krivosheev) und die USA/Westmächte. Es wird nicht aufgerechnet — die
+    Regel gilt hier strenger als in jedem anderen Kapitel.
+    *(drei Sichtweisen fertig, die Synthese führt sie zusammen)*
+18. **Die neue Weltordnung und der Kalte Krieg** (1945–1991) — elftes
+    Kapitel (Runde 20). Drei Stimmen: der Westen, der Osten (Sowjetunion,
+    Warschauer Pakt, DDR) und die Deutschen in Ost und West. Der
+    Zwei-plus-Vier-Vertrag steht prominent, die Debatte über seinen „Geist"
+    ist ausdrücklich an das nächste Kapitel verwiesen.
+    *(drei Sichtweisen fertig, die Synthese führt sie zusammen)*
+19. **Russland und der Westen** (1991–heute) — zwölftes und vorletztes
+    Kapitel des Neuzeit-Bogens. Von der Charta von Paris und dem Ende der
+    Sowjetunion über die Jelzin-Jahre (Schocktherapie, Oligarchen,
+    Rubelkrise 1998, Tschetschenien) bis zu Georgien 2008, der Krim 2014 und
+    dem groß angelegten russischen Angriffskrieg gegen die Ukraine seit dem
+    24. Februar 2022. Herzstück ist nach Betreiber-Vorgabe die
+    **NATO-Osterweiterung**: die Baker-Zusage vom 9. Februar 1990 („not one
+    inch eastward") und die Frage, ob sie gebrochen wurde — die westliche
+    Sicht (offene Tür nach Artikel 10, souveräne Beitrittsentscheidungen,
+    kein Vertragsverbot; Artikel 6 des Zwei-plus-Vier-Vertrags erlaubt die
+    Bündnismitgliedschaft ausdrücklich) und die russische Sicht
+    (Vertrauensbruch, Einkreisung, Demütigung) stehen fair nebeneinander.
+    Über Russland unter Putin gilt die Betreiber-Vorgabe **„wirklich
+    objektiv"**: die Stabilisierung und das Wachstum der 2000er Jahre UND
+    die autoritäre Wende, beides mit Zahlen und nebeneinander, ohne
+    Dämonisierung und ohne Beschönigung. Es ist das einzige Kapitel der App,
+    dessen Gegenstand nicht abgeschlossen ist — der Krieg wird geführt,
+    während es geschrieben wird. Leitfrage: Wie wurden aus Verbündeten von
+    1945 binnen weniger Jahre Feinde — und was bedeutet das bis heute?
+    *(erste Sichtweise fertig — der Westen, Stimme Opus; die Sicht Russlands
+    und ggf. die der Ukraine ergänzt Hermes, die Synthese ist vorläufig und
+    sagt das offen)*
 
 **Der Neuzeit-Bogen** ist vom Betreiber ausbuchstabiert und steht in
 `notizen/kapitel-planung.md`: zehn Kapitel (seit dem 14.08.2026 — der
@@ -237,12 +278,15 @@ angelegt) bis zum Zweiten Weltkrieg und der neuen Weltordnung. Wer eines
 dieser Kapitel beginnt, liest die Datei zuerst — sie enthält Vorgaben, die
 aus der Themenlandkarte allein nicht hervorgehen. Der frühere Platzhalter
 „Ausblick Neuzeit" ist damit erledigt: Der Bogen selbst ist der Ausblick.
-**Als Nächstes an der Reihe: Weimarer Republik und der Weg in die Diktatur
-(1918–1933), Kapitel 9** — die Revolution von 1918, die Verfassung von
-Weimar, Dolchstoßlegende und Inflation 1923, die goldenen Jahre, die
-Notverordnungen ab 1930 und die Machtübergabe 1933. Die Vorgaben dazu stehen
-ausbuchstabiert in `notizen/kapitel-planung.md` und sind vor dem Start zu
-lesen.
+**Als Nächstes an der Reihe: Der Aufstieg Asiens und die Zukunft des Westens
+(1945–heute), Kapitel 13** — das ABSCHLUSS-Kapitel der App, das nach
+Betreiber-Vorgabe offen bleiben darf: Wiederaufbau und Wirtschaftswunder,
+Japan, die Tigerstaaten, China seit Deng Xiaoping, Indien, Taiwan und die
+Halbleiter — und die Betreiber-These „Deutschland ein sterbendes Land,
+Europa ein alter Kontinent mit wenig Zukunft?", fair behandelt: relativer
+Bedeutungsverlust ja, absoluter Absturz nein, keine Panikmache und keine
+Beschönigung. Die Vorgaben dazu stehen ausbuchstabiert in
+`notizen/kapitel-planung.md` und sind vor dem Start zu lesen.
 
 **Spätere Module (Landkarte, noch ohne Termin):** Persien als großes Reich,
 das Osmanische Reich und der Mittlere Osten, Indonesien.
@@ -315,7 +359,11 @@ für Japan, `tests/karte-israel-palaestina.mjs` für die Levante,
 `tests/karte-dreissigjaehriger-krieg.mjs` für die vierte Europakarte,
 `tests/karte-usa-unabhaengigkeit.mjs` für die Nordamerika-Karte,
 `tests/karte-revolution-und-napoleon.mjs` für die fünfte Europakarte,
-`tests/karte-die-kolonien.mjs` für die Afrika-Indien-Karte; alle
+`tests/karte-die-kolonien.mjs` für die Afrika-Indien-Karte,
+`tests/karte-weg-zum-ersten-weltkrieg.mjs`, `tests/karte-usa-weltmacht.mjs`
+für die Pazifikkarte, `tests/karte-weimar-ns.mjs`,
+`tests/karte-zweiter-weltkrieg.mjs`, `tests/karte-kalter-krieg.mjs` und
+`tests/karte-russland-westen.mjs` für die Karte nach 1991; alle
 außer der ersten nehmen bewusst Koordinaten, die NICHT als Eckpunkte im
 Kartenmodul stehen, damit die gezeichnete Linie geprüft wird und nicht die
 abgeschriebene Zahl — dazu Kontrollpunkte im Binnenland bzw. auf offener See,
@@ -325,8 +373,10 @@ ein Längengrad bei der weiten Eurasien-Karte, bei der Kolonien-Karte (6,1
 SVG-Einheiten je Grad — sie spannt 115 Längengrade von den Kanaren bis Birma
 und ist damit die gröbste der App), bei der
 Amerika-Karte (6,4), bei der
-Nordamerika-Karte (11,7) und bei der Napoleon-Karte (14 — sie spannt 50
-Längengrade von Lissabon bis östlich von Moskau), 0,6 bei der feineren
+Nordamerika-Karte (11,7), bei der Napoleon-Karte (14 — sie spannt 50
+Längengrade von Lissabon bis östlich von Moskau) und bei der
+Russland-Westen-Karte (12,1 — sie spannt 58 Längengrade von Irland bis ans
+Kaspische Meer), 0,6 bei der feineren
 Japan-Karte und bei den vier engeren Europakarten, 0,15 bei der
 Levante-Karte — dort sind 140 SVG-Einheiten ein Längengrad, und ein ganzer
 Grad würde nichts mehr beweisen).
@@ -399,9 +449,121 @@ aus dem Play Store hinkt den SDKs hinterher (siehe AGENTS.md). Zum Testen
 
 ## Status
 
-Stand: 2026-08-17 — Runde 20 abgeschlossen (Modul „Die neue Weltordnung
-und der Kalte Krieg", elftes Kapitel des Neuzeit-Bogens; drei Stimmen,
-Karte und Tests):
+Stand: 2026-08-17 — Runde 21 abgeschlossen (Modul „Russland und der Westen",
+zwölftes Kapitel des Neuzeit-Bogens; drei Stimmen, Karte und Tests):
+- Runde 21: das neunzehnte Thema — „Russland und der Westen"
+  (`utils/themen/russland-westen.js`, registriert als Modul 19). Drei
+  Sichtweisen: die Sicht des Westens — USA, NATO und Europa (Stimme:
+  Opus), die Sicht Russlands (Stimme: Hermes — die neunziger Jahre als
+  Demütigung, Putin WIRKLICH OBJEKTIV nach Betreiber-Vorgabe:
+  Stabilisierung UND autoritäre Wende + Kriege) und die Sicht der Ukraine
+  (Stimme: Hermes — Maidan, Annexion der Krim, der Angriff 2022). Die
+  Synthese führt die drei über die „Bruchstellen" (1991, Osterweiterung,
+  24. Februar 2022) zusammen — „erklären ist nicht rechtfertigen". Karte
+  (1999, 2014, 2022–2024: die Ukraine schrumpft; Kyjiw/Lwiw). Inhalt: die Hoffnung
+  nach 1991 (Charta von Paris 1990 samt dem Recht auf freie Bündniswahl,
+  Partnerschaft für den Frieden 1994, NATO-Russland-Grundakte 1997,
+  G8 1998, NATO-Russland-Rat 2002, WTO 2012, die Zusammenarbeit nach dem
+  11. September und Putins Rede im Bundestag 2001); die neunziger Jahre mit
+  dem selbst benannten westlichen Anteil (Schocktherapie, über 2 500 Prozent
+  Inflation 1992, Voucher-Privatisierung, „Aktien gegen Kredite", der
+  IWF-Kredit über 10,2 Mrd. Dollar vier Monate vor der Wahl 1996, der
+  Staatsbankrott vom 17. August 1998) und dem Triumphalismus als eigenem
+  Fehler; Tschetschenien und das westliche Wegsehen; das **Herzstück, die
+  NATO-Osterweiterung**, in vier Fragen zerlegt — was 1990 gesagt wurde
+  (Baker am 9. Februar 1990, dazu Genscher, Kohl, Hurd, Wörner; die
+  Protokolle sind seit 2017 im National Security Archive öffentlich), ob
+  daraus ein Vertrag wurde (nein; Artikel 6 des Zwei-plus-Vier-Vertrags im
+  Wortlaut, dazu Gorbatschows spätere Aussage in BEIDEN Hälften), warum die
+  neuen Mitglieder trotzdem kamen (gewählte Parlamente, 12. März 1999,
+  29. März 2004) und was der Westen dabei falsch machte (die
+  Doppeldeutigkeit von 1990, die überhörten eigenen Warnungen von Kennan
+  1997 und Burns 2008, der Gipfel von Bukarest 2008 als „schlechteste aller
+  Möglichkeiten"); ein eigener Abschnitt „Und die russische Sicht?" innerhalb
+  der westlichen Perspektive, mit dem Satz, der die Regel festhält: Fair
+  wiedergeben heißt nachvollziehbar machen, nicht rechtfertigen; **Russland
+  unter Putin nach der Betreiber-Vorgabe „wirklich objektiv"** — die
+  Stabilisierung mit Zahlen (rund 7 % Wachstum im Jahrzehnt, verdoppelte
+  Realeinkommen, Armutsquote von 29 auf 13 Prozent, Ölpreis von 12 auf fast
+  140 Dollar) UND die autoritäre Wende mit Namen und Daten (NTW 2001,
+  Chodorkowski 2003, die Gouverneure 2004, Politkowskaja 2006, Litwinenko
+  2006, Nemzow 2015, Nawalny 2020/2024, „ausländische Agenten" ab 2012, die
+  Verfassungsänderung 2020), ausdrücklich ohne Aufrechnung; die Kriege
+  (Georgien 2008 mit dem Tagliavini-Bericht in beiden Richtungen, Krim und
+  Donbass 2014 mit UN-Resolution 68/262 und MH17, der 24. Februar 2022 als
+  groß angelegter Angriffskrieg — beim Namen genannt, mit der UN-Abstimmung
+  141 zu 5 —, Butscha, der IStGH-Haftbefehl 2023) und die Folge, die niemand
+  geplant hatte (Finnland 2023, Schweden 2024); die unbequemste Stelle unter
+  eigener Überschrift („das eigene Maß": Kosovo 1999, Irak 2003, Libyen
+  2011, Nord Stream und „Wandel durch Handel", die überhörte Münchner Rede
+  von 2007); die Grenzen der eigenen Unterstützung und die Kritik des
+  globalen Südens an den Sanktionen; und zum Schluss der eigene blinde
+  Fleck. Die Sicht Russlands ergänzt Hermes, möglicherweise mit der der
+  Ukraine als dritter Stimme; die Synthese ist vorläufig und sagt das offen
+  — sie benennt schon jetzt die fünf **Bruchstellen** (der Satz von 1990,
+  Souveränität gegen Sicherheit, dieselben Jahre mit zwei Namen, das eigene
+  Maß, der Krieg selbst).
+  Die Karte `utils/themen/karten/russland-westen.js` spannt 10° W bis 48° O
+  und 34° N bis 62° N auf 700 × 505 — 12,1 SVG-Einheiten je Längengrad. Der
+  Rahmen setzt den der Kalter-Krieg-Karte fort (dieselbe Bühne, andere
+  Grenzen), steht aber nach Osten und Norden eine Spur weiter, und zwar aus
+  Gründen, die das Kapitel selbst nennt: Tiflis liegt auf 44,79° O (der
+  Krieg von 2008), Helsinki auf 60,17° N und Stockholm auf 59,33° N (die
+  Beitritte 2023 und 2024). Drei Zustände (1999 die erste Osterweiterung /
+  2014 Krim und Donbass / 2022–2024 der Angriffskrieg und die nordische
+  Erweiterung), sieben Info-Punkte (Moskau, Kyjiw, Brüssel, Sewastopol,
+  Warschau, Tiflis, Helsinki) und vier Bewegungen (die Erweiterungen 1999
+  und 2004 von Brüssel nach Osten, der Angriff auf Kyjiw im Februar 2022 und
+  — als Gegenbewegung — die nordische Erweiterung von Helsinki nach
+  Brüssel). Vier Festlegungen sind zentral. Erstens: **Die Karte datiert,
+  sie bewertet nicht** — die Krim trägt ab 2014 beide Angaben im Titel, wer
+  sie kontrolliert UND wem sie völkerrechtlich zugerechnet wird
+  (UN-Resolution 68/262). Zweitens: **Russland liegt in jeder Phase zweimal
+  auf der Karte**, als Staatsfläche und als deckungsgleiche zweite Lage —
+  das ist der einzige Weg zu zwei Tönen, weil die App alle Flächen gleich
+  einfärbt (0,72 Deckkraft, zwei Lagen ergeben dunkler); so ist die
+  Betreiber-Vorgabe „NATO hell, Russland dunkel" umgesetzt, und der Titel
+  der zweiten Lage sagt offen, was sie ist. Drittens: **Die Frontlinie von
+  2024 ist angenähert und trägt das im Titel** — sie ist ein Stand, kein
+  Zustand. Viertens: **Ungefärbt heißt nicht leer** — Serbien, Bosnien,
+  Österreich, die Schweiz, Moldau und Irland gehören zu keiner der beiden
+  Seiten und bleiben deshalb ohne Fläche.
+  Dazu `tests/karte-russland-westen.mjs` (293 Prüfungen): 42 Atlas-Landmarken
+  von Lissabon bis zur Kaspi-Küste bei Astrachan mit einem Längengrad
+  Toleranz (jede mindestens 0,1 Grad neben dem nächsten Eckpunkt des
+  Kartenmoduls), 19 Kontrollpunkte abseits jeder Küste — und die Aussage des
+  Kapitels als Rechnung: Die NATO wächst über alle drei Zustände, Russlands
+  Fläche bleibt exakt gleich, die von Kyjiw kontrollierte Ukraine schrumpft
+  zweimal, die Krim taucht erst 2014 als eigene Fläche auf, das Baltikum
+  steht nur 1999 für sich. Dazu die Punkt-im-Vieleck-Proben: Riga, Tallinn
+  und Vilnius liegen 1999 nicht in der NATO und ab 2014 schon; Podgorica und
+  Skopje erst 2024; Tampere und Örebro erst 2024; Wien, Bern, Dublin,
+  Belgrad, Sarajevo und Chișinău in keiner Phase in einer der beiden Seiten;
+  Kyjiw in jeder Phase in der Ukraine und in keiner in Russland oder der
+  NATO; Sewastopol 1999 ukrainisch und ab 2014 auf der Krim-Fläche; Mariupol
+  2014 noch ukrainisch und 2024 besetzt. Und die Tone-Prüfungen: dass die
+  Perspektive Baker-Zusage, Triumphalismus, Schocktherapie, Kosovo, Irak,
+  Bukarest 2008 und Nord Stream selbst benennt, dass sie über Putin beide
+  Hälften mit Zahlen erzählt, dass sie die russischen Beweggründe fair
+  wiedergibt — und dass keine Quizfrage nach Schuld fragt.
+  `node tools/pruef-russland-westen.mjs` meldet **keine** Überlappung von
+  Beschriftungen und keinen Punkt über dem Bildrand.
+- **Nebenbefund der Runde 21 (behoben):** `tests/karte-zweiter-weltkrieg.mjs`
+  und `tests/karte-kalter-krieg.mjs` waren nie in `tests/alle.mjs`
+  eingetragen — die Kartenprüfungen der Runden 19 und 20 liefen also nie
+  mit. Beide sind jetzt registriert (das sind die rund 550 Prüfungen, um die
+  die Gesamtzahl über den Zuwachs dieser Runde hinaus steigt). Sechs ihrer
+  Zusicherungen schlugen dabei zunächst fehl: fünf, weil die gesuchten
+  Wendungen im Zeilen-Array über einen Umbruch laufen (die Tests prüfen
+  jetzt den Fließtext, wie es `tests/karte-russland-westen.mjs` von Anfang
+  an tut), eine zu Recht — die Sicht des Westens im Kalten Krieg erzählte
+  die Kubakrise ausführlich, ohne das Wort je zu verwenden; die Überschrift
+  heißt jetzt „Die dreizehn Tage — die Kubakrise 1962".
+- `npm test` grün (3829 Prüfungen)
+
+Frühere Runde (2026-08-17): Runde 20 abgeschlossen (Modul „Die neue
+Weltordnung und der Kalte Krieg", elftes Kapitel des Neuzeit-Bogens; drei
+Stimmen, Karte und Tests):
 - Runde 20: das achtzehnte Thema — „Die neue Weltordnung und der Kalte
   Krieg" (`utils/themen/kalter-krieg.js`, registriert als Modul 18).
   Drei gleichwertige Sichtweisen: der Westen (Stimme Opus — Truman-
@@ -816,14 +978,12 @@ Neuzeit-Bogens; beide Stimmen, Karte und Tests):
   wiedergibt — und dass keine Quizfrage nach Schuld oder Besitz fragt.
 - `npm test` grün (2095 Prüfungen)
 
-Vierzehn der fünfzehn Module — Rom, China, Dschingis Khan, Japan,
-Israel/Palästina, Germanen, Königreiche, Mittelalter, Eroberung Amerikas,
-Dreißigjähriger Krieg, die USA, Revolution und Napoleon, die Kolonien und
-„Der Weg zum Ersten Weltkrieg" (mit den Sichtweisen der Mittelmächte und der
-Entente und Serbiens) — haben beide Stimmen und eine echte Synthese — auch „Die USA: Aufstieg zur
-Weltmacht" (seit Runde 17) und „Der Zweite Weltkrieg" (seit Runde 19, mit
-den drei Sichtweisen der Besiegten, der Sowjetunion und der
-USA/Westmächte).
+Alle neunzehn Module haben alle Stimmen und eine echte Synthese — von Rom
+bis „Russland und der Westen", das seit Runde 21 + Hermes-Pass drei
+Sichtweisen hat (Westen, Russland, Ukraine). Die beiden anderen Kapitel mit
+drei Sichtweisen: „Der Zweite Weltkrieg" (Besiegte, Sowjetunion,
+USA/Westmächte) und „Die neue Weltordnung und der Kalte Krieg" (Westen,
+Osten, die Deutschen in Ost und West).
 
 Frühere Runde (2026-08-13): Runde 12 abgeschlossen (Modul „Der
 Dreißigjährige Krieg",
@@ -1214,7 +1374,29 @@ drittes Kapitel des Neuzeit-Bogens; erste Stimme, Karte und Tests):
   fragt.
 - `npm test` grün (1737 Prüfungen)
 
-Nächste Schritte nach Runde 17:
+Nächste Schritte nach Runde 21:
+- **Die Sicht Russlands** für „Russland und der Westen" — Hermes ergänzt die
+  zweite Stimme: die Jelzin-Jahre von innen (der Zusammenbruch als erlebte
+  Katastrophe, nicht als Übergangszeit), die Stabilisierung nach 2000, die
+  Einkreisungswahrnehmung, die eigene Begründung der Kriege. Die
+  Betreiber-Vorgabe „wirklich objektiv" gilt für diese Stimme genauso: beide
+  Hälften, mit Zahlen, ohne Beschönigung. Möglicherweise kommt eine dritte
+  Stimme dazu — die der Ukraine, die im Kapitel bisher vor allem vorkommt,
+  statt zu sprechen; das entscheidet Hermes. Erst danach führt die Synthese
+  die Stimmen über die fünf Bruchstellen zusammen.
+- **Der Aufstieg Asiens und die Zukunft des Westens (1945–heute)** als
+  letztes Kapitel (Kapitel 13 der Planung, Abschluss der App, darf offen
+  enden). Vor dem Start `notizen/kapitel-planung.md` lesen.
+- **Am Gerät gegenlesen:** Mit der Russland-Westen-Karte (700 × 505) sind es
+  jetzt achtzehn Karten, die rechnerisch gegen den Atlas geprüft, aber noch
+  auf keinem Handy gesehen wurden. Für diese Karte ist die offene Frage
+  besonders konkret: Die zweite, deckungsgleiche Lage Russlands soll einen
+  dunkleren Ton ergeben — ob der Unterschied zur NATO-Fläche auf einem
+  kleinen Bildschirm wirklich zu sehen ist, entscheidet das Gerät. Falls
+  nicht, wäre die Antwort eine Farbe je Fläche im Karten-Abschnitt, und das
+  beträfe alle Karten.
+
+Nächste Schritte nach Runde 17 (durch die Runden 18–21 überholt):
 - **Die Sicht derer, die die amerikanische Weltmacht zu spüren bekamen** für
   „Die USA: Aufstieg zur Weltmacht" — Hermes ergänzt die zweite Stimme
   (Philippinen, Lateinamerika, japanischstämmige Amerikaner in den

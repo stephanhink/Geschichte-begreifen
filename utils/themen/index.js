@@ -139,6 +139,20 @@
 // des Westens steht zuerst, weil Opus diese Runde übernommen hat; die Sicht
 // des Ostens (Sowjetunion, Warschauer Pakt, DDR) ergänzt Hermes danach.
 //
+// „Russland und der Westen" ist das neunzehnte Thema und das zwölfte Kapitel
+// des Neuzeit-Bogens. Es beginnt am 25. Dezember 1991, wo das Kapitel davor
+// endet, und übernimmt die Debatte, die jenes ausdrücklich hierher verwiesen
+// hat: die über die NATO-Osterweiterung und den „Geist" des
+// Zwei-plus-Vier-Vertrags. Es ist das einzige Kapitel der App, dessen
+// Gegenstand nicht abgeschlossen ist — der Krieg, von dem es erzählt, wird
+// geführt, während es geschrieben wird. Deshalb gilt hier die Zusatzregel für
+// sensible Themen doppelt, und deshalb steht die Betreiber-Vorgabe „wirklich
+// objektiv" über dem Abschnitt zu Russland unter Putin: Stabilisierung UND
+// autoritäre Wende, beides mit Zahlen, nebeneinander. Die Sicht des Westens
+// steht zuerst, weil Opus diese Runde übernommen hat; die Sicht Russlands
+// ergänzt Hermes danach, möglicherweise mit der der Ukraine als dritter
+// Stimme.
+//
 // CommonJS, damit dieselbe Datei mit blankem `node` prüfbar ist und von
 // Metro/Babel in der App geladen werden kann (siehe schema.js).
 
@@ -160,6 +174,7 @@ const usaWeltmacht = require('./usa-weltmacht');
 const weimarNs = require('./weimar-ns');
 const zweiterWeltkrieg = require('./zweiter-weltkrieg');
 const kalterKrieg = require('./kalter-krieg');
+const russlandWesten = require('./russland-westen');
 
 /** Alle Themen in der Reihenfolge der Themenlandkarte. */
 const alleThemen = [
@@ -181,6 +196,7 @@ const alleThemen = [
   weimarNs,
   zweiterWeltkrieg,
   kalterKrieg,
+  russlandWesten,
 ];
 
 /**
