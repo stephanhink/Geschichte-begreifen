@@ -23,8 +23,8 @@ const OEBPS = `${TMP}/OEBPS`;
 
 // ---- Meta ----
 const META = {
-  de: { titel: 'Geschichte begreifen', untertitel: 'Der Sieger schreibt die Geschichte — aber nicht die ganze.', sprache: 'de', autor: 'Stephan Hink' },
-  da: { titel: 'Historien forstået', untertitel: 'Sejrherren skriver historien — men ikke hele historien.', sprache: 'da', autor: 'Stephan Hink' },
+  de: { titel: 'Geschichte begreifen', untertitel: 'Der Sieger schreibt die Geschichte — aber nicht die ganze.', sprache: 'de', autor: 'Stephan Hink', uuid: 'urn:uuid:9b2f4c1e-7a3d-4e5f-9c1b-2d3e4f5a6b7c' },
+  da: { titel: 'Historien forstået', untertitel: 'Sejrherren skriver historien — men ikke hele historien.', sprache: 'da', autor: 'Stephan Hink', uuid: 'urn:uuid:8a1e3d2c-6b4f-4c7e-8d2a-1e3f4a5b6c7d' },
 }[SPRACHE];
 
 // ---- Modul-Liste (Buch-Reihenfolge) ----
@@ -203,7 +203,7 @@ function build() {
   const opf = `<?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="buch-id" xml:lang="${META.sprache}">
 <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-<dc:identifier id="buch-id">urn:uuid:geschichte-begreifen-${SPRACHE}</dc:identifier>
+<dc:identifier id="buch-id">${META.uuid}</dc:identifier>
 <dc:title>${META.titel} — ${META.untertitel}</dc:title>
 <dc:creator>${META.autor}</dc:creator>
 <dc:language>${META.sprache}</dc:language>
@@ -226,7 +226,7 @@ function build() {
     `<navPoint id="n${i}" playOrder="${i + 1}"><navLabel><text>${k.titel}</text></navLabel><content src="${k.datei}"/></navPoint>`).join('\n');
   fs.writeFileSync(`${OEBPS}/toc.ncx`, `<?xml version="1.0" encoding="UTF-8"?>
 <ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
-<head><meta name="dtb:uid" content="urn:uuid:geschichte-begreifen-${SPRACHE}"/><meta name="dtb:depth" content="1"/><meta name="dtb:totalPageCount" content="0"/><meta name="dtb:maxPageNumber" content="0"/></head>
+<head><meta name="dtb:uid" content="${META.uuid}"/><meta name="dtb:depth" content="1"/><meta name="dtb:totalPageCount" content="0"/><meta name="dtb:maxPageNumber" content="0"/></head>
 <docTitle><text>${META.titel}</text></docTitle>
 <navMap>${navPoints}</navMap>
 </ncx>`);
