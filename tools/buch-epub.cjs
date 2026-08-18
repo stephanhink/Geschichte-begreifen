@@ -268,8 +268,7 @@ function build() {
   console.log('EPUB:', ziel, fs.statSync(ziel).size, 'Bytes');
 }
 
-function xhtmlRahmen(inhalt, titel) {
-  return `<?xml version="1.0" encoding="UTF-8"?>
+function xhtmlRahmen(inhalt, titel) {  return `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="${META.sprache}"><head><title>${META.titel} — ${titel}</title><link rel="stylesheet" type="text/css" href="buch.css"/></head><body>${inhalt}</body></html>`;
 }
 
@@ -303,4 +302,70 @@ a { color: #7C4A03; text-decoration: none; }
 .zurueck { margin-top: 1.5em; font-size: 0.9em; }`;
 }
 
+// ---- PDF (A4, alle Kapitel in einem Dokument, Bilder eingebettet) ----
+function pdfErzeugen() {
+  const cover = `<section class="cover"><img src="images/cover.png" alt="Cover"/></section>`;
+  const inhaltListe = ids.map((id, i) => {
+    const m = ladeModul(id);
+    return `<li>${i + 1}. ${m.titel}</li>`;
+  }).join('\n');
+  const inhalt = `<section class="inhalt"><h1>Inhaltsverzeichnis</h1>\n<ol>${inhaltListe}</ol></section>`;
+  const vorwort = vorwortHTML();
+  const kapitel = ids.map((id, i) => kapitelHTML(ladeModul(id), i + 1)).join('\n');
+
+  let html = [cover, inhalt, vorwort, kapitel].join('\n');
+  // Bilder als data-URIs einbetten (EPUB-Relativpfade -> base64)
+  html = html.replace(/src="images\/([^"]+)"/g, (m, name) => {
+    const pfade = [`/tmp/karten-cache/${name}`, `${BUCH}/${name}`];
+    for (const pfad of pfade) {
+      if (fs.existsSync(pfad)) {
+        return `src="data:${name.endsWith('.jpg') ? 'image/jpeg' : 'image/png'};base64,${fs.readFileSync(pfad).toString('base64')}"`;
+      }
+    }
+    return m;
+  });
+
+  const pdfCss = `@page { size: A4; margin: 1.9cm 1.7cm; }
+body { font-family: Georgia, 'Times New Roman', serif; font-size: 11.5pt; line-height: 1.5; color: #1a1a1a; text-align: justify; }
+section.kapitel, section.vorwort, section.inhalt { page-break-before: always; }
+section.cover { page-break-after: always; text-align: center; padding-top: 3cm; }
+section.cover img { max-width: 62%; }
+h1.kapitel-titel { font-size: 22pt; color: #4a2c0a; margin: 0 0 0.1em; }
+p.epoche { font-style: italic; color: #666; margin-top: 0; }
+h2 { font-size: 15pt; color: #4a2c0a; margin-top: 1.2em; }
+h3 { font-size: 13pt; color: #4a2c0a; }
+h4 { font-size: 12pt; color: #4a2c0a; margin: 0.9em 0 0.3em; }
+p.frage { font-weight: bold; }
+.perspektive { margin: 1em 0; padding: 0.7em 1.1em; border-left: 3px solid #C9A227; background: #FBF4E4; page-break-inside: avoid; }
+.perspektive.p2 { border-left-color: #8C3B2F; background: #FBF0EA; }
+.perspektive.p3 { border-left-color: #3F6B37; background: #EFF5EA; }
+.perspektive.p4 { border-left-color: #3A5A8C; background: #EDF1F7; }
+p.stimme { font-size: 0.85em; font-style: italic; color: #777; }
+.synthese { background: #F7F0DF; padding: 0.7em 1.1em; border-left: 3px solid #7C4A03; page-break-inside: avoid; }
+.autorenwort { background: #E8EFE4; border: 2px solid #7C4A03; padding: 1em 1.2em; margin-top: 1.5em; page-break-inside: avoid; }
+.autorenwort .signatur { font-weight: bold; text-align: right; margin-top: 0.8em; }
+.karte figure { page-break-inside: avoid; text-align: center; margin: 1em 0; }
+.karte img { max-width: 85%; }
+.karte figcaption { font-size: 0.85em; color: #555; }
+.quiz .richtig { color: #3F6B37; font-weight: bold; }
+.zurueck { display: none; }
+hr { border: none; border-top: 1px solid #999; margin: 1em 0; }`;
+
+  const voll = `<!DOCTYPE html><html lang="${META.sprache}"><head><meta charset="utf-8"><title>${META.titel}</title><style>${pdfCss}</style></head><body>${html}</body></html>`;
+  fs.writeFileSync('/tmp/buch-voll.html', voll);
+
+  const ziel = `${BUCH}/Geschichte-begreifen-${SPRACHE.toUpperCase()}.pdf`;
+  execSync(`python3 - <<'EOF'
+from playwright.sync_api import sync_playwright
+with sync_playwright() as p:
+    b = p.chromium.launch()
+    pg = b.new_page()
+    pg.goto('file:///tmp/buch-voll.html')
+    pg.pdf(path='${ziel}', format='A4', print_background=True, margin={'top':'1.9cm','bottom':'1.9cm','left':'1.7cm','right':'1.7cm'})
+    b.close()
+EOF`);
+  console.log('PDF:', ziel, fs.statSync(ziel).size, 'Bytes');
+}
+
 build();
+if (process.argv[3] === 'pdf') pdfErzeugen();
