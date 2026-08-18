@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+<channel>
+<title>Geschichte begreifen — Das Hörbuch</title>
+<link>https://github.com/stephanhink/Geschichte-begreifen/releases/download/hoerbuch-de-v1/feed.xml</link>
+<description>Die Geschichte der Menschheit aus mehreren Perspektiven — von den ersten Königreichen bis zur KI. Das Hörbuch zum Buch von Stephan Hink: Jede Perspektive hat ihre eigene Stimme. Der Sieger schreibt die Geschichte — aber nicht die ganze Geschichte.</description>
+<language>de</language>
+<itunes:author>Stephan Hink</itunes:author>
+<itunes:image href="https://github.com/stephanhink/Geschichte-begreifen/releases/download/hoerbuch-de-v1/cover.jpg"/>
+<itunes:category text="History"/>
+<itunes:explicit>false</itunes:explicit>
+<item>
+<title>1. kapitel-01</title>
+<enclosure url="https://github.com/stephanhink/Geschichte-begreifen/releases/download/hoerbuch-de-v1/kapitel-01.mp3" length="7944532" type="audio/mpeg"/>
+<guid>geschichte-de-01</guid>
+<pubDate>Tue, 18 Aug 2026 13:48:41 GMT</pubDate>
+<description>Kapitel 1 — Länge 21:36</description>
+</item>
+<item>
+<title>2. kapitel-02</title>
+<enclosure url="https://github.com/stephanhink/Geschichte-begreifen/releases/download/hoerbuch-de-v1/kapitel-02.mp3" length="10542064" type="audio/mpeg"/>
+<guid>geschichte-de-02</guid>
+<pubDate>Tue, 18 Aug 2026 13:53:22 GMT</pubDate>
+<description>Kapitel 2 — Länge 28:49</description>
+</item>
+<item>
+<title>3. kapitel-03</title>
+<enclosure url="https://github.com/stephanhink/Geschichte-begreifen/releases/download/hoerbuch-de-v1/kapitel-03.mp3" length="11401066" type="audio/mpeg"/>
+<guid>geschichte-de-03</guid>
+<pubDate>Tue, 18 Aug 2026 14:00:12 GMT</pubDate>
+<description>Kapitel 3 — Länge 31:12</description>
+</item>
+<item>
+<title>4. kapitel-04</title>
+<enclosure url="https://github.com/stephanhink/Geschichte-begreifen/releases/download/hoerbuch-de-v1/kapitel-04.mp3" length="10893148" type="audio/mpeg"/>
+<guid>geschichte-de-04</guid>
+<pubDate>Tue, 18 Aug 2026 14:05:20 GMT</pubDate>
+<description>Kapitel 4 — Länge 29:47</description>
+</item>
+<item>
+<title>5. kapitel-05</title>
+<enclosure url="https://github.com/stephanhink/Geschichte-begreifen/releases/download/hoerbuch-de-v1/kapitel-05.mp3" length="12906686" type="audio/mpeg"/>
+<guid>geschichte-de-05</guid>
+<pubDate>Tue, 18 Aug 2026 14:11:57 GMT</pubDate>
+<description>Kapitel 5 — Länge 35:23</description>
+</item>
+<item>
+<title>6. kapitel-06</title>
+<enclosure url="https://github.com/stephanhink/Geschichte-begreifen/releases/download/hoerbuch-de-v1/kapitel-06.mp3" length="12540312" type="audio/mpeg"/>
+<guid>geschichte-de-06</guid>
+<pubDate>Tue, 18 Aug 2026 14:18:35 GMT</pubDate>
+<description>Kapitel 6 — Länge 34:22</description>
+</item>
+<item>
+<title>7. kapitel-07</title>
+<enclosure url="https://github.com/stephanhink/Geschichte-begreifen/releases/download/hoerbuch-de-v1/kapitel-07.mp3" length="11498534" type="audio/mpeg"/>
+<guid>geschichte-de-07</guid>
+<pubDate>Tue, 18 Aug 2026 14:24:01 GMT</pubDate>
+<description>Kapitel 7 — Länge 31:28</description>
+</item>
+<item>
+<title>8. kapitel-08</title>
+<enclosure url="https://github.com/stephanhink/Geschichte-begreifen/releases/download/hoerbuch-de-v1/kapitel-08.mp3" length="12410622" type="audio/mpeg"/>
+<guid>geschichte-de-08</guid>
+<pubDate>Tue, 18 Aug 2026 14:29:50 GMT</pubDate>
+<description>Kapitel 8 — Länge 34:00</description>
+</item>
+<item>
+<title>9. kapitel-09</title>
+<enclosure url="https://github.com/stephanhink/Geschichte-begreifen/releases/download/hoerbuch-de-v1/kapitel-09.mp3" length="22723952" type="audio/mpeg"/>
+<guid>geschichte-de-09</guid>
+<pubDate>Tue, 18 Aug 2026 14:40:24 GMT</pubDate>
+<description>Kapitel 9 — Länge 62:39</description>
+</item>
+<item>
+<title>10. kapitel-10</title>
+<enclosure url="https://github.com/stephanhink/Geschichte-begreifen/releases/download/hoerbuch-de-v1/kapitel-10.mp3" length="17960467" type="audio/mpeg"/>
+<guid>geschichte-de-10</guid>
+<pubDate>Tue, 18 Aug 2026 14:48:31 GMT</pubDate>
+<description>Kapitel 10 — Länge 49:25</description>
+</item>
+<item>
+<title>11. kapitel-11</title>
+<enclosure url="https://github.com/stephanhink/Geschichte-begreifen/releases/download/hoerbuch-de-v1/kapitel-11.mp3" length="15574883" type="audio/mpeg"/>
+<guid>geschichte-de-11</guid>
+<pubDate>Tue, 18 Aug 2026 14:54:53 GMT</pubDate>
+<description>Kapitel 11 — Länge 42:48</description>
+</item>
+<item>
+<title>12. kapitel-12</title>
+<enclosure url="https://github.com/stephanhink/Geschichte-begreifen/releases/download/hoerbuch-de-v1/kapitel-12.mp3" length="17310563" type="audio/mpeg"/>
+<guid>geschichte-de-12</guid>
+<pubDate>Tue, 18 Aug 2026 15:02:39 GMT</pubDate>
+<description>Kapitel 12 — Länge 47:37</description>
+</item>
+<item>
+<title>13. kapitel-13</title>
+<enclosure url="https://github.com/stephanhink/Geschichte-begreifen/releases/download/hoerbuch-de-v1/kapitel-13.mp3" length="19938120" type="audio/mpeg"/>
+<guid>geschichte-de-13</guid>
+<pubDate>Tue, 18 Aug 2026 15:10:48 GMT</pubDate>
+<description>Kapitel 13 — Länge 54:55</description>
+</item>
+<item>
+<title>14. kapitel-14</title>
+<enclosure url="https://github.com/stephanhink/Geschichte-begreifen/releases/download/hoerbuch-de-v1/kapitel-14.mp3" length="14868040" type="audio/mpeg"/>
+<guid>geschichte-de-14</guid>
+<pubDate>Tue, 18 Aug 2026 15:18:53 GMT</pubDate>
+<description>Kapitel 14 — Länge 40:50</description>
+</item>
+<item>
+<title>15. kapitel-15</title>
+<enclosure url="https://github.com/stephanhink/Geschichte-begreifen/releases/download/hoerbuch-de-v1/kapitel-15.mp3" length="16647019" type="audio/mpeg"/>
+<guid>geschichte-de-15</guid>
+<pubDate>Tue, 18 Aug 2026 15:25:54 GMT</pubDate>
+<description>Kapitel 15 — Länge 45:46</description>
+</item>
+<item>
+<title>16. kapitel-16</title>
+<enclosure url="https://github.com/stephanhink/Geschichte-begreifen/releases/download/hoerbuch-de-v1/kapitel-16.mp3" length="19982505" type="audio/mpeg"/>
+<guid>geschichte-de-16</guid>
+<pubDate>Tue, 18 Aug 2026 15:33:16 GMT</pubDate>
+<description>Kapitel 16 — Länge 55:02</description>
+</item>
+<item>
+<title>17. kapitel-17</title>
+<enclosure url="https://github.com/stephanhink/Geschichte-begreifen/releases/download/hoerbuch-de-v1/kapitel-17.mp3" length="23957337" type="audio/mpeg"/>
+<guid>geschichte-de-17</guid>
+<pubDate>Tue, 18 Aug 2026 15:42:01 GMT</pubDate>
+<description>Kapitel 17 — Länge 66:05</description>
+</item>
+<item>
+<title>18. kapitel-18</title>
+<enclosure url="https://github.com/stephanhink/Geschichte-begreifen/releases/download/hoerbuch-de-v1/kapitel-18.mp3" length="24771076" type="audio/mpeg"/>
+<guid>geschichte-de-18</guid>
+<pubDate>Tue, 18 Aug 2026 15:52:38 GMT</pubDate>
+<description>Kapitel 18 — Länge 68:20</description>
+</item>
+<item>
+<title>19. kapitel-19</title>
+<enclosure url="https://github.com/stephanhink/Geschichte-begreifen/releases/download/hoerbuch-de-v1/kapitel-19.mp3" length="19157075" type="audio/mpeg"/>
+<guid>geschichte-de-19</guid>
+<pubDate>Tue, 18 Aug 2026 15:59:52 GMT</pubDate>
+<description>Kapitel 19 — Länge 52:45</description>
+</item>
+<item>
+<title>20. kapitel-20</title>
+<enclosure url="https://github.com/stephanhink/Geschichte-begreifen/releases/download/hoerbuch-de-v1/kapitel-20.mp3" length="12740171" type="audio/mpeg"/>
+<guid>geschichte-de-20</guid>
+<pubDate>Tue, 18 Aug 2026 16:04:48 GMT</pubDate>
+<description>Kapitel 20 — Länge 34:55</description>
+</item>
+<item>
+<title>21. kapitel-21</title>
+<enclosure url="https://github.com/stephanhink/Geschichte-begreifen/releases/download/hoerbuch-de-v1/kapitel-21.mp3" length="18578070" type="audio/mpeg"/>
+<guid>geschichte-de-21</guid>
+<pubDate>Tue, 18 Aug 2026 16:11:47 GMT</pubDate>
+<description>Kapitel 21 — Länge 51:08</description>
+</item>
+</channel>
+</rss>
