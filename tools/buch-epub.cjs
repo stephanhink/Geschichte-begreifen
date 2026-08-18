@@ -151,6 +151,7 @@ ${perspektiven}
 <section class="urteil"><h2>Dein Urteil</h2><p class="frage">${mdInline(modul.urteil.frage)}</p><p>${mdInline(modul.urteil.hinweis)}</p></section>
 <section class="quiz"><h2>Stimmt's?</h2>${quiz}</section>
 ${autorenwort}
+<p class="zurueck"><a href="inhalt.xhtml">→ Inhaltsverzeichnis</a></p>
 </section>`;
 }
 
@@ -185,6 +186,18 @@ function build() {
   // Cover + Vorwort + Quellen
   const kapitel = [];
   kapitel.push({ datei: 'cover.xhtml', html: coverHTML(), titel: 'Cover' });
+
+  // Sichtbares Inhaltsverzeichnis (wie in einem gedruckten Buch — mit
+  // Hyperlinks; funktioniert in jedem Reader, auch ohne TOC-Funktion)
+  const inhaltListe = ids.map((id, i) => {
+    const m = ladeModul(id);
+    return `<li><a href="kapitel-${i + 1}.xhtml">${i + 1}. ${m.titel}</a></li>`;
+  }).join('\n');
+  const inhaltHTML = `<section class="inhalt"><h1>Inhaltsverzeichnis</h1>
+<ol>${inhaltListe}</ol>
+<p class="zurueck"><a href="vorwort.xhtml">→ Vorwort</a></p>
+</section>`;
+  kapitel.push({ datei: 'inhalt.xhtml', html: inhaltHTML, titel: 'Inhaltsverzeichnis' });
   kapitel.push({ datei: 'vorwort.xhtml', html: vorwortHTML(), titel: 'Vorwort' });
 
   ids.forEach((id, i) => {
@@ -275,7 +288,11 @@ p { margin: 0.6em 0; text-align: justify; }
 .signatur { font-weight: bold; text-align: right; }
 .quiz .richtig { color: #3F6B37; font-weight: bold; }
 .erklaerung { font-size: 0.92em; color: #444; }
-ul { margin: 0.4em 0 0.8em 1.2em; }`;
+ul { margin: 0.4em 0 0.8em 1.2em; }
+a { color: #7C4A03; text-decoration: none; }
+.inhalt li { margin: 0.45em 0; }
+.inhalt h1 { margin-bottom: 0.8em; }
+.zurueck { margin-top: 1.5em; font-size: 0.9em; }`;
 }
 
 build();
