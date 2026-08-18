@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 # Hörbuch-Generator: Module -> Kapitel-MP3s (eine feste Stimme pro
 # Perspektive, edge-tts). Nutzung: python3 tools/hoerbuch.py de|da
-import asyncio, json, os, re, subprocess, sys
+import asyncio, json, os, re, subprocess, sys, wave
+from multiprocessing import Pool
+from piper import PiperVoice
 import edge_tts
 
 SPRACHE = sys.argv[1] if len(sys.argv) > 1 and sys.argv[1] in ('de', 'da') else 'de'
@@ -12,23 +14,24 @@ COVER = '/Users/openclaw/Geschichte-Buch/cover-final.png'
 
 if SPRACHE == 'de':
     STIMMEN = {
-        'erzaehler': 'de-DE-FlorianMultilingualNeural',
-        'p1': 'de-DE-ConradNeural',
-        'p2': 'de-DE-KatjaNeural',
-        'p3': 'de-DE-KillianNeural',
-        'p4': 'de-DE-AmalaNeural',
-        'autor': 'de-DE-FlorianMultilingualNeural',
+        'erzaehler': '/tmp/piper-model/de_DE-thorsten-high.onnx',
+        'p1': '/tmp/piper-model/de_DE-thorsten-high.onnx',
+        'p2': '/tmp/piper-model/de_DE-thorsten-high.onnx',
+        'p3': '/tmp/piper-model/de_DE-thorsten-high.onnx',
+        'p4': '/tmp/piper-model/de_DE-thorsten-high.onnx',
+        'autorenwort': '/tmp/piper-model/de_DE-thorsten-high.onnx',
     }
     ALBUM = 'Geschichte begreifen'
 else:
-    # Daenisch hat zwei Stimmen: Christel (weiblich) und Jeppe (maennlich).
+    # Daenisch: Christel durchgehend (Betreiber-Entscheid 18.08. — die
+    # beste konsistente Qualitaet; alle Rollen mit derselben Stimme).
     STIMMEN = {
-        'erzaehler': 'da-DK-JeppeNeural',
+        'erzaehler': 'da-DK-ChristelNeural',
         'p1': 'da-DK-ChristelNeural',
-        'p2': 'da-DK-JeppeNeural',
+        'p2': 'da-DK-ChristelNeural',
         'p3': 'da-DK-ChristelNeural',
-        'p4': 'da-DK-JeppeNeural',
-        'autor': 'da-DK-JeppeNeural',
+        'p4': 'da-DK-ChristelNeural',
+        'autor': 'da-DK-ChristelNeural',
     }
     ALBUM = 'Historien forstået'
 
@@ -39,9 +42,35 @@ def text_bereinigen(t):
     t = re.sub(r'\n{2,}', '\n', t).strip()
     return t
 
-async def tts(text, pfad, stimme):
-    com = edge_tts.Communicate(text, stimme)
-    await com.save(pfad)
+PIPER_STIMMEN = {}
+
+def _tts_job(args):
+    pfad, text, stimme = args
+    tts(text, pfad, stimme)
+    return pfad
+
+def tts(text, pfad, stimme):
+    if SPRACHE == 'de':
+        if stimme not in PIPER_STIMMEN:
+            PIPER_STIMMEN[stimme] = PiperVoice.load(stimme)
+        wav_pfad = pfad + '.wav'
+        with wave.open(wav_pfad, 'wb') as w:
+            PIPER_STIMMEN[stimme].synthesize_wav(text, w)
+        subprocess.run(['ffmpeg', '-y', '-loglevel', 'quiet', '-i', wav_pfad,
+                        '-codec:a', 'libmp3lame', '-qscale:a', '3', pfad], check=True)
+        os.remove(wav_pfad)
+    else:
+        for versuch in range(4):
+            try:
+                com = edge_tts.Communicate(text, stimme)
+                asyncio.run(com.save(pfad))
+                if os.path.getsize(pfad) > 500:
+                    return
+            except Exception:
+                pass
+            import time as _t
+            _t.sleep(3 * (versuch + 1))
+        raise RuntimeError('TTS fehlgeschlagen: %s' % stimme)
 
 def lade_modul(mid):
     modulpfad = ('utils/themen/%s' if SPRACHE == 'de' else 'da/%s') % mid
@@ -84,10 +113,11 @@ def abschnitte(modul):
 def konvertiere(kapitel_nr, modul, abschnitte_liste):
     """Generiert MP3s und fuegt sie zur Kapitel-MP3 zusammen."""
     dateien = []
-    for i, (stimme, text) in enumerate(abschnitte_liste):
-        pfad = '%s/%s-%d.mp3' % (TMP, kapitel_nr, i)
-        asyncio.run(tts(text, pfad, STIMMEN[stimme]))
-        dateien.append(pfad)
+    jobs = [('%s/%s-%d.mp3' % (TMP, kapitel_nr, i), text, STIMMEN[stimme])
+            for i, (stimme, text) in enumerate(abschnitte_liste)]
+    with Pool(4) as pool:
+        for pfad in pool.map(_tts_job, jobs):
+            dateien.append(pfad)
     liste = '%s/%s-liste.txt' % (TMP, kapitel_nr)
     with open(liste, 'w') as f:
         for d in dateien:

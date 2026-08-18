@@ -6,8 +6,27 @@ import os, sys, subprocess, datetime
 
 SPRACHE = sys.argv[1] if len(sys.argv) > 1 and sys.argv[1] in ('de', 'da') else 'de'
 ROOT = '/Users/openclaw/Geschichte-Buch/Hoerbuch'
-HOST = 'https://github.com/stephanhink/Geschichte-begreifen/releases/download/hoerbuch-de-v1'
+HOST = ('https://github.com/stephanhink/Geschichte-begreifen/releases/download/hoerbuch-de-v1'
+        if SPRACHE == 'de' else
+        'https://github.com/stephanhink/Geschichte-begreifen/releases/download/hoerbuch-da-v1')
 AUSGABE = 'feed.xml' if SPRACHE == 'de' else 'feed-da.xml'
+REPO = '/Users/openclaw/Documents/GitHub/Geschichte-begreifen'
+
+# Kapitel-Titel aus den Modulen (de: utils/themen, da: da)
+import json as _json
+TITEL_MAP = {}
+try:
+    _ids = _json.loads(subprocess.run(['node', '-e',
+        "const i=require('%s/utils/themen/index');console.log(JSON.stringify(i.alleThemen.map(t=>t.id)))" % REPO],
+        capture_output=True, text=True, cwd=REPO).stdout)
+    for _nr, _mid in enumerate(_ids, 1):
+        _mp = ('utils/themen/%s' if SPRACHE == 'de' else 'da/%s') % _mid
+        _t = _json.loads(subprocess.run(['node', '-e',
+            "console.log(JSON.stringify(require('%s').titel))" % ('%s/%s' % (REPO, _mp))],
+            capture_output=True, text=True, cwd=REPO).stdout)
+        TITEL_MAP[_nr] = _t
+except Exception:
+    pass
 
 if SPRACHE == 'de':
     TITEL = 'Geschichte begreifen — Das Hörbuch'
@@ -52,7 +71,7 @@ for f in sorted(os.listdir(ORDNER)):
     sekunden = d % 60
     items.append({
         'nr': nr,
-        'titel': f.replace('.mp3', ''),
+        'titel': TITEL_MAP.get(nr, f.replace('.mp3', '')),
         'url': '%s/%s' % (HOST, f),
         'groesse': groesse,
         'dauer': '%d:%02d' % (minuten, sekunden),
