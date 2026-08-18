@@ -41,10 +41,11 @@ function ladeModul(id) {
   return require(pfad);
 }
 
-// ---- Markdown-lite (## Ueberschrift, **fett**, Absaetze) ----
+// ---- Markdown-lite (## Ueberschrift, **fett**, Absaetze, Listen, Linie) ----
 // WICHTIG: h4 immer als eigenes Element, NIE innerhalb von <p> (sonst
 // invalid XHTML — epubcheck RSC-005; Reader wie ReadEra ignorieren dann
-// das Inhaltsverzeichnis).
+// das Inhaltsverzeichnis). Zusaetzlich: `- `-Zeilen werden <ul><li>-Listen
+// und `---`-Zeilen werden <hr/> (die Quellen-Anhaenge nutzen beides).
 function md(txt) {
   const escTxt = String(txt)
     .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -52,16 +53,23 @@ function md(txt) {
   const zeilen = escTxt.split('\n');
   const out = [];
   let absatz = [];
+  let liste = null;
   const pushAbsatz = () => {
     if (absatz.length) { out.push(`<p>${absatz.join(' ').trim()}</p>`); absatz = []; }
   };
+  const pushListe = () => {
+    if (liste) { out.push(`<ul>${liste.map((x) => `<li>${x}</li>`).join('')}</ul>`); liste = null; }
+  };
   for (const z of zeilen) {
     const h = z.match(/^##\s+(.+)$/);
-    if (h) { pushAbsatz(); out.push(`<h4>${h[1]}</h4>`); }
-    else if (z.trim() === '') { pushAbsatz(); }
-    else { absatz.push(z.trim()); }
+    if (h) { pushAbsatz(); pushListe(); out.push(`<h4>${h[1]}</h4>`); }
+    else if (/^---+$/.test(z.trim())) { pushAbsatz(); pushListe(); out.push('<hr/>'); }
+    else if (z.trim() === '') { pushAbsatz(); pushListe(); }
+    else if (/^[-•]\s+/.test(z)) { pushAbsatz(); liste = liste || []; liste.push(z.replace(/^[-•]\s+/, '')); }
+    else { pushListe(); absatz.push(z.trim()); }
   }
   pushAbsatz();
+  pushListe();
   return out.join('\n');
 }
 
