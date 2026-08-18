@@ -298,24 +298,24 @@ p { margin: 0.6em 0; text-align: justify; }
 ul { margin: 0.4em 0 0.8em 1.2em; }
 a { color: #7C4A03; text-decoration: none; }
 .inhalt li { margin: 0.45em 0; }
+.inhalt ol { list-style: none; }
 .inhalt h1 { margin-bottom: 0.8em; }
 .zurueck { margin-top: 1.5em; font-size: 0.9em; }`;
 }
 
-// ---- PDF (A4, alle Kapitel in einem Dokument, Bilder eingebettet) ----
+// ---- PDF (A4, alle Kapitel, Bilder eingebettet, TOC mit Seitenzahlen) ----
+// Zwei-Pass-Verfahren: Pass 1 rendert mit unsichtbaren Markern, fitz misst
+// die Kapitel-Startseiten, Pass 2 trägt die Seitenzahlen in den TOC ein.
 function pdfErzeugen() {
-  const cover = `<section class="cover"><img src="images/cover.png" alt="Cover"/></section>`;
-  const inhaltListe = ids.map((id, i) => {
-    const m = ladeModul(id);
-    return `<li>${i + 1}. ${m.titel}</li>`;
-  }).join('\n');
-  const inhalt = `<section class="inhalt"><h1>Inhaltsverzeichnis</h1>\n<ol>${inhaltListe}</ol></section>`;
+  const cover = `<section class="cover"><img src="images/cover-final.png" alt="Cover"/></section>`;
+  const inhaltListeOhne = ids.map((id, i) => `<li>${i + 1}. ${ladeModul(id).titel}</li>`).join('\n');
+  const inhaltOhne = `<section class="inhalt"><h1>Inhaltsverzeichnis</h1>\n<ol>${inhaltListeOhne}</ol></section>`;
   const vorwort = vorwortHTML();
-  const kapitel = ids.map((id, i) => kapitelHTML(ladeModul(id), i + 1)).join('\n');
+  const marker = ids.map((_, i) => `<span style="color:transparent;font-size:1px">#START-${String(i + 1).padStart(2, '0')}#</span>`);
+  const kapitel = ids.map((id, i) => marker[i] + kapitelHTML(ladeModul(id), i + 1)).join('\n');
 
-  let html = [cover, inhalt, vorwort, kapitel].join('\n');
-  // Bilder als data-URIs einbetten (EPUB-Relativpfade -> base64)
-  html = html.replace(/src="images\/([^"]+)"/g, (m, name) => {
+  let html1 = [cover, inhaltOhne, vorwort, kapitel].join('\n');
+  html1 = html1.replace(/src="images\/([^"]+)"/g, (m, name) => {
     const pfade = [`/tmp/karten-cache/${name}`, `${BUCH}/${name}`];
     for (const pfad of pfade) {
       if (fs.existsSync(pfad)) {
@@ -349,21 +349,51 @@ p.stimme { font-size: 0.85em; font-style: italic; color: #777; }
 .karte figcaption { font-size: 0.85em; color: #555; }
 .quiz .richtig { color: #3F6B37; font-weight: bold; }
 .zurueck { display: none; }
+.inhalt li { margin: 0.35em 0; }
+.inhalt ol { list-style: none; }
+.inhalt .seite { font-style: italic; color: #666; }
 hr { border: none; border-top: 1px solid #999; margin: 1em 0; }`;
 
-  const voll = `<!DOCTYPE html><html lang="${META.sprache}"><head><meta charset="utf-8"><title>${META.titel}</title><style>${pdfCss}</style></head><body>${html}</body></html>`;
-  fs.writeFileSync('/tmp/buch-voll.html', voll);
-
-  const ziel = `${BUCH}/Geschichte-begreifen-${SPRACHE.toUpperCase()}.pdf`;
-  execSync(`python3 - <<'EOF'
+  const render = (html, pfad, mitFuss) => {
+    const voll = `<!DOCTYPE html><html lang="${META.sprache}"><head><meta charset="utf-8"><title>${META.titel}</title><style>${pdfCss}</style></head><body>${html}</body></html>`;
+    fs.writeFileSync('/tmp/buch-voll.html', voll);
+    const fuss = mitFuss
+      ? ", display_header_footer=True, footer_template='<div style=\"font-size:9px;width:100%;text-align:center;color:#888;\"><span class=\"pageNumber\"></span></div>', header_template='<div></div>'"
+      : '';
+    execSync(`python3 - <<'EOF'
 from playwright.sync_api import sync_playwright
 with sync_playwright() as p:
     b = p.chromium.launch()
     pg = b.new_page()
     pg.goto('file:///tmp/buch-voll.html')
-    pg.pdf(path='${ziel}', format='A4', print_background=True, margin={'top':'1.9cm','bottom':'1.9cm','left':'1.7cm','right':'1.7cm'})
+    pg.pdf(path='${pfad}', format='A4', print_background=True, margin={'top':'1.9cm','bottom':'1.9cm','left':'1.7cm','right':'1.7cm'}${fuss})
     b.close()
 EOF`);
+  };
+
+  const ziel = `${BUCH}/Geschichte-begreifen-${SPRACHE.toUpperCase()}.pdf`;
+  // Pass 1: Seiten messen
+  render(html1, '/tmp/buch-pass1.pdf', false);
+  const seiten = JSON.parse(execSync(`python3 - <<'EOF'
+import fitz, json
+d = fitz.open('/tmp/buch-pass1.pdf')
+r = {}
+for nr in range(1, ${ids.length + 1}):
+    m = '#START-%02d#' % nr
+    for i in range(d.page_count):
+        if d[i].search_for(m):
+            r[str(nr)] = i + 1
+            break
+print(json.dumps(r))
+EOF`).toString().trim());
+  // Pass 2: TOC mit Seitenzahlen, Marker entfernen
+  const inhaltListe = ids.map((id, i) => {
+    const s = seiten[String(i + 1)];
+    return `<li>${i + 1}. ${ladeModul(id).titel} <span class="seite">— Seite ${s || '?'}</span></li>`;
+  }).join('\n');
+  const inhalt = `<section class="inhalt"><h1>Inhaltsverzeichnis</h1>\n<ol>${inhaltListe}</ol></section>`;
+  const html2 = html1.replace(inhaltOhne, inhalt).replace(/#START-\d\d#/g, '');
+  render(html2, ziel, true);
   console.log('PDF:', ziel, fs.statSync(ziel).size, 'Bytes');
 }
 
