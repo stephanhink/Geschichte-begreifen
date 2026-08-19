@@ -19,7 +19,7 @@ if SPRACHE == 'de':
         'p2': '/tmp/piper-model/de_DE-thorsten-high.onnx',
         'p3': '/tmp/piper-model/de_DE-thorsten-high.onnx',
         'p4': '/tmp/piper-model/de_DE-thorsten-high.onnx',
-        'autorenwort': '/tmp/piper-model/de_DE-thorsten-high.onnx',
+        'autor': '/tmp/piper-model/de_DE-thorsten-high.onnx',
     }
     ALBUM = 'Geschichte begreifen'
 else:
