@@ -180,7 +180,8 @@ function vorwortHTML() {
 
 // ---- Cover ----
 function coverHTML() {
-  const cover = `${BUCH}/cover-final.png`;
+  const coverDatei = SPRACHE === 'de' ? 'cover-final.png' : `cover-${SPRACHE}.png`;
+  const cover = `${BUCH}/${coverDatei}`;
   const ziel = `${OEBPS}/images/cover.png`;
   if (!fs.existsSync(ziel)) fs.copyFileSync(cover, ziel);
   return `<section class="cover"><img src="images/cover.png" alt="Cover"/></section>`;
@@ -308,7 +309,8 @@ a { color: #7C4A03; text-decoration: none; }
 // Zwei-Pass-Verfahren: Pass 1 rendert mit unsichtbaren Markern, fitz misst
 // die Kapitel-Startseiten, Pass 2 trägt die Seitenzahlen in den TOC ein.
 function pdfErzeugen() {
-  const cover = `<section class="cover"><img src="images/cover-final.png" alt="Cover"/></section>`;
+  const coverDatei = SPRACHE === 'de' ? 'cover-final.png' : `cover-${SPRACHE}.png`;
+  const cover = `<section class="cover"><img src="images/${coverDatei}" alt="Cover"/></section>`;
   const inhaltListeOhne = ids.map((id, i) => `<li>${i + 1}. ${ladeModul(id).titel}</li>`).join('\n');
   const inhaltOhne = `<section class="inhalt"><h1>Inhaltsverzeichnis</h1>\n<ol>${inhaltListeOhne}</ol></section>`;
   const vorwort = vorwortHTML();
