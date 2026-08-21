@@ -15,7 +15,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-const SPRACHE = process.argv[2] === 'da' ? 'da' : 'de';
+const SPRACHE = process.argv[2] === 'da' ? 'da' : (process.argv[2] === 'en' ? 'en' : 'de');
 const REPO = '/Users/openclaw/Documents/GitHub/Geschichte-begreifen';
 const BUCH = '/Users/openclaw/Geschichte-Buch';
 const TMP = `/tmp/buch-${SPRACHE}`;
@@ -25,6 +25,7 @@ const OEBPS = `${TMP}/OEBPS`;
 const META = {
   de: { titel: 'Geschichte begreifen', untertitel: 'Der Sieger schreibt die Geschichte — aber nicht die ganze.', sprache: 'de', autor: 'Stephan Hink', uuid: 'urn:uuid:9b2f4c1e-7a3d-4e5f-9c1b-2d3e4f5a6b7c' },
   da: { titel: 'Historien forstået', untertitel: 'Sejrherren skriver historien — men ikke hele historien.', sprache: 'da', autor: 'Stephan Hink', uuid: 'urn:uuid:8a1e3d2c-6b4f-4c7e-8d2a-1e3f4a5b6c7d' },
+  en: { titel: 'Understanding History', untertitel: 'The victor writes history — but not all of it.', sprache: 'en', autor: 'Stephan Hink', uuid: 'urn:uuid:7b0d2c1e-5a3e-4f8d-9c2b-0e1f2a3b4c5d' },
 }[SPRACHE];
 
 // ---- Modul-Liste (Buch-Reihenfolge) ----
@@ -37,7 +38,7 @@ const ids = [
 ];
 
 function ladeModul(id) {
-  const pfad = SPRACHE === 'da' ? `${REPO}/da/${id}.js` : `${REPO}/utils/themen/${id}.js`;
+  const pfad = SPRACHE === 'de' ? `${REPO}/utils/themen/${id}.js` : `${REPO}/${SPRACHE}/${id}.js`;
   return require(pfad);
 }
 
@@ -90,7 +91,7 @@ const kartenCache = '/tmp/karten-cache';
 function kartenPNGs(modul) {
   const out = [];
   let karte = modul.karte;
-  if (!karte && SPRACHE === 'da') {
+  if (!karte && (SPRACHE === 'da' || SPRACHE === 'en')) {
     try { karte = require(`${REPO}/utils/themen/${modul.id}.js`).karte; } catch (e) { /* kein Karten-Modul */ }
   }
   if (!karte || !Array.isArray(karte.phasen)) return out;
@@ -139,8 +140,8 @@ function kapitelHTML(modul, nummer) {
   if (modul.autorenwort) {
     const text = typeof modul.autorenwort === 'string' ? modul.autorenwort : modul.autorenwort.text;
     const original = typeof modul.autorenwort === 'string' ? null : modul.autorenwort.original;
-    const originalBlock = SPRACHE === 'da' && original ? `<div class="aw-original"><h3>Schlusswort des Autors</h3>${md(original)}</div>` : '';
-    const titel = SPRACHE === 'da' ? 'Forfatterens afsluttende ord' : 'Schlusswort des Autors';
+    const originalBlock = (SPRACHE === 'da' || SPRACHE === 'en') && original ? `<div class="aw-original"><h3>${SPRACHE === 'en' ? "The author's closing words" : 'Schlusswort des Autors'}</h3>${md(original)}</div>` : '';
+    const titel = SPRACHE === 'da' ? 'Forfatterens afsluttende ord' : (SPRACHE === 'en' ? "The author's closing words" : 'Schlusswort des Autors');
     if (!originalBlock) {
       autorenwort = `<section class="autorenwort"><h2>${titel}</h2>${md(text)}<p class="signatur">— Stephan Hink</p></section>`;
     } else {
