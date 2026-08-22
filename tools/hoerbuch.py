@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # Hörbuch-Generator: Module -> Kapitel-MP3s (eine feste Stimme pro
-# Perspektive, edge-tts). Nutzung: python3 tools/hoerbuch.py de|da
+# Perspektive). Nutzung: python3 tools/hoerbuch.py de|da|en
 import asyncio, json, os, re, subprocess, sys, wave
 from multiprocessing import Pool
 from piper import PiperVoice
 import edge_tts
 
-SPRACHE = sys.argv[1] if len(sys.argv) > 1 and sys.argv[1] in ('de', 'da') else 'de'
+SPRACHE = sys.argv[1] if len(sys.argv) > 1 and sys.argv[1] in ('de', 'da', 'en') else 'de'
 REPO = '/Users/openclaw/Documents/GitHub/Geschichte-begreifen'
 AUSGABE = '/Users/openclaw/Geschichte-Buch/Hoerbuch/' + SPRACHE.upper()
 TMP = '/tmp/hoerbuch-' + SPRACHE
@@ -22,6 +22,17 @@ if SPRACHE == 'de':
         'autor': '/tmp/piper-model/de_DE-thorsten-high.onnx',
     }
     ALBUM = 'Geschichte begreifen'
+elif SPRACHE == 'en':
+    # Englisch: Ryan durchgehend (die warme Piper-Hoerbuchstimme).
+    STIMMEN = {
+        'erzaehler': '/tmp/piper-model/en_US-ryan-high.onnx',
+        'p1': '/tmp/piper-model/en_US-ryan-high.onnx',
+        'p2': '/tmp/piper-model/en_US-ryan-high.onnx',
+        'p3': '/tmp/piper-model/en_US-ryan-high.onnx',
+        'p4': '/tmp/piper-model/en_US-ryan-high.onnx',
+        'autor': '/tmp/piper-model/en_US-ryan-high.onnx',
+    }
+    ALBUM = 'Understanding History'
 else:
     # Daenisch: Christel durchgehend (Betreiber-Entscheid 18.08. — die
     # beste konsistente Qualitaet; alle Rollen mit derselben Stimme).
@@ -50,7 +61,7 @@ def _tts_job(args):
     return pfad
 
 def tts(text, pfad, stimme):
-    if SPRACHE == 'de':
+    if SPRACHE in ('de', 'en'):  # Piper fuer Deutsch und Englisch
         if stimme not in PIPER_STIMMEN:
             PIPER_STIMMEN[stimme] = PiperVoice.load(stimme)
         wav_pfad = pfad + '.wav'
@@ -73,7 +84,7 @@ def tts(text, pfad, stimme):
         raise RuntimeError('TTS fehlgeschlagen: %s' % stimme)
 
 def lade_modul(mid):
-    modulpfad = ('utils/themen/%s' if SPRACHE == 'de' else 'da/%s') % mid
+    modulpfad = ('utils/themen/%s' if SPRACHE == 'de' else ('en/%s' if SPRACHE == 'en' else 'da/%s')) % mid
     js = ("const m=require('%s/%s');"
           "console.log(JSON.stringify({titel:m.titel,epoche:m.epoche,"
           "aufhaenger:m.aufhaenger,perspektiven:m.perspektiven.map(p=>({name:p.name,text:p.text})),"
@@ -84,21 +95,31 @@ def lade_modul(mid):
         print('FEHLER beim Laden von', mid, out.stderr[:200]); sys.exit(1)
     return json.loads(out.stdout)
 
+RAHMEN = {
+    'de': {'frage': 'Die Frage: ', 'synthese': 'Synthese. ', 'urteil': 'Dein Urteil. ',
+           'quiz': 'Stimmt es? ', 'quizFrage': 'Frage %d: %s. Antworten: %s. Richtig ist: %s. %s. '},
+    'da': {'frage': 'Spørgsmålet: ', 'synthese': 'Syntese. ', 'urteil': 'Din vurdering. ',
+           'quiz': 'Er det rigtigt? ', 'quizFrage': 'Spørgsmål %d: %s. Svar: %s. Det rigtige svar er: %s. %s. '},
+    'en': {'frage': 'The question: ', 'synthese': 'Synthesis. ', 'urteil': 'Your verdict. ',
+           'quiz': 'True or false? ', 'quizFrage': 'Question %d: %s. Answers: %s. The correct answer is: %s. %s. '},
+}
+R = RAHMEN[SPRACHE]
+
 def abschnitte(modul):
     """Liefert Liste von (stimme, text) fuer ein Kapitel."""
     a = []
     intro = '%s. %s.' % (modul['titel'], modul['epoche'])
     a.append(('erzaehler', intro))
-    a.append(('erzaehler', 'Die Frage: ' + modul['aufhaenger']['frage']))
+    a.append(('erzaehler', R['frage'] + modul['aufhaenger']['frage']))
     a.append(('erzaehler', text_bereinigen(modul['aufhaenger']['text'])))
     for i, p in enumerate(modul['perspektiven']):
         a.append(('p%d' % (i + 1), text_bereinigen(p['name'] + '. ' + p['text'])))
-    a.append(('erzaehler', 'Synthese. ' + text_bereinigen(modul['synthese'])))
+    a.append(('erzaehler', R['synthese'] + text_bereinigen(modul['synthese'])))
     u = modul['urteil']
-    a.append(('erzaehler', 'Dein Urteil. ' + text_bereinigen(u['frage'] + ' ' + u['hinweis'])))
-    quiz = 'Stimmt es? '
+    a.append(('erzaehler', R['urteil'] + text_bereinigen(u['frage'] + ' ' + u['hinweis'])))
+    quiz = R['quiz']
     for i, q in enumerate(modul['quiz']):
-        quiz += ('Frage %d: %s. Antworten: %s. Richtig ist: %s. %s. '
+        quiz += (R['quizFrage']
                  % (i + 1, text_bereinigen(q['frage']),
                     ' '.join(text_bereinigen(x) for x in q['antworten']),
                     text_bereinigen(q['antworten'][q['richtig']]),

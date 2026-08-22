@@ -4,12 +4,10 @@
 # Spotify & Co. Nutzung: python3 tools/podcast-feed.py [de|da]
 import os, sys, subprocess, datetime
 
-SPRACHE = sys.argv[1] if len(sys.argv) > 1 and sys.argv[1] in ('de', 'da') else 'de'
+SPRACHE = sys.argv[1] if len(sys.argv) > 1 and sys.argv[1] in ('de', 'da', 'en') else 'de'
 ROOT = '/Users/openclaw/Geschichte-Buch/Hoerbuch'
-HOST = ('https://github.com/stephanhink/Geschichte-begreifen/releases/download/hoerbuch-de-v1'
-        if SPRACHE == 'de' else
-        'https://github.com/stephanhink/Geschichte-begreifen/releases/download/hoerbuch-da-v1')
-AUSGABE = 'feed.xml' if SPRACHE == 'de' else 'feed-da.xml'
+HOST = ('https://github.com/stephanhink/Geschichte-begreifen/releases/download/hoerbuch-%s-v1' % SPRACHE)
+AUSGABE = 'feed.xml' if SPRACHE == 'de' else 'feed-%s.xml' % SPRACHE
 REPO = '/Users/openclaw/Documents/GitHub/Geschichte-begreifen'
 
 # Kapitel-Titel aus den Modulen (de: utils/themen, da: da)
@@ -20,7 +18,7 @@ try:
         "const i=require('%s/utils/themen/index');console.log(JSON.stringify(i.alleThemen.map(t=>t.id)))" % REPO],
         capture_output=True, text=True, cwd=REPO).stdout)
     for _nr, _mid in enumerate(_ids, 1):
-        _mp = ('utils/themen/%s' if SPRACHE == 'de' else 'da/%s') % _mid
+        _mp = ('utils/themen/%s' if SPRACHE == 'de' else ('en/%s' if SPRACHE == 'en' else 'da/%s')) % _mid
         _t = _json.loads(subprocess.run(['node', '-e',
             "console.log(JSON.stringify(require('%s').titel))" % ('%s/%s' % (REPO, _mp))],
             capture_output=True, text=True, cwd=REPO).stdout)
