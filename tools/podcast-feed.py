@@ -34,6 +34,13 @@ if SPRACHE == 'de':
                     'Stimme. Der Sieger schreibt die Geschichte — aber nicht '
                     'die ganze Geschichte.')
     SPRACHE_CODE = 'de'
+elif SPRACHE == 'en':
+    TITEL = 'Understanding History — The Audiobook'
+    BESCHREIBUNG = ('The history of humanity from several perspectives — from '\
+                    'the first kingdoms to artificial intelligence. The audiobook '\
+                    'to the book by Stephan Hink: one calm voice reads all chapters. '\
+                    'The victor writes history — but not all of it.')
+    SPRACHE_CODE = 'en'
 else:
     TITEL = 'Historien forstået — Lydbogen'
     BESCHREIBUNG = ('Menneskehedens historie fra flere perspektiver — fra de '
