@@ -25,7 +25,7 @@ const OEBPS = `${TMP}/OEBPS`;
 const META = {
   de: { titel: 'Geschichte begreifen', untertitel: 'Der Sieger schreibt die Geschichte — aber nicht die ganze.', sprache: 'de', autor: 'Stephan Hink', uuid: 'urn:uuid:9b2f4c1e-7a3d-4e5f-9c1b-2d3e4f5a6b7c' },
   da: { titel: 'Historien forstået', untertitel: 'Sejrherren skriver historien — men ikke hele historien.', sprache: 'da', autor: 'Stephan Hink', uuid: 'urn:uuid:8a1e3d2c-6b4f-4c7e-8d2a-1e3f4a5b6c7d' },
-  en: { titel: 'Understanding History', untertitel: 'The victor writes history — but not all of it.', sprache: 'en', autor: 'Stephan Hink', uuid: 'urn:uuid:7b0d2c1e-5a3e-4f8d-9c2b-0e1f2a3b4c5d' },
+  en: { titel: 'History, Told Differently', untertitel: 'The victor writes history — but not all of it.', sprache: 'en', autor: 'Stephan Hink', uuid: 'urn:uuid:4d9f2e8a-7b3c-4d5e-9f1a-2b3c4d5e6f7a' },
 }[SPRACHE];
 
 // ---- Modul-Liste (Buch-Reihenfolge) ----
