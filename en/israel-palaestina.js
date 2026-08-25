@@ -502,6 +502,20 @@ const israelPalaestina = {
       erklaerung: 'The Sinai went back to Egypt in 1982; Israel withdrew from Gaza in 2005. The West Bank is occupied to this day — the occupation and the settlements there are regarded as the core of today’s conflict. For many Israelis, 1967 was at the same time the return to the Western Wall, to which they had had no access since 1948.',
     },
   ],
+  karteHinweise: [
+    {
+      label: "Partition Plan 1947",
+      hinweis: "This is what the United Nations had decided on 29 November 1947 (Resolution 181): a Jewish and an Arab state, each made up of three territories that touch at six points, plus Jerusalem and Bethlehem under international administration. The Jewish side accepted the plan; the Arab states and the Palestinian leadership rejected it. It was never implemented. Jaffa, too, was intended as an Arab enclave in the Jewish state — on this scale it is too small to draw.",
+    },
+    {
+      label: "Armistice 1949",
+      hinweis: "After the war of 1948/49 the situation was different from what had been planned. Israel held more territory than provided for in the partition plan, the West Bank was under Jordanian, the Gaza Strip under Egyptian control, Jerusalem was divided. The lines are called “armistice lines” or “Green Line” — the agreements explicitly stated that nothing had been decided about future borders. A Palestinian state did not come into being.",
+    },
+    {
+      label: "after 1967",
+      hinweis: "In June 1967 the war lasted six days. Afterwards Israel additionally controlled the West Bank with East Jerusalem, the Gaza Strip, the Golan Heights and the entire Sinai Peninsula. Sinai returned to Egypt in 1982 after the peace treaty; Israel withdrew from Gaza in 2005. Since then the West Bank and East Jerusalem have been occupied — under international law, politically and in the everyday life of the people there, that is precisely the core of today’s conflict. The map shows the situation; it does not judge it.",
+    },
+  ],
 };
 
 module.exports = israelPalaestina;

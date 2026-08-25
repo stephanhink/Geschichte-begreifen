@@ -1001,6 +1001,20 @@ const zweiterWeltkrieg = {
       erklaerung: 'It was signed on 7 May in Reims and again on the night of 9 May in Berlin-Karlshorst; it entered into force on 8 May at 11.01 p.m. In the Pacific, the war continued until the Japanese capitulation in September 1945.',
     },
   ],
+  karteHinweise: [
+    {
+      label: "1939–1941",
+      hinweis: "On 1 September 1939 the Wehrmacht attacked Poland; two days later Britain and France declared war on Germany. By the summer of 1941 the German sphere of power reached from the North Cape to Greece and from the Atlantic to the Soviet border. The Soviet Union stands on this phase as a treaty partner, not as an ally: the non-aggression treaty of 23 August 1939 — the Hitler-Stalin Pact — contained a secret additional protocol that divided Eastern Europe into spheres of interest; on 17 September 1939 the Red Army occupied the east of Poland. On 22 June 1941 Germany broke the treaty and attacked the Soviet Union. Dated states, without judgement.",
+    },
+    {
+      label: "1942–1944",
+      hinweis: "The area shows the greatest extent: the state of autumn 1942, when the Wehrmacht stood at the Volga and in the Caucasus and in November also marched into the previously unoccupied south of France. Its eastern border is a front line, not a state border. From here on everything ran in the other direction: on 2 February 1943 the 6th Army capitulated in Stalingrad, in May 1943 the war in North Africa ended (which lies below the lower edge of the map), in July 1943 the Western Allies landed on Sicily and the last great German offensive failed at Kursk, on 6 June 1944 they landed in Normandy, in summer 1944 Army Group Centre collapsed. Leningrad, Moscow and Stalingrad the Wehrmacht never took.",
+    },
+    {
+      label: "1945",
+      hinweis: "On 8 May 1945 the unconditional capitulation of the Wehrmacht came into force. Germany continued to exist as a state, but without a government: the four victorious powers assumed supreme authority and divided the country into four occupation zones; Berlin, in the middle of the Soviet zone, was administered jointly. The territories east of the Oder and Neisse came under Polish, northern East Prussia under Soviet administration — from them twelve to fourteen million Germans fled or were expelled. Austria was restored and likewise divided into four zones. The map shows the state after the Potsdam Conference of August 1945; the zone borders are approximate.",
+    },
+  ],
 };
 
 module.exports = zweiterWeltkrieg;

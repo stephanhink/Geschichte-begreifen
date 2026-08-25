@@ -645,6 +645,20 @@ const usaUnabhaengigkeit = {
       erklaerung: 'The publicist John L. O’Sullivan coined the phrase to make the expansion of the USA westward appear as an inevitable fate rather than a decision — a self-justification whose effect reached into the rhetoric of the late 19th century.',
     },
   ],
+  karteHinweise: [
+    {
+      label: "1776",
+      hinweis: "The Thirteen Colonies hang like a narrow strip on the Atlantic coast — the rest of the continent was claimed by others. Spain held Louisiana, Texas, New Mexico and California; Florida was British, but not rebellious. And west of the Appalachians lived nations with their own land: the Haudenosaunee in the north, in the southeast Cherokee, Muskogee, Choctaw, Chickasaw and Seminole. Between them and the Mississippi no area is deliberately drawn — in 1776 there was no border there that could be seriously drawn, only land that was already inhabited.",
+    },
+    {
+      label: "1830–1839",
+      hinweis: "The USA have grown: the Louisiana Purchase of 1803 and Florida 1821 lie in between, the border now reaches to the Rocky Mountains. Mexico, independent from Spain since 1821, still holds Texas, New Mexico and California. And in today’s Oklahoma the Indian Territory comes into being — the forced destination of the Indian Removal Act of 1830. The map no longer shows here the lands of the southeastern nations from phase 1: precisely this disappearance, with all the violence and death it cost, is what the “Trail of Tears” motion below tells.",
+    },
+    {
+      label: "1890",
+      hinweis: "The USA now reach from Atlantic to Pacific — the same outline as the continent itself. What remains of the lands of the Indigenous peoples are two small, dated areas: the Indian Territory, which only ceases to exist as a separate area in 1907, and the Pine Ridge Reservation of the Lakota, founded in 1889 — a few kilometres from Wounded Knee, where in December 1890 the last great chapter of the Indian Wars ends.",
+    },
+  ],
 };
 
 module.exports = usaUnabhaengigkeit;

@@ -463,6 +463,20 @@ const china = {
       erklaerung: 'Papyrus from Egypt is something different from paper. Real paper comes from China and took about a thousand years to reach Europe. Without that long road there would be no European printing — and without it, hardly the modern age as we know it.',
     },
   ],
+  karteHinweise: [
+    {
+      label: "221 BC",
+      hinweis: "After 250 years of war between the Warring States, one victor remains: Qin. The first emperor unites the land between the Yellow River and the Yangtze — and immediately makes everything the same: one script, one measure, one axle width, one wall in the north.",
+    },
+    {
+      label: "100 AD",
+      hinweis: "The Han dynasty at its height — roughly as large and as populous as the Roman Empire at the same time. Through the narrow Hexi Corridor it reaches into the Tarim Basin and thus keeps the Silk Road open.",
+    },
+    {
+      label: "750 AD",
+      hinweis: "The Tang dynasty in full bloom: Chang’an, with about one million people, is the largest city in the world, and the Silk Road is busier than ever. In the streets of the capital one hears Sogdian, Persian, Turkish, Sanskrit. Tap the route — it does not end at the edge of the map.",
+    },
+  ],
 };
 
 module.exports = china;

@@ -538,6 +538,24 @@ const mittelalter = {
       erklaerung: 'Nobody in the Middle Ages would have called himself "medieval" — the word means "the time in between" and comes from people who wanted their own present to look bright. Two tests of the matter: the great witch hunts took place only between 1560 and 1630, that is, in the modern age. And that the earth is a sphere was known to every educated person in the Middle Ages.',
     },
   ],
+  karteHinweise: [
+    {
+      label: "c. 800",
+      hinweis: "At the beginning stands an empire that encompasses almost the entire West — and that does not last a hundred years. Beside it lie the two powers that Europe will work through over the coming centuries: the caliphate in the south, which holds the entire Mediterranean shore, and Byzantium in the east, where the emperor sits who considers himself the only one. The small strip in the middle of Italy is the Papal States — from here the pope will later challenge the empire.",
+    },
+    {
+      label: "c. 1200",
+      hinweis: "Charles’s empire has long since been divided: from the western part becomes France, from the eastern part the Holy Roman Empire. It is the age of the cathedrals, the first universities and the struggle between emperor and pope. On the Levant lie the Crusader states — and what is left of them in 1200 says more than any narrative: a coastal strip. Jerusalem itself has been lost again since 1187.",
+    },
+    {
+      label: "c. 1500",
+      hinweis: "In two generations everything changes: in 1453 the Ottomans take Constantinople — the Eastern Roman Empire, which had existed for over a thousand years, is at an end. Around 1450 Gutenberg prints in Mainz with movable type. In 1492 Granada falls, and in the same year Columbus sails west. Look at where the arrow runs out of the picture: precisely there Europe stops taking itself for the world.",
+    },
+    {
+      label: "1618",
+      hinweis: "A hundred years after Luther’s theses, Europe is divided — no longer into empires but into confessions. The edge between the two areas is the coarsest line on this map, and it is deliberately coarse: in reality both often lay in the same country, sometimes in the same village. Bohemia, for example, was predominantly Protestant and yet lies here in the Catholic part — and precisely there, in Prague, the war begins in 1618.",
+    },
+  ],
 };
 
 module.exports = mittelalter;

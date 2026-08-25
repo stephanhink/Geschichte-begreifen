@@ -507,6 +507,24 @@ const koenigreiche = {
       erklaerung: "That is why one reads these books like a letter whose sender one knows: each wrote for someone and with an intention. According to Einhard, Charlemagne tried to learn to write even as an old man and put writing tablets under his pillow — he no longer quite succeeded.",
     },
   ],
+  karteHinweise: [
+    {
+      label: "476",
+      hinweis: "The last Western Roman emperor is deposed, and the empire has not disappeared but been divided. Seven polities where there was one. Look at how small the Frankish realm is here — a strip around Tournai. And look at how large the Visigothic kingdom is. In 476 nobody would have bet on which of the two would end up shaping Europe.",
+    },
+    {
+      label: "c. 526",
+      hinweis: "Half a century later the kingdoms stand. Clovis has defeated Syagrius (486), had himself baptised (c. 496) and driven the Visigoths out of Gaul (507) — his realm now reaches from Brittany across the Rhine. In Ravenna rules Theoderic, and he rules in the Roman manner: with Roman officials, Roman law and a senate that he lets continue working. The borders are drawn smoother than they were — a kingdom of this time was a web of oaths of loyalty, not a surveyed territory.",
+    },
+    {
+      label: "c. 600",
+      hinweis: "In between lies a setback that the map cannot show: Emperor Justinian reconquered North Africa (534) and Italy (554) — and devastated Italy so thoroughly in the process that in 568 it offered the Lombards hardly any resistance. What remains is a patchwork: Lombards in the north and centre, Constantinople in Ravenna, Rome and the south. In the north Britain has become Christian again — in 597 Augustine landed in Kent.",
+    },
+    {
+      label: "800",
+      hinweis: "On Christmas Day 800, Pope Leo III places an imperial crown on the head of the Frankish king Charles in Rome. From the smallest patch of 476 has become the largest area of this map — from the Elbe to the Ebro. But two things also stand in the picture: Spain has been for the most part Islamic since 711, and in Constantinople there still sits an emperor who wants to know nothing of a second one. From his point of view, 25 December 800 is not a feast day but an act of presumption.",
+    },
+  ],
 };
 
 module.exports = koenigreiche;

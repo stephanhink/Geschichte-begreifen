@@ -645,5 +645,20 @@ const usaWeltmacht = {
       erklaerung: 'The first atomic bomb hit Hiroshima on 6 August 1945, and three days later the second hit Nagasaki. By the end of the year an estimated 110,000 to 210,000 people had died, most of them civilians.',
     },
   ],
+  karteHinweise: [
+    {
+      label: "1890",
+      hinweis: "The USA are a continental power: the country reaches from sea to sea, the census declares the frontier closed in this year, and industry has already overtaken Britain in steel and coal. In the Pacific, by contrast, the USA own almost nothing — only Alaska, bought from Russia in 1867, and a right of use on Pearl Harbor, which the independent Kingdom of Hawaii granted them in 1887. Everything else belongs to others: the Philippines and the Marianas to Spain, the Marshall Islands since 1885 to the German Empire, Siberia and Sakhalin to Russia. Korea is still an independent kingdom, China the empire of the Qing — both areas run far beyond the left edge of the map.",
+    },
+    {
+      label: "1917",
+      hinweis: "Nineteen years later the map is a different one. The Spanish-American War of 1898 brought the USA the Philippines, Guam and Puerto Rico; in the same year Hawaii was annexed, in 1899 Wake. Midway has belonged to them since 1867. From a country without colonies has become a colonial power — and from the Pacific an American forward zone. Japan has gone the same way: Taiwan 1895, southern Sakhalin 1905, Korea 1910, and since 1914 it holds the German island territories north of the equator occupied. Two rising powers now share one ocean. In Europe the USA enter the world war in 1917; in Russia the tsarist empire falls in this year.",
+    },
+    {
+      label: "1945",
+      hinweis: "The Pacific War is decided. Japan conquered almost the entire western Pacific in 1941/42 — Guam, Wake, the Philippines, parts of the Aleutians — and lost it again between 1943 and 1945. After the capitulation of 2 September 1945, the four main islands remain to the empire: Taiwan falls back to China, Korea is divided at the 38th parallel into a Soviet and an American occupation zone, southern Sakhalin and the Kuriles go to the Soviet Union, and the Marianas, the Marshall Islands and Okinawa come under American administration. The Philippines are still US territory — they become independent on 4 July 1946. It is the state of a single year, not a result for all time.",
+    },
+  ],
 };
+
 module.exports = usaWeltmacht;

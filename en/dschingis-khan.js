@@ -482,6 +482,24 @@ const dschingisKhan = {
       erklaerung: 'The Mongols lived off tolls, so they secured the roads. A Florentine merchant wrote around 1340 that the road to China was "quite safe, by day and by night". Along those same open routes, however, the Black Death also came to Europe.',
     },
   ],
+  karteHinweise: [
+    {
+      label: "1206",
+      hinweis: "At the kurultai at the source of the Onon, the assembled tribes proclaim Temüjin as Genghis Khan. What he rules is not an empire but a confederation: perhaps one million people, more horses than people, not a single city. Look at this spot closely — the next map is twenty-one years later.",
+    },
+    {
+      label: "1227",
+      hinweis: "In the year of Genghis Khan’s death the empire reaches from the Caspian Sea to the Yellow Sea. The Khwarezmian Empire, in 1219 still a great power with Samarkand and Bukhara, has disappeared. In China the advance ends at the Yellow River: the south still belongs to the Song — and will remain so for fifty years.",
+    },
+    {
+      label: "1259",
+      hinweis: "The greatest extent: from Korea to the Carpathians, from Siberia to the Persian Gulf. About twenty-four million square kilometres, a fifth of the earth’s land — never before has an empire held so much together, and never again afterwards. Four patches of colour, one empire: one Great Khan still applies to all.",
+    },
+    {
+      label: "1294",
+      hinweis: "At the death of Kublai Khan the empire is still huge — but it is no longer one. Four successor empires go their own ways, fight their own wars, adopt their own religions. In China Kublai rules as emperor of a Chinese dynasty, the Yuan, from Dadu — today’s Beijing. The steppe has become a province.",
+    },
+  ],
 };
 
 module.exports = dschingisKhan;

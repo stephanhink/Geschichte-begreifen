@@ -823,6 +823,20 @@ const dieKolonien = {
       erklaerung: 'Britain bought tea, silk and porcelain and had hardly a commodity China wanted — except opium. The treaties after the wars opened harbours, fixed tariffs, removed foreigners from Chinese jurisdiction and ceded Hong Kong. In China the time after is called "the century of humiliation".',
     },
   ],
+  karteHinweise: [
+    {
+      label: "1815",
+      hinweis: "Africa before the Scramble. Europe sits on the coasts — on a few ports, forts and islands, mostly where trade had been carried on for centuries, including in slaves. Almost nobody in Europe knows the interior of the continent: the course of the Niger is a riddle, the source of the Nile a bone of contention. Coloured here are the colonial powers with their territories AND the states of Africa and Asia — the Sokoto Caliphate, Bornu, Ashanti, Dahomey, Abyssinia, Buganda, Merina on Madagascar, the Sultanate of Oman, Morocco. They carry the same colour as the colonies because the app colours all areas of a phase alike; only the titles say who is who. Two things are important. First: empty remains where no rule with borders could be drawn for 1815 — the Sahara, the Congo Basin, the Kalahari. People lived there, but none of the polities shown had a border there. Second: the coastal strip of the Sultan of Zanzibar is drawn wider here than it was, otherwise it would have been thinner than the line around it. The remaining states of Europe stay empty; this chapter is about the colonial empires.",
+    },
+    {
+      label: "1885",
+      hinweis: "The year in which the Congo Conference came to an end in Berlin. It did not distribute Africa on a map — that is a widespread simplification — but it laid down the rules according to which it was distributed: whoever claims an area must occupy it and inform the other powers. After that everything went very fast. On this phase one sees the beginning: Algeria and Tunisia French, Egypt occupied by Britain since 1882, in the south the Cape Colony and Natal beside the Boer republics, in 1884/85 the first German protectorates, and in the middle an area that existed only once — the Congo Free State, private property of the Belgian King Leopold II, not a possession of Belgium. At the same time large African states are still on the map: Abyssinia, the Sokoto Caliphate, Ashanti, Dahomey, the empire of Samori Touré, the Mahdist state in Sudan, which took Khartoum in 1885, Madagascar, Zanzibar. None of them sat at the table in Berlin.",
+    },
+    {
+      label: "1914",
+      hinweis: "Twenty-nine years later. Of the states that stood on this map in 1815 and 1885, two remain in Africa: the Abyssinian Empire, which defeated an Italian army at Adwa in 1896, and Liberia. Everything else is a colony, protectorate or occupied territory. Britain administers a strip from Cairo to the Cape — with a gap called German East Africa. In 1908, after years of international criticism, the Congo Free State passed to the Belgian state and is now called the Belgian Congo. Two notes on reading this phase: what is coloured is claimed and administered territory — the map does not claim that administration reached into every last village. And the shared colour says nothing about who belongs to whom; Abyssinia here wears the same shade as the Belgian Congo. What one nevertheless sees is the statement of this chapter: how little of the states that were there in 1815 remains on this continent in 1914.",
+    },
+  ],
 };
 
 module.exports = dieKolonien;

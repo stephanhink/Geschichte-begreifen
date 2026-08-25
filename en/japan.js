@@ -432,6 +432,24 @@ const japan = {
       erklaerung: 'Already the first contact refutes the image of the astonished, backward Japan: in 1575 at Nagashino three thousand gunners fired volleys. Around 1600 there were presumably more firearms in Japan than in any European country.',
     },
   ],
+  karteHinweise: [
+    {
+      label: "c. 600",
+      hinweis: "The Yamato rulers govern from the plain around Nara: the south and centre of Honshu, Shikoku, Kyushu. The north belongs to the Emishi; Ezo in the northeast lies outside the known world. Everything new comes by sea — script, Buddhism, administration, all of it from China and via Korea.",
+    },
+    {
+      label: "1274 and 1281",
+      hinweis: "Kublai Khan, the Great Khan from the previous chapter, wants Japan too. Twice a fleet sets out from Korea, in 1281 additionally a second one from China. Twice a typhoon smashes the ships. Japan calls these storms “kamikaze” — divine wind — and draws a conclusion from them that resonates until 1945.",
+    },
+    {
+      label: "c. 1700",
+      hinweis: "All of Japan under one shogun: the Tokugawa rule from Edo, the emperor remains in Kyoto without power. Outwardly the country has been closed since 1639 — no departure, no foreign ships. Only on the island of Dejima near Nagasaki a window of 120 by 75 metres stays open.",
+    },
+    {
+      label: "1868",
+      hinweis: "Fifteen years after Perry’s arrival the shogunate is abolished, the emperor back at the head, the capital now called Tokyo. The areas change little — Ezo is incorporated as Hokkaido — but the country is a different one: it builds railways, factories, a constitution and a fleet.",
+    },
+  ],
 };
 
 module.exports = japan;

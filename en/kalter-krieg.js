@@ -976,6 +976,20 @@ const kalterKrieg = {
       erklaerung: 'Negotiated were two German states and the four victorious powers — hence the name. Article 6 expressly states that the right of the united Germany to belong to alliances remains unaffected; Article 7 ends the rights of the four powers. On 3 October 1990 Germany was again a state, on 31 August 1994 the last Soviet soldiers left the country.',
     },
   ],
+  karteHinweise: [
+    {
+      label: "1949",
+      hinweis: "Four years after the end of the war, two German states stand on the map: the Federal Republic (Basic Law of 23 May, first federal government in September) and the GDR (7 October). Berlin lies in the middle of GDR territory and is divided into four sectors; the blockade of the western sectors ended on 12 May 1949, eleven months after it began. On 4 April 1949 NATO had been founded — the USA, Canada and Iceland belong to it but lie outside this map section. A Warsaw Pact does not yet exist; it only comes in 1955; but the states east of the line are already under Soviet influence. Greece and Turkey are not yet NATO members, but have been receiving aid under the Truman Doctrine since 1947. Austria is still occupied by four powers. The Saarland was under French administration until 1957 — on this map it is counted with the Federal Republic; in 1949 it did not belong to it.",
+    },
+    {
+      label: "1961/62",
+      hinweis: "Now two alliances face each other: NATO, which the Federal Republic joined in 1955, and the Warsaw Pact, which came into being in the same year as a response — with the GDR as a member. Greece and Turkey have been in NATO since 1952; American Jupiter missiles stand in Turkey, and precisely these become part in October 1962 of the secret deal that ends the Cuban Missile Crisis. Cuba itself lies seven thousand kilometres west of this map. In Berlin a wall has been built since 13 August 1961; the border through Germany is 1,393 kilometres long. Austria has been neutral since 1955, the Soviet troops have withdrawn — so that existed too. Yugoslavia belongs to no bloc and in 1961 founds the Non-Aligned Movement together with India and Egypt.",
+    },
+    {
+      label: "1989–1991",
+      hinweis: "In two years the order of forty disappears. On 9 November 1989 the Wall opens; on 3 October 1990 the two German states are one again — regulated under international law in the Two Plus Four Treaty of 12 September 1990. On 1 July 1991 the Warsaw Pact dissolves, on 25 December 1991 Mikhail Gorbachev resigns and the Soviet Union ceases to exist; Estonia, Latvia and Lithuania are already independent again in the same year. The dark line across Europe still stands on this phase, although it no longer exists — it shows what has disappeared. What came after is no longer part of this chapter: in Yugoslavia the disintegration begins in 1991, and the question of how the relationship between Russia and the West develops is taken up by the next chapter.",
+    },
+  ],
 };
 
 module.exports = kalterKrieg;

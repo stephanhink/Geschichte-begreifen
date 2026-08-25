@@ -87,7 +87,7 @@ function mdInline(txt) {
 // ---- Karten als PNG (Cache in /tmp/karten-cache; DA laedt die Karte aus
 // dem DE-Modul, die Bildunterschriften aus den karteHinweisen) ----
 const kartenskript = '/Users/openclaw/.hermes/skills/autonomous-ai-agents/geschichte-begreifen-workflow/scripts/karten-vorschau.js';
-const kartenCache = '/tmp/karten-cache';
+const kartenCache = SPRACHE === 'en' ? '/tmp/karten-cache-en' : '/tmp/karten-cache';
 function kartenPNGs(modul) {
   const out = [];
   let karte = modul.karte;
@@ -109,9 +109,9 @@ function kartenPNGs(modul) {
     }
     if (fs.existsSync(cache)) {
       fs.copyFileSync(cache, datei);
-      const hinweis = SPRACHE === 'da' && modul.karteHinweise && modul.karteHinweise[i]
+      const hinweis = (SPRACHE === 'da' || SPRACHE === 'en') && modul.karteHinweise && modul.karteHinweise[i]
         ? modul.karteHinweise[i].hinweis : p.hinweis;
-      const label = SPRACHE === 'da' && modul.karteHinweise && modul.karteHinweise[i]
+      const label = (SPRACHE === 'da' || SPRACHE === 'en') && modul.karteHinweise && modul.karteHinweise[i]
         ? modul.karteHinweise[i].label : p.label;
       out.push(`<figure class="karte"><figcaption><strong>${mdInline(label)}</strong> — ${mdInline(hinweis)}</figcaption><img src="images/${name}" alt="${mdInline(label)}"/></figure>`);
     }
@@ -128,12 +128,12 @@ function kapitelHTML(modul, nummer) {
   }).join('\n');
 
   const karten = kartenPNGs(modul).join('\n');
-  const kartenBlock = karten ? `<section class="karten"><h2>Geschichte in Bewegung</h2>${karten}</section>` : '';
+  const kartenBlock = karten ? `<section class="karten"><h2>${UI.bewegung}</h2>${karten}</section>` : '';
 
   const quiz = modul.quiz.map((q, i) => {
     const antworten = q.antworten.map((a, j) =>
       `<li class="${j === q.richtig ? 'richtig' : ''}">${mdInline(a)}${j === q.richtig ? ' ✓' : ''}</li>`).join('');
-    return `<div class="quizfrage"><p class="quizfrage-text"><strong>Frage ${i + 1}:</strong> ${mdInline(q.frage)}</p><ul>${antworten}</ul><p class="erklaerung">${mdInline(q.erklaerung)}</p></div>`;
+    return `<div class="quizfrage"><p class="quizfrage-text"><strong>${UI.frageN.replace('%d', i + 1)}</strong> ${mdInline(q.frage)}</p><ul>${antworten}</ul><p class="erklaerung">${mdInline(q.erklaerung)}</p></div>`;
   }).join('\n');
 
   let autorenwort = '';
@@ -152,15 +152,15 @@ function kapitelHTML(modul, nummer) {
   return `<section class="kapitel">
 <h1 class="kapitel-titel">${nummer}. ${mdInline(modul.titel)}</h1>
 <p class="epoche">${mdInline(modul.epoche)}</p>
-<section class="aufhaenger"><h2>Die Frage</h2><p class="frage">${mdInline(modul.aufhaenger.frage)}</p>${md(modul.aufhaenger.text)}</section>
+<section class="aufhaenger"><h2>${UI.frage}</h2><p class="frage">${mdInline(modul.aufhaenger.frage)}</p>${md(modul.aufhaenger.text)}</section>
 ${kartenBlock}
-<h2>Die Blickwinkel</h2>
+<h2>${UI.blickwinkel}</h2>
 ${perspektiven}
-<section class="synthese"><h2>Synthese</h2>${md(modul.synthese)}</section>
-<section class="urteil"><h2>Dein Urteil</h2><p class="frage">${mdInline(modul.urteil.frage)}</p><p>${mdInline(modul.urteil.hinweis)}</p></section>
-<section class="quiz"><h2>Stimmt's?</h2>${quiz}</section>
+<section class="synthese"><h2>${UI.synthese}</h2>${md(modul.synthese)}</section>
+<section class="urteil"><h2>${UI.urteil}</h2><p class="frage">${mdInline(modul.urteil.frage)}</p><p>${mdInline(modul.urteil.hinweis)}</p></section>
+<section class="quiz"><h2>${UI.stimmts}</h2>${quiz}</section>
 ${autorenwort}
-<p class="zurueck"><a href="inhalt.xhtml">→ Inhaltsverzeichnis</a></p>
+<p class="zurueck"><a href="inhalt.xhtml">${UI.zurueck}</a></p>
 </section>`;
 }
 
@@ -179,6 +179,12 @@ function vorwortHTML() {
 }
 
 // ---- Cover ----
+const UI = {
+  de: { frage: 'Die Frage', blickwinkel: 'Die Blickwinkel', synthese: 'Synthese', urteil: 'Dein Urteil', stimmts: 'Stimmt\'s?', frageN: 'Frage %d:', bewegung: 'Geschichte in Bewegung', inhalt: 'Inhaltsverzeichnis', zurueck: '→ Inhaltsverzeichnis', vorwort: '→ Vorwort' },
+  da: { frage: 'Spørgsmålet', blickwinkel: 'Synsvinklerne', synthese: 'Syntese', urteil: 'Din vurdering', stimmts: 'Er det rigtigt?', frageN: 'Spørgsmål %d:', bewegung: 'Historie i bevægelse', inhalt: 'Indholdsfortegnelse', zurueck: '→ Indholdsfortegnelse', vorwort: '→ Forord' },
+  en: { frage: 'The Question', blickwinkel: 'The Perspectives', synthese: 'Synthesis', urteil: 'Your Verdict', stimmts: 'True or False?', frageN: 'Question %d:', bewegung: 'History in Motion', inhalt: 'Contents', zurueck: '→ Contents', vorwort: '→ Foreword' },
+}[SPRACHE];
+
 function coverHTML() {
   const coverDatei = SPRACHE === 'de' ? 'cover-final.png' : `cover-${SPRACHE}.png`;
   const cover = `${BUCH}/${coverDatei}`;
@@ -203,11 +209,11 @@ function build() {
     const m = ladeModul(id);
     return `<li><a href="kapitel-${i + 1}.xhtml">${i + 1}. ${m.titel}</a></li>`;
   }).join('\n');
-  const inhaltHTML = `<section class="inhalt"><h1>Inhaltsverzeichnis</h1>
+  const inhaltHTML = `<section class="inhalt"><h1>${UI.inhalt}</h1>
 <ol>${inhaltListe}</ol>
-<p class="zurueck"><a href="vorwort.xhtml">→ Vorwort</a></p>
+<p class="zurueck"><a href="vorwort.xhtml">${UI.vorwort}</a></p>
 </section>`;
-  kapitel.push({ datei: 'inhalt.xhtml', html: inhaltHTML, titel: 'Inhaltsverzeichnis' });
+  kapitel.push({ datei: 'inhalt.xhtml', html: inhaltHTML, titel: UI.inhalt });
   kapitel.push({ datei: 'vorwort.xhtml', html: vorwortHTML(), titel: 'Vorwort' });
 
   ids.forEach((id, i) => {
@@ -312,7 +318,7 @@ function pdfErzeugen() {
   const coverDatei = SPRACHE === 'de' ? 'cover-final.png' : `cover-${SPRACHE}.png`;
   const cover = `<section class="cover"><img src="images/${coverDatei}" alt="Cover"/></section>`;
   const inhaltListeOhne = ids.map((id, i) => `<li>${i + 1}. ${ladeModul(id).titel}</li>`).join('\n');
-  const inhaltOhne = `<section class="inhalt"><h1>Inhaltsverzeichnis</h1>\n<ol>${inhaltListeOhne}</ol></section>`;
+  const inhaltOhne = `<section class="inhalt"><h1>${UI.inhalt}</h1>\n<ol>${inhaltListeOhne}</ol></section>`;
   const vorwort = vorwortHTML();
   const marker = ids.map((_, i) => `<span style="color:transparent;font-size:1px">#START-${String(i + 1).padStart(2, '0')}#</span>`);
   const kapitel = ids.map((id, i) => marker[i] + kapitelHTML(ladeModul(id), i + 1)).join('\n');
@@ -394,7 +400,7 @@ EOF`).toString().trim());
     const s = seiten[String(i + 1)];
     return `<li>${i + 1}. ${ladeModul(id).titel} <span class="seite">— Seite ${s || '?'}</span></li>`;
   }).join('\n');
-  const inhalt = `<section class="inhalt"><h1>Inhaltsverzeichnis</h1>\n<ol>${inhaltListe}</ol></section>`;
+  const inhalt = `<section class="inhalt"><h1>${UI.inhalt}</h1>\n<ol>${inhaltListe}</ol></section>`;
   const html2 = html1.replace(inhaltOhne, inhalt).replace(/#START-\d\d#/g, '');
   render(html2, ziel, true);
   console.log('PDF:', ziel, fs.statSync(ziel).size, 'Bytes');

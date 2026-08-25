@@ -712,6 +712,20 @@ const revolutionUndNapoleon = {
       erklaerung: 'On Saint Helena, Napoleon called the Civil Code his true legacy — Waterloo had erased the forty battles he had won. It continued to apply in many places, even after the French troops had withdrawn. France sold Louisiana in 1803 in a separate treaty.',
     },
   ],
+  karteHinweise: [
+    {
+      label: "1789",
+      hinweis: "Europe on the eve of the Revolution: a continent of kingdoms in which almost everywhere a prince by the grace of God rules. The pale line through the middle is the border of the Holy Roman Empire — and honestly, not much more of the Empire can be drawn: within this line lay more than three hundred polities with their own law, their own coinage, their own faith. Only what really had borders is coloured. Two things deserve a second look: Poland-Lithuania still stands on the map here — six years later this state no longer exists. And Corsica has belonged to France since 1768; a year later Napoleon Bonaparte is born there. Because all areas carry the same colour, neighbours optically merge into a bloc; only the titles say who is who.",
+    },
+    {
+      label: "1805–1812",
+      hinweis: "The empire at its height. The large bloc reaches from the mouth of the Elbe to Rome — that is territory administered directly from Paris, with French law, French administration and French conscription. Beside it stand the states that were ruled by Napoleon’s relatives or allies: the Kingdom of Italy, Naples under his brother-in-law Murat, Spain under his brother Joseph, the Confederation of the Rhine, the Duchy of Warsaw. Two things are important here. First: “dominated” does not mean “pacified” — in Spain a people’s war has been raging since 1808, which this colour does not show. Second: Moscow lies in NO phase within French territory. Napoleon stood in the city in September 1812; it was never annexed. The campaign is therefore an arrow and not an area — the difference between “an army stands there” and “the land belongs to it” is the core of this chapter.",
+    },
+    {
+      label: "1815",
+      hinweis: "Europe after Waterloo, as the Congress of Vienna arranged it. France stands again within the borders of 1792 — the country was punished remarkably mildly because the victors wanted a lasting peace and not an act of revenge. Otherwise almost nothing is as in 1789: the pale line in the background belongs to an empire that has not existed since 1806; in its place comes the German Confederation of 39 states. Prussia has the Rhineland and half of Saxony, Austria Lombardy-Venetia, Russia the Kingdom of Poland. The Republic of Venice has disappeared, the Netherlands are a kingdom, Poland-Lithuania does not return. And the Code civil remains in use, even where the French troops have been driven out. Caution with the colours: the 39 confederate states are summarised here as two areas — 39 individual outlines would no longer be legible on this scale.",
+    },
+  ],
 };
 
 module.exports = revolutionUndNapoleon;

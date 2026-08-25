@@ -361,6 +361,24 @@ const roemischesReich = {
       erklaerung: 'The Romance languages grew out of spoken Latin. And when you say "wall", "street" or "wine", you are using Latin words — they came to us through the Romans and simply stayed.',
     },
   ],
+  karteHinweise: [
+    {
+      label: "264 BC",
+      hinweis: "Before the first war against Carthage: Rome rules the peninsula up to the Rubicon — not a foot of ground outside Italy. Sicily, Sardinia and Corsica only come with the victory over Carthage (241 and 238 BC).",
+    },
+    {
+      label: "146 BC",
+      hinweis: "Carthage is destroyed, Corinth as well. Rome holds both shores of the western Mediterranean, plus Greece and the coasts of Hispania — the sea becomes the “mare nostrum”, our sea.",
+    },
+    {
+      label: "117 AD",
+      hinweis: "The greatest extent, under Emperor Trajan: from Britain to Egypt, from the Atlantic to the Persian Gulf. In the north a single line holds the empire together — Rhine, Limes, Danube.",
+    },
+    {
+      label: "476 AD",
+      hinweis: "In the west, of a world empire Italy is left; Britain, Gaul, Hispania and Africa have fallen to new rulers. The east, by contrast, stands — and will stand for almost another thousand years. “Decline” is therefore already an interpretation.",
+    },
+  ],
 };
 
 module.exports = roemischesReich;

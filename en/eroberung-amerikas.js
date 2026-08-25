@@ -939,6 +939,28 @@ const eroberungAmerikas = {
       erklaerung: 'Silver was found in the mountain of Potosí in today\'s Bolivia in 1545. Around 1610 about 160,000 people lived there at 4000 meters of altitude — more than in London. It was extracted in the mita, a forced labor service for which whole villages had to provide their men in turn. Via Lima, Panama and Havana the silver went to Seville — and a large part of it from there onwards to China.',
     },
   ],
+  karteHinweise: [
+    {
+      label: "c. 1492",
+      hinweis: "Two worlds in one picture that know nothing of each other. On the left the Aztec Empire and the Inca Empire — two great powers with millions of subjects, roads, taxes and cities, of which Tenochtitlan was larger than any city in Europe except perhaps Constantinople. On the right the crowns of Castile and Aragon, which have only just taken Granada, and Portugal, which is looking for the route around Africa. Between them lies an ocean that no one believes crossable. All four areas have the same colour: on this map none of these powers is the more important one.",
+    },
+    {
+      label: "1492–1504",
+      hinweis: "Columbus sails across the Atlantic four times and dies in 1506 in the conviction that he had been to Asia. What Spain really possesses in these twelve years is barely visible on the map: a single island. Hispaniola becomes the first base, Santo Domingo in 1496 the first permanent European city of the New World. In Europe no one yet knows anything of the two great empires in the west — and there, no one yet knows that someone has come.",
+    },
+    {
+      label: "1519–1521",
+      hinweis: "From Cuba, Cortés sails west in 1519 with about 500 men. Look at the line: the route leads via Veracruz and Tlaxcala — and in Tlaxcala lies the reason why 500 men become an army. The Tlaxcalans had been warred against for decades by the Triple Alliance and supplied tens of thousands of warriors. On 13 August 1521 Tenochtitlan falls after 93 days of siege. A year earlier smallpox had reached the city, against which no one there was protected.",
+    },
+    {
+      label: "1532–1533",
+      hinweis: "Eleven years later the same in the south — with one difference: the disease was there before the Spaniards. Around 1527 the Inca Huayna Capac and his heir probably died of the smallpox that came from the north; afterwards his sons Atahualpa and Huáscar fought a civil war. Into this country Pizarro comes in 1532 with 168 men. On 16 November he takes Atahualpa prisoner in Cajamarca; in November 1533 he enters Cusco. Resistance continues: the last Inca state in Vilcabamba holds out until 1572.",
+    },
+    {
+      label: "c. 1600",
+      hinweis: "A hundred years after the first voyage, two viceroyalties have grown out of it, and a stream of silver runs across the Atlantic. These areas are deliberately drawn with restraint: they show what was administered, not what was claimed. On paper almost the whole double continent belonged to Spain; in reality it ruled the old empires of the Aztecs and Incas, the coasts and the silver roads. North America, the Amazon Basin and the south remain empty — millions of people lived there outside any European rule.",
+    },
+  ],
 };
 
 module.exports = eroberungAmerikas;

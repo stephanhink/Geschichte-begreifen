@@ -781,6 +781,20 @@ const russlandWesten = {
       erklaerung: 'Finland had maintained its non-alignment since 1945, Sweden since 1814. In Finland support for accession rose within weeks from about a fifth to over two thirds. NATO’s land border with Russia has thereby more than doubled.',
     },
   ],
+  karteHinweise: [
+    {
+      label: "1999 — the first eastern enlargement",
+      hinweis: "Eight years after the end of the Soviet Union, Poland, the Czech Republic and Hungary join NATO (12 March 1999). Russia has shrunk, but it is not an adversary: in 1997 Moscow and Brussels signed the NATO-Russia Founding Act. The USA and Canada, the two largest members, lie outside this map section.",
+    },
+    {
+      label: "2014 — Crimea and Donbas",
+      hinweis: "Two further enlargements lie in between: in 2004 Estonia, Latvia, Lithuania, Slovakia, Slovenia, Romania and Bulgaria joined, in 2009 Albania and Croatia. Since 2004 NATO has had a land border with Russia. In March 2014 Russia annexes Crimea; in spring the war in the Donbas begins.",
+    },
+    {
+      label: "2022–2024 — the war of aggression and the Nordic enlargement",
+      hinweis: "On 24 February 2022 Russia attacks Ukraine in full force. The front on this map is an approximate state of 2024, not a fixed condition. And it shows a consequence that nobody in Moscow had planned: Finland (2023) and Sweden (2024) give up their decades-long non-alignment and join NATO.",
+    },
+  ],
 };
 
 module.exports = russlandWesten;

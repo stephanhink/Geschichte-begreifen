@@ -554,6 +554,20 @@ const aufstiegAsiens = {
       erklaerung: 'When semiconductors from Taiwan became scarce in 2021, German car plants went on short-time work — a single missing component from a single country sufficed. Exactly this close interdependence that makes Germany an export power makes it vulnerable at the same time.',
     },
   ],
+  karteHinweise: [
+    {
+      label: "1955–1968 — Reconstruction and the Economic Miracle",
+      hinweis: "Ten years after the war, Western Europe and Japan are growing faster than ever before: the Federal Republic by about 8 percent a year, Japan by about 9. At this point South Korea, Taiwan and Singapore are poor countries — South Korea reached around 100 dollars per capita in 1961 and thus lay below Ghana. The world’s largest economy lies outside this map section: the USA account for about 40 percent of the world economy around 1960. And once again: the area shows land, not weight — the weight is in the titles.",
+    },
+    {
+      label: "1990 — Japan’s peak and the four tigers",
+      hinweis: "In 1990 Japan accounts for about 14 percent of the world economy — the highest share the country ever had. The four “tiger states” South Korea, Taiwan, Hong Kong and Singapore have halved the gap to Europe within one generation. Twelve years after the reforms began, China is still small: about 2 percent of the world economy. Germany has been one state again since 3 October 1990 — it is the only area on this map that grows between two phases.",
+    },
+    {
+      label: "2024 — the new balance of power",
+      hinweis: "The People’s Republic of China has been the world’s second-largest economy since 2010, and India the most populous country since 2023. In 2023 Germany moved back up to third place — not because it had grown, but because the yen had fallen. The USA still lie outside this map section and still in first place, with about a quarter of the world economy. And the area still shows land, not weight: China’s territory is twenty-seven times as large as Germany’s, its economic output about four times.",
+    },
+  ],
 };
 
 module.exports = aufstiegAsiens;

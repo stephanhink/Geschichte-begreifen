@@ -770,6 +770,20 @@ const weimarNs = {
       erklaerung: 'The NSDAP never achieved a majority in a free election — in July 1932 it reached 37.4 percent, in November 33.1. Hitler came into office through the appointment of the Reich President, arranged by conservatives who believed they could frame him in.',
     },
   ],
+  karteHinweise: [
+    {
+      label: "1919",
+      hinweis: "The National Assembly meets in Weimar because there is fighting in the streets of Berlin. On 28 June 1919 the German government signs the Treaty of Versailles; on 11 August the constitution is promulgated. The map shows the borders that resulted from it — some of them were only finally drawn later: North Schleswig after the plebiscite of 1920, Upper Silesia after the vote of 1921 in the year 1922. The Rhineland is occupied, the Saar Territory is placed under the League of Nations, Danzig a free city, the Memel Territory separated. Dated states, without judgement — what one thinks of them, nobody decides for you.",
+    },
+    {
+      label: "1924–1929",
+      hinweis: "The same borders, a different situation. The Rentenmark has ended the inflation, the Dawes Plan has reorganised the reparations, the Treaty of Locarno of 1925 has relaxed the relationship with France and Belgium; in 1926 Germany becomes a member of the League of Nations. Of all this, one thing is to be seen on the map: the Cologne Zone in the north of the Rhineland is evacuated in January 1926, so the occupied area has become smaller. The Memel Territory has belonged to Lithuania since 1923/24. Berlin, Frankfurt and Dessau become addresses of art and science in these years.",
+    },
+    {
+      label: "1933",
+      hinweis: "On 30 January 1933 Reich President Hindenburg appoints Adolf Hitler Reich Chancellor. Nothing has changed in the national territory since 1919 — the last foreign military left the Rhineland on 30 June 1930, five years earlier than provided for in the treaty, and that is why the dark area in the west is missing. What has changed stands not on the map but in the law gazettes: since 1930 the country has been governed by emergency decrees, the Reichstag has been dissolved three times, and in Prussia a commissioner appointed by the Reich has governed since July 1932.",
+    },
+  ],
 };
 
 module.exports = weimarNs;

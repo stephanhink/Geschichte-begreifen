@@ -602,6 +602,20 @@ const wegZumErstenWeltkrieg = {
       erklaerung: 'The Schlieffen Plan required the advance through Belgium in order to attack France quickly. The breach of Belgian neutrality gave Great Britain the immediate occasion for its entry into the war.',
     },
   ],
+  karteHinweise: [
+    {
+      label: "1871",
+      hinweis: "The German Empire has existed since January 1871 — the constitution came into force on 1 January, the imperial proclamation followed on 18 January in the Hall of Mirrors at Versailles. The map shows five great powers side by side — but as yet no fixed alliance blocs. Bismarck’s Dual Alliance with Austria-Hungary only comes in 1879. Bosnia-Herzegovina is still Ottoman, Serbia a small kingdom at the edge of the map.",
+    },
+    {
+      label: "1907",
+      hinweis: "After the Triple Entente of 1907, two alliance blocs face each other: the Central Powers (German Empire, Austria-Hungary, nominally also Italy in the Triple Alliance) and the Entente (France, Russia, Britain). Austria-Hungary has administered Bosnia-Herzegovina since 1878 — the area is therefore larger than in 1871. Serbia is independent, but still small.",
+    },
+    {
+      label: "1914",
+      hinweis: "The same blocs as in 1907 — but the Balkans have changed. Serbia has grown considerably after the Balkan Wars of 1912/13, the Ottoman Empire has shrunk to a narrow strip around Constantinople. Exactly between the larger Serbia and Austria-Hungary’s Bosnia lies Sarajevo — the dated states show the situation before the assassination; they do not judge it.",
+    },
+  ],
 };
 
 module.exports = wegZumErstenWeltkrieg;

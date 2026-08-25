@@ -527,6 +527,28 @@ const germanen = {
       erklaerung: 'The Franks had their law written down in Latin; Theodoric ruled Italy with Roman officials. Whoever wants to destroy something does not afterwards carefully rebuild it — that is one of the strongest arguments against the word “downfall.” In Britain it was different: There Latin disappeared, and from the name of the Angles came England.',
     },
   ],
+  karteHinweise: [
+    {
+      label: "c. 100 AD",
+      hinweis: "The dark line is the border: Rhine, Limes, Danube. To the left of it lies an empire with roads, taxes and governors. To the right the map is empty — not because nobody lived there, but because there was no empire with borders there. Rome called the land “Germania magna” and its inhabitants “barbarians”, without ever knowing exactly how far it reaches.",
+    },
+    {
+      label: "375–378",
+      hinweis: "From the east something sets in motion. The Huns overrun the Goths at the Black Sea; tens of thousands stand at the Danube in 376 and ask to be admitted to the empire. In 378 a Roman army falls at Adrianople, together with the emperor. The border still stands — but it no longer holds what it promises.",
+    },
+    {
+      label: "406–455",
+      hinweis: "On New Year’s Eve 406, Vandals, Alans and Suebi cross the Rhine; in 410 the Visigoths plunder Rome, in 439 the Vandals take Carthage and with it the grain, in 455 Rome is plundered a second time. In the interior of the empire now lies Attila’s empire. Of the west a remnant is left — the east stands unchanged.",
+    },
+    {
+      label: "c. 500",
+      hinweis: "Twenty-four years after the deposition of the last Western Roman emperor, there is no longer one empire in the west but six. Their kings rule with Roman officials, have their law written down in Latin and style themselves on the Roman model. Theoderic in Ravenna even bears the title of a Roman governor — and means it seriously.",
+    },
+    {
+      label: "568",
+      hinweis: "Emperor Justinian has reconquered North Africa (534) and Italy (554) — and devastated Italy in the process so thoroughly that in 568 it offers the Lombards hardly any resistance. With this the migration ends. Of the realms on this map, one will shape Europe: that of the Franks. And one has already stood for almost a thousand years and will stand for almost a thousand more.",
+    },
+  ],
 };
 
 module.exports = germanen;

@@ -792,6 +792,20 @@ const dreissigjaehrigerKrieg = {
       erklaerung: 'The battles claimed many dead, but the great majority died of epidemics such as plague and typhus and of hunger when seed corn and cattle were gone. In the Empire the population fell from an estimated 16 to 18 million to 10 to 13 million, regionally by up to two thirds — elsewhere it stayed almost calm. The figures rest on tax lists and church registers and are disputed.',
     },
   ],
+  karteHinweise: [
+    {
+      label: "1618",
+      hinweis: "The Empire on the eve of the war. The pale line is the imperial border — and honestly, not much more of the Empire can be drawn: it was a patchwork, not a bloc. Within this line lay more than three hundred polities with their own law, their own coinage and their own faith. Only what really had borders is coloured. Note the Habsburg lands: Bohemia, where the revolt begins in May 1618, belongs to them — as an elective kingdom with guaranteed freedom of faith. Because all areas carry the same colour, neighbours such as the Spanish Netherlands and the Republic merge into one bloc; only the titles say who is who.",
+    },
+    {
+      label: "1631–1632",
+      hinweis: "The war at its height. In May 1631 Magdeburg is taken and burns down; in September Gustavus Adolphus, together with Electoral Saxony, defeats the imperial-League army at Breitenfeld; in November 1632 he himself falls at Lützen. The large area in the Empire is deliberately named as it is meant: the reach of an army, not a state territory. What lay within it was occupied and paid contributions — and could be lost again in the next campaign. Bohemia lies deliberately outside, although Saxon troops even stood in Prague in November 1631: they stayed only one winter.",
+    },
+    {
+      label: "1648",
+      hinweis: "The Peace of Westphalia, signed on 24 October 1648 in Münster and Osnabrück. On the map one sees three things: Sweden now sits in the Empire itself — in Western Pomerania, in Wismar, in Bremen and Verden. France has the Habsburg rights in Alsace. And the Dutch Republic and Switzerland have formally left the Empire. What is not to be seen is the most important thing: the imperial estates received territorial sovereignty and the right to conclude their own alliances — the borders within the Empire remained, but whoever ruled within them was from then on almost sovereign. And the war was not over everywhere: Spain and France fought on until 1659.",
+    },
+  ],
 };
 
 module.exports = dreissigjaehrigerKrieg;
